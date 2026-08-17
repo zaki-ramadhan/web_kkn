@@ -36,7 +36,7 @@ function MemberMiniCard({ member }) {
             {member.role}
           </div>
           <div className="text-sm text-slate-500 font-normal mt-0.5 line-clamp-1 truncate">
-            {member.major}
+            {member.nim ? `NIM. ${member.nim}` : member.major}
           </div>
         </div>
       </div>
@@ -48,9 +48,9 @@ export default function TeamMarqueeSlider({
   members = kknTeamMembers,
   className = '',
 }) {
-  // Split 15 members into 2 balanced rows
-  const row1 = members.slice(0, 8); // 8 members
-  const row2 = members.slice(8);    // 7 members
+  // Split 20 members into 2 balanced rows (10 members each)
+  const row1 = members.slice(0, 10);
+  const row2 = members.slice(10, 20);
 
   return (
     <div

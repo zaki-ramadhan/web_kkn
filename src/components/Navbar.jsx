@@ -36,16 +36,12 @@ export default function Navbar({ modules = navEducationalModules }) {
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
           {/* Logo */}
-          <a href="#" className="flex items-center gap-3 group shrink-0">
-            <div
-              className={`w-10 h-10 rounded-xl flex items-center justify-center transition-all duration-300 ${
-                isScrolled
-                  ? 'bg-brand-850 text-lime-400 shadow-subtle group-hover:bg-brand-950'
-                  : 'bg-white/15 text-lime-400 border border-white/20 backdrop-blur-sm group-hover:bg-white/25 shadow-sm'
-              }`}
-            >
-              <HeartPulse className="w-6 h-6" />
-            </div>
+          <a href="#" className="flex items-center gap-2.5 sm:gap-3 group shrink-0">
+            <img
+              src="/images/logo/logo_kkn_ars.webp"
+              alt="Logo KKN ARS Cibaregbeg"
+              className="w-8 h-8 sm:w-9 sm:h-9 rounded-full object-cover shadow-sm ring-1 ring-white/20 group-hover:scale-105 transition-transform duration-200 shrink-0 bg-white"
+            />
             <div>
               <span
                 className={`font-grotesk font-bold text-lg tracking-tight block leading-tight transition-colors duration-300 ${

@@ -34,7 +34,7 @@ export default function DigitalFeatureShowcase({ features = defaultFeatures }) {
               Butuh Konsultasi Alur Layanan BPJS?
             </h4>
             <p className="text-sm text-slate-700 leading-relaxed font-normal">
-              Kunjungi Posko Mahasiswa KKN ARS di Balai Pertemuan Desa Cibaregbeg untuk konsultasi langsung alur berobat Puskesmas dan panduan administrasi faskes.
+              Kunjungi Posko Mahasiswa KKN ARS di Kp. Nyalindung / Talaga, Desa Cibaregbeg untuk konsultasi langsung alur berobat Puskesmas dan panduan administrasi faskes.
             </p>
           </div>
           <a

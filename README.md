@@ -1,6 +1,6 @@
 # Posko Sehat BPJS - Web Edukasi Layanan Kesehatan Desa
 
-Sistem informasi dan portal edukasi mandiri mengenai alur pelayanan BPJS Kesehatan dan Puskesmas, dikembangkan oleh Tim Mahasiswa KKN ARS Cibaregbeg Periode 2026. Proyek ini bertujuan membantu warga desa memahami hak kepesertaan, alur berobat berjenjang, tata cara pengaktifan kartu, hingga pemanfaatan antrean online secara mandiri.
+Sistem informasi dan portal edukasi mandiri mengenai alur pelayanan BPJS Kesehatan dan Puskesmas, dikembangkan oleh Tim Mahasiswa KKN S1 Administrasi Rumah Sakit (ARS) Universitas Indonesia Maju (UIMA) - Desa Cibaregbeg, Kec. Cibeber, Kab. Cianjur Periode 2026. Proyek ini bertujuan membantu warga desa memahami hak kepesertaan, alur berobat berjenjang, tata cara pengaktifan kartu, hingga pemanfaatan antrean online secara mandiri.
 
 ---
 
@@ -23,14 +23,14 @@ Landing page ini menyajikan 6 pilar informasi utama yang disesuaikan dengan kebu
 
 ---
 
-## 🛠️ Teknologi yang Digunakan
+## 🚀 Teknologi & Arsitektur Sistem
 
-- **Frontend Core:** React 18+ (Pure JSX)
-- **Build Tool:** Vite 6
-- **Styling:** Tailwind CSS 3.4
-- **Iconography:** Lucide React
-- **Typography:** Space Grotesk (Heading) & Plus Jakarta Sans (Body UI)
-- **Arsitektur:** Component-Driven Architecture (Atomic UI Primitives & Feature Modules)
+Landing page ini dibangun dengan standar performa dan aksesibilitas tinggi:
+- **Framework UI:** React 18 + Vite (SPA)
+- **Styling Engine:** Tailwind CSS v3 dengan custom extended design tokens
+- **Tipografi:** Plus Jakarta Sans & Space Grotesk
+- **Ikonografi:** Lucide React
+- **Optimasi Aset:** Lazy load modul & avatar, zero layout shift (CLS 0.0), 100% responsive mobile-first
 
 ---
 

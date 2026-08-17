@@ -4,6 +4,7 @@ import React from 'react';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import NotFound from './components/NotFound';
+import ScrollToTop from './components/ui/ScrollToTop';
 
 // Modular Page Sections
 import HeroSection from './components/HeroSection';
@@ -26,7 +27,7 @@ export default function App() {
   }
 
   return (
-    <div className="min-h-screen bg-white text-slate-800 font-sans selection:bg-lime-400 selection:text-brand-950">
+    <div className="min-h-screen bg-white text-slate-800 font-sans selection:bg-lime-400 selection:text-brand-950 relative">
       <Navbar />
       <main>
         <HeroSection />
@@ -38,6 +39,7 @@ export default function App() {
         <ContactSection />
       </main>
       <Footer />
+      <ScrollToTop />
     </div>
   );
 }

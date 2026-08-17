@@ -43,7 +43,7 @@ export default function ContactSection({
         ))}
       </div>
 
-      {/* Sub-section: 15 Mahasiswa Tim KKN Continuous Nonstop Slider */}
+      {/* Sub-section: 20 Mahasiswa Tim KKN Continuous Nonstop Slider */}
       <div className="pt-12 pb-8 border-t border-slate-200/80">
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-8 gap-4">
           <div>
@@ -51,11 +51,11 @@ export default function ContactSection({
               Struktur Tim Mahasiswa
             </Eyebrow>
             <h3 className="font-grotesk text-2xl sm:text-3xl font-bold text-slate-950 tracking-tight">
-              15 Mahasiswa Tim KKN ARS Cibaregbeg
+              20 Mahasiswa Tim KKN ARS Cibaregbeg
             </h3>
           </div>
           <p className="text-sm sm:text-base text-slate-600 max-w-md font-normal leading-relaxed">
-            Susunan 15 mahasiswa lintas program studi yang bertugas mendampingi warga di posko pelayanan dan edukasi kesehatan Desa Cibaregbeg.
+            Susunan 20 mahasiswa S1 Administrasi Rumah Sakit yang bertugas mendampingi warga di posko pelayanan dan edukasi kesehatan Desa Cibaregbeg.
           </p>
         </div>
 
