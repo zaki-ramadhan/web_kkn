@@ -5,24 +5,24 @@ import { digitalFeatures as defaultFeatures } from '../data/bpjsData';
 export default function DigitalFeatureShowcase({ features = defaultFeatures }) {
   return (
     <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-start">
-      {/* Left Column: Stacked Card Presentation & Posko Assistance Box */}
-      <div className="lg:col-span-5 space-y-6 lg:sticky lg:top-28">
-        {/* Layered Stacked Cards Container */}
-        <div className="relative group select-none py-2 px-1">
-          {/* Layer 1: Bottom Deep Tilt Card (Forest Accent) */}
-          <div className="absolute inset-x-2 inset-y-1 bg-brand-900/10 rounded-3xl -rotate-3 scale-95 border border-brand-900/15 shadow-sm transition-all duration-500 ease-out group-hover:-rotate-5 group-hover:-translate-x-3 group-hover:-translate-y-2 pointer-events-none" />
+      {/* Left Column: Static Stacked Card Presentation & Posko Assistance Box */}
+      <div className="lg:col-span-5 space-y-7 lg:sticky lg:top-28">
+        {/* Static Layered Stacked Cards Container (Pure Decorative Depth, No Hover Animations) */}
+        <div className="relative select-none p-2">
+          {/* Static Background Layer 1: Left-Tilted Card */}
+          <div className="absolute inset-0 bg-white rounded-3xl -rotate-2 scale-[0.98] border border-slate-200/90 shadow-subtle pointer-events-none" />
 
-          {/* Layer 2: Middle Offset Card (Lime Accent) */}
-          <div className="absolute inset-x-1 inset-y-1 bg-lime-400/15 rounded-3xl rotate-2 scale-[0.98] border border-lime-500/25 shadow-subtle transition-all duration-500 ease-out group-hover:rotate-4 group-hover:translate-x-3 group-hover:-translate-y-1.5 pointer-events-none" />
+          {/* Static Background Layer 2: Right-Tilted Accent Card */}
+          <div className="absolute inset-0 bg-brand-50/75 rounded-3xl rotate-2 scale-[0.99] border border-brand-200/70 shadow-subtle pointer-events-none" />
 
-          {/* Layer 3: Foreground Main Editorial Photo Card */}
-          <div className="relative z-10 rounded-3xl overflow-hidden shadow-card-depth group-hover:shadow-card-hover border border-slate-200/90 aspect-[4/3] sm:aspect-[4/3] lg:aspect-[4/5] bg-slate-100 transition-all duration-500 ease-out">
+          {/* Main Foreground Editorial Photo Card */}
+          <div className="relative z-10 rounded-3xl overflow-hidden shadow-card-depth border border-slate-200/90 aspect-[4/3] sm:aspect-[4/3] lg:aspect-[4/5] bg-slate-100">
             <img
               src="https://images.unsplash.com/photo-1584515979956-d9f6e5d09982?auto=format&fit=crop&w=800&h=1000&q=80&fm=webp"
               alt="Pendampingan Layanan Digital Kesehatan"
               loading="lazy"
               decoding="async"
-              className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700 ease-out"
+              className="w-full h-full object-cover object-center"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/30 to-transparent pointer-events-none" />
 
@@ -43,7 +43,7 @@ export default function DigitalFeatureShowcase({ features = defaultFeatures }) {
             <h4 className="font-grotesk font-bold text-base sm:text-lg text-brand-950 mb-1">
               Butuh Konsultasi Alur Layanan BPJS?
             </h4>
-            <p className="text-sm text-slate-700 leading-relaxed font-normal">
+            <p className="text-sm sm:text-base text-slate-700 leading-relaxed font-normal">
               Kunjungi Posko Mahasiswa KKN di Balai Pertemuan Desa Sukamakmur untuk konsultasi langsung alur berobat Puskesmas dan panduan administrasi faskes.
             </p>
           </div>
