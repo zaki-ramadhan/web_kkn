@@ -261,7 +261,7 @@ export const emergencyContacts = [
   {
     id: 'c1',
     name: 'M. Raditya Pratama',
-    number: '0821-4567-••••',
+    number: '0821-****-01',
     type: 'Koordinator Desa KKN',
     avatar: 'https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?auto=format&fit=crop&w=160&h=160&q=80&fm=webp',
     desc: 'Narahubung utama mahasiswa KKN untuk koordinasi posko, pendampingan warga desa, dan informasi kegiatan pengabdian.',
@@ -272,7 +272,7 @@ export const emergencyContacts = [
   {
     id: 'c2',
     name: 'Anindya Kirana',
-    number: '0812-3456-••••',
+    number: '0812-****-90',
     type: 'Divisi Kesehatan KKN',
     avatar: 'https://images.unsplash.com/photo-1594824813515-d419b48b92b6?auto=format&fit=crop&w=160&h=160&q=80&fm=webp',
     desc: 'Konsultasi alur berobat Puskesmas, panduan syarat re-aktivasi BPJS, dan edukasi jadwal posyandu balita & lansia.',
@@ -283,7 +283,7 @@ export const emergencyContacts = [
   {
     id: 'c3',
     name: 'Piket Posko Induk KKN',
-    number: '0857-1122-••••',
+    number: '0857-****-44',
     type: 'Layanan Balai Desa',
     avatar: 'https://images.unsplash.com/photo-1577495508048-b635879837f1?auto=format&fit=crop&w=160&h=160&q=80&fm=webp',
     desc: 'Piket posko mahasiswa di Balai Pertemuan Desa untuk bantuan konsultasi langsung, panduan antrean online, dan layanan informasi.',
@@ -294,7 +294,7 @@ export const emergencyContacts = [
   {
     id: 'c4',
     name: 'Fauzan Ramadhan',
-    number: '0813-9988-••••',
+    number: '0813-****-66',
     type: 'Pendamping Lapangan',
     avatar: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=160&h=160&q=80&fm=webp',
     desc: 'Pendampingan langsung bagi lansia dan warga yang membutuhkan bantuan teknis alur pelayanan dan administrasi kartu.',

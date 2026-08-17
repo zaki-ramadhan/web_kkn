@@ -111,13 +111,13 @@ export default function Footer() {
               <div className="flex items-center gap-2.5">
                 <PhoneCall className="w-4 h-4 text-lime-400 shrink-0" />
                 <a href="https://wa.me/6282145678901?text=Halo%20Kordes%20Raditya" target="_blank" rel="noreferrer" className="hover:text-lime-400 transition-colors">
-                  Kordes Raditya: 0821-4567-8901
+                  Kordes Raditya: 0821-****-01
                 </a>
               </div>
               <div className="flex items-center gap-2.5">
                 <PhoneCall className="w-4 h-4 text-lime-400 shrink-0" />
                 <a href="https://wa.me/6281234567890?text=Halo%20Divisi%20Kesehatan%20Anindya" target="_blank" rel="noreferrer" className="hover:text-lime-400 transition-colors">
-                  Divisi Kesehatan Anindya: 0812-3456-7890
+                  Divisi Kesehatan Anindya: 0812-****-90
                 </a>
               </div>
             </div>
