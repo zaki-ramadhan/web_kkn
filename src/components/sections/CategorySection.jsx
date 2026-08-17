@@ -6,9 +6,13 @@ import { bpjsCategories } from '../../data/bpjsData';
 
 export default function CategorySection({ categories = bpjsCategories }) {
   return (
-    <SectionWrapper id="jenis-bpjs" bg="slate" className="relative overflow-hidden pt-24 pb-20">
-      {/* Top Edge Color Transition: Dark Forest Green from Hero Section melting down into Section 1 */}
-      <div className="absolute top-0 inset-x-0 h-28 sm:h-40 bg-gradient-to-b from-brand-950 via-brand-950/20 to-transparent pointer-events-none z-0" />
+    <SectionWrapper
+      id="jenis-bpjs"
+      bg="slate"
+      className="relative overflow-hidden pt-32 sm:pt-40 lg:pt-44 pb-20 sm:pb-24"
+    >
+      {/* Extended Top Edge Color Transition: Dark Forest Green melting smoothly down into Slate Grey */}
+      <div className="absolute top-0 inset-x-0 h-64 sm:h-80 lg:h-96 bg-gradient-to-b from-brand-950 via-brand-950/35 via-brand-950/10 to-transparent pointer-events-none z-0" />
 
       <div className="relative z-10">
         <SectionHeader
