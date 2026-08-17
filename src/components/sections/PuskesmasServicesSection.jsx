@@ -1,0 +1,60 @@
+import React, { useState, useMemo } from 'react';
+import SectionWrapper from '../ui/SectionWrapper';
+import Heading from '../ui/Heading';
+import Eyebrow from '../ui/Eyebrow';
+import TabGroup from '../ui/TabGroup';
+import BentoServiceCard from '../BentoServiceCard';
+import { serviceFilterTabs, puskesmasServices } from '../../data/bpjsData';
+
+export default function PuskesmasServicesSection({
+  services = puskesmasServices,
+  tabs = serviceFilterTabs,
+}) {
+  const [activeTab, setActiveTab] = useState('all');
+
+  const filteredServices = useMemo(() => {
+    if (activeTab === 'all') return services;
+    return services.filter((srv) => srv.category === activeTab);
+  }, [services, activeTab]);
+
+  return (
+    <SectionWrapper id="layanan-puskesmas" bg="slateSoft">
+      <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
+        <div>
+          <Eyebrow variant="brand">
+            Cakupan Manfaat Layanan
+          </Eyebrow>
+          <Heading as="h2" level="2" color="dark">
+            Jenis Pelayanan Puskesmas Tercover BPJS
+          </Heading>
+        </div>
+        <p className="text-slate-700 text-base max-w-md font-normal leading-relaxed">
+          Seluruh tindakan medis dasar, tindakan preventif, dan obat-obatan formularium nasional diberikan 100% tanpa iur biaya bagi peserta aktif.
+        </p>
+      </div>
+
+      {/* Category Tabs Filter */}
+      <TabGroup
+        tabs={tabs}
+        activeTab={activeTab}
+        onTabChange={setActiveTab}
+        className="mb-8"
+      />
+
+      {/* Bento Showcase Grid */}
+      <div className="grid grid-cols-12 gap-6">
+        {filteredServices.map((srv) => (
+          <BentoServiceCard
+            key={srv.id}
+            title={srv.title}
+            tag={srv.tag}
+            desc={srv.desc}
+            stat={srv.stat}
+            image={srv.image}
+            span={srv.span}
+          />
+        ))}
+      </div>
+    </SectionWrapper>
+  );
+}
