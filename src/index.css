@@ -60,23 +60,23 @@
   animation-play-state: paused !important;
 }
 
-/* Alternating Float Animation for Contact Card Speech Bubbles */
+/* Alternating Fast & Responsive Float Animation for Contact Card Speech Bubbles */
 @keyframes float-bubble {
   0%, 100% {
     transform: translateY(0px);
   }
   50% {
-    transform: translateY(-5px);
+    transform: translateY(-6px);
   }
 }
 
 .animate-float-bubble {
-  animation: float-bubble 3.2s ease-in-out infinite;
+  animation: float-bubble 1.8s ease-in-out infinite;
   will-change: transform;
 }
 
 .animate-float-bubble-alt {
-  animation: float-bubble 3.2s ease-in-out infinite;
-  animation-delay: 1.6s;
+  animation: float-bubble 1.8s ease-in-out infinite;
+  animation-delay: 0.9s;
   will-change: transform;
 }
