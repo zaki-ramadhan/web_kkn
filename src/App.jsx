@@ -365,6 +365,7 @@ export default function App() {
                 name={contact.name}
                 number={contact.number}
                 type={contact.type}
+                avatar={contact.avatar}
                 desc={contact.desc}
                 actionText={contact.actionText}
                 link={contact.link}

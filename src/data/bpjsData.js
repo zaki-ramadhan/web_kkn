@@ -256,13 +256,14 @@ export const administrativeFaqs = [
   },
 ];
 
-// 6. Kontak Darurat & Narahubung Tim Mahasiswa KKN (Item #7)
+// 5. Kontak Narahubung Tim Mahasiswa KKN (Item #7)
 export const emergencyContacts = [
   {
     id: 'c1',
-    name: 'Raditya Arya (Kordes KKN)',
-    number: '0821-4567-8901',
-    type: 'Koordinator Mahasiswa Desa',
+    name: 'M. Raditya Pratama',
+    number: '0821-4567-••••',
+    type: 'Koordinator Desa KKN',
+    avatar: 'https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?auto=format&fit=crop&w=160&h=160&q=80&fm=webp',
     desc: 'Narahubung utama mahasiswa KKN untuk koordinasi posko, pendampingan warga desa, dan informasi kegiatan pengabdian.',
     actionText: 'Chat WA Kordes',
     link: 'https://wa.me/6282145678901?text=Halo%20Kordes%20Raditya%2C%20saya%20warga%20butuh%20informasi%20bantuan%20kesehatan',
@@ -270,9 +271,10 @@ export const emergencyContacts = [
   },
   {
     id: 'c2',
-    name: 'Anindya Kirana (Divisi Kesehatan)',
-    number: '0812-3456-7890',
-    type: 'Divisi Kesehatan Mahasiswa',
+    name: 'Anindya Kirana',
+    number: '0812-3456-••••',
+    type: 'Divisi Kesehatan KKN',
+    avatar: 'https://images.unsplash.com/photo-1594824813515-d419b48b92b6?auto=format&fit=crop&w=160&h=160&q=80&fm=webp',
     desc: 'Konsultasi alur berobat Puskesmas, panduan syarat re-aktivasi BPJS, dan edukasi jadwal posyandu balita & lansia.',
     actionText: 'Chat Divisi Kesehatan',
     link: 'https://wa.me/6281234567890?text=Halo%20Kak%20Anindya%20Divisi%20Kesehatan%2C%20saya%20ingin%20tanya%20prosedur%20faskes',
@@ -280,9 +282,10 @@ export const emergencyContacts = [
   },
   {
     id: 'c3',
-    name: 'Piket Harian Posko KKN',
-    number: '0857-1122-3344',
-    type: 'Posko Induk Mahasiswa',
+    name: 'Piket Posko Induk KKN',
+    number: '0857-1122-••••',
+    type: 'Layanan Balai Desa',
+    avatar: 'https://images.unsplash.com/photo-1577495508048-b635879837f1?auto=format&fit=crop&w=160&h=160&q=80&fm=webp',
     desc: 'Piket posko mahasiswa di Balai Pertemuan Desa untuk bantuan konsultasi langsung, panduan antrean online, dan layanan informasi.',
     actionText: 'Hubungi Posko KKN',
     link: 'https://wa.me/6285711223344?text=Halo%20Piket%20Posko%20KKN%2C%20saya%20ingin%20konsultasi%20di%20posko',
@@ -290,9 +293,10 @@ export const emergencyContacts = [
   },
   {
     id: 'c4',
-    name: 'Fauzan (Pendampingan Warga)',
-    number: '0813-9988-7766',
+    name: 'Fauzan Ramadhan',
+    number: '0813-9988-••••',
     type: 'Pendamping Lapangan',
+    avatar: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=160&h=160&q=80&fm=webp',
     desc: 'Pendampingan langsung bagi lansia dan warga yang membutuhkan bantuan teknis alur pelayanan dan administrasi kartu.',
     actionText: 'Chat Pendamping Warga',
     link: 'https://wa.me/6281399887766?text=Halo%20Kak%20Fauzan%2C%20saya%20butuh%20pendampingan%20administrasi',
