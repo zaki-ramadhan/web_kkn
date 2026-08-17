@@ -17,11 +17,11 @@ export default function FlowSection({ steps = registrationSteps }) {
         />
       </div>
 
-      {/* Continuous 60fps Nonstop Slider Track */}
+      {/* Continuous 60fps Nonstop Slider Track with ample clearance */}
       <div className="relative w-full overflow-hidden marquee-container py-4 [mask-image:linear-gradient(to_right,transparent,black_6%,black_94%,transparent)]">
-        <div className="flex gap-6 animate-marquee">
+        <div className="flex gap-6 animate-marquee py-3">
           {[...steps, ...steps].map((step, idx) => (
-            <div key={idx} className="w-[280px] sm:w-[320px] shrink-0">
+            <div key={idx} className="w-[280px] sm:w-[320px] shrink-0 py-1">
               <StepCard
                 step={step.step}
                 icon={step.icon}

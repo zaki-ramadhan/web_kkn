@@ -4,8 +4,8 @@ import TopShimmer from './ui/TopShimmer';
 
 function MemberMiniCard({ member }) {
   return (
-    <div className="w-[185px] sm:w-[205px] shrink-0">
-      <div className="group relative bg-white border border-slate-200/90 hover:border-emerald-400/70 rounded-2xl p-3 sm:p-3.5 transition-all duration-300 ease-out shadow-card-depth hover:shadow-card-hover hover:-translate-y-1 flex flex-col justify-between h-full overflow-hidden">
+    <div className="w-[185px] sm:w-[205px] shrink-0 py-2">
+      <div className="group relative bg-white border border-slate-200/90 hover:border-emerald-400/70 rounded-2xl p-3 sm:p-3.5 transition-all duration-300 ease-out shadow-card-depth hover:shadow-card-hover hover:-translate-y-1.5 flex flex-col justify-between h-full overflow-hidden">
         <TopShimmer variant="lime" />
 
         {/* Portrait Photo */}
@@ -54,10 +54,10 @@ export default function TeamMarqueeSlider({
 
   return (
     <div
-      className={`space-y-4 relative w-full overflow-hidden [mask-image:linear-gradient(to_right,transparent,black_5%,black_95%,transparent)] ${className}`}
+      className={`space-y-1 relative w-full overflow-hidden py-3 [mask-image:linear-gradient(to_right,transparent,black_5%,black_95%,transparent)] ${className}`}
     >
-      {/* Row 1: Moves Left (Calm & Smooth 42s loop) */}
-      <div className="marquee-row overflow-hidden">
+      {/* Row 1: Moves Left with ample vertical clearance to prevent clipping on hover */}
+      <div className="marquee-row overflow-hidden py-2">
         <div className="flex gap-3.5 sm:gap-4 animate-marquee">
           {[...row1, ...row1, ...row1].map((member, idx) => (
             <MemberMiniCard key={`r1-${member.id}-${idx}`} member={member} />
@@ -65,8 +65,8 @@ export default function TeamMarqueeSlider({
         </div>
       </div>
 
-      {/* Row 2: Moves Right (Opposite Direction 42s loop) */}
-      <div className="marquee-row overflow-hidden">
+      {/* Row 2: Moves Right with ample vertical clearance to prevent clipping on hover */}
+      <div className="marquee-row overflow-hidden py-2">
         <div className="flex gap-3.5 sm:gap-4 animate-marquee-reverse">
           {[...row2, ...row2, ...row2].map((member, idx) => (
             <MemberMiniCard key={`r2-${member.id}-${idx}`} member={member} />
