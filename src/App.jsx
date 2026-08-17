@@ -382,11 +382,10 @@ export default function App() {
 
             <div className="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
               {/* Left Column: Directive & Legal Exemption */}
-              <div className="lg:col-span-6 space-y-4">
-                <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-rose-500/20 border border-rose-500/30 text-rose-300 text-sm font-semibold">
-                  <span className="w-2 h-2 rounded-full bg-rose-400" />
-                  <span>Prosedur Gawat Darurat Medis</span>
-                </div>
+              <div className="lg:col-span-6 space-y-3">
+                <span className="block text-sm sm:text-base font-semibold text-rose-400 tracking-normal">
+                  Prosedur Gawat Darurat Medis
+                </span>
 
                 <h3 className="font-grotesk text-2xl sm:text-3xl font-extrabold text-white tracking-tight leading-snug">
                   Hak Bebas Rujukan Langsung ke IGD Rumah Sakit
