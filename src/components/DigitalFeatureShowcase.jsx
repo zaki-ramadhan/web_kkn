@@ -9,11 +9,11 @@ export default function DigitalFeatureShowcase({ features = defaultFeatures }) {
       <div className="lg:col-span-5 space-y-7 lg:sticky lg:top-28">
         {/* Static Layered Stacked Cards Container (Pure Decorative Depth, No Hover Animations) */}
         <div className="relative select-none p-2">
-          {/* Static Background Layer 1: Left-Tilted Card */}
-          <div className="absolute inset-0 bg-white rounded-3xl -rotate-2 scale-[0.98] border border-slate-200/90 shadow-subtle pointer-events-none" />
+          {/* Static Background Layer 1: Left-Tilted Grey Card */}
+          <div className="absolute inset-0 bg-slate-200 rounded-3xl -rotate-2 scale-[0.98] border border-slate-300 shadow-sm pointer-events-none" />
 
-          {/* Static Background Layer 2: Right-Tilted Accent Card */}
-          <div className="absolute inset-0 bg-brand-50/75 rounded-3xl rotate-2 scale-[0.99] border border-brand-200/70 shadow-subtle pointer-events-none" />
+          {/* Static Background Layer 2: Right-Tilted Soft Grey Card */}
+          <div className="absolute inset-0 bg-slate-100 rounded-3xl rotate-2 scale-[0.99] border border-slate-200 shadow-subtle pointer-events-none" />
 
           {/* Main Foreground Editorial Photo Card */}
           <div className="relative z-10 rounded-3xl overflow-hidden shadow-card-depth border border-slate-200/90 aspect-[4/3] sm:aspect-[4/3] lg:aspect-[4/5] bg-slate-100">
