@@ -19,9 +19,9 @@ export default function Badge({
   };
 
   const sizeStyles = {
-    xs: 'text-xs px-2.5 py-0.5',
-    sm: 'text-xs px-3 py-1',
-    md: 'text-xs sm:text-sm px-3.5 py-1.5',
+    xs: 'text-xs sm:text-sm px-3 py-1',
+    sm: 'text-sm px-3.5 py-1.5',
+    md: 'text-sm sm:text-base px-4 py-2',
   };
 
   return (

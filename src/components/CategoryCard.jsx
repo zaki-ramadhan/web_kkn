@@ -70,7 +70,7 @@ export default function CategoryCard({
             {price}
           </div>
           <p
-            className={`text-xs font-semibold mt-1 ${
+            className={`text-sm font-semibold mt-1 ${
               isForest ? 'text-slate-300' : 'text-slate-600'
             }`}
           >
@@ -79,7 +79,7 @@ export default function CategoryCard({
         </div>
 
         <p
-          className={`text-xs sm:text-sm leading-relaxed mb-6 font-normal ${
+          className={`text-sm sm:text-base leading-relaxed mb-6 font-normal ${
             isForest ? 'text-slate-200' : 'text-slate-600'
           }`}
         >

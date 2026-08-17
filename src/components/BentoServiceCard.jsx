@@ -37,8 +37,8 @@ export default function BentoServiceCard({
             </Badge>
           )}
           {stat && (
-            <span className="inline-flex items-center gap-1.5 text-xs text-lime-300 font-medium bg-black/40 px-2.5 py-0.5 rounded-full border border-lime-400/20 backdrop-blur-sm">
-              <Check className="w-3.5 h-3.5 text-lime-400 shrink-0" />
+            <span className="inline-flex items-center gap-1.5 text-sm text-lime-300 font-medium bg-black/40 px-3 py-1 rounded-full border border-lime-400/20 backdrop-blur-sm">
+              <Check className="w-4 h-4 text-lime-400 shrink-0" />
               <span>{stat}</span>
             </span>
           )}
@@ -46,7 +46,7 @@ export default function BentoServiceCard({
         <Heading as="h3" level="3" color="light" className="mb-2 group-hover:text-lime-200 transition-colors">
           {title}
         </Heading>
-        <p className="text-slate-200 text-xs sm:text-sm max-w-2xl leading-relaxed font-normal">
+        <p className="text-slate-200 text-sm sm:text-base max-w-2xl leading-relaxed font-normal">
           {desc}
         </p>
       </div>

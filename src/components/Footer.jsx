@@ -17,25 +17,25 @@ export default function Footer() {
                 <span className="font-grotesk font-bold text-lg text-white tracking-tight block leading-tight">
                   POSKO SEHAT BPJS
                 </span>
-                <span className="text-xs font-medium text-lime-300 block">
+                <span className="text-sm font-medium text-lime-300 block">
                   Karya Tim Mahasiswa KKN 2026
                 </span>
               </div>
             </div>
-            <p className="text-slate-300 text-xs sm:text-sm leading-relaxed mb-6">
+            <p className="text-slate-200 text-sm sm:text-base leading-relaxed mb-6">
               Portal informasi dan edukasi kesehatan mandiri yang dikembangkan oleh Tim Mahasiswa KKN Tematik 2026 untuk mempermudah warga desa memahami alur dan hak pelayanan kesehatan.
             </p>
-            <div className="text-xs text-slate-400">
+            <div className="text-sm text-slate-300">
               Inisiatif Program Kerja Bidang Kesehatan Masyarakat Desa Sukamakmur
             </div>
           </div>
 
           {/* Col 2 */}
           <div className="lg:col-span-2 sm:col-span-1">
-            <Heading as="h4" level="4" color="light" className="text-sm font-bold mb-4">
+            <Heading as="h4" level="4" color="light" className="text-base font-bold mb-4">
               Panduan Cepat
             </Heading>
-            <ul className="space-y-2.5 text-xs text-slate-300">
+            <ul className="space-y-3 text-sm text-slate-200">
               <li>
                 <a href="#jenis-bpjs" className="hover:text-lime-400 transition-colors">
                   Jenis Kepesertaan
@@ -66,10 +66,10 @@ export default function Footer() {
 
           {/* Col 3 */}
           <div className="lg:col-span-3 sm:col-span-1">
-            <Heading as="h4" level="4" color="light" className="text-sm font-bold mb-4">
+            <Heading as="h4" level="4" color="light" className="text-base font-bold mb-4">
               Materi Edukasi
             </Heading>
-            <ul className="space-y-2.5 text-xs text-slate-300">
+            <ul className="space-y-3 text-sm text-slate-200">
               <li>
                 <a href="#solusi-adm" className="hover:text-lime-400 transition-colors">
                   Panduan Cicilan REHAB
@@ -100,10 +100,10 @@ export default function Footer() {
 
           {/* Col 4 */}
           <div className="lg:col-span-3">
-            <Heading as="h4" level="4" color="light" className="text-sm font-bold mb-4">
+            <Heading as="h4" level="4" color="light" className="text-base font-bold mb-4">
               Posko Mahasiswa KKN
             </Heading>
-            <div className="space-y-3 text-xs text-slate-300">
+            <div className="space-y-3 text-sm text-slate-200">
               <div className="flex items-start gap-2.5">
                 <MapPin className="w-4 h-4 text-lime-400 shrink-0 mt-0.5" />
                 <span>Posko Induk KKN, Balai Pertemuan Warga RT 02 / RW 01, Desa Sukamakmur</span>
@@ -124,7 +124,7 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-400">
+        <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-sm text-slate-300">
           <p>© 2026 Posko Edukasi Kesehatan • Karya Tim Mahasiswa KKN Tematik Desa Sukamakmur.</p>
           <div className="flex items-center gap-6">
             <a href="#jenis-bpjs" className="hover:text-white transition-colors">

@@ -126,7 +126,7 @@ export default function Navbar() {
               POSKO SEHAT BPJS
             </span>
             <span
-              className={`text-xs font-medium block transition-colors duration-300 ${
+              className={`text-xs sm:text-sm font-medium block transition-colors duration-300 ${
                 isScrolled ? 'text-brand-700' : 'text-lime-300 drop-shadow-sm'
               }`}
             >
@@ -136,13 +136,13 @@ export default function Navbar() {
         </a>
 
         {/* Compact Single-Line Desktop Nav */}
-        <nav className="hidden lg:flex items-center gap-6 text-sm font-medium">
+        <nav className="hidden lg:flex items-center gap-6 text-sm sm:text-base font-medium">
           {/* Dropdown Group: Panduan Edukasi BPJS */}
           <div className="relative" ref={dropdownRef}>
             <button
               type="button"
               onClick={() => setDropdownOpen((prev) => !prev)}
-              className={`flex items-center gap-1.5 py-2 px-3 rounded-full transition-all duration-200 cursor-pointer ${
+              className={`flex items-center gap-1.5 py-2 px-3.5 rounded-full transition-all duration-200 cursor-pointer ${
                 dropdownOpen
                   ? isScrolled
                     ? 'bg-brand-50 text-brand-900 font-bold'
@@ -187,7 +187,7 @@ export default function Navbar() {
                         }`}
                       >
                         <div
-                          className={`w-8 h-8 rounded-lg flex items-center justify-center shrink-0 mt-0.5 ${
+                          className={`w-9 h-9 rounded-lg flex items-center justify-center shrink-0 mt-0.5 ${
                             isScrolled
                               ? 'bg-brand-100/70 text-brand-800 group-hover:bg-brand-850 group-hover:text-lime-400'
                               : 'bg-white/10 text-lime-300 group-hover:bg-lime-400 group-hover:text-brand-950'
@@ -196,10 +196,10 @@ export default function Navbar() {
                           <ItemIcon className="w-4 h-4" />
                         </div>
                         <div className="flex-1 min-w-0">
-                          <div className="text-xs font-bold leading-tight group-hover:text-brand-850 group-hover:underline">
+                          <div className="text-sm font-bold leading-tight group-hover:text-brand-850 group-hover:underline">
                             {item.title}
                           </div>
-                          <div className="text-xs text-slate-500 line-clamp-1 mt-0.5 font-normal">
+                          <div className="text-xs sm:text-sm text-slate-500 line-clamp-1 mt-0.5 font-normal">
                             {item.desc}
                           </div>
                         </div>
@@ -214,7 +214,7 @@ export default function Navbar() {
           {/* Direct Link 1: Alur Berobat */}
           <a
             href="#alur-faskes"
-            className={`transition-colors duration-200 py-1.5 px-2.5 rounded-lg ${
+            className={`transition-colors duration-200 py-1.5 px-3 rounded-lg ${
               isScrolled
                 ? 'text-slate-700 hover:text-brand-850'
                 : 'text-slate-100 hover:text-white drop-shadow-sm'
@@ -226,7 +226,7 @@ export default function Navbar() {
           {/* Direct Link 2: Narahubung Tim KKN */}
           <a
             href="#darurat"
-            className={`font-bold transition-colors duration-200 py-1.5 px-2.5 rounded-lg ${
+            className={`font-bold transition-colors duration-200 py-1.5 px-3 rounded-lg ${
               isScrolled
                 ? 'text-brand-850 hover:text-lime-600'
                 : 'text-lime-400 hover:text-lime-300 drop-shadow-sm'
@@ -281,7 +281,7 @@ export default function Navbar() {
                 key={item.href}
                 href={item.href}
                 onClick={() => setMobileMenuOpen(false)}
-                className={`flex items-center justify-between py-2 px-3 rounded-xl text-sm font-semibold ${
+                className={`flex items-center justify-between py-2 px-3 rounded-xl text-base font-semibold ${
                   isScrolled
                     ? 'text-slate-800 hover:bg-slate-100'
                     : 'text-slate-200 hover:bg-white/10'
@@ -297,7 +297,7 @@ export default function Navbar() {
             <a
               href="#alur-faskes"
               onClick={() => setMobileMenuOpen(false)}
-              className={`block py-2 px-3 rounded-xl text-sm font-semibold ${
+              className={`block py-2 px-3 rounded-xl text-base font-semibold ${
                 isScrolled ? 'text-slate-800 hover:bg-slate-100' : 'text-slate-200 hover:bg-white/10'
               }`}
             >
@@ -306,7 +306,7 @@ export default function Navbar() {
             <a
               href="#darurat"
               onClick={() => setMobileMenuOpen(false)}
-              className="block py-2 px-3 rounded-xl text-sm font-bold text-lime-400 hover:bg-white/10"
+              className="block py-2 px-3 rounded-xl text-base font-bold text-lime-400 hover:bg-white/10"
             >
               Kontak Posko KKN
             </a>

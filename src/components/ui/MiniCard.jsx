@@ -48,13 +48,13 @@ export default function MiniCard({
       )}
 
       {description && (
-        <p className="text-xs leading-relaxed opacity-90">
+        <p className="text-sm leading-relaxed opacity-95">
           {description}
         </p>
       )}
 
       {footer && (
-        <div className="pt-3 mt-3 border-t border-slate-100/30 text-xs font-bold flex items-center gap-1.5">
+        <div className="pt-3.5 mt-3.5 border-t border-slate-100/30 text-sm font-bold flex items-center gap-1.5">
           {footer}
         </div>
       )}

@@ -79,7 +79,7 @@ export default function App() {
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
           {/* Plain Text Eyebrow (No chip, no blinking dot) */}
-          <span className="inline-block text-xs sm:text-sm font-semibold text-lime-400 mb-4 tracking-normal drop-shadow-sm">
+          <span className="inline-block text-sm sm:text-base font-semibold text-lime-400 mb-4 tracking-normal drop-shadow-sm">
             Program Pengabdian Mahasiswa KKN 2026 • Desa Sukamakmur
           </span>
 
@@ -214,7 +214,7 @@ export default function App() {
                 Jenis Pelayanan Puskesmas Tercover BPJS
               </Heading>
             </div>
-            <p className="text-slate-700 text-sm sm:text-base max-w-md font-normal leading-relaxed">
+            <p className="text-slate-700 text-base max-w-md font-normal leading-relaxed">
               Seluruh tindakan medis dasar, tindakan preventif, dan obat-obatan formularium nasional diberikan 100% tanpa iur biaya bagi peserta aktif.
             </p>
           </div>
@@ -265,7 +265,7 @@ export default function App() {
                   Fitur & Pemanfaatan Layanan Digital JKN
                 </Heading>
 
-                <p className="text-slate-200 text-sm sm:text-base mb-8 leading-relaxed font-normal">
+                <p className="text-slate-200 text-base mb-8 leading-relaxed font-normal">
                   Pelajari alur dan kemudahan akses layanan digital BPJS Kesehatan mulai dari registrasi akun, pendaftaran antrean faskes secara online, hingga kartu digital KIS.
                 </p>
 
@@ -392,7 +392,7 @@ export default function App() {
             <p className="text-sm sm:text-base text-slate-800 leading-relaxed mb-4 font-normal">
               Untuk kondisi medis darurat yang mengancam keselamatan, pasien dapat <strong>langsung mendatangi UGD Rumah Sakit terdekat tanpa perlu surat rujukan faskes tingkat pertama</strong>:
             </p>
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 text-xs sm:text-sm font-semibold text-slate-900">
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 text-sm font-semibold text-slate-900">
               <div className="p-4 bg-white rounded-2xl border border-rose-100 flex items-start gap-2.5 shadow-subtle">
                 <CheckCircle2 className="w-4 h-4 text-rose-600 shrink-0 mt-0.5" />
                 <span>Gangguan pernapasan akut / henti napas</span>

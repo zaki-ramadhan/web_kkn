@@ -37,8 +37,8 @@ export default function StatCard({
           </div>
         )}
       </div>
-      <p className={`text-sm font-bold ${isDark ? 'text-white' : 'text-slate-900'}`}>{label}</p>
-      <p className={`text-xs font-medium mt-0.5 leading-relaxed ${isDark ? 'text-slate-300' : 'text-slate-600'}`}>
+      <p className={`text-sm sm:text-base font-bold ${isDark ? 'text-white' : 'text-slate-900'}`}>{label}</p>
+      <p className={`text-sm font-medium mt-0.5 leading-relaxed ${isDark ? 'text-slate-200' : 'text-slate-600'}`}>
         {detail}
       </p>
     </div>

@@ -22,7 +22,7 @@ export default function ContactCard({
           <Badge variant="brand" size="xs">
             {type}
           </Badge>
-          <div className="w-8 h-8 rounded-xl bg-brand-50 border border-brand-100 flex items-center justify-center text-brand-700 shadow-subtle group-hover:scale-105 transition-transform duration-200">
+          <div className="w-9 h-9 rounded-xl bg-brand-50 border border-brand-100 flex items-center justify-center text-brand-700 shadow-subtle group-hover:scale-105 transition-transform duration-200">
             <MessageSquare className="w-4 h-4" />
           </div>
         </div>
@@ -35,7 +35,7 @@ export default function ContactCard({
           {number}
         </div>
 
-        <p className="text-xs sm:text-sm text-slate-600 leading-relaxed mb-6 font-normal">
+        <p className="text-sm text-slate-600 leading-relaxed mb-6 font-normal">
           {desc}
         </p>
       </div>
@@ -44,14 +44,14 @@ export default function ContactCard({
         href={link}
         target="_blank"
         rel="noreferrer"
-        className="w-full py-3 px-5 rounded-full text-xs sm:text-sm font-bold flex items-center justify-between transition-all duration-200 shadow-subtle hover:shadow-elevation bg-brand-850 hover:bg-brand-950 text-lime-300 active:scale-95 group/btn"
+        className="w-full py-3.5 px-5 rounded-full text-sm font-bold flex items-center justify-between transition-all duration-200 shadow-subtle hover:shadow-elevation bg-brand-850 hover:bg-brand-950 text-lime-300 active:scale-95 group/btn"
       >
         <span className="flex items-center gap-2">
           <PhoneCall className="w-4 h-4" />
           <span>{actionText}</span>
         </span>
-        <span className="w-6 h-6 rounded-full bg-white/10 flex items-center justify-center text-lime-400 group-hover/btn:rotate-45 transition-transform duration-200">
-          <ArrowUpRight className="w-3.5 h-3.5" />
+        <span className="w-7 h-7 rounded-full bg-white/10 flex items-center justify-center text-lime-400 group-hover/btn:rotate-45 transition-transform duration-200">
+          <ArrowUpRight className="w-4 h-4" />
         </span>
       </a>
     </div>
