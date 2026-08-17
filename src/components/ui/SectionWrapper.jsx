@@ -10,9 +10,10 @@ export default function SectionWrapper({
 }) {
   const bgStyles = {
     white: 'bg-white',
-    slate: 'bg-gradient-to-b from-slate-50 via-slate-50/80 to-white border-y border-slate-200/80',
-    slateTop: 'bg-gradient-to-b from-slate-50 via-slate-50/80 to-white border-t border-slate-200/80',
-    slateSoft: 'bg-gradient-to-b from-slate-50 via-slate-50/70 to-white border-t border-slate-200/80',
+    slate: 'bg-slate-50/90 border-y border-slate-200/90',
+    slateTop: 'bg-slate-50/90 border-t border-slate-200/90',
+    slateSoft: 'bg-slate-50/70 border-y border-slate-200/80',
+    brandTint: 'bg-brand-50/40 border-y border-brand-100/70',
     dark: 'bg-brand-950 text-white',
   };
 

@@ -1,5 +1,6 @@
 import React from 'react';
 import { Info } from 'lucide-react';
+import SectionWrapper from '../ui/SectionWrapper';
 import SectionHeader from '../ui/SectionHeader';
 import StepCard from '../StepCard';
 import CalloutBox from '../ui/CalloutBox';
@@ -8,7 +9,7 @@ import { registrationSteps } from '../../data/bpjsData';
 
 export default function FlowSection({ steps = registrationSteps }) {
   return (
-    <section id="alur-faskes" className="py-20 bg-white overflow-hidden">
+    <SectionWrapper id="alur-faskes" bg="white" noContainer className="overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <SectionHeader
           badge="Alur Pelayanan Faskes"
@@ -51,6 +52,6 @@ export default function FlowSection({ steps = registrationSteps }) {
           </PillCTAButton>
         </CalloutBox>
       </div>
-    </section>
+    </SectionWrapper>
   );
 }

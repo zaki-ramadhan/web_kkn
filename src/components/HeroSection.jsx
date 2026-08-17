@@ -13,7 +13,7 @@ export default function HeroSection({
   return (
     <section
       id="hero-section"
-      className="relative pt-28 pb-24 sm:pt-32 md:pt-36 md:pb-28 overflow-hidden bg-brand-950 text-white"
+      className="relative pt-28 pb-28 sm:pt-32 sm:pb-36 md:pt-36 md:pb-40 overflow-hidden bg-brand-950 text-white"
     >
       {/* Background Image with Crisp Object-Cover and Increased Clarity */}
       <img
@@ -94,6 +94,22 @@ export default function HeroSection({
             );
           })}
         </div>
+      </div>
+
+      {/* Elegant Organic Wave Transition Divider at Bottom of Hero */}
+      <div className="absolute -bottom-1 inset-x-0 w-full overflow-hidden leading-none z-10 pointer-events-none">
+        <svg
+          className="relative block w-full h-8 sm:h-12 md:h-16 text-slate-50"
+          viewBox="0 0 1440 80"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          preserveAspectRatio="none"
+        >
+          <path
+            d="M0,36 C280,72 520,78 720,54 C940,30 1180,48 1440,32 L1440,80 L0,80 Z"
+            fill="currentColor"
+          />
+        </svg>
       </div>
     </section>
   );
