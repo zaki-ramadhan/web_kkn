@@ -13,7 +13,7 @@ export default function HeroSection({
   return (
     <section
       id="hero-section"
-      className="relative pt-28 pb-24 sm:pt-32 md:pt-36 md:pb-28 overflow-hidden bg-brand-950 text-white"
+      className="relative pt-28 pb-24 sm:pt-32 md:pt-36 md:pb-32 overflow-hidden bg-brand-950 text-white"
     >
       {/* Background Image with Crisp Object-Cover and Increased Clarity */}
       <img
