@@ -32,10 +32,21 @@ import BentoServiceCard from './components/BentoServiceCard';
 import DigitalFeatureShowcase from './components/DigitalFeatureShowcase';
 import AccordionItem from './components/AccordionItem';
 import ContactCard from './components/ContactCard';
+import NotFound from './components/NotFound';
 
 export default function App() {
   const [activeServiceTab, setActiveServiceTab] = useState('all');
   const [openFaqId, setOpenFaqId] = useState('adm-1');
+
+  // Check for 404 fallback on invalid URL path
+  const isNotFound =
+    typeof window !== 'undefined' &&
+    window.location.pathname !== '/' &&
+    window.location.pathname !== '';
+
+  if (isNotFound) {
+    return <NotFound />;
+  }
 
   // Filter Puskesmas Services
   const filteredServices = useMemo(() => {
