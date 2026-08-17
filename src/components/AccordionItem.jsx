@@ -64,10 +64,10 @@ export default function AccordionItem({
                 <ul className="space-y-2.5 pt-1">
                   {answer.list.map((item, idx) => (
                     <li key={idx} className="flex items-start gap-2.5">
-                      <span className="w-5 h-5 rounded-full bg-brand-100/80 text-brand-850 font-bold text-xs flex items-center justify-center shrink-0 mt-0.5">
+                      <span className="w-6 h-6 rounded-full bg-brand-100/80 text-brand-850 font-bold text-sm flex items-center justify-center shrink-0 mt-0.5">
                         {idx + 1}
                       </span>
-                      <div className="text-slate-700 flex-1">
+                      <div className="text-slate-700 flex-1 text-sm sm:text-base">
                         {item.title && (
                           <strong className="text-slate-900 font-semibold mr-1.5">
                             {item.title}:

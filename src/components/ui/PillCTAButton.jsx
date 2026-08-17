@@ -27,9 +27,9 @@ export default function PillCTAButton({
   };
 
   const sizeStyles = {
-    sm: 'text-xs py-1.5 pl-4 pr-1.5',
-    md: 'text-sm py-2 pl-5 pr-2',
-    lg: 'text-base py-2.5 pl-6 pr-2.5',
+    sm: 'text-sm py-2 pl-4 pr-2',
+    md: 'text-sm sm:text-base py-2.5 pl-5 pr-2.5',
+    lg: 'text-base sm:text-lg py-3 pl-6 pr-3',
   };
 
   const content = (

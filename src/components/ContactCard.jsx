@@ -20,7 +20,7 @@ export default function ContactCard({
         {/* Tooltip / Speech Bubble Tag with Downward Caret */}
         <div className="relative inline-block mb-3.5">
           <div
-            className={`px-3 py-1 rounded-xl text-xs font-bold tracking-wide inline-flex items-center shadow-subtle ${
+            className={`px-3.5 py-1 rounded-xl text-sm font-bold tracking-wide inline-flex items-center shadow-subtle ${
               urgent
                 ? 'bg-lime-400 text-brand-950 border border-lime-500/40'
                 : 'bg-brand-50 text-brand-900 border border-brand-200/90'

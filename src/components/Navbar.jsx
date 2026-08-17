@@ -55,7 +55,7 @@ export default function Navbar({ modules = navEducationalModules }) {
                 POSKO SEHAT BPJS
               </span>
               <span
-                className={`text-xs sm:text-sm font-medium block transition-colors duration-300 ${
+                className={`text-sm font-medium block transition-colors duration-300 ${
                   isScrolled ? 'text-brand-700' : 'text-lime-300 drop-shadow-sm'
                 }`}
               >
@@ -105,7 +105,7 @@ export default function Navbar({ modules = navEducationalModules }) {
                         <div className="text-sm font-bold text-slate-900 group-hover:text-emerald-600 transition-colors leading-tight">
                           {item.title}
                         </div>
-                        <div className="text-xs sm:text-sm text-slate-600 line-clamp-1 mt-1 font-normal leading-relaxed">
+                        <div className="text-sm text-slate-600 line-clamp-1 mt-1 font-normal leading-relaxed">
                           {item.desc}
                         </div>
                       </a>

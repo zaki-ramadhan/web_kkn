@@ -19,7 +19,7 @@ export default function Badge({
   };
 
   const sizeStyles = {
-    xs: 'text-xs sm:text-sm px-3 py-1',
+    xs: 'text-sm px-3.5 py-1',
     sm: 'text-sm px-3.5 py-1.5',
     md: 'text-sm sm:text-base px-4 py-2',
   };

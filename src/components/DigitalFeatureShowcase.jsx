@@ -18,7 +18,7 @@ export default function DigitalFeatureShowcase({ features = defaultFeatures }) {
           <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/30 to-transparent pointer-events-none" />
 
           <div className="absolute bottom-0 inset-x-0 p-6 sm:p-7 text-white">
-            <div className="text-xs font-bold text-lime-400 uppercase tracking-wider mb-1">
+            <div className="text-sm font-bold text-lime-400 uppercase tracking-wider mb-1">
               Edukasi Digital Mahasiswa KKN
             </div>
             <p className="text-sm sm:text-base text-slate-100 leading-snug font-medium">

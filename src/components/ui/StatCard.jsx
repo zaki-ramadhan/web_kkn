@@ -24,7 +24,7 @@ export default function StatCard({
           </div>
         </div>
         {detail && (
-          <div className="text-xs text-slate-300 mt-3 pt-3 border-t border-white/10 font-normal">
+          <div className="text-sm text-slate-200 mt-3 pt-3 border-t border-white/10 font-normal">
             {detail}
           </div>
         )}

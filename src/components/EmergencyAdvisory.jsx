@@ -30,14 +30,14 @@ export default function EmergencyAdvisory({
             tanpa memerlukan surat rujukan dari FKTP/Puskesmas dan tanpa uang muka.
           </p>
 
-          <div className="pt-2 text-xs sm:text-sm text-slate-400 font-medium border-t border-white/10">
+          <div className="pt-2 text-sm text-slate-300 font-medium border-t border-white/10">
             Landasan Regulasi: {regulation}
           </div>
         </div>
 
         {/* Right Column: Clinical Emergency Criteria List */}
         <div className="lg:col-span-6 space-y-3">
-          <div className="text-xs font-bold text-slate-400 uppercase tracking-wider mb-2">
+          <div className="text-sm font-bold text-slate-300 uppercase tracking-wider mb-2">
             Kriteria Klinis Penanganan Gawat Darurat:
           </div>
 
@@ -53,7 +53,7 @@ export default function EmergencyAdvisory({
                 <div className="text-sm sm:text-base font-bold text-white leading-snug">
                   {item.title}
                 </div>
-                <div className="text-xs sm:text-sm text-slate-300 mt-1 font-normal leading-relaxed">
+                <div className="text-sm text-slate-300 mt-1 font-normal leading-relaxed">
                   {item.desc}
                 </div>
               </div>

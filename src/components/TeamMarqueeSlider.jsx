@@ -18,13 +18,13 @@ function MemberMiniCard({ member }) {
             className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-300"
           />
           {member.isContact && (
-            <span className="absolute bottom-2 left-2 px-2.5 py-0.5 rounded-md bg-brand-950/90 backdrop-blur-xs text-xs font-bold text-lime-400 border border-lime-400/30 shadow-subtle">
+            <span className="absolute bottom-2 left-2 px-2.5 py-0.5 rounded-md bg-brand-950/90 backdrop-blur-xs text-sm font-bold text-lime-400 border border-lime-400/30 shadow-subtle">
               Narahubung
             </span>
           )}
         </div>
 
-        {/* Member Details: Standardized font sizes (min text-xs = 12px) */}
+        {/* Member Details: Standardized font sizes (min text-sm = 14px) */}
         <div>
           <h4
             title={member.name}
@@ -32,10 +32,10 @@ function MemberMiniCard({ member }) {
           >
             {member.name}
           </h4>
-          <div className="text-xs sm:text-sm font-semibold text-emerald-600 mt-1 line-clamp-1 truncate">
+          <div className="text-sm font-semibold text-emerald-600 mt-1 line-clamp-1 truncate">
             {member.role}
           </div>
-          <div className="text-xs sm:text-sm text-slate-500 font-normal mt-0.5 line-clamp-1 truncate">
+          <div className="text-sm text-slate-500 font-normal mt-0.5 line-clamp-1 truncate">
             {member.major}
           </div>
         </div>
