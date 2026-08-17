@@ -4,12 +4,7 @@ import {
   Menu,
   X,
   MessageSquare,
-  ChevronDown,
-  ShieldCheck,
-  Stethoscope,
-  Laptop,
-  RefreshCw,
-  ArrowRight
+  ChevronDown
 } from 'lucide-react';
 import PillCTAButton from './ui/PillCTAButton';
 
@@ -19,25 +14,21 @@ const educationalModules = [
     href: '#jenis-bpjs',
     title: 'Jenis Kepesertaan BPJS',
     desc: 'Kategori PBI, Mandiri (PBPU), dan PPU beserta iurannya',
-    icon: ShieldCheck,
   },
   {
     href: '#layanan-puskesmas',
     title: 'Layanan Tercover Puskesmas',
-    desc: 'Cakupan poli umum, KIA/KB, gigi, dan laboratorium gratis',
-    icon: Stethoscope,
+    desc: 'Cakupan poli umum, KIA/KB, gigi, dan laboratorium',
   },
   {
     href: '#layanan-digital',
     title: 'Fitur Layanan Digital JKN',
     desc: 'Antrean online mandiri, kartu digital KIS, dan skrining',
-    icon: Laptop,
   },
   {
     href: '#solusi-adm',
     title: 'Aktivasi & Balik Domisili',
     desc: 'Solusi kartu nonaktif, cicilan REHAB, dan pindah faskes',
-    icon: RefreshCw,
   },
 ];
 
@@ -63,38 +54,23 @@ export default function Navbar() {
         setIsScrolled(!entry.isIntersecting);
       },
       {
-        rootMargin: '-80px 0px 0px 0px',
-        threshold: 0,
+        threshold: 0.15,
       }
     );
 
     observer.observe(heroEl);
-
-    return () => {
-      observer.disconnect();
-    };
+    return () => observer.disconnect();
   }, []);
 
-  // Close dropdown on click outside or escape key
+  // Close dropdown on outside click
   useEffect(() => {
-    const handleClickOutside = (e) => {
-      if (dropdownRef.current && !dropdownRef.current.contains(e.target)) {
+    function handleClickOutside(event) {
+      if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
         setDropdownOpen(false);
       }
-    };
-    const handleKeyDown = (e) => {
-      if (e.key === 'Escape') {
-        setDropdownOpen(false);
-      }
-    };
-
+    }
     document.addEventListener('mousedown', handleClickOutside);
-    document.addEventListener('keydown', handleKeyDown);
-
-    return () => {
-      document.removeEventListener('mousedown', handleClickOutside);
-      document.removeEventListener('keydown', handleKeyDown);
-    };
+    return () => document.removeEventListener('mousedown', handleClickOutside);
   }, []);
 
   return (
@@ -160,38 +136,27 @@ export default function Navbar() {
               />
             </button>
 
-            {/* Dropdown Menu Flyout: SOLID OPAQUE WHITE for Guaranteed Clarity */}
+            {/* Dropdown Menu Flyout: Clean Typographic Editorial Links */}
             {dropdownOpen && (
               <div
-                className="absolute top-full left-0 mt-3 w-80 sm:w-96 rounded-2xl p-3 bg-white border border-slate-200/90 text-slate-900 shadow-2xl ring-1 ring-black/10 z-50 animate-in fade-in slide-in-from-top-2"
+                className="absolute top-full left-0 mt-3 w-80 sm:w-88 rounded-2xl p-2.5 bg-white border border-slate-200/90 text-slate-900 shadow-2xl ring-1 ring-black/10 z-50 animate-in fade-in slide-in-from-top-2"
               >
-                <div className="text-xs font-bold uppercase tracking-wider px-3 py-1.5 mb-1 text-slate-500">
-                  Modul Edukasi Kesehatan
-                </div>
                 <div className="space-y-1">
-                  {educationalModules.map((item) => {
-                    const ItemIcon = item.icon;
-                    return (
-                      <a
-                        key={item.href}
-                        href={item.href}
-                        onClick={() => setDropdownOpen(false)}
-                        className="flex items-start gap-3.5 p-3 rounded-xl hover:bg-slate-50 text-slate-900 transition-all duration-150 group"
-                      >
-                        <div className="w-10 h-10 rounded-xl bg-brand-50 border border-brand-100/90 text-brand-850 group-hover:bg-brand-900 group-hover:text-lime-400 flex items-center justify-center shrink-0 shadow-subtle transition-colors duration-200 mt-0.5">
-                          <ItemIcon className="w-5 h-5" />
-                        </div>
-                        <div className="flex-1 min-w-0">
-                          <div className="text-sm font-bold text-slate-900 group-hover:text-brand-850 leading-tight">
-                            {item.title}
-                          </div>
-                          <div className="text-xs sm:text-sm text-slate-600 line-clamp-1 mt-0.5 font-normal leading-relaxed">
-                            {item.desc}
-                          </div>
-                        </div>
-                      </a>
-                    );
-                  })}
+                  {educationalModules.map((item) => (
+                    <a
+                      key={item.href}
+                      href={item.href}
+                      onClick={() => setDropdownOpen(false)}
+                      className="block p-3 rounded-xl hover:bg-slate-50 transition-colors group"
+                    >
+                      <div className="text-sm font-bold text-slate-900 group-hover:text-brand-850 transition-colors leading-tight">
+                        {item.title}
+                      </div>
+                      <div className="text-xs sm:text-sm text-slate-600 line-clamp-1 mt-1 font-normal leading-relaxed">
+                        {item.desc}
+                      </div>
+                    </a>
+                  ))}
                 </div>
               </div>
             )}
@@ -249,24 +214,20 @@ export default function Navbar() {
         </button>
       </div>
 
-      {/* Mobile Menu Drawer: SOLID OPAQUE WHITE */}
+      {/* Mobile Menu Drawer */}
       {mobileMenuOpen && (
         <div
           className="lg:hidden border-b border-slate-200 bg-white text-slate-900 shadow-2xl px-5 pt-4 pb-6 space-y-3"
         >
-          <div className="text-xs font-bold text-slate-500 uppercase tracking-wider pt-1">
-            Materi & Panduan
-          </div>
           <div className="space-y-1">
             {educationalModules.map((item) => (
               <a
                 key={item.href}
                 href={item.href}
                 onClick={() => setMobileMenuOpen(false)}
-                className="flex items-center justify-between py-2.5 px-3 rounded-xl text-base font-semibold text-slate-900 hover:bg-slate-100 transition-colors"
+                className="block py-2.5 px-3 rounded-xl text-base font-semibold text-slate-900 hover:bg-slate-100 hover:text-brand-850 transition-colors"
               >
-                <span>{item.title}</span>
-                <ArrowRight className="w-4 h-4 text-slate-400" />
+                {item.title}
               </a>
             ))}
           </div>
@@ -275,14 +236,14 @@ export default function Navbar() {
             <a
               href="#alur-faskes"
               onClick={() => setMobileMenuOpen(false)}
-              className="block py-2.5 px-3 rounded-xl text-base font-semibold text-slate-800 hover:bg-slate-100 transition-colors"
+              className="block py-2.5 px-3 rounded-xl text-base font-semibold text-slate-800 hover:bg-slate-100 hover:text-brand-850 transition-colors"
             >
               Alur Berobat Puskesmas
             </a>
             <a
               href="#darurat"
               onClick={() => setMobileMenuOpen(false)}
-              className="block py-2.5 px-3 rounded-xl text-base font-bold text-brand-850 hover:bg-slate-100 transition-colors"
+              className="block py-2.5 px-3 rounded-xl text-base font-bold text-brand-850 hover:bg-brand-50 transition-colors"
             >
               Kontak Posko KKN
             </a>
@@ -291,12 +252,13 @@ export default function Navbar() {
           <div className="pt-3">
             <PillCTAButton
               href="#darurat"
-              onClick={() => setMobileMenuOpen(false)}
               variant="dark"
+              size="md"
               icon={MessageSquare}
               className="w-full justify-center"
+              onClick={() => setMobileMenuOpen(false)}
             >
-              Konsultasi Tim Mahasiswa KKN
+              Konsultasi Posko
             </PillCTAButton>
           </div>
         </div>
