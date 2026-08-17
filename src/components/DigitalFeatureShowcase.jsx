@@ -1,109 +1,101 @@
 import React from 'react';
-import { ArrowUpRight } from 'lucide-react';
+import { ArrowUpRight, CheckCircle2 } from 'lucide-react';
 
 const digitalFeatures = [
   {
     number: '01',
-    title: 'Pendaftaran Antrean Online Tanpa Antre Subuh',
-    problem: 'Warga tidak perlu lagi datang subuh jam 05.00 pagi hanya untuk berebut nomor antrean fisik di loket Puskesmas.',
-    solution: 'Ambil nomor antrean mandiri dari rumah mulai H-1 sebelum jadwal kunjungan. Anda cukup datang 15 menit sebelum estimasi jam pelayanan yang tertera di ponsel.',
-    note: 'Nomor antrean online langsung terhubung ke sistem antrean poli Puskesmas Sukamakmur.',
+    title: 'Booking Antrean Puskesmas dari Rumah',
+    desc: 'Warga tidak perlu lagi datang subuh jam 05.00 pagi untuk mengambil nomor antrean fisik. Pilih poli tujuan dan dokter mulai H-1 melalui ponsel, lalu datang cukup 15 menit sebelum estimasi jam pelayanan.',
+    highlight: 'Hemat waktu antrean 2 hingga 3 jam di loket fisik Puskesmas.',
   },
   {
     number: '02',
-    title: 'Kartu KIS Digital Pengganti Kartu Fisik',
-    problem: 'Kartu fisik sering hilang, rusak di dompet, tertinggal di rumah, atau warga merasa wajib membawa fotokopi kartu.',
-    solution: 'Cukup buka layar ponsel dan perlihatkan barcode Kartu Indonesia Sehat (KIS) saat verifikasi di loket. Berkas fotokopi fisik tidak lagi diwajibkan.',
-    note: 'Barcode kartu digital memiliki kekuatan hukum resmi dan wajib diterima di seluruh faskes mitra BPJS.',
+    title: 'Kartu Indonesia Sehat (KIS) Digital',
+    desc: 'Cukup perlihatkan barcode KIS di layar ponsel saat verifikasi loket pendaftaran. Kartu digital ini berkekuatan hukum sah di seluruh Puskesmas dan Rumah Sakit mitra BPJS tanpa perlu membawa fotokopi kartu fisik.',
+    highlight: 'Solusi praktis saat kartu fisik hilang, rusak, atau tertinggal di rumah.',
   },
   {
     number: '03',
-    title: 'Skrining Kesehatan Mandiri untuk Deteksi Dini',
-    problem: 'Penyakit tidak menular seperti darah tinggi (hipertensi) dan diabetes sering kali baru disadari saat sudah terjadi komplikasi berat.',
-    solution: 'Isi kuesioner evaluasi kesehatan singkat secara berkala 1 kali per tahun untuk mengetahui tingkat risiko kesehatan Anda sebelum berkonsultasi dengan dokter.',
-    note: 'Hasil skrining otomatis tersimpan di rekam medis Puskesmas sebagai acuan pemeriksaan dokter.',
+    title: 'Skrining Riwayat Kesehatan Berkala',
+    desc: 'Kuesioner evaluasi mandiri singkat untuk mendeteksi dini risiko penyakit tidak menular seperti hipertensi (darah tinggi), diabetes melitus, dan jantung koroner secara berkala minimal 1 kali per tahun.',
+    highlight: 'Hasil skrining langsung terhubung ke rekam medis Puskesmas sebagai acuan dokter.',
   },
   {
     number: '04',
-    title: 'Pindah Faskes Tingkat Pertama (FKTP) Mandiri',
-    problem: 'Warga pendatang atau yang faskesnya masih terdaftar di luar kota harus mengurus perpindahan faskes ke kantor cabang BPJS.',
-    solution: 'Pindahkan faskes pertama Anda ke Puskesmas Sukamakmur langsung secara mandiri tanpa perlu surat pengantar dari desa asal.',
-    note: 'Syarat mutasi: sudah terdaftar minimal 3 bulan di faskes lama. Perubahan aktif per tanggal 1 bulan berikutnya.',
+    title: 'Perubahan Faskes Domisili Mandiri',
+    desc: 'Bagi warga pendatang atau warga yang faskes pertamanya masih terdaftar di luar kota, Anda dapat memindahkan faskes tingkat pertama ke Puskesmas Sukamakmur secara mandiri tanpa perlu surat pengantar.',
+    highlight: 'Syarat: terdaftar minimal 3 bulan di faskes lama. Aktif per tanggal 1 bulan berikutnya.',
   },
 ];
 
 export default function DigitalFeatureShowcase() {
   return (
-    <div className="space-y-8">
-      {/* 2x2 Clean Editorial Breakdown: Masalah Lapangan vs Solusi Nyata */}
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
-        {digitalFeatures.map((item) => (
-          <div
-            key={item.number}
-            className="group relative bg-gradient-to-b from-white via-white to-slate-50/60 border border-slate-200/90 hover:border-brand-400/60 rounded-3xl p-7 sm:p-8 flex flex-col justify-between shadow-card-depth hover:shadow-card-hover hover:-translate-y-1.5 transition-all duration-300 ease-out overflow-hidden"
-          >
-            {/* Top shimmer accent on hover */}
-            <div className="absolute top-0 inset-x-0 h-[2px] bg-gradient-to-r from-transparent via-lime-400/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
+    <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-start">
+      {/* Left Column: Authentic Real Context Photo & Village Assistance Banner */}
+      <div className="lg:col-span-5 space-y-6 lg:sticky lg:top-28">
+        <div className="relative rounded-3xl overflow-hidden shadow-card-depth border border-slate-200/90 aspect-[4/3] sm:aspect-[4/3] lg:aspect-[4/5] bg-slate-100">
+          <img
+            src="https://images.unsplash.com/photo-1584515979956-d9f6e5d09982?auto=format&fit=crop&w=800&h=1000&q=80&fm=webp"
+            alt="Pendampingan Layanan Digital Kesehatan"
+            loading="lazy"
+            decoding="async"
+            className="w-full h-full object-cover object-center"
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/30 to-transparent pointer-events-none" />
 
-            <div>
-              {/* Header Number & Title */}
-              <div className="flex items-baseline gap-3.5 mb-5">
-                <span className="font-grotesk font-black text-2xl sm:text-3xl text-brand-850 group-hover:text-brand-950 transition-colors shrink-0">
-                  {item.number}
-                </span>
-                <h3 className="font-grotesk font-bold text-lg sm:text-xl text-slate-900 group-hover:text-brand-850 transition-colors leading-snug">
+          <div className="absolute bottom-0 inset-x-0 p-6 sm:p-7 text-white">
+            <div className="text-xs font-bold text-lime-400 uppercase tracking-wider mb-1">
+              Edukasi Digital Mahasiswa KKN
+            </div>
+            <p className="text-sm sm:text-base text-slate-100 leading-snug font-medium">
+              Pendampingan warga Desa Sukamakmur dalam memanfaatkan fitur antrean mandiri dan KIS digital dari ponsel.
+            </p>
+          </div>
+        </div>
+
+        {/* Posko Assistance Box */}
+        <div className="bg-brand-50 border border-brand-200/80 rounded-2xl p-6 flex flex-col justify-between gap-4">
+          <div>
+            <h4 className="font-grotesk font-bold text-base sm:text-lg text-brand-950 mb-1">
+              Butuh Panduan Pendaftaran Akun?
+            </h4>
+            <p className="text-sm text-slate-700 leading-relaxed font-normal">
+              Kunjungi Posko Mahasiswa KKN di Balai Pertemuan Desa Sukamakmur untuk dibimbing langsung proses registrasi dan aktivasi antrean faskes.
+            </p>
+          </div>
+          <a
+            href="#darurat"
+            className="w-full py-3 px-5 rounded-full bg-brand-850 hover:bg-brand-950 text-lime-300 font-bold text-sm flex items-center justify-between transition-colors shadow-subtle"
+          >
+            <span>Hubungi Narahubung Posko</span>
+            <ArrowUpRight className="w-4 h-4 text-lime-400" />
+          </a>
+        </div>
+      </div>
+
+      {/* Right Column: Editorial Step Flow with Clean Dividers (No Card Boxes) */}
+      <div className="lg:col-span-7 divide-y divide-slate-200/90">
+        {digitalFeatures.map((item) => (
+          <div key={item.number} className="py-7 first:pt-0 last:pb-0">
+            <div className="flex items-start gap-4 sm:gap-5">
+              <span className="font-grotesk font-black text-3xl sm:text-4xl text-brand-850 shrink-0 mt-0.5">
+                {item.number}
+              </span>
+              <div className="space-y-2 flex-1">
+                <h3 className="font-grotesk font-bold text-lg sm:text-xl text-slate-900 leading-snug">
                   {item.title}
                 </h3>
-              </div>
-
-              {/* Context: Kendala Warga vs Solusi */}
-              <div className="space-y-3.5 text-sm sm:text-base leading-relaxed">
-                <div className="bg-slate-100/70 border border-slate-200/80 rounded-2xl p-4 text-slate-700">
-                  <strong className="text-slate-900 font-bold block mb-1">
-                    Kendala yang sering dialami:
-                  </strong>
-                  {item.problem}
-                </div>
-
-                <div className="bg-brand-50/60 border border-brand-200/70 rounded-2xl p-4 text-slate-800">
-                  <strong className="text-brand-900 font-bold block mb-1">
-                    Kemudahan solusi digital:
-                  </strong>
-                  {item.solution}
+                <p className="text-sm sm:text-base text-slate-700 leading-relaxed font-normal">
+                  {item.desc}
+                </p>
+                <div className="flex items-center gap-2 pt-1 text-sm font-semibold text-brand-900">
+                  <CheckCircle2 className="w-4 h-4 text-brand-700 shrink-0" />
+                  <span>{item.highlight}</span>
                 </div>
               </div>
-            </div>
-
-            {/* Practical Regulatory Note */}
-            <div className="mt-6 pt-4 border-t border-slate-100 text-xs sm:text-sm text-slate-600 font-medium">
-              <span className="font-bold text-slate-800">Catatan: </span>
-              {item.note}
             </div>
           </div>
         ))}
-      </div>
-
-      {/* Grounded Assistance Banner */}
-      <div className="relative bg-gradient-to-br from-brand-850 via-brand-900 to-brand-950 text-white rounded-3xl p-7 sm:p-9 border border-brand-700/80 shadow-forest-card flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6 overflow-hidden">
-        {/* Top shimmer accent on hover */}
-        <div className="absolute top-0 inset-x-0 h-[2px] bg-gradient-to-r from-transparent via-lime-400/60 to-transparent pointer-events-none" />
-
-        <div className="relative z-10">
-          <h4 className="font-grotesk font-bold text-lg sm:text-xl text-white mb-1.5">
-            Perlu Pendampingan Pembuatan Akun & Pendaftaran Antrean?
-          </h4>
-          <p className="text-sm sm:text-base text-slate-200 max-w-2xl font-normal leading-relaxed">
-            Warga yang membutuhkan bantuan pendaftaran akun di ponsel dapat langsung mendatangi Posko Mahasiswa KKN di Balai Desa Sukamakmur pada jam piket harian.
-          </p>
-        </div>
-
-        <a
-          href="#darurat"
-          className="relative z-10 px-6 py-3.5 rounded-full bg-lime-400 hover:bg-lime-300 text-brand-950 font-bold text-sm whitespace-nowrap transition-all duration-200 shadow-subtle hover:shadow-elevation flex items-center gap-2 active:scale-95 group/btn shrink-0"
-        >
-          <span>Jadwal & Kontak Posko</span>
-          <ArrowUpRight className="w-4 h-4 group-hover/btn:rotate-45 transition-transform duration-200" />
-        </a>
       </div>
     </div>
   );
