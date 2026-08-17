@@ -176,27 +176,33 @@ export default function App() {
       {/* ====================================================================
           SECTION 2: ALUR PENDAFTARAN PASIEN BPJS DI PUSKESMAS (Item #1)
           ==================================================================== */}
-      <section id="alur-faskes" className="py-20 bg-white">
+      <section id="alur-faskes" className="py-20 bg-white overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <SectionHeader
             badge="Alur Pelayanan Faskes"
             title="Alur Pelayanan Pasien BPJS di FKTP / Puskesmas"
             subtitle="Ikuti 5 langkah terpadu mulai dari pengambilan antrean hingga pengambilan obat tanpa biaya tambahan."
           />
+        </div>
 
-          {/* 5 Steps Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-5 gap-4 relative">
-            {registrationSteps.map((step, idx) => (
-              <StepCard
-                key={idx}
-                step={step.step}
-                title={step.title}
-                desc={step.desc}
-                highlight={step.highlight}
-              />
+        {/* Seamless Infinite Nonstop Slider Track */}
+        <div className="relative w-full overflow-hidden marquee-container py-4 [mask-image:linear-gradient(to_right,transparent,black_6%,black_94%,transparent)]">
+          <div className="flex gap-6 animate-marquee">
+            {[...registrationSteps, ...registrationSteps].map((step, idx) => (
+              <div key={idx} className="w-[280px] sm:w-[320px] shrink-0">
+                <StepCard
+                  step={step.step}
+                  title={step.title}
+                  desc={step.desc}
+                  highlight={step.highlight}
+                  className="h-full"
+                />
+              </div>
             ))}
           </div>
+        </div>
 
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Essential Rule Notice Callout */}
           <CalloutBox
             icon={Info}
