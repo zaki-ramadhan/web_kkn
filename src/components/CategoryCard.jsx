@@ -19,15 +19,12 @@ export default function CategoryCard({
 
   return (
     <div
-      className={`group rounded-3xl p-8 sm:p-9 flex flex-col justify-between transition-all duration-300 ease-out relative overflow-hidden h-full ${
+      className={`rounded-3xl p-8 sm:p-9 flex flex-col justify-between relative overflow-hidden h-full ${
         isForest
           ? 'bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-brand-800 via-brand-850 to-brand-950 text-white shadow-forest-card border border-brand-700/80 ring-1 ring-white/15'
-          : 'bg-gradient-to-b from-white via-white to-slate-50/60 text-slate-800 border border-slate-200/90 hover:border-brand-400/60 shadow-card-depth'
+          : 'bg-gradient-to-b from-white via-white to-slate-50/60 text-slate-800 border border-slate-200/90 shadow-card-depth'
       }`}
     >
-      {/* Top shimmer highlight on hover */}
-      <div className="absolute top-0 inset-x-0 h-[2px] bg-gradient-to-r from-transparent via-lime-400/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
-
       {/* Subtle ambient light for dark cards */}
       {isForest && (
         <div className="absolute -right-16 -top-16 w-48 h-48 bg-lime-400/15 rounded-full blur-3xl pointer-events-none" />
@@ -57,7 +54,7 @@ export default function CategoryCard({
 
         {/* Price capsule */}
         <div
-          className={`rounded-2xl p-5 mb-6 transition-colors ${
+          className={`rounded-2xl p-5 mb-6 ${
             isForest
               ? 'bg-brand-900/90 border border-white/10 shadow-inner-glow'
               : 'bg-gradient-to-r from-brand-50/80 to-white border border-brand-100/90 shadow-subtle'

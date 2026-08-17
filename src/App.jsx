@@ -148,10 +148,10 @@ export default function App() {
             {bpjsCategories.map((cat, idx) => {
               const scaleClass =
                 idx === 1
-                  ? 'lg:scale-105 z-10 hover:lg:scale-[1.07] transition-transform duration-300'
+                  ? 'lg:scale-105 z-10'
                   : idx === 0
-                  ? 'lg:scale-95 lg:origin-right hover:lg:scale-100 transition-transform duration-300'
-                  : 'lg:scale-95 lg:origin-left hover:lg:scale-100 transition-transform duration-300';
+                  ? 'lg:scale-95 lg:origin-right'
+                  : 'lg:scale-95 lg:origin-left';
 
               return (
                 <div key={cat.id} className={`h-full ${scaleClass}`}>
