@@ -22,7 +22,6 @@ import SectionHeader from './components/ui/SectionHeader';
 import StatCard from './components/ui/StatCard';
 import CalloutBox from './components/ui/CalloutBox';
 import Heading from './components/ui/Heading';
-import CheckList from './components/ui/CheckList';
 import TabGroup from './components/ui/TabGroup';
 
 // Feature Components (Molecules / Organisms)
@@ -235,57 +234,64 @@ export default function App() {
       </section>
 
       {/* ====================================================================
-          SECTION 4: FITUR LAYANAN DIGITAL JKN (Item #6)
+          SECTION 4: FITUR LAYANAN DIGITAL JKN (Item #6) - CLEAN EDITORIAL FLOW
           ==================================================================== */}
       <section id="layanan-digital" className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-brand-800 via-brand-850 to-brand-950 rounded-3xl p-8 sm:p-12 lg:p-16 text-white relative overflow-hidden shadow-forest-card border border-brand-700/80 ring-1 ring-white/10">
-            <div className="absolute -right-20 -top-20 w-80 h-80 bg-lime-400/15 rounded-full blur-3xl pointer-events-none" />
+          <SectionHeader
+            badge="Transformasi Layanan Digital"
+            title="Fitur & Pemanfaatan Layanan Digital JKN"
+            subtitle="Pelajari alur registrasi akun mandiri, pendaftaran antrean Puskesmas dari rumah, akses kartu KIS digital, dan skrining riwayat kesehatan berkala."
+          />
 
-            <div className="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-              {/* Left Column */}
-              <div className="lg:col-span-5">
-                <span className="block text-sm sm:text-base font-semibold text-lime-400 mb-2.5 tracking-normal">
-                  Transformasi Layanan Digital
-                </span>
+          {/* 4 Clean Step Cards Grid */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {digitalJknFlow.map((item, idx) => (
+              <div
+                key={idx}
+                className="group relative rounded-3xl p-6 sm:p-7 bg-gradient-to-b from-white via-white to-slate-50/70 border border-slate-200/90 hover:border-brand-400/60 transition-all duration-300 ease-out shadow-card-depth hover:shadow-card-hover hover:-translate-y-1.5 flex flex-col justify-between overflow-hidden"
+              >
+                {/* Top shimmer accent on hover */}
+                <div className="absolute top-0 inset-x-0 h-[2px] bg-gradient-to-r from-transparent via-lime-400/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
 
-                <Heading as="h2" level="1" color="light" className="mb-4 leading-tight">
-                  Fitur & Pemanfaatan Layanan Digital JKN
-                </Heading>
+                <div>
+                  <div className="font-grotesk text-3xl font-extrabold text-brand-850 mb-3 group-hover:text-brand-950 transition-colors">
+                    0{item.step}
+                  </div>
 
-                <p className="text-slate-200 text-base mb-8 leading-relaxed font-normal">
-                  Pelajari alur dan kemudahan akses layanan digital BPJS Kesehatan mulai dari registrasi akun, pendaftaran antrean faskes secara online, hingga kartu digital KIS.
-                </p>
+                  <h3 className="font-bold text-slate-900 text-lg leading-snug mb-2 group-hover:text-brand-850 transition-colors">
+                    {item.title}
+                  </h3>
 
-                <CheckList
-                  items={[
-                    'Booking Antrean Puskesmas H-1 dari Rumah',
-                    'Kartu Digital KIS (Cukup tunjukkan barcode di loket)',
-                    'Cek Riwayat Pembayaran & Pindah FKTP Mandiri',
-                  ]}
-                  theme="forest"
-                  size="sm"
-                  className="space-y-3 mb-8"
-                />
-
-                <div className="bg-white/10 border border-white/15 rounded-2xl p-4 text-sm sm:text-base text-slate-200 leading-relaxed backdrop-blur-sm">
-                  Seluruh fitur layanan digital dapat diakses 24 jam secara terpadu untuk mempermudah pendaftaran dan pelayanan faskes warga.
+                  <p className="text-sm text-slate-600 leading-relaxed font-normal mb-4">
+                    {item.desc}
+                  </p>
                 </div>
-              </div>
 
-              {/* Right Column */}
-              <div className="lg:col-span-7 space-y-3">
-                {digitalJknFlow.map((item, idx) => (
-                  <StepCard
-                    key={idx}
-                    variant="dark"
-                    step={item.step}
-                    title={item.title}
-                    desc={item.desc}
-                    tip={item.tip}
-                  />
-                ))}
+                {item.tip && (
+                  <div className="pt-3.5 border-t border-slate-100 text-xs sm:text-sm text-slate-500 font-medium">
+                    <span className="font-bold text-brand-850">Tips: </span>
+                    {item.tip}
+                  </div>
+                )}
               </div>
+            ))}
+          </div>
+
+          {/* Practical Assistance Callout Banner */}
+          <div className="mt-10 bg-brand-50/70 border border-brand-200/90 rounded-2xl p-6 sm:p-8 flex flex-col md:flex-row items-center justify-between gap-6 shadow-subtle">
+            <div>
+              <h4 className="font-grotesk font-bold text-lg text-slate-900 mb-1">
+                Butuh Bantuan Registrasi Akun atau Booking Antrean?
+              </h4>
+              <p className="text-sm sm:text-base text-slate-700 font-normal">
+                Tim Mahasiswa KKN siap mendampingi pembuatan akun dan aktivasi antrean online langsung di Posko Desa Sukamakmur.
+              </p>
+            </div>
+            <div className="shrink-0">
+              <PillCTAButton href="#darurat" variant="dark" size="sm">
+                Konsultasi di Posko
+              </PillCTAButton>
             </div>
           </div>
         </div>
