@@ -41,10 +41,9 @@ export default function ContactCard({
           {name}
         </Heading>
 
-        {/* Privacy Masked Number Capsule */}
-        <div className="inline-flex items-center gap-2 text-xs sm:text-sm font-semibold text-slate-600 my-2.5 px-3 py-1 rounded-full bg-slate-100 border border-slate-200/80">
-          <span className="w-2 h-2 rounded-full bg-emerald-500 shrink-0" />
-          <span>WA: {number}</span>
+        {/* Plain Bold Masked Number */}
+        <div className="font-grotesk text-2xl font-black text-slate-900 my-2 tracking-tight">
+          {number}
         </div>
 
         <p className="text-sm text-slate-600 leading-relaxed mb-6 font-normal">
