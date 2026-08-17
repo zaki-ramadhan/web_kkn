@@ -236,10 +236,9 @@ export const administrativeFaqs = [
         },
         {
           title: 'Bayar Iuran / Cicilan Pertama',
-          text: 'Lakukan pembayaran tagihan penuh atau angsuran pertama via ATM, autodebet bank, atau minimarket.',
+          text: 'Lakukan pembayaran tagihan penuh atau angsuran pertama via ATM, autodebet bank, atau minimarket agar kartu aktif kembali dalam 1x24 jam.',
         },
       ],
-      note: 'Kartu BPJS otomatis aktif kembali maksimal 1x24 jam setelah pembayaran atau angsuran pertama diverifikasi oleh sistem perbankan.',
     },
   },
   {
@@ -262,7 +261,6 @@ export const administrativeFaqs = [
           text: 'Jika membutuhkan pelayanan medis mendesak dan mampu secara ekonomi, Anda dapat beralih sementara ke BPJS Mandiri Kelas 3 (Rp 35.000/bulan).',
         },
       ],
-      note: 'Pengaktifan kembali PBI bansos sepenuhnya bergantung pada penetapan kuota Kemensos RI dan verifikasi Dinas Sosial setempat.',
     },
   },
   {
@@ -282,10 +280,9 @@ export const administrativeFaqs = [
         },
         {
           title: 'Pembayaran Iuran Pertama',
-          text: 'Lakukan pembayaran iuran pertama untuk mengaktifkan kembali kartu secara langsung tanpa masa tunggu 14 hari.',
+          text: 'Lakukan pembayaran iuran pertama dalam kurun waktu 30 hari untuk mengaktifkan kembali kartu secara langsung tanpa masa tunggu.',
         },
       ],
-      note: 'Pastikan pengalihan segmen dilakukan dalam kurun waktu 30 hari sejak tanggal nonaktif dari perusahaan untuk menghindari tunggakan kumulatif.',
     },
   },
   {
@@ -308,7 +305,6 @@ export const administrativeFaqs = [
           text: 'Perubahan faskes baru akan mulai berlaku efektif per tanggal 1 pada bulan berikutnya.',
         },
       ],
-      note: 'Selama masa tunggu hingga tanggal 1 bulan berikutnya, Anda tetap dapat berobat di faskes lama atau memanfaatkan kuota berobat luar faskes.',
     },
   },
   {
@@ -327,7 +323,6 @@ export const administrativeFaqs = [
           text: 'Jika mengalami kondisi darurat medis yang mengancam nyawa, Anda dapat langsung mendatangi IGD rumah sakit mana saja tanpa rujukan.',
         },
       ],
-      note: 'Jika Anda menetap lebih dari 3 bulan di domisili baru, sangat dianjurkan untuk memindahkan FKTP secara permanen agar pelayanan lebih optimal.',
     },
   },
 ];
