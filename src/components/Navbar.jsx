@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useRef } from 'react';
 import {
   HeartPulse,
   Menu,
@@ -7,79 +7,22 @@ import {
   ChevronDown
 } from 'lucide-react';
 import PillCTAButton from './ui/PillCTAButton';
+import { useScrolledState } from '../hooks/useScrolledState';
+import { useClickOutside } from '../hooks/useClickOutside';
+import { navEducationalModules } from '../data/bpjsData';
 
-// Grouped sub-items for educational guides
-const educationalModules = [
-  {
-    href: '#jenis-bpjs',
-    title: 'Jenis Kepesertaan BPJS',
-    desc: 'Kategori PBI, Mandiri (PBPU), dan PPU beserta iurannya',
-  },
-  {
-    href: '#layanan-puskesmas',
-    title: 'Layanan Tercover Puskesmas',
-    desc: 'Cakupan poli umum, KIA/KB, gigi, dan laboratorium',
-  },
-  {
-    href: '#layanan-digital',
-    title: 'Fitur Layanan Digital JKN',
-    desc: 'Antrean online mandiri, kartu digital KIS, dan skrining',
-  },
-  {
-    href: '#solusi-adm',
-    title: 'Aktivasi & Balik Domisili',
-    desc: 'Solusi kartu nonaktif, cicilan REHAB, dan pindah faskes',
-  },
-];
-
-export default function Navbar() {
+export default function Navbar({ modules = navEducationalModules }) {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const [isScrolled, setIsScrolled] = useState(false);
   const [dropdownOpen, setDropdownOpen] = useState(false);
   const dropdownRef = useRef(null);
   const headerRef = useRef(null);
 
-  // Precision scroll detection using IntersectionObserver on #hero-section
-  useEffect(() => {
-    const heroEl = document.getElementById('hero-section');
-    if (!heroEl) {
-      const handleScrollFallback = () => {
-        setIsScrolled(window.scrollY > 400);
-      };
-      window.addEventListener('scroll', handleScrollFallback, { passive: true });
-      return () => window.removeEventListener('scroll', handleScrollFallback);
-    }
+  // Precision scroll detection via custom hook
+  const isScrolled = useScrolledState('hero-section', 0.15);
 
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        setIsScrolled(!entry.isIntersecting);
-      },
-      {
-        threshold: 0.15,
-      }
-    );
-
-    observer.observe(heroEl);
-    return () => observer.disconnect();
-  }, []);
-
-  // Close desktop dropdown & mobile drawer on outside click
-  useEffect(() => {
-    function handleClickOutside(event) {
-      if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
-        setDropdownOpen(false);
-      }
-      if (headerRef.current && !headerRef.current.contains(event.target)) {
-        setMobileMenuOpen(false);
-      }
-    }
-    document.addEventListener('mousedown', handleClickOutside);
-    document.addEventListener('touchstart', handleClickOutside, { passive: true });
-    return () => {
-      document.removeEventListener('mousedown', handleClickOutside);
-      document.removeEventListener('touchstart', handleClickOutside);
-    };
-  }, []);
+  // Click outside handling via custom hooks
+  useClickOutside(dropdownRef, () => setDropdownOpen(false), dropdownOpen);
+  useClickOutside(headerRef, () => setMobileMenuOpen(false), mobileMenuOpen);
 
   return (
     <>
@@ -146,13 +89,13 @@ export default function Navbar() {
                 />
               </button>
 
-              {/* Dropdown Menu Flyout: Clean Typographic Editorial Links with Green Hover */}
+              {/* Dropdown Menu Flyout */}
               {dropdownOpen && (
                 <div
                   className="absolute top-full left-0 mt-3 w-80 sm:w-88 rounded-2xl p-2.5 bg-white border border-slate-200/90 text-slate-900 shadow-2xl ring-1 ring-black/10 z-50 animate-in fade-in slide-in-from-top-2"
                 >
                   <div className="space-y-1">
-                    {educationalModules.map((item) => (
+                    {modules.map((item) => (
                       <a
                         key={item.href}
                         href={item.href}
@@ -230,7 +173,7 @@ export default function Navbar() {
             className="lg:hidden border-b border-slate-200 bg-white text-slate-900 shadow-2xl px-5 pt-4 pb-6 space-y-3"
           >
             <div className="space-y-1">
-              {educationalModules.map((item) => (
+              {modules.map((item) => (
                 <a
                   key={item.href}
                   href={item.href}

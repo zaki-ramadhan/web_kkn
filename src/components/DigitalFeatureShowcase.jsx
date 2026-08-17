@@ -1,34 +1,8 @@
 import React from 'react';
 import { ArrowUpRight, CheckCircle2 } from 'lucide-react';
+import { digitalFeatures as defaultFeatures } from '../data/bpjsData';
 
-const digitalFeatures = [
-  {
-    number: '01',
-    title: 'Booking Antrean Puskesmas dari Rumah',
-    desc: 'Warga tidak perlu lagi datang subuh jam 05.00 pagi untuk mengambil nomor antrean fisik. Pilih poli tujuan dan dokter mulai H-1 melalui ponsel, lalu datang cukup 15 menit sebelum estimasi jam pelayanan.',
-    highlight: 'Hemat waktu antrean 2 hingga 3 jam di loket fisik Puskesmas.',
-  },
-  {
-    number: '02',
-    title: 'Kartu Indonesia Sehat (KIS) Digital',
-    desc: 'Cukup perlihatkan barcode KIS di layar ponsel saat verifikasi loket pendaftaran. Kartu digital ini berkekuatan hukum sah di seluruh Puskesmas dan Rumah Sakit mitra BPJS tanpa perlu membawa fotokopi kartu fisik.',
-    highlight: 'Solusi praktis saat kartu fisik hilang, rusak, atau tertinggal di rumah.',
-  },
-  {
-    number: '03',
-    title: 'Skrining Riwayat Kesehatan Berkala',
-    desc: 'Kuesioner evaluasi mandiri singkat untuk mendeteksi dini risiko penyakit tidak menular seperti hipertensi (darah tinggi), diabetes melitus, dan jantung koroner secara berkala minimal 1 kali per tahun.',
-    highlight: 'Hasil skrining langsung terhubung ke rekam medis Puskesmas sebagai acuan dokter.',
-  },
-  {
-    number: '04',
-    title: 'Perubahan Faskes Domisili Mandiri',
-    desc: 'Bagi warga pendatang atau warga yang faskes pertamanya masih terdaftar di luar kota, Anda dapat memindahkan faskes tingkat pertama ke Puskesmas Sukamakmur secara mandiri tanpa perlu surat pengantar.',
-    highlight: 'Syarat: terdaftar minimal 3 bulan di faskes lama. Aktif per tanggal 1 bulan berikutnya.',
-  },
-];
-
-export default function DigitalFeatureShowcase() {
+export default function DigitalFeatureShowcase({ features = defaultFeatures }) {
   return (
     <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-start">
       {/* Left Column: Authentic Real Context Photo & Village Assistance Banner */}
@@ -75,7 +49,7 @@ export default function DigitalFeatureShowcase() {
 
       {/* Right Column: Editorial Step Flow with Clean Dividers (No Card Boxes) */}
       <div className="lg:col-span-7 divide-y divide-slate-200/90">
-        {digitalFeatures.map((item) => (
+        {features.map((item) => (
           <div key={item.number} className="py-7 first:pt-0 last:pb-0">
             <div className="flex items-start gap-4 sm:gap-5">
               <span className="font-grotesk font-black text-3xl sm:text-4xl text-brand-850 shrink-0 mt-0.5">
