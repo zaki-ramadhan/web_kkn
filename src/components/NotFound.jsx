@@ -1,31 +1,11 @@
 import React from 'react';
-import { HeartPulse, ArrowLeft } from 'lucide-react';
+import { ArrowLeft } from 'lucide-react';
 
 export default function NotFound() {
   return (
     <div className="min-h-screen bg-white text-slate-900 flex flex-col justify-between font-sans">
-      {/* Top Navbar Header with Unclickable Logo */}
-      <header className="fixed top-0 inset-x-0 z-50 bg-white/95 backdrop-blur-md border-b border-slate-200/80 shadow-subtle">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
-          {/* Logo (Static / Non-clickable) */}
-          <div className="flex items-center gap-3 select-none">
-            <div className="w-10 h-10 rounded-xl flex items-center justify-center bg-brand-850 text-lime-400 shadow-subtle">
-              <HeartPulse className="w-6 h-6" />
-            </div>
-            <div>
-              <span className="font-grotesk font-bold text-lg tracking-tight block leading-tight text-slate-900">
-                POSKO SEHAT BPJS
-              </span>
-              <span className="text-xs sm:text-sm font-medium block text-brand-700">
-                Program KKN Tematik 2026
-              </span>
-            </div>
-          </div>
-        </div>
-      </header>
-
-      {/* Main Content */}
-      <main className="max-w-3xl mx-auto w-full px-4 sm:px-6 lg:px-8 pt-36 pb-16 sm:pt-44 sm:pb-24 my-auto">
+      {/* Main Content (Centered) */}
+      <main className="max-w-3xl mx-auto w-full px-4 sm:px-6 lg:px-8 py-16 sm:py-24 my-auto">
         <span className="font-grotesk font-black text-sm text-slate-400 tracking-wider uppercase block mb-3">
           Error 404
         </span>
