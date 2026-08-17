@@ -19,21 +19,26 @@ export default function CategoryCard({
 
   return (
     <div
-      className={`rounded-2xl p-8 flex flex-col justify-between transition-all duration-300 relative ${
+      className={`rounded-3xl p-8 sm:p-9 flex flex-col justify-between transition-all duration-300 ease-out relative overflow-hidden ${
         isForest
-          ? 'bg-brand-850 text-white shadow-elevation border border-brand-700/50 lg:-translate-y-2 ring-1 ring-white/10'
-          : 'bg-white text-slate-800 border border-slate-200 shadow-soft hover:shadow-elevation'
+          ? 'bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-brand-800 via-brand-850 to-brand-950 text-white shadow-forest-card border border-brand-700/80 ring-1 ring-white/15 lg:-translate-y-2 hover:-translate-y-3'
+          : 'bg-gradient-to-b from-white via-white to-slate-50/60 text-slate-800 border border-slate-200/90 shadow-card-depth hover:shadow-card-hover hover:-translate-y-1.5'
       }`}
     >
+      {/* Subtle ambient light for dark cards */}
       {isForest && (
-        <div className="absolute -top-3.5 left-1/2 -translate-x-1/2">
-          <Badge variant="lime" size="xs" className="shadow-subtle">
+        <div className="absolute -right-16 -top-16 w-48 h-48 bg-lime-400/15 rounded-full blur-3xl pointer-events-none" />
+      )}
+
+      {isForest && (
+        <div className="absolute -top-3.5 left-1/2 -translate-x-1/2 z-10">
+          <Badge variant="lime" size="xs" className="shadow-elevation ring-2 ring-brand-950">
             Paling Banyak Dipakai
           </Badge>
         </div>
       )}
 
-      <div>
+      <div className="relative z-10">
         <div className="mb-4">
           <Badge variant={isForest ? 'brandDark' : 'slate'} size="xs">
             {badge}
@@ -51,21 +56,21 @@ export default function CategoryCard({
 
         {/* Price capsule */}
         <div
-          className={`rounded-xl p-4 mb-6 ${
+          className={`rounded-2xl p-5 mb-6 transition-colors ${
             isForest
-              ? 'bg-brand-900/80 border border-white/10'
-              : 'bg-brand-50/60 border border-brand-100'
+              ? 'bg-brand-900/90 border border-white/10 shadow-inner-glow'
+              : 'bg-gradient-to-r from-brand-50/80 to-white border border-brand-100/90 shadow-subtle'
           }`}
         >
           <div
-            className={`font-grotesk text-2xl font-extrabold ${
+            className={`font-grotesk text-2xl sm:text-3xl font-extrabold ${
               isForest ? 'text-lime-400' : 'text-brand-850'
             }`}
           >
             {price}
           </div>
           <p
-            className={`text-xs font-semibold mt-0.5 ${
+            className={`text-xs font-semibold mt-1 ${
               isForest ? 'text-slate-300' : 'text-slate-600'
             }`}
           >
@@ -74,7 +79,7 @@ export default function CategoryCard({
         </div>
 
         <p
-          className={`text-xs leading-relaxed mb-6 font-medium ${
+          className={`text-xs sm:text-sm leading-relaxed mb-6 font-normal ${
             isForest ? 'text-slate-200' : 'text-slate-600'
           }`}
         >
@@ -89,7 +94,7 @@ export default function CategoryCard({
         />
       </div>
 
-      <div className="pt-4 border-t border-dashed border-slate-200/30">
+      <div className="pt-5 border-t border-slate-200/40 relative z-10">
         <PillCTAButton
           href={ctaLink}
           target={ctaLink?.startsWith('http') ? '_blank' : undefined}

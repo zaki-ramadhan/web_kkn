@@ -61,13 +61,16 @@ export default function App() {
       <Navbar />
 
       {/* ====================================================================
-          HERO SECTION
+          HERO SECTION (Enhanced with ambient light aura & depth)
           ==================================================================== */}
-      <section className="relative pt-12 pb-20 md:pt-16 md:pb-24 overflow-hidden bg-gradient-to-b from-slate-50 via-white to-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <section className="relative pt-12 pb-20 md:pt-16 md:pb-24 overflow-hidden bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-lime-400/10 via-brand-50/40 to-white">
+        {/* Subtle decorative background light orbs */}
+        <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[700px] h-[350px] bg-gradient-to-tr from-lime-400/15 to-brand-500/10 rounded-full blur-[110px] pointer-events-none" />
+
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
           {/* Main Hero Pill Badge */}
           <div className="mb-6">
-            <Badge variant="brand" size="md" pulseDot dotColor="bg-lime-500">
+            <Badge variant="brand" size="md" pulseDot dotColor="bg-lime-500" className="shadow-subtle">
               Program Pengabdian Mahasiswa KKN 2026 • Desa Sukamakmur
             </Badge>
           </div>
@@ -120,7 +123,7 @@ export default function App() {
       {/* ====================================================================
           SECTION 1: JENIS-JENIS BPJS (Item #3)
           ==================================================================== */}
-      <section id="jenis-bpjs" className="py-20 bg-slate-50 border-y border-slate-200/80">
+      <section id="jenis-bpjs" className="py-20 bg-gradient-to-b from-slate-50 via-slate-50/80 to-white border-y border-slate-200/80">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <SectionHeader
             badge="Pilar 1 • Kepesertaan"
@@ -189,7 +192,7 @@ export default function App() {
       {/* ====================================================================
           SECTION 3: JENIS PELAYANAN DI PUSKESMAS TERCOVER BPJS (Item #5)
           ==================================================================== */}
-      <section id="layanan-puskesmas" className="py-20 bg-slate-50 border-t border-slate-200/80">
+      <section id="layanan-puskesmas" className="py-20 bg-gradient-to-b from-slate-50 via-slate-50/70 to-white border-t border-slate-200/80">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
             <div>
@@ -237,8 +240,8 @@ export default function App() {
           ==================================================================== */}
       <section id="layanan-digital" className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="bg-brand-850 rounded-3xl p-8 sm:p-12 lg:p-16 text-white relative overflow-hidden shadow-elevation border border-brand-700">
-            <div className="absolute -right-20 -top-20 w-80 h-80 bg-lime-400/10 rounded-full blur-3xl pointer-events-none" />
+          <div className="bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-brand-800 via-brand-850 to-brand-950 rounded-3xl p-8 sm:p-12 lg:p-16 text-white relative overflow-hidden shadow-forest-card border border-brand-700/80 ring-1 ring-white/10">
+            <div className="absolute -right-20 -top-20 w-80 h-80 bg-lime-400/15 rounded-full blur-3xl pointer-events-none" />
 
             <div className="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
               {/* Left Column */}
@@ -296,7 +299,7 @@ export default function App() {
       {/* ====================================================================
           SECTION 5: CARA AKTIVASI BPJS MATI & BALIK DOMISILI FKTP (Items #2 & #4)
           ==================================================================== */}
-      <section id="solusi-adm" className="py-20 bg-slate-50 border-t border-slate-200/80">
+      <section id="solusi-adm" className="py-20 bg-gradient-to-b from-slate-50 via-slate-50/80 to-white border-t border-slate-200/80">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
             {/* Left Sticky Guide */}
@@ -373,24 +376,24 @@ export default function App() {
           </div>
 
           {/* Emergency Guidelines Callout */}
-          <div className="mt-12 bg-slate-50 border border-slate-200 rounded-2xl p-6 sm:p-8">
-            <Heading as="h4" level="4" color="dark" className="mb-2 flex items-center gap-2">
-              <AlertTriangle className="w-5 h-5 text-amber-600" /> Catatan Penting: Kondisi Gawat Darurat Medis
+          <div className="mt-12 bg-gradient-to-r from-rose-50/70 via-rose-50/40 to-white border border-rose-200/90 rounded-3xl p-6 sm:p-8 shadow-card-depth">
+            <Heading as="h4" level="4" color="dark" className="mb-2 flex items-center gap-2 text-rose-950 font-bold">
+              <AlertTriangle className="w-5 h-5 text-rose-600" /> Catatan Penting: Kondisi Gawat Darurat Medis
             </Heading>
             <p className="text-sm sm:text-base text-slate-800 leading-relaxed mb-4 font-normal">
               Untuk kondisi medis darurat yang mengancam keselamatan, pasien dapat <strong>langsung mendatangi UGD Rumah Sakit terdekat tanpa perlu surat rujukan faskes tingkat pertama</strong>:
             </p>
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 text-xs sm:text-sm font-semibold text-slate-900">
-              <div className="p-3.5 bg-white rounded-xl border border-slate-200 flex items-start gap-2 shadow-subtle">
-                <CheckCircle2 className="w-4 h-4 text-brand-700 shrink-0 mt-0.5" />
+              <div className="p-4 bg-white rounded-2xl border border-rose-100 flex items-start gap-2.5 shadow-subtle">
+                <CheckCircle2 className="w-4 h-4 text-rose-600 shrink-0 mt-0.5" />
                 <span>Gangguan pernapasan akut / henti napas</span>
               </div>
-              <div className="p-3.5 bg-white rounded-xl border border-slate-200 flex items-start gap-2 shadow-subtle">
-                <CheckCircle2 className="w-4 h-4 text-brand-700 shrink-0 mt-0.5" />
+              <div className="p-4 bg-white rounded-2xl border border-rose-100 flex items-start gap-2.5 shadow-subtle">
+                <CheckCircle2 className="w-4 h-4 text-rose-600 shrink-0 mt-0.5" />
                 <span>Kehilangan kesadaran / cedera fisik berat</span>
               </div>
-              <div className="p-3.5 bg-white rounded-xl border border-slate-200 flex items-start gap-2 shadow-subtle">
-                <CheckCircle2 className="w-4 h-4 text-brand-700 shrink-0 mt-0.5" />
+              <div className="p-4 bg-white rounded-2xl border border-rose-100 flex items-start gap-2.5 shadow-subtle">
+                <CheckCircle2 className="w-4 h-4 text-rose-600 shrink-0 mt-0.5" />
                 <span>Pendarahan hebat / kejang demam anak</span>
               </div>
             </div>

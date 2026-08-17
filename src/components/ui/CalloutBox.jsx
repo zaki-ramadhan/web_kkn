@@ -9,10 +9,10 @@ export default function CalloutBox({
   className = '',
 }) {
   const variantStyles = {
-    brand: 'bg-brand-50/80 border-brand-200 text-slate-900',
-    slate: 'bg-slate-50 border-slate-200 text-slate-900',
-    rose: 'bg-rose-50 border-rose-200 text-rose-950',
-    dark: 'bg-brand-900 border-brand-700 text-white',
+    brand: 'bg-gradient-to-r from-brand-50 via-brand-50/70 to-white border-brand-200/90 text-slate-900 shadow-card-depth',
+    slate: 'bg-gradient-to-r from-slate-50 via-white to-slate-50 border-slate-200/90 text-slate-900 shadow-card-depth',
+    rose: 'bg-gradient-to-r from-rose-50 via-rose-50/60 to-white border-rose-200 text-rose-950 shadow-card-depth',
+    dark: 'bg-gradient-to-br from-brand-850 via-brand-900 to-brand-950 border-brand-700/80 text-white shadow-forest-card',
   };
 
   const titleStyles = {
@@ -23,30 +23,30 @@ export default function CalloutBox({
   };
 
   const descStyles = {
-    brand: 'text-slate-800 font-normal',
-    slate: 'text-slate-800 font-normal',
-    rose: 'text-rose-900 font-normal',
-    dark: 'text-slate-200 font-normal',
+    brand: 'text-slate-800',
+    slate: 'text-slate-800',
+    rose: 'text-rose-900',
+    dark: 'text-slate-200',
   };
 
   const iconBgStyles = {
-    brand: 'bg-brand-850 text-lime-400',
-    slate: 'bg-slate-800 text-white',
-    rose: 'bg-rose-600 text-white',
-    dark: 'bg-lime-400 text-brand-950',
+    brand: 'bg-gradient-to-br from-brand-850 to-brand-950 text-lime-400 border border-white/10 shadow-elevation',
+    slate: 'bg-gradient-to-br from-slate-800 to-slate-950 text-white border border-white/10 shadow-elevation',
+    rose: 'bg-gradient-to-br from-rose-600 to-rose-700 text-white border border-white/10 shadow-elevation',
+    dark: 'bg-lime-400 text-brand-950 shadow-glow-lime',
   };
 
   return (
     <div
-      className={`border rounded-2xl p-6 sm:p-8 ${
+      className={`relative border rounded-2xl p-6 sm:p-8 overflow-hidden ${
         variantStyles[variant] || variantStyles.brand
       } ${className}`}
     >
-      <div className="flex flex-col md:flex-row items-start justify-between gap-6">
+      <div className="flex flex-col md:flex-row items-start justify-between gap-6 relative z-10">
         <div className="flex items-start gap-4">
           {Icon && (
             <div
-              className={`p-3 rounded-xl shrink-0 mt-0.5 shadow-subtle ${
+              className={`p-3.5 rounded-2xl shrink-0 mt-0.5 ${
                 iconBgStyles[variant] || iconBgStyles.brand
               }`}
             >
@@ -63,7 +63,7 @@ export default function CalloutBox({
             </h4>
             {description && (
               <p
-                className={`text-sm sm:text-base mt-1.5 leading-relaxed max-w-3xl ${
+                className={`text-sm sm:text-base mt-2 leading-relaxed max-w-3xl font-normal ${
                   descStyles[variant] || descStyles.brand
                 }`}
               >
