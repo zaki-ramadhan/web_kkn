@@ -57,34 +57,34 @@ export default function App() {
 
   return (
     <div className="min-h-screen bg-white text-slate-800 font-sans selection:bg-lime-400 selection:text-brand-950">
-      {/* Top Ribbon & Sticky Header */}
+      {/* Top Ribbon & Dynamic Glassmorphism Header */}
       <Navbar />
 
       {/* ====================================================================
-          HERO SECTION (Cinematic Dark Background with Optimized Cover Photo)
+          HERO SECTION (High Visibility Dark Cover Photo & Text Legibility)
           ==================================================================== */}
       <section className="relative pt-16 pb-24 md:pt-20 md:pb-28 overflow-hidden bg-brand-950 text-white">
-        {/* Background Image with Object-Cover and Scrim */}
+        {/* Background Image with Crisp Object-Cover and Increased Clarity */}
         <img
           src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&w=1920&h=1080&q=75&fm=webp"
           alt="Layanan Kesehatan Masyarakat"
-          className="absolute inset-0 w-full h-full object-cover object-center opacity-20 pointer-events-none"
+          className="absolute inset-0 w-full h-full object-cover object-center opacity-45 pointer-events-none"
         />
 
-        {/* Multi-layer Dark Gradient Scrim */}
-        <div className="absolute inset-0 bg-gradient-to-b from-brand-950/95 via-brand-950/80 to-brand-950 pointer-events-none" />
+        {/* Multi-layer Dark Gradient Scrim for Guaranteed Text Readability */}
+        <div className="absolute inset-0 bg-gradient-to-b from-brand-950/90 via-brand-950/75 to-brand-950 pointer-events-none" />
 
         {/* Ambient Center Glow */}
-        <div className="absolute top-1/3 left-1/2 -translate-x-1/2 w-[600px] h-[300px] bg-lime-400/10 rounded-full blur-[120px] pointer-events-none" />
+        <div className="absolute top-1/3 left-1/2 -translate-x-1/2 w-[600px] h-[300px] bg-lime-400/15 rounded-full blur-[120px] pointer-events-none" />
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
           {/* Plain Text Eyebrow (No chip, no blinking dot) */}
-          <span className="inline-block text-xs sm:text-sm font-semibold text-lime-400 mb-4 tracking-normal">
+          <span className="inline-block text-xs sm:text-sm font-semibold text-lime-400 mb-4 tracking-normal drop-shadow-sm">
             Program Pengabdian Mahasiswa KKN 2026 • Desa Sukamakmur
           </span>
 
           {/* Heading */}
-          <Heading as="h1" level="1" color="light" className="max-w-4xl mx-auto mb-6 text-balance text-white leading-tight">
+          <Heading as="h1" level="1" color="light" className="max-w-4xl mx-auto mb-6 text-balance text-white leading-tight drop-shadow-md">
             Panduan Lengkap Layanan{' '}
             <span className="text-lime-300 underline decoration-lime-400 decoration-4 underline-offset-8">
               BPJS Kesehatan
@@ -93,7 +93,7 @@ export default function App() {
           </Heading>
 
           {/* Subtitle */}
-          <p className="text-base sm:text-lg text-slate-200 max-w-2xl mx-auto leading-relaxed mb-8 text-balance font-normal">
+          <p className="text-base sm:text-lg text-slate-100 max-w-2xl mx-auto leading-relaxed mb-8 text-balance font-normal drop-shadow-sm">
             Media edukasi kesehatan dari mahasiswa KKN untuk warga: alur berobat mudah tanpa antre panjang,
             cara re-aktivasi kartu nonaktif, prosedur pindah faskes domisili, dan pemanfaatan antrean online.
           </p>
