@@ -40,7 +40,7 @@ export default function AccordionItem({
       </button>
 
       {isOpen && (
-        <div className="px-6 pb-6 pt-1 text-slate-600 text-sm leading-relaxed border-t border-slate-100 bg-slate-50/50">
+        <div className="px-6 pb-6 pt-1 text-slate-800 text-sm sm:text-base leading-relaxed border-t border-slate-100 bg-slate-50/70 font-normal">
           <p>{answer}</p>
         </div>
       )}

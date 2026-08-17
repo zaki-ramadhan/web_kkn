@@ -13,8 +13,8 @@ export default function StatCard({
         <span className="font-grotesk text-3xl font-bold text-slate-900">{value}</span>
         {Icon && <Icon className="w-5 h-5 text-brand-700" />}
       </div>
-      <p className="text-sm font-semibold text-slate-900">{label}</p>
-      <p className="text-xs text-slate-500 mt-0.5">{detail}</p>
+      <p className="text-sm font-bold text-slate-900">{label}</p>
+      <p className="text-xs text-slate-600 font-medium mt-0.5">{detail}</p>
     </div>
   );
 }

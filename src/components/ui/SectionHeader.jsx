@@ -29,7 +29,7 @@ export default function SectionHeader({
         {title}
       </Heading>
       {subtitle && (
-        <p className="text-slate-600 mt-4 text-base leading-relaxed">
+        <p className="text-slate-700 mt-4 text-base leading-relaxed">
           {subtitle}
         </p>
       )}

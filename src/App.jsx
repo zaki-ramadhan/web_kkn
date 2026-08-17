@@ -82,7 +82,7 @@ export default function App() {
           </Heading>
 
           {/* Subtitle */}
-          <p className="text-base sm:text-lg text-slate-600 max-w-2xl mx-auto leading-relaxed mb-8 text-balance">
+          <p className="text-base sm:text-lg text-slate-700 max-w-2xl mx-auto leading-relaxed mb-8 text-balance font-normal">
             Media edukasi kesehatan dari mahasiswa KKN untuk warga: alur berobat mudah tanpa antre panjang,
             cara re-aktivasi kartu nonaktif, prosedur pindah faskes domisili, dan pemanfaatan antrean online.
           </p>
@@ -171,7 +171,7 @@ export default function App() {
             ))}
           </div>
 
-          {/* Essential Rule Notice */}
+          {/* Essential Rule Notice Callout */}
           <CalloutBox
             icon={Info}
             variant="brand"
@@ -202,7 +202,7 @@ export default function App() {
                 Jenis Pelayanan Puskesmas Tercover BPJS
               </Heading>
             </div>
-            <p className="text-slate-600 text-sm max-w-md">
+            <p className="text-slate-700 text-sm sm:text-base max-w-md font-normal leading-relaxed">
               Seluruh tindakan medis dasar, tindakan preventif, dan obat-obatan formularium nasional diberikan 100% tanpa iur biaya bagi peserta aktif.
             </p>
           </div>
@@ -253,7 +253,7 @@ export default function App() {
                   Fitur & Pemanfaatan Layanan Digital JKN
                 </Heading>
 
-                <p className="text-slate-200 text-sm sm:text-base mb-8 leading-relaxed">
+                <p className="text-slate-200 text-sm sm:text-base mb-8 leading-relaxed font-normal">
                   Pelajari alur dan kemudahan akses layanan digital BPJS Kesehatan mulai dari registrasi akun, pendaftaran antrean faskes secara online, hingga kartu digital KIS.
                 </p>
 
@@ -311,7 +311,7 @@ export default function App() {
                 Aktivasi BPJS Mati & Balik Domisili FKTP
               </Heading>
 
-              <p className="text-slate-600 text-base leading-relaxed mb-6">
+              <p className="text-slate-700 text-base leading-relaxed mb-6 font-normal">
                 Jangan panik jika status kartu Anda nonaktif atau faskes terdaftar masih di kampung halaman lama. Simak solusi mandiri dan ketentuan terbarunya di sini.
               </p>
 
@@ -321,7 +321,7 @@ export default function App() {
                 title="Program REHAB (Cicilan Iuran)"
                 description="Bagi peserta PBPU/Mandiri dengan tunggakan lebih dari 3 bulan s.d 24 bulan, Anda dapat mencicil tunggakan hingga 12 tahapan melalui menu REHAB di layanan digital JKN."
                 footer={
-                  <span className="text-brand-850 flex items-center gap-1.5">
+                  <span className="text-brand-900 font-bold flex items-center gap-1.5">
                     <MapPin className="w-4 h-4 text-brand-700" /> Syarat Pindah FKTP: Terdaftar minimal 3 bulan
                   </span>
                 }
@@ -377,19 +377,19 @@ export default function App() {
             <Heading as="h4" level="4" color="dark" className="mb-2 flex items-center gap-2">
               <AlertTriangle className="w-5 h-5 text-amber-600" /> Catatan Penting: Kondisi Gawat Darurat Medis
             </Heading>
-            <p className="text-xs sm:text-sm text-slate-700 leading-relaxed mb-4">
+            <p className="text-sm sm:text-base text-slate-800 leading-relaxed mb-4 font-normal">
               Untuk kondisi medis darurat yang mengancam keselamatan, pasien dapat <strong>langsung mendatangi UGD Rumah Sakit terdekat tanpa perlu surat rujukan faskes tingkat pertama</strong>:
             </p>
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 text-xs font-medium text-slate-800">
-              <div className="p-3 bg-white rounded-xl border border-slate-200 flex items-start gap-2 shadow-subtle">
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 text-xs sm:text-sm font-semibold text-slate-900">
+              <div className="p-3.5 bg-white rounded-xl border border-slate-200 flex items-start gap-2 shadow-subtle">
                 <CheckCircle2 className="w-4 h-4 text-brand-700 shrink-0 mt-0.5" />
                 <span>Gangguan pernapasan akut / henti napas</span>
               </div>
-              <div className="p-3 bg-white rounded-xl border border-slate-200 flex items-start gap-2 shadow-subtle">
+              <div className="p-3.5 bg-white rounded-xl border border-slate-200 flex items-start gap-2 shadow-subtle">
                 <CheckCircle2 className="w-4 h-4 text-brand-700 shrink-0 mt-0.5" />
                 <span>Kehilangan kesadaran / cedera fisik berat</span>
               </div>
-              <div className="p-3 bg-white rounded-xl border border-slate-200 flex items-start gap-2 shadow-subtle">
+              <div className="p-3.5 bg-white rounded-xl border border-slate-200 flex items-start gap-2 shadow-subtle">
                 <CheckCircle2 className="w-4 h-4 text-brand-700 shrink-0 mt-0.5" />
                 <span>Pendarahan hebat / kejang demam anak</span>
               </div>

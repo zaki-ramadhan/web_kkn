@@ -9,10 +9,24 @@ export default function CalloutBox({
   className = '',
 }) {
   const variantStyles = {
-    brand: 'bg-brand-50 border-brand-200 text-slate-900',
+    brand: 'bg-brand-50/80 border-brand-200 text-slate-900',
     slate: 'bg-slate-50 border-slate-200 text-slate-900',
-    rose: 'bg-rose-50 border-rose-200 text-rose-900',
-    dark: 'bg-brand-900/80 border-white/10 text-white',
+    rose: 'bg-rose-50 border-rose-200 text-rose-950',
+    dark: 'bg-brand-900 border-brand-700 text-white',
+  };
+
+  const titleStyles = {
+    brand: 'text-slate-900',
+    slate: 'text-slate-900',
+    rose: 'text-rose-950',
+    dark: 'text-white',
+  };
+
+  const descStyles = {
+    brand: 'text-slate-800 font-normal',
+    slate: 'text-slate-800 font-normal',
+    rose: 'text-rose-900 font-normal',
+    dark: 'text-slate-200 font-normal',
   };
 
   const iconBgStyles = {
@@ -32,7 +46,7 @@ export default function CalloutBox({
         <div className="flex items-start gap-4">
           {Icon && (
             <div
-              className={`p-3 rounded-xl shrink-0 mt-0.5 ${
+              className={`p-3 rounded-xl shrink-0 mt-0.5 shadow-subtle ${
                 iconBgStyles[variant] || iconBgStyles.brand
               }`}
             >
@@ -40,9 +54,19 @@ export default function CalloutBox({
             </div>
           )}
           <div>
-            <h4 className="font-grotesk font-bold text-lg">{title}</h4>
+            <h4
+              className={`font-grotesk font-bold text-lg leading-snug ${
+                titleStyles[variant] || titleStyles.brand
+              }`}
+            >
+              {title}
+            </h4>
             {description && (
-              <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-200 mt-1 leading-relaxed max-w-3xl">
+              <p
+                className={`text-sm sm:text-base mt-1.5 leading-relaxed max-w-3xl ${
+                  descStyles[variant] || descStyles.brand
+                }`}
+              >
                 {description}
               </p>
             )}

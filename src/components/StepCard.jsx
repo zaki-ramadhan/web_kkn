@@ -54,12 +54,12 @@ export default function StepCard({
         <Heading as="h3" level="4" color="dark" className="mb-2 leading-tight">
           {title}
         </Heading>
-        <p className="text-xs text-slate-600 leading-relaxed mb-4">
+        <p className="text-xs text-slate-700 leading-relaxed mb-4 font-normal">
           {desc}
         </p>
       </div>
       {highlight && (
-        <div className="pt-3 border-t border-slate-200 text-[11px] font-bold text-brand-700 flex items-center gap-1.5">
+        <div className="pt-3 border-t border-slate-200 text-[11px] font-bold text-brand-800 flex items-center gap-1.5">
           <Check className="w-3.5 h-3.5 text-lime-600 shrink-0" />
           <span>{highlight}</span>
         </div>
