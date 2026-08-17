@@ -2,6 +2,7 @@ import React, { useState, useMemo } from 'react';
 import SectionWrapper from '../ui/SectionWrapper';
 import Heading from '../ui/Heading';
 import Eyebrow from '../ui/Eyebrow';
+import Stabilo from '../ui/Stabilo';
 import TabGroup from '../ui/TabGroup';
 import BentoServiceCard from '../BentoServiceCard';
 import { serviceFilterTabs, puskesmasServices } from '../../data/bpjsData';
@@ -25,7 +26,7 @@ export default function PuskesmasServicesSection({
             Cakupan Manfaat Layanan
           </Eyebrow>
           <Heading as="h2" level="2" color="dark">
-            Jenis Pelayanan Puskesmas Tercover BPJS
+            Jenis Pelayanan Puskesmas <Stabilo>Tercover BPJS</Stabilo>
           </Heading>
         </div>
         <p className="text-slate-700 text-base max-w-md font-normal leading-relaxed">

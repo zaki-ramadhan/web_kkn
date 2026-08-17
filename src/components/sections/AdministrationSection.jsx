@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import SectionWrapper from '../ui/SectionWrapper';
 import Heading from '../ui/Heading';
 import Eyebrow from '../ui/Eyebrow';
+import Stabilo from '../ui/Stabilo';
 import TopShimmer from '../ui/TopShimmer';
 import AccordionItem from '../AccordionItem';
 import { administrativeFaqs } from '../../data/bpjsData';
@@ -23,7 +24,7 @@ export default function AdministrationSection({ faqs = administrativeFaqs }) {
           </Eyebrow>
 
           <Heading as="h2" level="2" color="dark" className="mb-4">
-            Aktivasi BPJS Mati & Balik Domisili FKTP
+            Aktivasi <Stabilo>BPJS Mati</Stabilo> & Balik Domisili FKTP
           </Heading>
 
           <p className="text-slate-700 text-base leading-relaxed mb-6 font-normal">

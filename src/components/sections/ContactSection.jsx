@@ -2,6 +2,7 @@ import React from 'react';
 import SectionWrapper from '../ui/SectionWrapper';
 import SectionHeader from '../ui/SectionHeader';
 import Eyebrow from '../ui/Eyebrow';
+import Stabilo from '../ui/Stabilo';
 import ContactCard from '../ContactCard';
 import EmergencyAdvisory from '../EmergencyAdvisory';
 import TeamMarqueeSlider from '../TeamMarqueeSlider';
@@ -16,7 +17,11 @@ export default function ContactSection({
     <SectionWrapper id="darurat" bg="white">
       <SectionHeader
         badge="Pendampingan Warga Desa"
-        title="Kontak & Narahubung Tim Mahasiswa KKN"
+        title={
+          <>
+            Kontak & Narahubung <Stabilo>Tim Mahasiswa KKN</Stabilo>
+          </>
+        }
         subtitle="Hubungi tim mahasiswa KKN kami jika Anda memerlukan bantuan informasi, pendampingan alur faskes, atau konsultasi langsung di posko desa."
       />
 

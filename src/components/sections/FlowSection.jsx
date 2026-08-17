@@ -1,6 +1,7 @@
 import React from 'react';
 import { Info } from 'lucide-react';
 import SectionHeader from '../ui/SectionHeader';
+import Stabilo from '../ui/Stabilo';
 import StepCard from '../StepCard';
 import CalloutBox from '../ui/CalloutBox';
 import PillCTAButton from '../ui/PillCTAButton';
@@ -12,7 +13,11 @@ export default function FlowSection({ steps = registrationSteps }) {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <SectionHeader
           badge="Alur Pelayanan Faskes"
-          title="Alur Pelayanan Pasien BPJS di FKTP / Puskesmas"
+          title={
+            <>
+              Alur Pelayanan Pasien BPJS di <Stabilo>FKTP & Puskesmas</Stabilo>
+            </>
+          }
           subtitle="Ikuti 5 langkah terpadu mulai dari pengambilan antrean hingga pengambilan obat tanpa biaya tambahan."
         />
       </div>

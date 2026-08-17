@@ -1,6 +1,7 @@
 import React from 'react';
 import SectionWrapper from '../ui/SectionWrapper';
 import SectionHeader from '../ui/SectionHeader';
+import Stabilo from '../ui/Stabilo';
 import CategoryCard from '../CategoryCard';
 import { bpjsCategories } from '../../data/bpjsData';
 
@@ -9,7 +10,11 @@ export default function CategorySection({ categories = bpjsCategories }) {
     <SectionWrapper id="jenis-bpjs" bg="slate">
       <SectionHeader
         badge="Kategori Kepesertaan"
-        title="Jenis-Jenis Kepesertaan BPJS Kesehatan"
+        title={
+          <>
+            Jenis-Jenis Kepesertaan <Stabilo>BPJS Kesehatan</Stabilo>
+          </>
+        }
         subtitle="Pahami kategori kepesertaan, besaran iuran, hak rawat inap, dan mekanisme pendaftarannya."
       />
 
