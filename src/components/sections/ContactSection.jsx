@@ -48,8 +48,8 @@ export default function ContactSection({
               15 Mahasiswa Tim Pengabdian KKN 2026
             </h3>
           </div>
-          <p className="text-sm text-slate-500 max-w-md font-normal leading-relaxed">
-            Daftar seluruh mahasiswa lintas fakultas yang bertugas di posko dan lapangan Desa Sukamakmur (arah kursor untuk jeda slider).
+          <p className="text-sm sm:text-base text-slate-600 max-w-md font-normal leading-relaxed">
+            Susunan 15 mahasiswa lintas program studi yang bertugas mendampingi warga di posko pelayanan dan edukasi kesehatan Desa Sukamakmur.
           </p>
         </div>
 
