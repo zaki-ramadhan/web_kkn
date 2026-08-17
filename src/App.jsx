@@ -57,13 +57,13 @@ export default function App() {
 
   return (
     <div className="min-h-screen bg-white text-slate-800 font-sans selection:bg-lime-400 selection:text-brand-950">
-      {/* Top Ribbon & Dynamic Glassmorphism Header */}
+      {/* Dynamic Glassmorphism Fixed Header */}
       <Navbar />
 
       {/* ====================================================================
           HERO SECTION (High Visibility Dark Cover Photo & Text Legibility)
           ==================================================================== */}
-      <section className="relative pt-16 pb-24 md:pt-20 md:pb-28 overflow-hidden bg-brand-950 text-white">
+      <section className="relative pt-28 pb-24 sm:pt-32 md:pt-36 md:pb-28 overflow-hidden bg-brand-950 text-white">
         {/* Background Image with Crisp Object-Cover and Increased Clarity */}
         <img
           src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&w=1920&h=1080&q=75&fm=webp"
