@@ -22,7 +22,6 @@ import AvatarStack from './components/ui/AvatarStack';
 import SectionHeader from './components/ui/SectionHeader';
 import StatCard from './components/ui/StatCard';
 import CalloutBox from './components/ui/CalloutBox';
-import Badge from './components/ui/Badge';
 import Heading from './components/ui/Heading';
 import CheckList from './components/ui/CheckList';
 import TabGroup from './components/ui/TabGroup';
@@ -199,11 +198,9 @@ export default function App() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
             <div>
-              <div className="mb-3">
-                <Badge variant="brand" size="sm">
-                  Pilar 3 • Cakupan Manfaat
-                </Badge>
-              </div>
+              <span className="block text-sm sm:text-base font-semibold text-brand-800 mb-2.5 tracking-normal">
+                Pilar 3 • Cakupan Manfaat
+              </span>
               <Heading as="h2" level="2" color="dark">
                 Jenis Pelayanan Puskesmas Tercover BPJS
               </Heading>
@@ -249,11 +246,9 @@ export default function App() {
             <div className="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
               {/* Left Column */}
               <div className="lg:col-span-5">
-                <div className="mb-4">
-                  <Badge variant="brandDark" size="md">
-                    Pilar 4 • Transformasi Digital
-                  </Badge>
-                </div>
+                <span className="block text-sm sm:text-base font-semibold text-lime-400 mb-2.5 tracking-normal">
+                  Pilar 4 • Transformasi Digital
+                </span>
 
                 <Heading as="h2" level="1" color="light" className="mb-4 leading-tight">
                   Fitur & Pemanfaatan Layanan Digital JKN
@@ -305,11 +300,9 @@ export default function App() {
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
             {/* Left Sticky Guide */}
             <div className="lg:col-span-5 lg:sticky lg:top-28 self-start">
-              <div className="mb-3">
-                <Badge variant="brand" size="sm">
-                  Pilar 5 • Solusi Administrasi
-                </Badge>
-              </div>
+              <span className="block text-sm sm:text-base font-semibold text-brand-800 mb-2.5 tracking-normal">
+                Pilar 5 • Solusi Administrasi
+              </span>
 
               <Heading as="h2" level="2" color="dark" className="mb-4">
                 Aktivasi BPJS Mati & Balik Domisili FKTP
