@@ -274,7 +274,7 @@ export const emergencyContacts = [
     name: 'Anindya Kirana',
     number: '0812-****-90',
     type: 'Divisi Kesehatan KKN',
-    avatar: 'https://images.unsplash.com/photo-1594824813515-d419b48b92b6?auto=format&fit=crop&w=160&h=160&q=80&fm=webp',
+    avatar: 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=160&h=160&q=80&fm=webp',
     desc: 'Konsultasi alur berobat Puskesmas, panduan syarat re-aktivasi BPJS, dan edukasi jadwal posyandu balita & lansia.',
     actionText: 'Chat Divisi Kesehatan',
     link: 'https://wa.me/6281234567890?text=Halo%20Kak%20Anindya%20Divisi%20Kesehatan%2C%20saya%20ingin%20tanya%20prosedur%20faskes',
