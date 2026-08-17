@@ -9,10 +9,16 @@ export default function CategorySection({ categories = bpjsCategories }) {
     <SectionWrapper
       id="jenis-bpjs"
       bg="slate"
-      className="relative overflow-hidden pt-32 sm:pt-40 lg:pt-44 pb-20 sm:pb-24"
+      className="relative overflow-hidden pt-48 sm:pt-60 md:pt-72 lg:pt-80 pb-24 sm:pb-28"
     >
-      {/* Extended Top Edge Color Transition: Dark Forest Green melting smoothly down into Slate Grey */}
-      <div className="absolute top-0 inset-x-0 h-64 sm:h-80 lg:h-96 bg-gradient-to-b from-brand-950 via-brand-950/35 via-brand-950/10 to-transparent pointer-events-none z-0" />
+      {/* Ultra-Smooth Velvety Atmospheric Color Transition from Dark Forest Green to Slate Grey */}
+      <div
+        className="absolute top-0 inset-x-0 h-[340px] sm:h-[440px] md:h-[520px] lg:h-[580px] pointer-events-none z-0"
+        style={{
+          background:
+            'linear-gradient(to bottom, #032219 0%, rgba(3, 34, 25, 0.72) 18%, rgba(3, 34, 25, 0.38) 38%, rgba(3, 34, 25, 0.16) 60%, rgba(3, 34, 25, 0.04) 82%, transparent 100%)',
+        }}
+      />
 
       <div className="relative z-10">
         <SectionHeader
