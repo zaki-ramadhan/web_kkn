@@ -105,17 +105,30 @@ export default function App() {
             <AvatarStack variant="dark" label="1.450+ Warga Terbantu Program Edukasi Mahasiswa" />
           </div>
 
-          {/* 4 Hero Stat Capsules (Pure Typographic Metric Focus) */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-5xl mx-auto text-left">
-            {heroStats.map((item) => (
-              <StatCard
-                key={item.id}
-                variant="dark"
-                value={item.value}
-                label={item.label}
-                detail={item.detail}
-              />
-            ))}
+          {/* 4 Hero Stat Capsules (Distorted Slider Effect on Outer Cards) */}
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-5xl mx-auto text-left items-stretch pt-2">
+            {heroStats.map((item, idx) => {
+              const distortionClass =
+                idx === 0
+                  ? 'md:-rotate-2 md:-translate-x-3 md:scale-[0.96] md:opacity-90 md:origin-right hover:md:rotate-0 hover:md:translate-x-0 hover:md:opacity-100 hover:md:scale-100 transition-all duration-300'
+                  : idx === 3
+                  ? 'md:rotate-2 md:translate-x-3 md:scale-[0.96] md:opacity-90 md:origin-left hover:md:rotate-0 hover:md:translate-x-0 hover:md:opacity-100 hover:md:scale-100 transition-all duration-300'
+                  : idx === 1
+                  ? 'md:-translate-x-0.5 transition-all duration-300'
+                  : 'md:translate-x-0.5 transition-all duration-300';
+
+              return (
+                <div key={item.id} className={`h-full ${distortionClass}`}>
+                  <StatCard
+                    variant="dark"
+                    value={item.value}
+                    label={item.label}
+                    detail={item.detail}
+                    className="h-full"
+                  />
+                </div>
+              );
+            })}
           </div>
         </div>
       </section>
