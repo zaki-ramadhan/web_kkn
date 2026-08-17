@@ -1,6 +1,5 @@
 import React from 'react';
 import { ArrowUpRight } from 'lucide-react';
-import Heading from './ui/Heading';
 
 export default function ContactCard({
   name,
@@ -39,26 +38,25 @@ export default function ContactCard({
           />
         </div>
 
-        {/* PFP Avatar underneath */}
-        <div className="mb-3.5">
+        {/* Identity Lockup: Avatar on Left, Name & Number on Right */}
+        <div className="flex items-center gap-3.5 mb-4">
           {avatar && (
             <img
               src={avatar}
               alt={name}
               loading="lazy"
               decoding="async"
-              className="w-14 h-14 rounded-2xl object-cover border-2 border-brand-100/90 shadow-subtle group-hover:scale-105 group-hover:border-lime-400 transition-all duration-300"
+              className="w-14 h-14 rounded-2xl object-cover border-2 border-brand-100/90 shadow-subtle group-hover:scale-105 group-hover:border-lime-400 transition-all duration-300 shrink-0"
             />
           )}
-        </div>
-
-        <Heading as="h3" level="4" color="dark" className="mb-1 text-slate-900 group-hover:text-brand-850 transition-colors font-bold text-base sm:text-lg">
-          {name}
-        </Heading>
-
-        {/* Plain Bold Masked Number */}
-        <div className="font-grotesk text-2xl font-black text-slate-900 my-1.5 tracking-tight">
-          {number}
+          <div className="flex-1 min-w-0">
+            <h3 className="text-slate-900 group-hover:text-brand-850 transition-colors font-bold text-base sm:text-lg leading-snug">
+              {name}
+            </h3>
+            <div className="font-grotesk text-base sm:text-lg font-black text-brand-850 tracking-tight mt-0.5">
+              {number}
+            </div>
+          </div>
         </div>
 
         <p className="text-sm text-slate-600 leading-relaxed mb-6 font-normal">
