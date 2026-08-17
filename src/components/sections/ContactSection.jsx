@@ -51,7 +51,7 @@ export default function ContactSection({
               Struktur Tim Mahasiswa
             </Eyebrow>
             <h3 className="font-grotesk text-2xl sm:text-3xl font-bold text-slate-950 tracking-tight">
-              15 Mahasiswa Tim KKN ARS CIBAREGBEG
+              15 Mahasiswa Tim KKN ARS Cibaregbeg
             </h3>
           </div>
           <p className="text-sm sm:text-base text-slate-600 max-w-md font-normal leading-relaxed">

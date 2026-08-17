@@ -18,15 +18,15 @@ export default function Footer() {
                   POSKO SEHAT BPJS
                 </span>
                 <span className="text-sm font-bold text-lime-300 block">
-                  KKN ARS CIBAREGBEG 2026
+                  KKN ARS Cibaregbeg 2026
                 </span>
               </div>
             </div>
             <p className="text-slate-200 text-sm sm:text-base leading-relaxed mb-6">
-              Portal informasi dan edukasi kesehatan mandiri yang dikembangkan oleh Tim Mahasiswa KKN ARS CIBAREGBEG untuk mempermudah warga desa memahami alur dan hak pelayanan kesehatan.
+              Portal informasi dan edukasi kesehatan mandiri yang dikembangkan oleh Tim Mahasiswa KKN ARS Cibaregbeg untuk mempermudah warga desa memahami alur dan hak pelayanan kesehatan.
             </p>
             <div className="text-sm text-slate-300">
-              Inisiatif Program Kerja Bidang Kesehatan Masyarakat • KKN ARS CIBAREGBEG
+              Inisiatif Program Kerja Bidang Kesehatan Masyarakat • KKN ARS Cibaregbeg
             </div>
           </div>
 
@@ -137,7 +137,7 @@ export default function Footer() {
         </div>
 
         <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-sm text-slate-300">
-          <p>© 2026 Posko Edukasi Kesehatan • Karya Tim Mahasiswa KKN ARS CIBAREGBEG.</p>
+          <p>© 2026 Posko Edukasi Kesehatan • Karya Tim Mahasiswa KKN ARS Cibaregbeg.</p>
           <div className="flex items-center gap-6">
             <a href="#jenis-bpjs" className="hover:text-white transition-colors">
               Materi Edukasi

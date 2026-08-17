@@ -19,7 +19,7 @@ export default function DigitalFeatureShowcase({ features = defaultFeatures }) {
 
           <div className="absolute bottom-0 inset-x-0 p-6 sm:p-7 text-white">
             <div className="text-sm font-bold text-lime-400 uppercase tracking-wider mb-1">
-              Edukasi KKN ARS CIBAREGBEG
+              Edukasi KKN ARS Cibaregbeg
             </div>
             <p className="text-sm sm:text-base text-slate-100 leading-snug font-medium">
               Pendampingan warga Desa Cibaregbeg dalam memanfaatkan fitur antrean mandiri dan KIS digital dari ponsel.

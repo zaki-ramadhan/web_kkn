@@ -59,7 +59,7 @@ export default function Navbar({ modules = navEducationalModules }) {
                   isScrolled ? 'text-brand-700' : 'text-lime-300 drop-shadow-sm'
                 }`}
               >
-                KKN ARS CIBAREGBEG
+                KKN ARS Cibaregbeg
               </span>
             </div>
           </a>

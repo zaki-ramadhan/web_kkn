@@ -30,7 +30,7 @@ export default function NotFound() {
       {/* Minimal Footer */}
       <footer className="w-full border-t border-slate-200/80 py-6 text-center text-sm text-slate-500">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          © 2026 Tim Pengabdian KKN ARS CIBAREGBEG. Hak Cipta Dilindungi.
+          © 2026 Tim Pengabdian KKN ARS Cibaregbeg. Hak Cipta Dilindungi.
         </div>
       </footer>
     </div>

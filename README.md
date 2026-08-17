@@ -1,6 +1,6 @@
 # Posko Sehat BPJS - Web Edukasi Layanan Kesehatan Desa
 
-Sistem informasi dan portal edukasi mandiri mengenai alur pelayanan BPJS Kesehatan dan Puskesmas, dikembangkan oleh Tim Mahasiswa KKN ARS CIBAREGBEG Periode 2026. Proyek ini bertujuan membantu warga desa memahami hak kepesertaan, alur berobat berjenjang, tata cara pengaktifan kartu, hingga pemanfaatan antrean online secara mandiri.
+Sistem informasi dan portal edukasi mandiri mengenai alur pelayanan BPJS Kesehatan dan Puskesmas, dikembangkan oleh Tim Mahasiswa KKN ARS Cibaregbeg Periode 2026. Proyek ini bertujuan membantu warga desa memahami hak kepesertaan, alur berobat berjenjang, tata cara pengaktifan kartu, hingga pemanfaatan antrean online secara mandiri.
 
 ---
 
@@ -100,6 +100,6 @@ Hasil kompilasi siap pakai akan berada di dalam folder `dist/`.
 
 ## 👥 Tim Pelaksana
 
-**Program Kuliah Kerja Nyata - KKN ARS CIBAREGBEG 2026**  
+**Program Kuliah Kerja Nyata - KKN ARS Cibaregbeg 2026**  
 - **Wilayah Penugasan:** Desa Cibaregbeg, Posko Induk KKN ARS  
 - **Fokus Kegiatan:** Edukasi Literasi Jaminan Kesehatan & Digitalisasi Pelayanan Faskes Desa  
