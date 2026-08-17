@@ -382,3 +382,23 @@ export const avatarList = [
   'https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=64&h=64&q=80&fm=webp',
   'https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=64&h=64&q=80&fm=webp',
 ];
+
+// 6. Kriteria Klinis Gawat Darurat Bebas Rujukan (Permenkes RI No. 28/2014)
+export const emergencyCriteria = [
+  {
+    code: '01',
+    title: 'Gangguan Pernapasan Akut & Henti Jantung',
+    desc: 'Asma berat mendadak, sesak napas akut, henti napas, atau serangan jantung.',
+  },
+  {
+    code: '02',
+    title: 'Penurunan Kesadaran & Cedera Fisik Berat',
+    desc: 'Pingsan tidak sadarkan diri, kecelakaan lalu lintas, trauma kepala, patah tulang terbuka.',
+  },
+  {
+    code: '03',
+    title: 'Pendarahan Masif & Kejang Demam Balita',
+    desc: 'Pendarahan hebat yang tidak terkendali, luka bakar luas, keracunan akut, atau kejang demam anak.',
+  },
+];
+
