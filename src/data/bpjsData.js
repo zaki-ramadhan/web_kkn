@@ -1,3 +1,11 @@
+import {
+  Smartphone,
+  QrCode,
+  Stethoscope,
+  Pill,
+  FileText
+} from 'lucide-react';
+
 // Hero Stats (Clean Typographic Metrics)
 export const heroStats = [
   {
@@ -88,33 +96,38 @@ export const bpjsCategories = [
 export const registrationSteps = [
   {
     step: '01',
+    icon: Smartphone,
     title: 'Ambil Antrean Online / Offline',
     desc: 'Ambil nomor antrean secara online sebelum datang atau langsung di mesin antrean Puskesmas.',
-    highlight: 'Hemat waktu antrean',
+    highlight: 'Hemat waktu antrean 2-3 jam',
   },
   {
     step: '02',
+    icon: QrCode,
     title: 'Verifikasi di Loket Pendaftaran',
     desc: 'Tunjukkan KTP atau barcode Kartu Indonesia Sehat (KIS) digital. Tidak perlu fotokopi berkas tebal.',
-    highlight: 'Cukup tunjukkan NIK',
+    highlight: 'Cukup tunjukkan NIK / KTP',
   },
   {
     step: '03',
+    icon: Stethoscope,
     title: 'Pemeriksaan Medis & Dokter',
     desc: 'Pemeriksaan tanda vital oleh perawat, dilanjutkan konsultasi & diagnosa oleh dokter umum/gigi.',
-    highlight: 'Sesuai poli tujuan',
+    highlight: 'Sesuai poli tujuan faskes',
   },
   {
     step: '04',
+    icon: Pill,
     title: 'Pengambilan Obat di Farmasi',
     desc: 'Ambil obat sesuai resep dokter di instalasi farmasi Puskesmas. Seluruh obat formularium 100% gratis.',
-    highlight: 'Tanpa iur biaya obat',
+    highlight: 'Obat generik 100% gratis',
   },
   {
     step: '05',
-    title: 'Rujukan Berjenjang (Jika Diperlukan)',
+    icon: FileText,
+    title: 'Rujukan Berjenjang (Jika Perlu)',
     desc: 'Jika memerlukan tindakan spesialis, dokter menerbitkan surat rujukan online otomatis ke Rumah Sakit rekanan.',
-    highlight: 'Rujukan terintegrasi',
+    highlight: 'Sistem rujukan terintegrasi',
   },
 ];
 

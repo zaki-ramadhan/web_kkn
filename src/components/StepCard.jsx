@@ -1,65 +1,51 @@
 import React from 'react';
-import {
-  Smartphone,
-  CreditCard,
-  Stethoscope,
-  Pill,
-  FileText,
-  HelpCircle
-} from 'lucide-react';
 import TopShimmer from './ui/TopShimmer';
-
-const stepIconMap = {
-  '01': Smartphone,
-  '02': CreditCard,
-  '03': Stethoscope,
-  '04': Pill,
-  '05': FileText,
-};
 
 export default function StepCard({
   step,
+  icon: Icon,
   title,
   desc,
   highlight,
   className = '',
 }) {
-  const IconComponent = stepIconMap[step] || HelpCircle;
-
   return (
     <div
-      className={`group relative bg-gradient-to-b from-white via-white to-slate-50/80 border border-slate-200/90 hover:border-brand-500/60 rounded-3xl p-6 sm:p-7 transition-all duration-300 ease-out flex flex-col justify-between shadow-card-depth hover:shadow-card-hover hover:-translate-y-2 overflow-hidden ${className}`}
+      className={`group relative bg-gradient-to-b from-white via-white to-slate-50/80 border border-slate-200/90 hover:border-brand-400/70 rounded-3xl p-6 sm:p-7 transition-all duration-300 ease-out flex flex-col justify-between shadow-card-depth hover:shadow-card-hover hover:-translate-y-2 overflow-hidden h-full ${className}`}
     >
       <TopShimmer variant="lime" />
 
-      <div>
-        {/* Top Header: Thematic Micro-Icon & Translucent Watermark Number */}
-        <div className="flex items-center justify-between mb-5">
-          <div className="w-11 h-11 rounded-2xl bg-brand-50 border border-brand-100/90 flex items-center justify-center text-brand-850 shadow-subtle group-hover:bg-lime-400 group-hover:text-brand-950 group-hover:border-lime-500/40 group-hover:scale-105 transition-all duration-300">
-            <IconComponent className="w-5 h-5" />
-          </div>
-
-          <span className="font-grotesk font-black text-4xl text-slate-200 group-hover:text-brand-800/25 transition-colors select-none">
-            {step}
-          </span>
+      {/* Top Row: Thematic Icon Pod (Left) & Oversized Watermark Number (Right) */}
+      <div className="flex items-start justify-between mb-5">
+        <div className="w-12 h-12 rounded-2xl bg-brand-50 border border-brand-100/90 flex items-center justify-center text-brand-850 shadow-subtle group-hover:bg-lime-400 group-hover:text-brand-950 group-hover:border-lime-500/40 group-hover:scale-105 transition-all duration-300">
+          {Icon ? (
+            <Icon className="w-6 h-6" />
+          ) : (
+            <span className="font-grotesk font-black text-lg">{step}</span>
+          )}
         </div>
 
-        {/* Title */}
-        <h3 className="font-grotesk font-bold text-base sm:text-lg text-slate-900 group-hover:text-emerald-600 transition-colors leading-snug mb-2.5">
+        {/* Oversized Subtle Watermark Number */}
+        <span className="font-grotesk font-black text-4xl sm:text-5xl text-slate-200 group-hover:text-brand-850/15 tracking-tight transition-colors select-none leading-none pt-0.5">
+          {step}
+        </span>
+      </div>
+
+      {/* Body: Title & Concise Description */}
+      <div className="flex-1 flex flex-col justify-start">
+        <h3 className="font-grotesk font-bold text-base sm:text-lg text-slate-950 group-hover:text-emerald-600 transition-colors leading-snug mb-2.5">
           {title}
         </h3>
-
-        {/* Description */}
         <p className="text-sm text-slate-600 leading-relaxed font-normal mb-5">
           {desc}
         </p>
       </div>
 
-      {/* Bottom Capsule Highlight Chip */}
+      {/* Bottom: Refined Capsule Chip */}
       {highlight && (
-        <div className="pt-3 border-t border-slate-100/90 flex items-center">
-          <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-brand-50/80 text-brand-900 border border-brand-100/90 text-xs font-semibold">
-            <span className="w-1.5 h-1.5 rounded-full bg-lime-500 shrink-0" />
+        <div className="pt-3 border-t border-slate-100/90">
+          <div className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-brand-50/80 border border-brand-100/80 text-xs font-semibold text-brand-900 group-hover:bg-lime-50 group-hover:border-lime-300 group-hover:text-brand-950 transition-colors">
+            <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 group-hover:bg-lime-500 shrink-0 transition-colors" />
             <span>{highlight}</span>
           </div>
         </div>

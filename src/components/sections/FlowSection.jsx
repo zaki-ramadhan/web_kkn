@@ -24,6 +24,7 @@ export default function FlowSection({ steps = registrationSteps }) {
             <div key={idx} className="w-[280px] sm:w-[320px] shrink-0">
               <StepCard
                 step={step.step}
+                icon={step.icon}
                 title={step.title}
                 desc={step.desc}
                 highlight={step.highlight}
