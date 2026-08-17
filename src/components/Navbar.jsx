@@ -146,7 +146,7 @@ export default function Navbar() {
                 dropdownOpen
                   ? isScrolled
                     ? 'bg-brand-50 text-brand-900 font-bold'
-                    : 'bg-white/20 text-white font-bold'
+                    : 'bg-white/25 text-white font-bold'
                   : isScrolled
                   ? 'text-slate-700 hover:text-brand-850 hover:bg-slate-100'
                   : 'text-slate-100 hover:text-white hover:bg-white/10 drop-shadow-sm'
@@ -160,16 +160,12 @@ export default function Navbar() {
               />
             </button>
 
-            {/* Dropdown Menu Flyout */}
+            {/* Dropdown Menu Flyout: SOLID OPAQUE WHITE for Guaranteed Clarity */}
             {dropdownOpen && (
               <div
-                className={`absolute top-full left-0 mt-3 w-80 sm:w-96 rounded-2xl p-3 border transition-all duration-200 animate-in fade-in slide-in-from-top-2 shadow-card-hover ${
-                  isScrolled
-                    ? 'bg-white border-slate-200/90 text-slate-800'
-                    : 'bg-brand-950/98 border-white/15 text-white backdrop-blur-xl shadow-forest-card'
-                }`}
+                className="absolute top-full left-0 mt-3 w-80 sm:w-96 rounded-2xl p-3 bg-white border border-slate-200/90 text-slate-900 shadow-2xl ring-1 ring-black/10 z-50 animate-in fade-in slide-in-from-top-2"
               >
-                <div className="text-xs font-bold uppercase tracking-wider px-3 py-1.5 mb-1 text-slate-400">
+                <div className="text-xs font-bold uppercase tracking-wider px-3 py-1.5 mb-1 text-slate-500">
                   Modul Edukasi Kesehatan
                 </div>
                 <div className="space-y-1">
@@ -180,26 +176,16 @@ export default function Navbar() {
                         key={item.href}
                         href={item.href}
                         onClick={() => setDropdownOpen(false)}
-                        className={`flex items-start gap-3 p-2.5 rounded-xl transition-all duration-150 group ${
-                          isScrolled
-                            ? 'hover:bg-brand-50/80 text-slate-800'
-                            : 'hover:bg-white/10 text-white'
-                        }`}
+                        className="flex items-start gap-3.5 p-3 rounded-xl hover:bg-slate-50 text-slate-900 transition-all duration-150 group"
                       >
-                        <div
-                          className={`w-9 h-9 rounded-lg flex items-center justify-center shrink-0 mt-0.5 ${
-                            isScrolled
-                              ? 'bg-brand-100/70 text-brand-800 group-hover:bg-brand-850 group-hover:text-lime-400'
-                              : 'bg-white/10 text-lime-300 group-hover:bg-lime-400 group-hover:text-brand-950'
-                          } transition-colors duration-200`}
-                        >
-                          <ItemIcon className="w-4 h-4" />
+                        <div className="w-10 h-10 rounded-xl bg-brand-50 border border-brand-100/90 text-brand-850 group-hover:bg-brand-900 group-hover:text-lime-400 flex items-center justify-center shrink-0 shadow-subtle transition-colors duration-200 mt-0.5">
+                          <ItemIcon className="w-5 h-5" />
                         </div>
                         <div className="flex-1 min-w-0">
-                          <div className="text-sm font-bold leading-tight group-hover:text-brand-850 group-hover:underline">
+                          <div className="text-sm font-bold text-slate-900 group-hover:text-brand-850 leading-tight">
                             {item.title}
                           </div>
-                          <div className="text-xs sm:text-sm text-slate-500 line-clamp-1 mt-0.5 font-normal">
+                          <div className="text-xs sm:text-sm text-slate-600 line-clamp-1 mt-0.5 font-normal leading-relaxed">
                             {item.desc}
                           </div>
                         </div>
@@ -263,16 +249,12 @@ export default function Navbar() {
         </button>
       </div>
 
-      {/* Mobile Menu Drawer */}
+      {/* Mobile Menu Drawer: SOLID OPAQUE WHITE */}
       {mobileMenuOpen && (
         <div
-          className={`lg:hidden border-b px-5 pt-3 pb-6 space-y-3 transition-colors ${
-            isScrolled
-              ? 'bg-white border-slate-200 shadow-lg text-slate-800'
-              : 'bg-brand-950/98 border-brand-800/80 shadow-forest-card text-white backdrop-blur-md'
-          }`}
+          className="lg:hidden border-b border-slate-200 bg-white text-slate-900 shadow-2xl px-5 pt-4 pb-6 space-y-3"
         >
-          <div className="text-xs font-bold text-slate-400 uppercase tracking-wider pt-1">
+          <div className="text-xs font-bold text-slate-500 uppercase tracking-wider pt-1">
             Materi & Panduan
           </div>
           <div className="space-y-1">
@@ -281,32 +263,26 @@ export default function Navbar() {
                 key={item.href}
                 href={item.href}
                 onClick={() => setMobileMenuOpen(false)}
-                className={`flex items-center justify-between py-2 px-3 rounded-xl text-base font-semibold ${
-                  isScrolled
-                    ? 'text-slate-800 hover:bg-slate-100'
-                    : 'text-slate-200 hover:bg-white/10'
-                }`}
+                className="flex items-center justify-between py-2.5 px-3 rounded-xl text-base font-semibold text-slate-900 hover:bg-slate-100 transition-colors"
               >
                 <span>{item.title}</span>
-                <ArrowRight className="w-4 h-4 opacity-50" />
+                <ArrowRight className="w-4 h-4 text-slate-400" />
               </a>
             ))}
           </div>
 
-          <div className="pt-2 border-t border-slate-200/20 space-y-1">
+          <div className="pt-2 border-t border-slate-200 space-y-1">
             <a
               href="#alur-faskes"
               onClick={() => setMobileMenuOpen(false)}
-              className={`block py-2 px-3 rounded-xl text-base font-semibold ${
-                isScrolled ? 'text-slate-800 hover:bg-slate-100' : 'text-slate-200 hover:bg-white/10'
-              }`}
+              className="block py-2.5 px-3 rounded-xl text-base font-semibold text-slate-800 hover:bg-slate-100 transition-colors"
             >
               Alur Berobat Puskesmas
             </a>
             <a
               href="#darurat"
               onClick={() => setMobileMenuOpen(false)}
-              className="block py-2 px-3 rounded-xl text-base font-bold text-lime-400 hover:bg-white/10"
+              className="block py-2.5 px-3 rounded-xl text-base font-bold text-brand-850 hover:bg-slate-100 transition-colors"
             >
               Kontak Posko KKN
             </a>
@@ -316,7 +292,7 @@ export default function Navbar() {
             <PillCTAButton
               href="#darurat"
               onClick={() => setMobileMenuOpen(false)}
-              variant={isScrolled ? 'dark' : 'lime'}
+              variant="dark"
               icon={MessageSquare}
               className="w-full justify-center"
             >
