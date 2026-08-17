@@ -10,7 +10,6 @@ import {
   registrationSteps,
   serviceFilterTabs,
   puskesmasServices,
-  digitalJknFlow,
   administrativeFaqs,
   emergencyContacts
 } from './data/bpjsData';
@@ -30,6 +29,7 @@ import Footer from './components/Footer';
 import CategoryCard from './components/CategoryCard';
 import StepCard from './components/StepCard';
 import BentoServiceCard from './components/BentoServiceCard';
+import DigitalFeatureShowcase from './components/DigitalFeatureShowcase';
 import AccordionItem from './components/AccordionItem';
 import ContactCard from './components/ContactCard';
 
@@ -234,66 +234,18 @@ export default function App() {
       </section>
 
       {/* ====================================================================
-          SECTION 4: FITUR LAYANAN DIGITAL JKN (Item #6) - CLEAN EDITORIAL FLOW
+          SECTION 4: FITUR LAYANAN DIGITAL JKN (Item #6) - INTERACTIVE SPLIT SHOWCASE
           ==================================================================== */}
-      <section id="layanan-digital" className="py-20 bg-white">
+      <section id="layanan-digital" className="py-20 bg-white border-t border-slate-200/80">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <SectionHeader
             badge="Transformasi Layanan Digital"
             title="Fitur & Pemanfaatan Layanan Digital JKN"
-            subtitle="Pelajari alur registrasi akun mandiri, pendaftaran antrean Puskesmas dari rumah, akses kartu KIS digital, dan skrining riwayat kesehatan berkala."
+            subtitle="Pelajari alur antrean online Puskesmas dari rumah, akses kartu KIS digital, skrining kesehatan mandiri, dan prosedur ganti domisili faskes."
           />
 
-          {/* 4 Clean Step Cards Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {digitalJknFlow.map((item, idx) => (
-              <div
-                key={idx}
-                className="group relative rounded-3xl p-6 sm:p-7 bg-gradient-to-b from-white via-white to-slate-50/70 border border-slate-200/90 hover:border-brand-400/60 transition-all duration-300 ease-out shadow-card-depth hover:shadow-card-hover hover:-translate-y-1.5 flex flex-col justify-between overflow-hidden"
-              >
-                {/* Top shimmer accent on hover */}
-                <div className="absolute top-0 inset-x-0 h-[2px] bg-gradient-to-r from-transparent via-lime-400/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
-
-                <div>
-                  <div className="font-grotesk text-3xl font-extrabold text-brand-850 mb-3 group-hover:text-brand-950 transition-colors">
-                    0{item.step}
-                  </div>
-
-                  <h3 className="font-bold text-slate-900 text-lg leading-snug mb-2 group-hover:text-brand-850 transition-colors">
-                    {item.title}
-                  </h3>
-
-                  <p className="text-sm text-slate-600 leading-relaxed font-normal mb-4">
-                    {item.desc}
-                  </p>
-                </div>
-
-                {item.tip && (
-                  <div className="pt-3.5 border-t border-slate-100 text-xs sm:text-sm text-slate-500 font-medium">
-                    <span className="font-bold text-brand-850">Tips: </span>
-                    {item.tip}
-                  </div>
-                )}
-              </div>
-            ))}
-          </div>
-
-          {/* Practical Assistance Callout Banner */}
-          <div className="mt-10 bg-brand-50/70 border border-brand-200/90 rounded-2xl p-6 sm:p-8 flex flex-col md:flex-row items-center justify-between gap-6 shadow-subtle">
-            <div>
-              <h4 className="font-grotesk font-bold text-lg text-slate-900 mb-1">
-                Butuh Bantuan Registrasi Akun atau Booking Antrean?
-              </h4>
-              <p className="text-sm sm:text-base text-slate-700 font-normal">
-                Tim Mahasiswa KKN siap mendampingi pembuatan akun dan aktivasi antrean online langsung di Posko Desa Sukamakmur.
-              </p>
-            </div>
-            <div className="shrink-0">
-              <PillCTAButton href="#darurat" variant="dark" size="sm">
-                Konsultasi di Posko
-              </PillCTAButton>
-            </div>
-          </div>
+          {/* Interactive Feature Showcase with Live Preview Screen */}
+          <DigitalFeatureShowcase />
         </div>
       </section>
 
