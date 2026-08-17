@@ -187,9 +187,9 @@ export const puskesmasServices = [
 export const digitalJknFlow = [
   {
     step: '1',
-    title: 'Registrasi & Masuk Akun',
-    desc: 'Akses sistem layanan digital, masukkan Nomor Kartu BPJS atau NIK KTP, nomor telepon aktif, dan buat kata sandi akun Anda.',
-    tip: 'Pastikan nomor telepon terdaftar sesuai data saat awal registrasi BPJS.',
+    title: 'Aktivasi Akses NIK Digital',
+    desc: 'Verifikasi NIK KTP dan nomor kartu BPJS aktif untuk mengakses alur informasi kesehatan mandiri.',
+    tip: 'Data terhubung langsung dengan basis data kependudukan resmi.',
   },
   {
     step: '2',

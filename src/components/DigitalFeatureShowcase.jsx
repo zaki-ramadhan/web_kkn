@@ -57,10 +57,10 @@ export default function DigitalFeatureShowcase() {
         <div className="bg-brand-50 border border-brand-200/80 rounded-2xl p-6 flex flex-col justify-between gap-4">
           <div>
             <h4 className="font-grotesk font-bold text-base sm:text-lg text-brand-950 mb-1">
-              Butuh Panduan Pendaftaran Akun?
+              Butuh Konsultasi Alur Layanan BPJS?
             </h4>
             <p className="text-sm text-slate-700 leading-relaxed font-normal">
-              Kunjungi Posko Mahasiswa KKN di Balai Pertemuan Desa Sukamakmur untuk dibimbing langsung proses registrasi dan aktivasi antrean faskes.
+              Kunjungi Posko Mahasiswa KKN di Balai Pertemuan Desa Sukamakmur untuk konsultasi langsung alur berobat Puskesmas dan panduan administrasi faskes.
             </p>
           </div>
           <a
