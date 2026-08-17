@@ -124,8 +124,8 @@ export default function Navbar() {
                     ? 'bg-brand-50 text-brand-900 font-bold'
                     : 'bg-white/25 text-white font-bold'
                   : isScrolled
-                  ? 'text-slate-700 hover:text-brand-850 hover:bg-slate-100'
-                  : 'text-slate-100 hover:text-white hover:bg-white/10 drop-shadow-sm'
+                  ? 'text-slate-700 hover:text-brand-850 hover:bg-slate-100 hover:underline underline-offset-4 decoration-2 decoration-brand-700'
+                  : 'text-slate-100 hover:text-white hover:bg-white/10 hover:underline underline-offset-4 decoration-2 decoration-lime-400 drop-shadow-sm'
               }`}
             >
               <span>Panduan Layanan</span>
@@ -136,7 +136,7 @@ export default function Navbar() {
               />
             </button>
 
-            {/* Dropdown Menu Flyout: Clean Typographic Editorial Links */}
+            {/* Dropdown Menu Flyout: Clean Typographic Editorial Links with Hover Underline & Color */}
             {dropdownOpen && (
               <div
                 className="absolute top-full left-0 mt-3 w-80 sm:w-88 rounded-2xl p-2.5 bg-white border border-slate-200/90 text-slate-900 shadow-2xl ring-1 ring-black/10 z-50 animate-in fade-in slide-in-from-top-2"
@@ -149,7 +149,7 @@ export default function Navbar() {
                       onClick={() => setDropdownOpen(false)}
                       className="block p-3 rounded-xl hover:bg-slate-50 transition-colors group"
                     >
-                      <div className="text-sm font-bold text-slate-900 group-hover:text-brand-850 transition-colors leading-tight">
+                      <div className="text-sm font-bold text-slate-900 group-hover:text-brand-850 group-hover:underline underline-offset-4 decoration-2 decoration-lime-500 transition-all leading-tight">
                         {item.title}
                       </div>
                       <div className="text-xs sm:text-sm text-slate-600 line-clamp-1 mt-1 font-normal leading-relaxed">
@@ -165,10 +165,10 @@ export default function Navbar() {
           {/* Direct Link 1: Alur Berobat */}
           <a
             href="#alur-faskes"
-            className={`transition-colors duration-200 py-1.5 px-3 rounded-lg ${
+            className={`transition-all duration-200 py-1.5 px-3 rounded-lg hover:underline underline-offset-4 decoration-2 ${
               isScrolled
-                ? 'text-slate-700 hover:text-brand-850'
-                : 'text-slate-100 hover:text-white drop-shadow-sm'
+                ? 'text-slate-700 hover:text-brand-850 decoration-brand-700'
+                : 'text-slate-100 hover:text-white decoration-lime-400 drop-shadow-sm'
             }`}
           >
             Alur Berobat Puskesmas
@@ -177,10 +177,10 @@ export default function Navbar() {
           {/* Direct Link 2: Narahubung Tim KKN */}
           <a
             href="#darurat"
-            className={`font-bold transition-colors duration-200 py-1.5 px-3 rounded-lg ${
+            className={`font-bold transition-all duration-200 py-1.5 px-3 rounded-lg hover:underline underline-offset-4 decoration-2 ${
               isScrolled
-                ? 'text-brand-850 hover:text-lime-600'
-                : 'text-lime-400 hover:text-lime-300 drop-shadow-sm'
+                ? 'text-brand-850 hover:text-lime-600 decoration-lime-500'
+                : 'text-lime-400 hover:text-lime-300 decoration-lime-300 drop-shadow-sm'
             }`}
           >
             Kontak Posko KKN
@@ -225,7 +225,7 @@ export default function Navbar() {
                 key={item.href}
                 href={item.href}
                 onClick={() => setMobileMenuOpen(false)}
-                className="block py-2.5 px-3 rounded-xl text-base font-semibold text-slate-900 hover:bg-slate-100 hover:text-brand-850 transition-colors"
+                className="block py-2.5 px-3 rounded-xl text-base font-semibold text-slate-900 hover:bg-slate-100 hover:text-brand-850 hover:underline underline-offset-4 decoration-2 decoration-lime-500 transition-all"
               >
                 {item.title}
               </a>
@@ -236,14 +236,14 @@ export default function Navbar() {
             <a
               href="#alur-faskes"
               onClick={() => setMobileMenuOpen(false)}
-              className="block py-2.5 px-3 rounded-xl text-base font-semibold text-slate-800 hover:bg-slate-100 hover:text-brand-850 transition-colors"
+              className="block py-2.5 px-3 rounded-xl text-base font-semibold text-slate-800 hover:bg-slate-100 hover:text-brand-850 hover:underline underline-offset-4 decoration-2 decoration-brand-700 transition-all"
             >
               Alur Berobat Puskesmas
             </a>
             <a
               href="#darurat"
               onClick={() => setMobileMenuOpen(false)}
-              className="block py-2.5 px-3 rounded-xl text-base font-bold text-brand-850 hover:bg-brand-50 transition-colors"
+              className="block py-2.5 px-3 rounded-xl text-base font-bold text-brand-850 hover:bg-brand-50 hover:text-lime-600 hover:underline underline-offset-4 decoration-2 decoration-lime-500 transition-all"
             >
               Kontak Posko KKN
             </a>
