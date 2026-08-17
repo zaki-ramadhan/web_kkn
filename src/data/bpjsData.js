@@ -311,7 +311,7 @@ export const administrativeFaqs = [
         },
         {
           title: 'Pilih Puskesmas Domisili Baru',
-          text: 'Tentukan Puskesmas Sukamakmur sebagai fasilitas kesehatan tingkat pertama yang baru untuk seluruh anggota keluarga.',
+          text: 'Tentukan Puskesmas Cibaregbeg sebagai fasilitas kesehatan tingkat pertama yang baru untuk seluruh anggota keluarga.',
         },
         {
           title: 'Masa Berlaku Aktif',
@@ -438,7 +438,7 @@ export const digitalFeatures = [
   {
     number: '04',
     title: 'Perubahan Faskes Domisili Mandiri',
-    desc: 'Bagi warga pendatang atau warga yang faskes pertamanya masih terdaftar di luar kota, Anda dapat memindahkan faskes tingkat pertama ke Puskesmas Sukamakmur secara mandiri tanpa perlu surat pengantar.',
+    desc: 'Bagi warga pendatang atau warga yang faskes pertamanya masih terdaftar di luar kota, Anda dapat memindahkan faskes tingkat pertama ke Puskesmas Cibaregbeg secara mandiri tanpa perlu surat pengantar.',
     highlight: 'Syarat: terdaftar minimal 3 bulan di faskes lama. Aktif per tanggal 1 bulan berikutnya.',
   },
 ];

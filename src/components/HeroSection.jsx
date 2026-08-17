@@ -31,7 +31,7 @@ export default function HeroSection({
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
         {/* Eyebrow */}
         <Eyebrow variant="lime" className="mb-4 drop-shadow-sm">
-          Program Pengabdian Mahasiswa KKN 2026 • Desa Sukamakmur
+          Program Pengabdian KKN ARS CIBAREGBEG 2026 • Desa Cibaregbeg
         </Eyebrow>
 
         {/* Heading */}

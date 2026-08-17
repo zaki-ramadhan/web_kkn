@@ -51,11 +51,11 @@ export default function ContactSection({
               Struktur Tim Mahasiswa
             </Eyebrow>
             <h3 className="font-grotesk text-2xl sm:text-3xl font-bold text-slate-950 tracking-tight">
-              15 Mahasiswa Tim Pengabdian KKN 2026
+              15 Mahasiswa Tim KKN ARS CIBAREGBEG
             </h3>
           </div>
           <p className="text-sm sm:text-base text-slate-600 max-w-md font-normal leading-relaxed">
-            Susunan 15 mahasiswa lintas program studi yang bertugas mendampingi warga di posko pelayanan dan edukasi kesehatan Desa Sukamakmur.
+            Susunan 15 mahasiswa lintas program studi yang bertugas mendampingi warga di posko pelayanan dan edukasi kesehatan Desa Cibaregbeg.
           </p>
         </div>
 

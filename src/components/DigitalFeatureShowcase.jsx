@@ -19,10 +19,10 @@ export default function DigitalFeatureShowcase({ features = defaultFeatures }) {
 
           <div className="absolute bottom-0 inset-x-0 p-6 sm:p-7 text-white">
             <div className="text-sm font-bold text-lime-400 uppercase tracking-wider mb-1">
-              Edukasi Digital Mahasiswa KKN
+              Edukasi KKN ARS CIBAREGBEG
             </div>
             <p className="text-sm sm:text-base text-slate-100 leading-snug font-medium">
-              Pendampingan warga Desa Sukamakmur dalam memanfaatkan fitur antrean mandiri dan KIS digital dari ponsel.
+              Pendampingan warga Desa Cibaregbeg dalam memanfaatkan fitur antrean mandiri dan KIS digital dari ponsel.
             </p>
           </div>
         </div>
@@ -34,7 +34,7 @@ export default function DigitalFeatureShowcase({ features = defaultFeatures }) {
               Butuh Konsultasi Alur Layanan BPJS?
             </h4>
             <p className="text-sm text-slate-700 leading-relaxed font-normal">
-              Kunjungi Posko Mahasiswa KKN di Balai Pertemuan Desa Sukamakmur untuk konsultasi langsung alur berobat Puskesmas dan panduan administrasi faskes.
+              Kunjungi Posko Mahasiswa KKN ARS di Balai Pertemuan Desa Cibaregbeg untuk konsultasi langsung alur berobat Puskesmas dan panduan administrasi faskes.
             </p>
           </div>
           <a

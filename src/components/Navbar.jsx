@@ -55,11 +55,11 @@ export default function Navbar({ modules = navEducationalModules }) {
                 POSKO SEHAT BPJS
               </span>
               <span
-                className={`text-sm font-medium block transition-colors duration-300 ${
+                className={`text-sm font-bold block transition-colors duration-300 ${
                   isScrolled ? 'text-brand-700' : 'text-lime-300 drop-shadow-sm'
                 }`}
               >
-                Program KKN Tematik 2026
+                KKN ARS CIBAREGBEG
               </span>
             </div>
           </a>
