@@ -131,21 +131,31 @@ export default function App() {
             subtitle="Pahami kategori kepesertaan, besaran iuran, hak rawat inap, dan mekanisme pendaftarannya."
           />
 
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 items-stretch">
-            {bpjsCategories.map((cat) => (
-              <CategoryCard
-                key={cat.id}
-                badge={cat.badge}
-                name={cat.name}
-                price={cat.price}
-                priceSub={cat.priceSub}
-                target={cat.target}
-                features={cat.features}
-                ctaText={cat.ctaText}
-                ctaLink={cat.ctaLink}
-                theme={cat.theme}
-              />
-            ))}
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 items-center pt-4 pb-4">
+            {bpjsCategories.map((cat, idx) => {
+              const scaleClass =
+                idx === 1
+                  ? 'lg:scale-105 z-10 hover:lg:scale-[1.07] transition-transform duration-300'
+                  : idx === 0
+                  ? 'lg:scale-95 lg:origin-right hover:lg:scale-100 transition-transform duration-300'
+                  : 'lg:scale-95 lg:origin-left hover:lg:scale-100 transition-transform duration-300';
+
+              return (
+                <div key={cat.id} className={`h-full ${scaleClass}`}>
+                  <CategoryCard
+                    badge={cat.badge}
+                    name={cat.name}
+                    price={cat.price}
+                    priceSub={cat.priceSub}
+                    target={cat.target}
+                    features={cat.features}
+                    ctaText={cat.ctaText}
+                    ctaLink={cat.ctaLink}
+                    theme={cat.theme}
+                  />
+                </div>
+              );
+            })}
           </div>
         </div>
       </section>

@@ -19,10 +19,10 @@ export default function CategoryCard({
 
   return (
     <div
-      className={`group rounded-3xl p-8 sm:p-9 flex flex-col justify-between transition-all duration-300 ease-out relative overflow-hidden ${
+      className={`group rounded-3xl p-8 sm:p-9 flex flex-col justify-between transition-all duration-300 ease-out relative overflow-hidden h-full ${
         isForest
-          ? 'bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-brand-800 via-brand-850 to-brand-950 text-white shadow-forest-card border border-brand-700/80 ring-1 ring-white/15 lg:-translate-y-2 hover:-translate-y-3.5 hover:shadow-card-hover'
-          : 'bg-gradient-to-b from-white via-white to-slate-50/60 text-slate-800 border border-slate-200/90 hover:border-brand-400/60 shadow-card-depth hover:shadow-card-hover hover:-translate-y-2'
+          ? 'bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-brand-800 via-brand-850 to-brand-950 text-white shadow-forest-card border border-brand-700/80 ring-1 ring-white/15'
+          : 'bg-gradient-to-b from-white via-white to-slate-50/60 text-slate-800 border border-slate-200/90 hover:border-brand-400/60 shadow-card-depth'
       }`}
     >
       {/* Top shimmer highlight on hover */}
