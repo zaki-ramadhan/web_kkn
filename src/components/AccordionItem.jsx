@@ -13,12 +13,15 @@ export default function AccordionItem({
 }) {
   return (
     <div
-      className={`rounded-2xl overflow-hidden transition-all duration-300 ${
+      className={`group relative rounded-2xl overflow-hidden transition-all duration-300 ease-out ${
         isOpen
           ? 'border border-brand-400/80 bg-gradient-to-b from-white via-white to-brand-50/30 shadow-card-depth ring-1 ring-brand-400/20'
-          : 'border border-slate-200/90 bg-white shadow-subtle hover:border-slate-300 hover:shadow-card-depth'
+          : 'border border-slate-200/90 bg-white shadow-subtle hover:border-brand-400/50 hover:shadow-card-depth hover:-translate-y-0.5'
       }`}
     >
+      {/* Top shimmer accent on hover */}
+      <div className="absolute top-0 inset-x-0 h-[1.5px] bg-gradient-to-r from-transparent via-lime-400/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
+
       <button
         type="button"
         onClick={() => onToggle(id)}

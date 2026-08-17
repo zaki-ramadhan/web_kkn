@@ -13,8 +13,11 @@ export default function BentoServiceCard({
 }) {
   return (
     <div
-      className={`${span} group relative rounded-3xl overflow-hidden shadow-card-depth hover:shadow-card-hover min-h-[350px] flex flex-col justify-end border border-slate-200/90 bg-slate-900 transition-all duration-300 ${className}`}
+      className={`${span} group relative rounded-3xl overflow-hidden shadow-card-depth hover:shadow-card-hover hover:-translate-y-1.5 min-h-[350px] flex flex-col justify-end border border-slate-200/90 hover:border-brand-400/50 bg-slate-900 transition-all duration-300 ease-out ${className}`}
     >
+      {/* Top shimmer accent on hover */}
+      <div className="absolute top-0 inset-x-0 h-[2px] bg-gradient-to-r from-transparent via-lime-400/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-20 pointer-events-none" />
+
       <img
         src={image}
         alt={title}
@@ -24,9 +27,6 @@ export default function BentoServiceCard({
       />
       {/* Multi-stop cinematic gradient scrim */}
       <div className="absolute inset-0 bg-gradient-to-t from-black/95 via-black/55 to-black/10 pointer-events-none" />
-
-      {/* Top subtle highlight shimmer */}
-      <div className="absolute top-0 inset-x-0 h-px bg-gradient-to-r from-transparent via-white/25 to-transparent pointer-events-none" />
 
       <div className="relative z-10 p-6 sm:p-8 text-white">
         <div className="flex items-center gap-2.5 mb-3 flex-wrap">

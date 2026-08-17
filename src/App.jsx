@@ -319,15 +319,18 @@ export default function App() {
                 Jangan panik jika status kartu Anda nonaktif atau faskes terdaftar masih di kampung halaman lama. Simak solusi mandiri dan ketentuan terbarunya di sini.
               </p>
 
-              {/* Editorial Highlight Card */}
-              <div className="bg-white border border-slate-200/90 rounded-2xl p-6 shadow-card-depth">
-                <h4 className="font-grotesk font-bold text-base text-slate-900 mb-2">
+              {/* Editorial Highlight Card with Hover Shimmer & Lift */}
+              <div className="group relative bg-white border border-slate-200/90 hover:border-brand-400/60 rounded-2xl p-6 shadow-card-depth hover:shadow-card-hover hover:-translate-y-1.5 transition-all duration-300 ease-out overflow-hidden">
+                {/* Top shimmer accent on hover */}
+                <div className="absolute top-0 inset-x-0 h-[1.5px] bg-gradient-to-r from-transparent via-lime-400/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
+
+                <h4 className="font-grotesk font-bold text-base text-slate-900 mb-2 group-hover:text-brand-850 transition-colors">
                   Program REHAB (Cicilan Iuran)
                 </h4>
                 <p className="text-sm text-slate-700 leading-relaxed mb-4 font-normal">
                   Bagi peserta PBPU/Mandiri dengan tunggakan lebih dari 3 bulan s.d 24 bulan, Anda dapat mencicil tunggakan hingga 12 tahapan melalui menu REHAB di layanan digital JKN.
                 </p>
-                <div className="pt-3 border-t border-slate-100 text-sm font-bold text-brand-900 flex items-center gap-2">
+                <div className="pt-3.5 border-t border-slate-100 text-sm font-bold text-brand-900 flex items-center gap-2">
                   <span className="w-2 h-2 rounded-full bg-brand-700" />
                   <span>Ketentuan Pindah FKTP: Terdaftar minimal 3 bulan</span>
                 </div>
@@ -378,7 +381,7 @@ export default function App() {
             ))}
           </div>
 
-          {/* Emergency Guidelines Callout (Clean Editorial Clinical Criteria) */}
+          {/* Emergency Guidelines Callout (Clean Editorial Clinical Criteria with Hover Shimmer) */}
           <div className="mt-12 bg-gradient-to-r from-rose-50/70 via-rose-50/40 to-white border border-rose-200/90 rounded-3xl p-6 sm:p-8 shadow-card-depth">
             <Heading as="h4" level="4" color="dark" className="mb-2 flex items-center gap-2 text-rose-950 font-bold">
               <AlertTriangle className="w-5 h-5 text-rose-600" /> Catatan Penting: Kondisi Gawat Darurat Medis
@@ -387,15 +390,18 @@ export default function App() {
               Untuk kondisi medis darurat yang mengancam keselamatan, pasien dapat <strong>langsung mendatangi UGD Rumah Sakit terdekat tanpa perlu surat rujukan faskes tingkat pertama</strong>:
             </p>
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-3.5 text-sm font-semibold text-slate-900">
-              <div className="p-4 bg-white rounded-2xl border-l-4 border-l-rose-500 border border-slate-200/80 shadow-subtle flex flex-col justify-center">
+              <div className="group relative p-4 bg-white rounded-2xl border-l-4 border-l-rose-500 border border-slate-200/80 hover:border-slate-300 shadow-subtle hover:shadow-card-depth hover:-translate-y-1 transition-all duration-300 ease-out flex flex-col justify-center overflow-hidden">
+                <div className="absolute top-0 inset-x-0 h-[1.5px] bg-gradient-to-r from-transparent via-rose-400/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
                 <span className="text-xs font-bold text-rose-700 uppercase tracking-wider mb-1">Kriteria 1</span>
                 <span>Gangguan pernapasan akut / henti napas</span>
               </div>
-              <div className="p-4 bg-white rounded-2xl border-l-4 border-l-rose-500 border border-slate-200/80 shadow-subtle flex flex-col justify-center">
+              <div className="group relative p-4 bg-white rounded-2xl border-l-4 border-l-rose-500 border border-slate-200/80 hover:border-slate-300 shadow-subtle hover:shadow-card-depth hover:-translate-y-1 transition-all duration-300 ease-out flex flex-col justify-center overflow-hidden">
+                <div className="absolute top-0 inset-x-0 h-[1.5px] bg-gradient-to-r from-transparent via-rose-400/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
                 <span className="text-xs font-bold text-rose-700 uppercase tracking-wider mb-1">Kriteria 2</span>
                 <span>Kehilangan kesadaran / cedera fisik berat</span>
               </div>
-              <div className="p-4 bg-white rounded-2xl border-l-4 border-l-rose-500 border border-slate-200/80 shadow-subtle flex flex-col justify-center">
+              <div className="group relative p-4 bg-white rounded-2xl border-l-4 border-l-rose-500 border border-slate-200/80 hover:border-slate-300 shadow-subtle hover:shadow-card-depth hover:-translate-y-1 transition-all duration-300 ease-out flex flex-col justify-center overflow-hidden">
+                <div className="absolute top-0 inset-x-0 h-[1.5px] bg-gradient-to-r from-transparent via-rose-400/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
                 <span className="text-xs font-bold text-rose-700 uppercase tracking-wider mb-1">Kriteria 3</span>
                 <span>Pendarahan hebat / kejang demam anak</span>
               </div>

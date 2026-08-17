@@ -13,9 +13,9 @@ export default function ContactCard({
   urgent = false,
 }) {
   return (
-    <div className="group rounded-3xl p-6 sm:p-7 flex flex-col justify-between border border-slate-200/90 hover:border-brand-400/70 transition-all duration-300 ease-out shadow-card-depth hover:shadow-card-hover hover:-translate-y-1.5 bg-gradient-to-b from-white via-white to-slate-50/60 relative overflow-hidden">
-      {/* Top subtle highlight */}
-      <div className="absolute top-0 inset-x-0 h-1 bg-gradient-to-r from-transparent via-lime-400/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+    <div className="group rounded-3xl p-6 sm:p-7 flex flex-col justify-between border border-slate-200/90 hover:border-brand-400/70 transition-all duration-300 ease-out shadow-card-depth hover:shadow-card-hover hover:-translate-y-2 bg-gradient-to-b from-white via-white to-slate-50/60 relative overflow-hidden">
+      {/* Top shimmer accent on hover */}
+      <div className="absolute top-0 inset-x-0 h-[2px] bg-gradient-to-r from-transparent via-lime-400/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
 
       <div>
         <div className="mb-4">

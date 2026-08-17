@@ -19,12 +19,15 @@ export default function CategoryCard({
 
   return (
     <div
-      className={`rounded-3xl p-8 sm:p-9 flex flex-col justify-between transition-all duration-300 ease-out relative overflow-hidden ${
+      className={`group rounded-3xl p-8 sm:p-9 flex flex-col justify-between transition-all duration-300 ease-out relative overflow-hidden ${
         isForest
-          ? 'bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-brand-800 via-brand-850 to-brand-950 text-white shadow-forest-card border border-brand-700/80 ring-1 ring-white/15 lg:-translate-y-2 hover:-translate-y-3'
-          : 'bg-gradient-to-b from-white via-white to-slate-50/60 text-slate-800 border border-slate-200/90 shadow-card-depth hover:shadow-card-hover hover:-translate-y-1.5'
+          ? 'bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-brand-800 via-brand-850 to-brand-950 text-white shadow-forest-card border border-brand-700/80 ring-1 ring-white/15 lg:-translate-y-2 hover:-translate-y-3.5 hover:shadow-card-hover'
+          : 'bg-gradient-to-b from-white via-white to-slate-50/60 text-slate-800 border border-slate-200/90 hover:border-brand-400/60 shadow-card-depth hover:shadow-card-hover hover:-translate-y-2'
       }`}
     >
+      {/* Top shimmer highlight on hover */}
+      <div className="absolute top-0 inset-x-0 h-[2px] bg-gradient-to-r from-transparent via-lime-400/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
+
       {/* Subtle ambient light for dark cards */}
       {isForest && (
         <div className="absolute -right-16 -top-16 w-48 h-48 bg-lime-400/15 rounded-full blur-3xl pointer-events-none" />

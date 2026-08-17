@@ -14,8 +14,11 @@ export default function StepCard({
   if (variant === 'dark') {
     return (
       <div
-        className={`group bg-white/[0.06] hover:bg-white/[0.10] border border-white/15 rounded-2xl p-5 transition-all duration-300 flex items-start gap-4 backdrop-blur-sm shadow-sm ${className}`}
+        className={`group relative bg-white/[0.06] hover:bg-white/[0.12] border border-white/15 hover:border-white/30 rounded-2xl p-5 transition-all duration-300 ease-out flex items-start gap-4 backdrop-blur-sm shadow-sm hover:shadow-card-hover hover:-translate-y-1 overflow-hidden ${className}`}
       >
+        {/* Top shimmer accent on hover */}
+        <div className="absolute top-0 inset-x-0 h-[1.5px] bg-gradient-to-r from-transparent via-lime-400/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
+
         <div className="w-9 h-9 rounded-xl bg-gradient-to-br from-lime-400 to-lime-500 text-brand-950 font-black flex items-center justify-center shrink-0 text-sm shadow-glow-lime group-hover:scale-105 transition-transform duration-200 mt-0.5">
           {step}
         </div>
@@ -39,8 +42,11 @@ export default function StepCard({
 
   return (
     <div
-      className={`group bg-gradient-to-b from-white via-white to-slate-50/70 border border-slate-200/90 hover:border-brand-400/60 rounded-2xl p-6 transition-all duration-300 ease-out flex flex-col justify-between shadow-card-depth hover:shadow-card-hover hover:-translate-y-1.5 ${className}`}
+      className={`group relative bg-gradient-to-b from-white via-white to-slate-50/70 border border-slate-200/90 hover:border-brand-400/60 rounded-2xl p-6 transition-all duration-300 ease-out flex flex-col justify-between shadow-card-depth hover:shadow-card-hover hover:-translate-y-1.5 overflow-hidden ${className}`}
     >
+      {/* Top shimmer accent on hover */}
+      <div className="absolute top-0 inset-x-0 h-[1.5px] bg-gradient-to-r from-transparent via-lime-400/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
+
       <div>
         <div className="flex items-center justify-between mb-4">
           <div className="w-11 h-11 rounded-2xl bg-brand-50 border border-brand-100/90 flex items-center justify-center font-grotesk text-xl font-extrabold text-brand-850 shadow-subtle group-hover:bg-lime-400 group-hover:text-brand-950 group-hover:border-lime-500/40 group-hover:scale-105 transition-all duration-300">
