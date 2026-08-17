@@ -13,7 +13,7 @@ export default function HeroSection({
   return (
     <section
       id="hero-section"
-      className="relative pt-28 pb-28 sm:pt-32 sm:pb-32 md:pt-36 md:pb-36 overflow-hidden bg-brand-950 text-white"
+      className="relative pt-28 pb-24 sm:pt-32 md:pt-36 md:pb-32 overflow-hidden bg-brand-950 text-white"
     >
       {/* Background Image with Crisp Object-Cover and Increased Clarity */}
       <img
@@ -27,6 +27,9 @@ export default function HeroSection({
 
       {/* Ambient Center Glow */}
       <div className="absolute top-1/3 left-1/2 -translate-x-1/2 w-[600px] h-[300px] bg-lime-400/15 rounded-full blur-[120px] pointer-events-none" />
+
+      {/* Seamless Bottom Edge Color Gradient Transition to Section Below */}
+      <div className="absolute bottom-0 inset-x-0 h-24 sm:h-36 bg-gradient-to-b from-transparent via-brand-950/60 to-slate-100/90 pointer-events-none z-0" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
         {/* Eyebrow */}
@@ -94,22 +97,6 @@ export default function HeroSection({
             );
           })}
         </div>
-      </div>
-
-      {/* Decorative Bottom Transition: Ambient Lime Hairline & Sculpted Wave Bridge into Slate Section 1 */}
-      <div className="absolute bottom-0 inset-x-0 overflow-hidden leading-none pointer-events-none z-20">
-        <div className="w-full h-px bg-gradient-to-r from-transparent via-lime-400/40 to-transparent" />
-        <svg
-          className="relative block w-full h-8 sm:h-12 md:h-16 text-slate-100/90"
-          viewBox="0 0 1440 56"
-          fill="none"
-          preserveAspectRatio="none"
-        >
-          <path
-            d="M0,12 C360,44 1080,44 1440,12 L1440,56 L0,56 Z"
-            fill="currentColor"
-          />
-        </svg>
       </div>
     </section>
   );
