@@ -11,14 +11,21 @@ export default function ContactCard({
   actionText,
   link,
   urgent = false,
+  index = 0,
 }) {
+  const isOdd = index % 2 !== 0;
+
   return (
     <div className="group rounded-3xl p-6 sm:p-7 flex flex-col justify-between border border-slate-200/90 hover:border-brand-400/70 transition-all duration-300 ease-out shadow-card-depth hover:shadow-card-hover hover:-translate-y-2 bg-gradient-to-b from-white via-white to-slate-50/60 relative overflow-hidden">
       <TopShimmer variant="lime" />
 
       <div>
-        {/* Tooltip / Speech Bubble Tag with Downward Caret */}
-        <div className="relative inline-block mb-3.5">
+        {/* Tooltip / Speech Bubble Tag with Alternating Nonstop Floating Animation */}
+        <div
+          className={`relative inline-block mb-3.5 ${
+            isOdd ? 'animate-float-bubble-alt' : 'animate-float-bubble'
+          }`}
+        >
           <div
             className={`px-3.5 py-1 rounded-xl text-sm font-bold tracking-wide inline-flex items-center shadow-subtle ${
               urgent
@@ -28,7 +35,7 @@ export default function ContactCard({
           >
             {type}
           </div>
-          {/* Downward Arrow Caret pointing to PFP */}
+          {/* Downward Arrow Caret pointing to Avatar */}
           <div
             className={`absolute left-4 -bottom-1 w-2.5 h-2.5 rotate-45 transform ${
               urgent

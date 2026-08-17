@@ -22,9 +22,10 @@ export default function ContactSection({
 
       {/* 4 Primary Action Cards for Direct Citizen Inquiries */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
-        {contacts.map((contact) => (
+        {contacts.map((contact, idx) => (
           <ContactCard
             key={contact.id}
+            index={idx}
             name={contact.name}
             number={contact.number}
             type={contact.type}
