@@ -9,18 +9,56 @@ dist-ssr/
 build/
 out/
 
-# Crash dumps, Temporary files & Logs
+# Markdown files (Exclude all except README.md)
+*.md
+!README.md
+!readme.md
+
+# Executables, Binaries & Scripts
+*.exe
+*.dll
+*.so
+*.dylib
+*.bin
+*.out
+*.app
+*.msi
+*.bat
+*.cmd
+*.ps1
+*.sh
+
+# Crash Dumps & Stack Traces
 *.stackdump
 *.dmp
+*.dump
+*.core
+
+# Archives & Compressed Files
+*.zip
+*.tar
+*.tar.gz
+*.tgz
+*.rar
+*.7z
+*.iso
+*.gz
+
+# Temporary, Backup & Scratch Files
 *.tmp
 *.temp
 *.bak
+*.old
 *.orig
 *.swp
 *.swo
+*.draft
+*.scratch
 *.pid
 *.seed
 *.pid.lock
+
+# Logs
 logs/
 *.log
 npm-debug.log*
@@ -50,6 +88,7 @@ lerna-debug.log*
 .idea/
 .DS_Store
 Thumbs.db
+desktop.ini
 *.suo
 *.ntvs*
 *.njsproj
