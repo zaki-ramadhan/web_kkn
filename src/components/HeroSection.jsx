@@ -13,7 +13,7 @@ export default function HeroSection({
   return (
     <section
       id="hero-section"
-      className="relative pt-28 pb-24 sm:pt-32 md:pt-36 md:pb-32 overflow-hidden bg-brand-950 text-white"
+      className="relative pt-28 pb-24 sm:pt-32 md:pt-36 md:pb-28 overflow-hidden bg-brand-950 text-white"
     >
       {/* Background Image with Crisp Object-Cover and Increased Clarity */}
       <img
@@ -27,9 +27,6 @@ export default function HeroSection({
 
       {/* Ambient Center Glow */}
       <div className="absolute top-1/3 left-1/2 -translate-x-1/2 w-[600px] h-[300px] bg-lime-400/15 rounded-full blur-[120px] pointer-events-none" />
-
-      {/* Seamless Bottom Edge Color Gradient Transition to Section Below */}
-      <div className="absolute bottom-0 inset-x-0 h-24 sm:h-36 bg-gradient-to-b from-transparent via-brand-950/60 to-slate-100/90 pointer-events-none z-0" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
         {/* Eyebrow */}
