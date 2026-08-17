@@ -126,7 +126,7 @@ export default function Navbar() {
               POSKO SEHAT BPJS
             </span>
             <span
-              className={`text-[11px] font-medium block transition-colors duration-300 ${
+              className={`text-xs font-medium block transition-colors duration-300 ${
                 isScrolled ? 'text-brand-700' : 'text-lime-300 drop-shadow-sm'
               }`}
             >
@@ -169,7 +169,7 @@ export default function Navbar() {
                     : 'bg-brand-950/98 border-white/15 text-white backdrop-blur-xl shadow-forest-card'
                 }`}
               >
-                <div className="text-[11px] font-bold uppercase tracking-wider px-3 py-1.5 mb-1 text-slate-400">
+                <div className="text-xs font-bold uppercase tracking-wider px-3 py-1.5 mb-1 text-slate-400">
                   Modul Edukasi Kesehatan
                 </div>
                 <div className="space-y-1">
@@ -199,7 +199,7 @@ export default function Navbar() {
                           <div className="text-xs font-bold leading-tight group-hover:text-brand-850 group-hover:underline">
                             {item.title}
                           </div>
-                          <div className="text-[11px] text-slate-500 line-clamp-1 mt-0.5 font-normal">
+                          <div className="text-xs text-slate-500 line-clamp-1 mt-0.5 font-normal">
                             {item.desc}
                           </div>
                         </div>

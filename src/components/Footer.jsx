@@ -17,7 +17,7 @@ export default function Footer() {
                 <span className="font-grotesk font-bold text-lg text-white tracking-tight block leading-tight">
                   POSKO SEHAT BPJS
                 </span>
-                <span className="text-[11px] font-medium text-lime-300 block">
+                <span className="text-xs font-medium text-lime-300 block">
                   Karya Tim Mahasiswa KKN 2026
                 </span>
               </div>

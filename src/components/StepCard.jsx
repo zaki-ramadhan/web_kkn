@@ -28,7 +28,7 @@ export default function StepCard({
             {desc}
           </p>
           {tip && (
-            <span className="inline-flex items-center gap-1.5 text-[11px] font-medium text-lime-300 bg-black/40 px-3 py-1 rounded-full border border-lime-400/25">
+            <span className="inline-flex items-center gap-1.5 text-xs font-medium text-lime-300 bg-black/40 px-3 py-1 rounded-full border border-lime-400/25">
               <Lightbulb className="w-3.5 h-3.5 text-lime-400 shrink-0" />
               <span>Tips: {tip}</span>
             </span>
@@ -59,7 +59,7 @@ export default function StepCard({
         </p>
       </div>
       {highlight && (
-        <div className="pt-3.5 border-t border-slate-100 text-[11px] sm:text-xs font-bold text-brand-800 flex items-center gap-1.5">
+        <div className="pt-3.5 border-t border-slate-100 text-xs font-bold text-brand-800 flex items-center gap-1.5">
           <Check className="w-3.5 h-3.5 text-lime-600 shrink-0" />
           <span>{highlight}</span>
         </div>
