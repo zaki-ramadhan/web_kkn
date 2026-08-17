@@ -68,7 +68,7 @@ export default function App() {
           {/* Main Hero Pill Badge */}
           <div className="mb-6">
             <Badge variant="brand" size="md" pulseDot dotColor="bg-lime-500">
-              PROGRAM PENGABDIAN MAHASISWA KKN 2026 • DESA SUKAMAKMUR
+              Program Pengabdian Mahasiswa KKN 2026 • Desa Sukamakmur
             </Badge>
           </div>
 

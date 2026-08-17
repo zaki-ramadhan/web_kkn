@@ -44,7 +44,7 @@ export default function Navbar() {
               <span className="font-grotesk font-bold text-lg text-slate-900 tracking-tight block leading-tight">
                 POSKO SEHAT BPJS
               </span>
-              <span className="text-[11px] font-semibold text-brand-700 tracking-wide block uppercase">
+              <span className="text-[11px] font-medium text-brand-700 block">
                 Program KKN Tematik 2026
               </span>
             </div>

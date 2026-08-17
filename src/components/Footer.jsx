@@ -17,7 +17,7 @@ export default function Footer() {
                 <span className="font-grotesk font-bold text-lg text-white tracking-tight block leading-tight">
                   POSKO SEHAT BPJS
                 </span>
-                <span className="text-[11px] font-medium text-lime-300 tracking-wide block uppercase">
+                <span className="text-[11px] font-medium text-lime-300 block">
                   Karya Tim Mahasiswa KKN 2026
                 </span>
               </div>
@@ -32,7 +32,7 @@ export default function Footer() {
 
           {/* Col 2 */}
           <div className="lg:col-span-2 sm:col-span-1">
-            <Heading as="h4" level="4" color="light" className="text-sm uppercase tracking-wider mb-4">
+            <Heading as="h4" level="4" color="light" className="text-sm font-bold mb-4">
               Panduan Cepat
             </Heading>
             <ul className="space-y-2.5 text-xs text-slate-300">
@@ -66,7 +66,7 @@ export default function Footer() {
 
           {/* Col 3 */}
           <div className="lg:col-span-3 sm:col-span-1">
-            <Heading as="h4" level="4" color="light" className="text-sm uppercase tracking-wider mb-4">
+            <Heading as="h4" level="4" color="light" className="text-sm font-bold mb-4">
               Materi Edukasi
             </Heading>
             <ul className="space-y-2.5 text-xs text-slate-300">
@@ -100,7 +100,7 @@ export default function Footer() {
 
           {/* Col 4 */}
           <div className="lg:col-span-3">
-            <Heading as="h4" level="4" color="light" className="text-sm uppercase tracking-wider mb-4">
+            <Heading as="h4" level="4" color="light" className="text-sm font-bold mb-4">
               Posko Mahasiswa KKN
             </Heading>
             <div className="space-y-3 text-xs text-slate-300">
