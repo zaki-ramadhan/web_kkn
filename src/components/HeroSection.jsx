@@ -1,5 +1,6 @@
 import React from 'react';
 import Heading from './ui/Heading';
+import Eyebrow from './ui/Eyebrow';
 import PillCTAButton from './ui/PillCTAButton';
 import AvatarStack from './ui/AvatarStack';
 import StatCard from './ui/StatCard';
@@ -28,10 +29,10 @@ export default function HeroSection({
       <div className="absolute top-1/3 left-1/2 -translate-x-1/2 w-[600px] h-[300px] bg-lime-400/15 rounded-full blur-[120px] pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
-        {/* Plain Text Eyebrow */}
-        <span className="inline-block text-sm sm:text-base font-semibold text-lime-400 mb-4 tracking-normal drop-shadow-sm">
+        {/* Eyebrow */}
+        <Eyebrow variant="lime" className="mb-4 drop-shadow-sm">
           Program Pengabdian Mahasiswa KKN 2026 • Desa Sukamakmur
-        </span>
+        </Eyebrow>
 
         {/* Heading */}
         <Heading

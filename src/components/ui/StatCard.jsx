@@ -1,4 +1,5 @@
 import React from 'react';
+import TopShimmer from './TopShimmer';
 
 export default function StatCard({
   value,
@@ -7,33 +8,47 @@ export default function StatCard({
   variant = 'light',
   className = '',
 }) {
-  const isDark = variant === 'dark';
+  if (variant === 'dark') {
+    return (
+      <div
+        className={`group relative bg-white/[0.07] hover:bg-white/[0.14] border border-white/10 hover:border-lime-400/40 rounded-2xl p-5 sm:p-6 transition-all duration-300 ease-out backdrop-blur-md shadow-card-depth hover:shadow-elevation flex flex-col justify-between overflow-hidden ${className}`}
+      >
+        <TopShimmer variant="lime" />
+
+        <div>
+          <div className="font-grotesk font-black text-3xl sm:text-4xl text-lime-400 tracking-tight leading-none group-hover:scale-105 transition-transform duration-200 origin-left">
+            {value}
+          </div>
+          <div className="text-sm sm:text-base font-bold text-white mt-2 leading-snug">
+            {label}
+          </div>
+        </div>
+        {detail && (
+          <div className="text-xs text-slate-300 mt-3 pt-3 border-t border-white/10 font-normal">
+            {detail}
+          </div>
+        )}
+      </div>
+    );
+  }
 
   return (
     <div
-      className={`group relative rounded-2xl p-6 transition-all duration-300 ease-out overflow-hidden flex flex-col justify-between ${
-        isDark
-          ? 'bg-brand-950/75 hover:bg-brand-900/85 border border-white/15 backdrop-blur-md text-white shadow-forest-card hover:-translate-y-1'
-          : 'bg-gradient-to-b from-white via-white to-slate-50/70 border border-slate-200/90 shadow-card-depth hover:shadow-card-hover hover:-translate-y-1'
-      } ${className}`}
+      className={`group relative bg-white border border-slate-200/90 hover:border-brand-400/60 rounded-2xl p-6 transition-all duration-300 ease-out shadow-card-depth hover:shadow-card-hover hover:-translate-y-1 overflow-hidden ${className}`}
     >
-      {/* Subtle top inner light bar */}
-      <div className="absolute top-0 inset-x-0 h-[1.5px] bg-gradient-to-r from-transparent via-lime-400/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+      <TopShimmer variant="brand" />
 
-      <div>
-        <div className="mb-2">
-          <span className={`font-grotesk text-3xl sm:text-4xl font-extrabold tracking-tight block ${isDark ? 'text-lime-400' : 'text-slate-900'}`}>
-            {value}
-          </span>
-        </div>
-        <p className={`text-sm sm:text-base font-bold leading-snug ${isDark ? 'text-white' : 'text-slate-900'}`}>
-          {label}
-        </p>
+      <div className="font-grotesk font-black text-3xl sm:text-4xl text-brand-850 tracking-tight leading-none group-hover:text-lime-600 transition-colors">
+        {value}
       </div>
-
-      <p className={`text-sm font-medium mt-2 leading-relaxed ${isDark ? 'text-slate-300' : 'text-slate-600'}`}>
-        {detail}
-      </p>
+      <div className="text-base font-bold text-slate-900 mt-2">
+        {label}
+      </div>
+      {detail && (
+        <div className="text-sm text-slate-700 mt-2 pt-2 border-t border-slate-100 font-normal">
+          {detail}
+        </div>
+      )}
     </div>
   );
 }

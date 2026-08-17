@@ -2,6 +2,7 @@ import React from 'react';
 import { ChevronDown, ChevronUp } from 'lucide-react';
 import Badge from './ui/Badge';
 import Heading from './ui/Heading';
+import TopShimmer from './ui/TopShimmer';
 
 export default function AccordionItem({
   id,
@@ -19,8 +20,7 @@ export default function AccordionItem({
           : 'border border-slate-200/90 bg-white shadow-subtle hover:border-brand-400/50 hover:shadow-card-depth hover:-translate-y-0.5'
       }`}
     >
-      {/* Top shimmer accent on hover */}
-      <div className="absolute top-0 inset-x-0 h-[1.5px] bg-gradient-to-r from-transparent via-lime-400/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
+      <TopShimmer variant="brand" />
 
       <button
         type="button"

@@ -1,5 +1,6 @@
 import React from 'react';
 import { ArrowUpRight } from 'lucide-react';
+import TopShimmer from './ui/TopShimmer';
 
 export default function ContactCard({
   name,
@@ -13,8 +14,7 @@ export default function ContactCard({
 }) {
   return (
     <div className="group rounded-3xl p-6 sm:p-7 flex flex-col justify-between border border-slate-200/90 hover:border-brand-400/70 transition-all duration-300 ease-out shadow-card-depth hover:shadow-card-hover hover:-translate-y-2 bg-gradient-to-b from-white via-white to-slate-50/60 relative overflow-hidden">
-      {/* Top shimmer accent on hover */}
-      <div className="absolute top-0 inset-x-0 h-[2px] bg-gradient-to-r from-transparent via-lime-400/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
+      <TopShimmer variant="lime" />
 
       <div>
         {/* Tooltip / Speech Bubble Tag with Downward Caret */}

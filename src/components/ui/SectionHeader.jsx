@@ -1,5 +1,6 @@
 import React from 'react';
 import Heading from './Heading';
+import Eyebrow from './Eyebrow';
 
 export default function SectionHeader({
   badge,
@@ -15,22 +16,12 @@ export default function SectionHeader({
     left: 'text-left max-w-2xl',
   };
 
-  const kickerStyles = {
-    brand: 'text-brand-800',
-    light: 'text-lime-400',
-    slate: 'text-slate-600',
-  };
-
   return (
     <div className={`mb-16 ${alignStyles[align] || alignStyles.center} ${className}`}>
       {badge && (
-        <span
-          className={`block text-sm sm:text-base font-semibold mb-2.5 tracking-normal ${
-            kickerStyles[kickerColor] || kickerStyles.brand
-          }`}
-        >
+        <Eyebrow variant={kickerColor}>
           {badge}
-        </span>
+        </Eyebrow>
       )}
       <Heading as="h2" level="2" color={headingColor}>
         {title}

@@ -1,4 +1,5 @@
 import React from 'react';
+import Eyebrow from './ui/Eyebrow';
 import { emergencyCriteria } from '../data/bpjsData';
 
 export default function EmergencyAdvisory({
@@ -13,9 +14,9 @@ export default function EmergencyAdvisory({
       <div className="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
         {/* Left Column: Directive & Legal Exemption */}
         <div className="lg:col-span-6 space-y-3">
-          <span className="block text-sm sm:text-base font-semibold text-rose-400 tracking-normal">
+          <Eyebrow variant="rose">
             Prosedur Gawat Darurat Medis
-          </span>
+          </Eyebrow>
 
           <h3 className="font-grotesk text-2xl sm:text-3xl font-extrabold text-white tracking-tight leading-snug">
             Hak Bebas Rujukan Langsung ke IGD Rumah Sakit

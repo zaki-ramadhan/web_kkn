@@ -1,4 +1,5 @@
 import React from 'react';
+import TopShimmer from './TopShimmer';
 
 export default function CalloutBox({
   icon: Icon,
@@ -42,8 +43,7 @@ export default function CalloutBox({
         variantStyles[variant] || variantStyles.brand
       } ${className}`}
     >
-      {/* Top shimmer accent on hover */}
-      <div className="absolute top-0 inset-x-0 h-[1.5px] bg-gradient-to-r from-transparent via-lime-400/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
+      <TopShimmer variant="brand" />
 
       <div className="flex flex-col md:flex-row items-start justify-between gap-6 relative z-10">
         <div className="flex items-start gap-4">

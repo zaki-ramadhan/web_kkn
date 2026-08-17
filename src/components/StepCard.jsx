@@ -1,6 +1,7 @@
 import React from 'react';
 import Badge from './ui/Badge';
 import Heading from './ui/Heading';
+import TopShimmer from './ui/TopShimmer';
 
 export default function StepCard({
   step,
@@ -16,8 +17,7 @@ export default function StepCard({
       <div
         className={`group relative bg-white/[0.06] hover:bg-white/[0.12] border border-white/15 hover:border-white/30 rounded-2xl p-5 transition-all duration-300 ease-out flex items-start gap-4 backdrop-blur-sm shadow-sm hover:shadow-card-hover hover:-translate-y-1 overflow-hidden ${className}`}
       >
-        {/* Top shimmer accent on hover */}
-        <div className="absolute top-0 inset-x-0 h-[1.5px] bg-gradient-to-r from-transparent via-lime-400/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
+        <TopShimmer variant="brand" />
 
         <div className="w-9 h-9 rounded-xl bg-gradient-to-br from-lime-400 to-lime-500 text-brand-950 font-black flex items-center justify-center shrink-0 text-sm shadow-glow-lime group-hover:scale-105 transition-transform duration-200 mt-0.5">
           {step}
@@ -44,8 +44,7 @@ export default function StepCard({
     <div
       className={`group relative bg-gradient-to-b from-white via-white to-slate-50/70 border border-slate-200/90 hover:border-brand-400/60 rounded-2xl p-6 transition-all duration-300 ease-out flex flex-col justify-between shadow-card-depth hover:shadow-card-hover hover:-translate-y-1.5 overflow-hidden ${className}`}
     >
-      {/* Top shimmer accent on hover */}
-      <div className="absolute top-0 inset-x-0 h-[1.5px] bg-gradient-to-r from-transparent via-lime-400/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
+      <TopShimmer variant="brand" />
 
       <div>
         <div className="flex items-center justify-between mb-4">
