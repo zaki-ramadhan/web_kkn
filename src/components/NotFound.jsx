@@ -1,22 +1,31 @@
 import React from 'react';
-import { ArrowLeft } from 'lucide-react';
+import { HeartPulse, ArrowLeft } from 'lucide-react';
 
 export default function NotFound() {
   return (
-    <div className="min-h-screen bg-white text-slate-900 flex flex-col justify-between p-6 sm:p-12 font-sans">
-      {/* Minimal Header */}
-      <div className="max-w-3xl mx-auto w-full">
-        <a
-          href="/"
-          className="text-sm font-bold text-brand-900 hover:text-brand-700 transition-colors inline-flex items-center gap-2"
-        >
-          <span className="w-2 h-2 rounded-full bg-lime-500" />
-          <span>Panduan Layanan BPJS Kesehatan • KKN Desa Sukamakmur</span>
-        </a>
-      </div>
+    <div className="min-h-screen bg-white text-slate-900 flex flex-col justify-between font-sans">
+      {/* Top Navbar Header with Unclickable Logo */}
+      <header className="fixed top-0 inset-x-0 z-50 bg-white/95 backdrop-blur-md border-b border-slate-200/80 shadow-subtle">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+          {/* Logo (Static / Non-clickable) */}
+          <div className="flex items-center gap-3 select-none">
+            <div className="w-10 h-10 rounded-xl flex items-center justify-center bg-brand-850 text-lime-400 shadow-subtle">
+              <HeartPulse className="w-6 h-6" />
+            </div>
+            <div>
+              <span className="font-grotesk font-bold text-lg tracking-tight block leading-tight text-slate-900">
+                POSKO SEHAT BPJS
+              </span>
+              <span className="text-xs sm:text-sm font-medium block text-brand-700">
+                Program KKN Tematik 2026
+              </span>
+            </div>
+          </div>
+        </div>
+      </header>
 
       {/* Main Content */}
-      <div className="max-w-3xl mx-auto w-full py-16 sm:py-24">
+      <main className="max-w-3xl mx-auto w-full px-4 sm:px-6 lg:px-8 pt-36 pb-16 sm:pt-44 sm:pb-24 my-auto">
         <span className="font-grotesk font-black text-sm text-slate-400 tracking-wider uppercase block mb-3">
           Error 404
         </span>
@@ -36,12 +45,14 @@ export default function NotFound() {
           <ArrowLeft className="w-4 h-4 text-lime-400" />
           <span>Kembali ke Halaman Utama</span>
         </a>
-      </div>
+      </main>
 
       {/* Minimal Footer */}
-      <div className="max-w-3xl mx-auto w-full pt-8 border-t border-slate-100 text-xs text-slate-400">
-        © 2026 Tim Pengabdian KKN Mahasiswa Desa Sukamakmur.
-      </div>
+      <footer className="w-full border-t border-slate-200/80 py-6 text-center text-xs text-slate-500">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          © 2026 Tim Pengabdian KKN Mahasiswa Desa Sukamakmur. Hak Cipta Dilindungi.
+        </div>
+      </footer>
     </div>
   );
 }
