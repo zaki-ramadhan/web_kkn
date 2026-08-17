@@ -61,38 +61,46 @@ export default function App() {
       <Navbar />
 
       {/* ====================================================================
-          HERO SECTION (Enhanced with ambient light aura & depth)
+          HERO SECTION (Cinematic Dark Background with Optimized Cover Photo)
           ==================================================================== */}
-      <section className="relative pt-12 pb-20 md:pt-16 md:pb-24 overflow-hidden bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-lime-400/10 via-brand-50/40 to-white">
-        {/* Subtle decorative background light orbs */}
-        <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[700px] h-[350px] bg-gradient-to-tr from-lime-400/15 to-brand-500/10 rounded-full blur-[110px] pointer-events-none" />
+      <section className="relative pt-16 pb-24 md:pt-20 md:pb-28 overflow-hidden bg-brand-950 text-white">
+        {/* Background Image with Object-Cover and Scrim */}
+        <img
+          src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&w=1920&h=1080&q=75&fm=webp"
+          alt="Layanan Kesehatan Masyarakat"
+          className="absolute inset-0 w-full h-full object-cover object-center opacity-20 pointer-events-none"
+        />
+
+        {/* Multi-layer Dark Gradient Scrim */}
+        <div className="absolute inset-0 bg-gradient-to-b from-brand-950/95 via-brand-950/80 to-brand-950 pointer-events-none" />
+
+        {/* Ambient Center Glow */}
+        <div className="absolute top-1/3 left-1/2 -translate-x-1/2 w-[600px] h-[300px] bg-lime-400/10 rounded-full blur-[120px] pointer-events-none" />
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
-          {/* Main Hero Pill Badge */}
-          <div className="mb-6">
-            <Badge variant="brand" size="md" pulseDot dotColor="bg-lime-500" className="shadow-subtle">
-              Program Pengabdian Mahasiswa KKN 2026 • Desa Sukamakmur
-            </Badge>
-          </div>
+          {/* Plain Text Eyebrow (No chip, no blinking dot) */}
+          <span className="inline-block text-xs sm:text-sm font-semibold text-lime-400 mb-4 tracking-normal">
+            Program Pengabdian Mahasiswa KKN 2026 • Desa Sukamakmur
+          </span>
 
           {/* Heading */}
-          <Heading as="h1" level="1" color="dark" className="max-w-4xl mx-auto mb-6 text-balance">
+          <Heading as="h1" level="1" color="light" className="max-w-4xl mx-auto mb-6 text-balance text-white leading-tight">
             Panduan Lengkap Layanan{' '}
-            <span className="text-brand-850 underline decoration-lime-400 decoration-4 underline-offset-8">
+            <span className="text-lime-300 underline decoration-lime-400 decoration-4 underline-offset-8">
               BPJS Kesehatan
             </span>{' '}
             & Puskesmas
           </Heading>
 
           {/* Subtitle */}
-          <p className="text-base sm:text-lg text-slate-700 max-w-2xl mx-auto leading-relaxed mb-8 text-balance font-normal">
+          <p className="text-base sm:text-lg text-slate-200 max-w-2xl mx-auto leading-relaxed mb-8 text-balance font-normal">
             Media edukasi kesehatan dari mahasiswa KKN untuk warga: alur berobat mudah tanpa antre panjang,
             cara re-aktivasi kartu nonaktif, prosedur pindah faskes domisili, dan pemanfaatan antrean online.
           </p>
 
           {/* Action Buttons */}
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-10">
-            <PillCTAButton href="#alur-faskes" variant="dark" size="lg">
+            <PillCTAButton href="#alur-faskes" variant="lime" size="lg">
               Pelajari Alur Pendaftaran
             </PillCTAButton>
             <PillCTAButton href="#darurat" variant="light" size="lg">
@@ -100,16 +108,17 @@ export default function App() {
             </PillCTAButton>
           </div>
 
-          {/* Avatar stack */}
+          {/* Avatar stack (Dark variant) */}
           <div className="flex justify-center mb-14">
-            <AvatarStack label="1.450+ Warga Terbantu Program Edukasi Mahasiswa" />
+            <AvatarStack variant="dark" label="1.450+ Warga Terbantu Program Edukasi Mahasiswa" />
           </div>
 
-          {/* 4 Hero Stat Capsules */}
+          {/* 4 Hero Stat Capsules (Dark Glass variant) */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-5xl mx-auto text-left">
             {heroStats.map((item) => (
               <StatCard
                 key={item.id}
+                variant="dark"
                 value={item.value}
                 label={item.label}
                 detail={item.detail}

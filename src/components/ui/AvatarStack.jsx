@@ -4,11 +4,18 @@ import { avatarList } from '../../data/bpjsData';
 export default function AvatarStack({
   label = '1.450+ Warga Terbantu Edukasi Mahasiswa',
   avatars = avatarList,
+  variant = 'light',
   className = '',
 }) {
+  const isDark = variant === 'dark';
+
   return (
     <div
-      className={`inline-flex items-center gap-3 bg-white/95 backdrop-blur-sm border border-slate-200 rounded-full py-1.5 px-3 shadow-subtle ${className}`}
+      className={`inline-flex items-center gap-3 rounded-full py-1.5 px-3.5 backdrop-blur-md shadow-subtle transition-all ${
+        isDark
+          ? 'bg-black/50 border border-white/15 text-slate-200'
+          : 'bg-white/95 border border-slate-200 text-slate-700'
+      } ${className}`}
     >
       <div className="flex -space-x-2 overflow-hidden">
         {avatars.map((src, idx) => (
@@ -20,14 +27,16 @@ export default function AvatarStack({
             height={28}
             loading="lazy"
             decoding="async"
-            className="inline-block h-7 w-7 rounded-full ring-2 ring-white object-cover object-center shrink-0 bg-slate-100"
+            className="inline-block h-7 w-7 rounded-full ring-2 ring-brand-950 object-cover object-center shrink-0 bg-slate-800"
           />
         ))}
-        <span className="inline-flex h-7 w-7 items-center justify-center rounded-full bg-lime-400 text-brand-950 text-xs font-bold ring-2 ring-white shrink-0">
+        <span className="inline-flex h-7 w-7 items-center justify-center rounded-full bg-lime-400 text-brand-950 text-xs font-bold ring-2 ring-brand-950 shrink-0">
           +
         </span>
       </div>
-      <span className="text-xs font-semibold text-slate-700 pr-1">{label}</span>
+      <span className={`text-xs font-semibold pr-1 ${isDark ? 'text-slate-200' : 'text-slate-700'}`}>
+        {label}
+      </span>
     </div>
   );
 }
