@@ -1,40 +1,28 @@
-import {
-  ShieldCheck,
-  PhoneCall,
-  Laptop,
-  Baby,
-  UserCheck
-} from 'lucide-react';
-
-// Hero Stats
+// Hero Stats (Clean Typographic Metrics)
 export const heroStats = [
   {
     id: 'hs1',
     value: '100%',
     label: 'Tercover BPJS',
     detail: 'Pelayanan & obat generik di Puskesmas',
-    icon: ShieldCheck,
   },
   {
     id: 'hs2',
     value: 'Posko',
     label: 'Siaga Mahasiswa',
     detail: 'Konsultasi alur & panduan berkas',
-    icon: UserCheck,
   },
   {
     id: 'hs3',
     value: '5 Menit',
     label: 'Antrean Online JKN',
     detail: 'Ambil nomor dari rumah tanpa antre',
-    icon: Laptop,
   },
   {
     id: 'hs4',
     value: '0 Rupiah',
     label: 'Persalinan Normal',
     detail: 'Gratis di Puskesmas PONED terdaftar',
-    icon: Baby,
   },
 ];
 

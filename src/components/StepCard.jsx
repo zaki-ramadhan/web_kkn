@@ -1,5 +1,4 @@
 import React from 'react';
-import { Check, Lightbulb } from 'lucide-react';
 import Badge from './ui/Badge';
 import Heading from './ui/Heading';
 
@@ -24,14 +23,14 @@ export default function StepCard({
           <Heading as="h4" level="4" color="light" className="mb-1 text-white group-hover:text-lime-300 transition-colors text-base font-bold">
             {title}
           </Heading>
-          <p className="text-sm sm:text-base text-slate-200 leading-relaxed mb-3 font-normal">
+          <p className="text-sm sm:text-base text-slate-200 leading-relaxed mb-2.5 font-normal">
             {desc}
           </p>
           {tip && (
-            <span className="inline-flex items-center gap-1.5 text-sm font-medium text-lime-300 bg-black/40 px-3.5 py-1 rounded-full border border-lime-400/25">
-              <Lightbulb className="w-4 h-4 text-lime-400 shrink-0" />
-              <span>Tips: {tip}</span>
-            </span>
+            <div className="text-sm font-medium text-lime-300 bg-black/40 px-3.5 py-1 rounded-lg border border-lime-400/25 inline-block">
+              <span className="font-bold text-lime-400">Tips: </span>
+              {tip}
+            </div>
           )}
         </div>
       </div>
@@ -59,8 +58,8 @@ export default function StepCard({
         </p>
       </div>
       {highlight && (
-        <div className="pt-3.5 border-t border-slate-100 text-sm font-bold text-brand-800 flex items-center gap-1.5">
-          <Check className="w-4 h-4 text-lime-600 shrink-0" />
+        <div className="pt-3.5 border-t border-slate-100 text-sm font-bold text-brand-800 flex items-center gap-2">
+          <span className="w-1.5 h-1.5 rounded-full bg-lime-500 shrink-0" />
           <span>{highlight}</span>
         </div>
       )}

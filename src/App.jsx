@@ -1,10 +1,6 @@
 import React, { useState, useMemo } from 'react';
 import {
-  Sparkles,
   Info,
-  CheckCircle2,
-  RefreshCw,
-  MapPin,
   AlertTriangle
 } from 'lucide-react';
 
@@ -30,7 +26,6 @@ import Badge from './components/ui/Badge';
 import Heading from './components/ui/Heading';
 import CheckList from './components/ui/CheckList';
 import TabGroup from './components/ui/TabGroup';
-import MiniCard from './components/ui/MiniCard';
 
 // Feature Components (Molecules / Organisms)
 import Navbar from './components/Navbar';
@@ -113,7 +108,7 @@ export default function App() {
             <AvatarStack variant="dark" label="1.450+ Warga Terbantu Program Edukasi Mahasiswa" />
           </div>
 
-          {/* 4 Hero Stat Capsules (Dark Glass variant) */}
+          {/* 4 Hero Stat Capsules (Pure Typographic Metric Focus) */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-5xl mx-auto text-left">
             {heroStats.map((item) => (
               <StatCard
@@ -122,7 +117,6 @@ export default function App() {
                 value={item.value}
                 label={item.label}
                 detail={item.detail}
-                icon={item.icon}
               />
             ))}
           </div>
@@ -280,11 +274,9 @@ export default function App() {
                   className="space-y-3 mb-8"
                 />
 
-                <MiniCard
-                  icon={Sparkles}
-                  variant="darkGlass"
-                  description="Seluruh fitur layanan digital dapat diakses 24 jam secara terpadu untuk mempermudah pendaftaran dan pelayanan faskes."
-                />
+                <div className="bg-white/10 border border-white/15 rounded-2xl p-4 text-sm sm:text-base text-slate-200 leading-relaxed backdrop-blur-sm">
+                  Seluruh fitur layanan digital dapat diakses 24 jam secara terpadu untuk mempermudah pendaftaran dan pelayanan faskes warga.
+                </div>
               </div>
 
               {/* Right Column */}
@@ -327,17 +319,19 @@ export default function App() {
                 Jangan panik jika status kartu Anda nonaktif atau faskes terdaftar masih di kampung halaman lama. Simak solusi mandiri dan ketentuan terbarunya di sini.
               </p>
 
-              {/* Highlight MiniCard */}
-              <MiniCard
-                icon={RefreshCw}
-                title="Program REHAB (Cicilan Iuran)"
-                description="Bagi peserta PBPU/Mandiri dengan tunggakan lebih dari 3 bulan s.d 24 bulan, Anda dapat mencicil tunggakan hingga 12 tahapan melalui menu REHAB di layanan digital JKN."
-                footer={
-                  <span className="text-brand-900 font-bold flex items-center gap-1.5">
-                    <MapPin className="w-4 h-4 text-brand-700" /> Syarat Pindah FKTP: Terdaftar minimal 3 bulan
-                  </span>
-                }
-              />
+              {/* Editorial Highlight Card */}
+              <div className="bg-white border border-slate-200/90 rounded-2xl p-6 shadow-card-depth">
+                <h4 className="font-grotesk font-bold text-base text-slate-900 mb-2">
+                  Program REHAB (Cicilan Iuran)
+                </h4>
+                <p className="text-sm text-slate-700 leading-relaxed mb-4 font-normal">
+                  Bagi peserta PBPU/Mandiri dengan tunggakan lebih dari 3 bulan s.d 24 bulan, Anda dapat mencicil tunggakan hingga 12 tahapan melalui menu REHAB di layanan digital JKN.
+                </p>
+                <div className="pt-3 border-t border-slate-100 text-sm font-bold text-brand-900 flex items-center gap-2">
+                  <span className="w-2 h-2 rounded-full bg-brand-700" />
+                  <span>Ketentuan Pindah FKTP: Terdaftar minimal 3 bulan</span>
+                </div>
+              </div>
             </div>
 
             {/* Right Accordion List */}
@@ -384,25 +378,25 @@ export default function App() {
             ))}
           </div>
 
-          {/* Emergency Guidelines Callout */}
+          {/* Emergency Guidelines Callout (Clean Editorial Clinical Criteria) */}
           <div className="mt-12 bg-gradient-to-r from-rose-50/70 via-rose-50/40 to-white border border-rose-200/90 rounded-3xl p-6 sm:p-8 shadow-card-depth">
             <Heading as="h4" level="4" color="dark" className="mb-2 flex items-center gap-2 text-rose-950 font-bold">
               <AlertTriangle className="w-5 h-5 text-rose-600" /> Catatan Penting: Kondisi Gawat Darurat Medis
             </Heading>
-            <p className="text-sm sm:text-base text-slate-800 leading-relaxed mb-4 font-normal">
+            <p className="text-sm sm:text-base text-slate-800 leading-relaxed mb-5 font-normal">
               Untuk kondisi medis darurat yang mengancam keselamatan, pasien dapat <strong>langsung mendatangi UGD Rumah Sakit terdekat tanpa perlu surat rujukan faskes tingkat pertama</strong>:
             </p>
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 text-sm font-semibold text-slate-900">
-              <div className="p-4 bg-white rounded-2xl border border-rose-100 flex items-start gap-2.5 shadow-subtle">
-                <CheckCircle2 className="w-4 h-4 text-rose-600 shrink-0 mt-0.5" />
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-3.5 text-sm font-semibold text-slate-900">
+              <div className="p-4 bg-white rounded-2xl border-l-4 border-l-rose-500 border border-slate-200/80 shadow-subtle flex flex-col justify-center">
+                <span className="text-xs font-bold text-rose-700 uppercase tracking-wider mb-1">Kriteria 1</span>
                 <span>Gangguan pernapasan akut / henti napas</span>
               </div>
-              <div className="p-4 bg-white rounded-2xl border border-rose-100 flex items-start gap-2.5 shadow-subtle">
-                <CheckCircle2 className="w-4 h-4 text-rose-600 shrink-0 mt-0.5" />
+              <div className="p-4 bg-white rounded-2xl border-l-4 border-l-rose-500 border border-slate-200/80 shadow-subtle flex flex-col justify-center">
+                <span className="text-xs font-bold text-rose-700 uppercase tracking-wider mb-1">Kriteria 2</span>
                 <span>Kehilangan kesadaran / cedera fisik berat</span>
               </div>
-              <div className="p-4 bg-white rounded-2xl border border-rose-100 flex items-start gap-2.5 shadow-subtle">
-                <CheckCircle2 className="w-4 h-4 text-rose-600 shrink-0 mt-0.5" />
+              <div className="p-4 bg-white rounded-2xl border-l-4 border-l-rose-500 border border-slate-200/80 shadow-subtle flex flex-col justify-center">
+                <span className="text-xs font-bold text-rose-700 uppercase tracking-wider mb-1">Kriteria 3</span>
                 <span>Pendarahan hebat / kejang demam anak</span>
               </div>
             </div>

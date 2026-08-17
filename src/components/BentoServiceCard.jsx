@@ -1,5 +1,4 @@
 import React from 'react';
-import { Check } from 'lucide-react';
 import Badge from './ui/Badge';
 import Heading from './ui/Heading';
 
@@ -30,16 +29,15 @@ export default function BentoServiceCard({
       <div className="absolute top-0 inset-x-0 h-px bg-gradient-to-r from-transparent via-white/25 to-transparent pointer-events-none" />
 
       <div className="relative z-10 p-6 sm:p-8 text-white">
-        <div className="flex items-center gap-2.5 mb-3">
+        <div className="flex items-center gap-2.5 mb-3 flex-wrap">
           {tag && (
             <Badge variant="lime" size="xs" className="shadow-subtle">
               {tag}
             </Badge>
           )}
           {stat && (
-            <span className="inline-flex items-center gap-1.5 text-sm text-lime-300 font-medium bg-black/40 px-3 py-1 rounded-full border border-lime-400/20 backdrop-blur-sm">
-              <Check className="w-4 h-4 text-lime-400 shrink-0" />
-              <span>{stat}</span>
+            <span className="inline-block text-sm text-lime-300 font-medium bg-black/50 px-3 py-1 rounded-full border border-lime-400/20 backdrop-blur-sm">
+              {stat}
             </span>
           )}
         </div>
