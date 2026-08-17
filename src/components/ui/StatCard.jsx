@@ -11,7 +11,7 @@ export default function StatCard({
   if (variant === 'dark') {
     return (
       <div
-        className={`group relative bg-white/[0.07] hover:bg-white/[0.14] border border-white/10 hover:border-lime-400/40 rounded-2xl p-5 sm:p-6 transition-all duration-300 ease-out backdrop-blur-md shadow-card-depth hover:shadow-elevation flex flex-col justify-between overflow-hidden ${className}`}
+        className={`group relative bg-white/[0.07] hover:bg-white/[0.14] border border-white/10 hover:border-lime-400/40 rounded-2xl p-5 sm:p-6 transition-all duration-300 ease-out backdrop-blur-md shadow-card-depth flex flex-col justify-between overflow-hidden ${className}`}
       >
         <TopShimmer variant="lime" />
 
@@ -34,7 +34,7 @@ export default function StatCard({
 
   return (
     <div
-      className={`group relative bg-white border border-slate-200/90 hover:border-brand-400/60 rounded-2xl p-6 transition-all duration-300 ease-out shadow-card-depth hover:shadow-card-hover hover:-translate-y-1 overflow-hidden ${className}`}
+      className={`group relative bg-white border border-slate-200/90 hover:border-brand-400/60 rounded-2xl p-6 transition-all duration-300 ease-out shadow-card-depth hover:-translate-y-1 overflow-hidden ${className}`}
     >
       <TopShimmer variant="brand" />
 

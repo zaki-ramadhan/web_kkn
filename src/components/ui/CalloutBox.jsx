@@ -7,13 +7,21 @@ export default function CalloutBox({
   description,
   children,
   variant = 'brand',
+  interactive = false,
   className = '',
 }) {
-  const variantStyles = {
-    brand: 'bg-gradient-to-r from-brand-50 via-brand-50/70 to-white border-brand-200/90 hover:border-brand-400/60 text-slate-900 shadow-card-depth hover:shadow-card-hover hover:-translate-y-1',
-    slate: 'bg-gradient-to-r from-slate-50 via-white to-slate-50 border-slate-200/90 hover:border-slate-400/60 text-slate-900 shadow-card-depth hover:shadow-card-hover hover:-translate-y-1',
-    rose: 'bg-gradient-to-r from-rose-50 via-rose-50/60 to-white border-rose-200 hover:border-rose-400/60 text-rose-950 shadow-card-depth hover:shadow-card-hover hover:-translate-y-1',
-    dark: 'bg-gradient-to-br from-brand-850 via-brand-900 to-brand-950 border-brand-700/80 hover:border-white/30 text-white shadow-forest-card hover:-translate-y-1',
+  const staticStyles = {
+    brand: 'bg-gradient-to-r from-brand-50 via-brand-50/70 to-white border-brand-200/90 text-slate-900 shadow-card-depth',
+    slate: 'bg-gradient-to-r from-slate-50 via-white to-slate-50 border-slate-200/90 text-slate-900 shadow-card-depth',
+    rose: 'bg-gradient-to-r from-rose-50 via-rose-50/60 to-white border-rose-200 text-rose-950 shadow-card-depth',
+    dark: 'bg-gradient-to-br from-brand-850 via-brand-900 to-brand-950 border-brand-700/80 text-white shadow-forest-card',
+  };
+
+  const hoverStyles = {
+    brand: 'hover:border-brand-400/60 hover:-translate-y-1',
+    slate: 'hover:border-slate-400/60 hover:-translate-y-1',
+    rose: 'hover:border-rose-400/60 hover:-translate-y-1',
+    dark: 'hover:border-white/30 hover:-translate-y-1',
   };
 
   const titleStyles = {
@@ -40,10 +48,10 @@ export default function CalloutBox({
   return (
     <div
       className={`group relative border rounded-2xl p-6 sm:p-8 overflow-hidden transition-all duration-300 ease-out ${
-        variantStyles[variant] || variantStyles.brand
-      } ${className}`}
+        staticStyles[variant] || staticStyles.brand
+      } ${interactive ? hoverStyles[variant] || hoverStyles.brand : ''} ${className}`}
     >
-      <TopShimmer variant="brand" />
+      {interactive && <TopShimmer variant="brand" />}
 
       <div className="flex flex-col md:flex-row items-start justify-between gap-6 relative z-10">
         <div className="flex items-start gap-4">

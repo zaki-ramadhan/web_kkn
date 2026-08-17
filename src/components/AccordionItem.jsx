@@ -17,7 +17,7 @@ export default function AccordionItem({
       className={`group relative rounded-2xl overflow-hidden transition-all duration-300 ease-out ${
         isOpen
           ? 'border border-brand-400/80 bg-gradient-to-b from-white via-white to-brand-50/30 shadow-card-depth ring-1 ring-brand-400/20'
-          : 'border border-slate-200/90 bg-white shadow-subtle hover:border-brand-400/50 hover:shadow-card-depth hover:-translate-y-0.5'
+          : 'border border-slate-200/90 bg-white shadow-subtle hover:border-brand-400/50 hover:-translate-y-0.5'
       }`}
     >
       <TopShimmer variant="brand" />

@@ -11,7 +11,7 @@ export default function StepCard({
 }) {
   return (
     <div
-      className={`group relative bg-gradient-to-b from-white via-white to-slate-50/80 border border-slate-200/90 hover:border-emerald-400/60 rounded-3xl p-6 sm:p-7 transition-all duration-300 ease-out flex flex-col justify-between shadow-card-depth hover:shadow-card-hover hover:-translate-y-2 overflow-hidden h-full ${className}`}
+      className={`group relative bg-gradient-to-b from-white via-white to-slate-50/80 border border-slate-200/90 hover:border-emerald-400/60 rounded-3xl p-6 sm:p-7 transition-all duration-300 ease-out flex flex-col justify-between shadow-card-depth hover:-translate-y-2 overflow-hidden h-full ${className}`}
     >
       <TopShimmer variant="lime" />
 

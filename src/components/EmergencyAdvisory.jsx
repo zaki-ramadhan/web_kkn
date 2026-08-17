@@ -35,30 +35,39 @@ export default function EmergencyAdvisory({
           </div>
         </div>
 
-        {/* Right Column: Clinical Emergency Criteria List */}
-        <div className="lg:col-span-6 space-y-3">
+        {/* Right Column: Clinical Emergency Criteria List with Cascading Tilt / Crumble Effect */}
+        <div className="lg:col-span-6 space-y-3 pt-2 pb-2">
           <div className="text-sm font-bold text-slate-300 uppercase tracking-wider mb-2">
             Kriteria Klinis Penanganan Gawat Darurat:
           </div>
 
-          {criteria.map((item) => (
-            <div
-              key={item.code}
-              className="flex items-start gap-4 p-4 rounded-2xl bg-white/[0.06] hover:bg-white/[0.09] border border-white/10 transition-colors"
-            >
-              <span className="font-grotesk font-black text-rose-400 text-lg shrink-0 mt-0.5">
-                {item.code}
-              </span>
-              <div>
-                <div className="text-sm sm:text-base font-bold text-white leading-snug">
-                  {item.title}
-                </div>
-                <div className="text-sm text-slate-300 mt-1 font-normal leading-relaxed">
-                  {item.desc}
+          {criteria.map((item, idx) => {
+            const tiltClass =
+              idx === 1
+                ? 'md:rotate-[1.5deg] md:translate-x-2.5 md:translate-y-0.5 md:scale-[0.99] origin-top-left hover:md:rotate-0 hover:md:translate-x-0 hover:md:translate-y-0 hover:md:scale-100'
+                : idx === 2
+                ? 'md:rotate-[3.2deg] md:translate-x-5 md:translate-y-1.5 md:scale-[0.98] origin-top-left hover:md:rotate-0 hover:md:translate-x-0 hover:md:translate-y-0 hover:md:scale-100'
+                : 'md:rotate-0';
+
+            return (
+              <div
+                key={item.code}
+                className={`flex items-start gap-4 p-4 rounded-2xl bg-white/[0.06] hover:bg-white/[0.12] border border-white/10 hover:border-rose-400/40 transition-all duration-300 ${tiltClass}`}
+              >
+                <span className="font-grotesk font-black text-rose-400 text-lg shrink-0 mt-0.5">
+                  {item.code}
+                </span>
+                <div>
+                  <div className="text-sm sm:text-base font-bold text-white leading-snug">
+                    {item.title}
+                  </div>
+                  <div className="text-sm text-slate-300 mt-1 font-normal leading-relaxed">
+                    {item.desc}
+                  </div>
                 </div>
               </div>
-            </div>
-          ))}
+            );
+          })}
         </div>
       </div>
     </div>

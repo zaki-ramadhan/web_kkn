@@ -13,7 +13,7 @@ export default function BentoServiceCard({
 }) {
   return (
     <div
-      className={`${span} group relative rounded-3xl overflow-hidden shadow-card-depth hover:shadow-card-hover hover:-translate-y-1.5 min-h-[350px] flex flex-col justify-end border border-slate-200/90 hover:border-brand-400/50 bg-slate-900 transition-all duration-300 ease-out ${className}`}
+      className={`${span} group relative rounded-3xl overflow-hidden shadow-card-depth hover:-translate-y-1.5 min-h-[350px] flex flex-col justify-end border border-slate-200/90 hover:border-brand-400/50 bg-slate-900 transition-all duration-300 ease-out ${className}`}
     >
       {/* Top shimmer accent on hover */}
       <div className="absolute top-0 inset-x-0 h-[2px] bg-gradient-to-r from-transparent via-lime-400/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-20 pointer-events-none" />

@@ -5,7 +5,7 @@ import TopShimmer from './ui/TopShimmer';
 function MemberMiniCard({ member }) {
   return (
     <div className="w-[195px] sm:w-[220px] shrink-0 py-2 transition-all duration-300 ease-out group-hover/track:opacity-45 group-hover/track:grayscale-[40%] hover:!opacity-100 hover:!grayscale-0 hover:!scale-105 relative z-0 hover:z-20">
-      <div className="group relative bg-white border border-slate-200/90 hover:border-emerald-400/80 rounded-2xl p-3.5 sm:p-4 transition-all duration-300 ease-out shadow-card-depth hover:shadow-card-hover hover:-translate-y-1.5 flex flex-col justify-between h-full overflow-hidden">
+      <div className="group relative bg-white border border-slate-200/90 hover:border-emerald-400/80 rounded-2xl p-3.5 sm:p-4 transition-all duration-300 ease-out shadow-card-depth hover:-translate-y-1.5 flex flex-col justify-between h-full overflow-hidden">
         <TopShimmer variant="lime" />
 
         {/* Portrait Photo */}

@@ -31,11 +31,9 @@ export default function AdministrationSection({ faqs = administrativeFaqs }) {
             Jangan panik jika status kartu Anda nonaktif atau faskes terdaftar masih di kampung halaman lama. Simak solusi mandiri dan ketentuan terbarunya di sini.
           </p>
 
-          {/* REHAB Program Highlight Box */}
-          <div className="group relative bg-white border border-slate-200/90 hover:border-brand-400/60 rounded-2xl p-6 shadow-card-depth hover:shadow-card-hover hover:-translate-y-1.5 transition-all duration-300 ease-out overflow-hidden">
-            <TopShimmer variant="lime" />
-
-            <h4 className="font-grotesk font-bold text-base text-slate-900 mb-2 group-hover:text-brand-850 transition-colors">
+          {/* REHAB Program Highlight Box (Static Informational Card) */}
+          <div className="relative bg-white border border-slate-200/90 rounded-2xl p-6 shadow-card-depth overflow-hidden">
+            <h4 className="font-grotesk font-bold text-base text-slate-900 mb-2">
               Program REHAB (Cicilan Iuran)
             </h4>
             <p className="text-sm text-slate-700 leading-relaxed mb-4 font-normal">
