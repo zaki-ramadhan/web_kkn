@@ -30,7 +30,7 @@ export const heroStats = [
 export const bpjsCategories = [
   {
     id: 'pbi',
-    badge: 'Kategori 1 • Bantuan Pemerintah',
+    badge: 'Bantuan Pemerintah',
     name: 'BPJS PBI (Penerima Bantuan Iuran)',
     price: 'Gratis 100%',
     priceSub: 'Bantuan Iuran Pemerintah',
@@ -48,7 +48,7 @@ export const bpjsCategories = [
   },
   {
     id: 'mandiri',
-    badge: 'Kategori 2 • Paling Populer',
+    badge: 'Mandiri / PBPU',
     name: 'BPJS Non-PBI / Mandiri (PBPU)',
     price: 'Rp 35.000 - Rp 150.000',
     priceSub: 'Per Orang / Bulan (Sesuai Kelas)',
@@ -66,7 +66,7 @@ export const bpjsCategories = [
   },
   {
     id: 'ppu',
-    badge: 'Kategori 3 • Pekerja Formal',
+    badge: 'Pekerja Formal (PPU)',
     name: 'BPJS PPU (Pekerja Penerima Upah)',
     price: '5% dari Gaji',
     priceSub: 'Tanggungan Pemberi Kerja & Karyawan',

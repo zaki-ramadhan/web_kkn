@@ -33,19 +33,17 @@ export default function CategoryCard({
         <div className="absolute -right-16 -top-16 w-48 h-48 bg-lime-400/15 rounded-full blur-3xl pointer-events-none" />
       )}
 
-      {isForest && (
-        <div className="absolute -top-3.5 left-1/2 -translate-x-1/2 z-10">
-          <Badge variant="lime" size="xs" className="shadow-elevation ring-2 ring-brand-950">
-            Paling Banyak Dipakai
-          </Badge>
-        </div>
-      )}
-
       <div className="relative z-10">
-        <div className="mb-4">
-          <Badge variant={isForest ? 'brandDark' : 'slate'} size="xs">
+        {/* Top Badges Row (Cleanly Embedded, Zero Cropping) */}
+        <div className="flex items-center justify-between gap-2 mb-4 flex-wrap">
+          <Badge variant={isForest ? 'brandDark' : 'brand'} size="xs">
             {badge}
           </Badge>
+          {isForest && (
+            <Badge variant="lime" size="xs" className="shadow-subtle">
+              Paling Banyak Dipakai
+            </Badge>
+          )}
         </div>
 
         <Heading
