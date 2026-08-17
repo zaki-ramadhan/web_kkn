@@ -55,7 +55,13 @@ export default function PillCTAButton({
 
   if (href) {
     return (
-      <a href={href} target={target} rel={rel} className={baseClasses}>
+      <a
+        href={href}
+        target={target}
+        rel={rel}
+        onClick={onClick}
+        className={baseClasses}
+      >
         {content}
       </a>
     );
