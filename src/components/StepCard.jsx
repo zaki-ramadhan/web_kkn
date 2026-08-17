@@ -11,13 +11,13 @@ export default function StepCard({
 }) {
   return (
     <div
-      className={`group relative bg-gradient-to-b from-white via-white to-slate-50/80 border border-slate-200/90 hover:border-brand-400/70 rounded-3xl p-6 sm:p-7 transition-all duration-300 ease-out flex flex-col justify-between shadow-card-depth hover:shadow-card-hover hover:-translate-y-2 overflow-hidden h-full ${className}`}
+      className={`group relative bg-gradient-to-b from-white via-white to-slate-50/80 border border-slate-200/90 hover:border-emerald-400/60 rounded-3xl p-6 sm:p-7 transition-all duration-300 ease-out flex flex-col justify-between shadow-card-depth hover:shadow-card-hover hover:-translate-y-2 overflow-hidden h-full ${className}`}
     >
       <TopShimmer variant="lime" />
 
-      {/* Top Row: Thematic Icon Pod (Left) & Oversized Watermark Number (Right) */}
+      {/* Top Row: Thematic Icon Pod & Oversized Watermark Number */}
       <div className="flex items-start justify-between mb-5">
-        <div className="w-12 h-12 rounded-2xl bg-brand-50 border border-brand-100/90 flex items-center justify-center text-brand-850 shadow-subtle group-hover:bg-lime-400 group-hover:text-brand-950 group-hover:border-lime-500/40 group-hover:scale-105 transition-all duration-300">
+        <div className="w-12 h-12 rounded-2xl bg-brand-50 border border-brand-100/90 flex items-center justify-center text-brand-850 shadow-subtle group-hover:bg-emerald-600 group-hover:text-white group-hover:border-emerald-600 group-hover:scale-105 transition-all duration-300">
           {Icon ? (
             <Icon className="w-6 h-6" />
           ) : (
@@ -41,13 +41,11 @@ export default function StepCard({
         </p>
       </div>
 
-      {/* Bottom: Refined Capsule Chip */}
+      {/* Bottom: Clean Editorial Note (No Chip / Badge AI Slop) */}
       {highlight && (
-        <div className="pt-3 border-t border-slate-100/90">
-          <div className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-brand-50/80 border border-brand-100/80 text-xs font-semibold text-brand-900 group-hover:bg-lime-50 group-hover:border-lime-300 group-hover:text-brand-950 transition-colors">
-            <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 group-hover:bg-lime-500 shrink-0 transition-colors" />
-            <span>{highlight}</span>
-          </div>
+        <div className="pt-3.5 border-t border-slate-100 text-xs sm:text-sm font-semibold text-slate-600 group-hover:text-slate-900 transition-colors flex items-center gap-2">
+          <span className="w-1.5 h-1.5 rounded-full bg-emerald-600 shrink-0" />
+          <span>{highlight}</span>
         </div>
       )}
     </div>
