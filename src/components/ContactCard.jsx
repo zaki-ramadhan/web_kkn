@@ -50,7 +50,10 @@ export default function ContactCard({
             />
           )}
           <div className="flex-1 min-w-0">
-            <h3 className="text-slate-900 group-hover:text-brand-850 transition-colors font-bold text-base sm:text-lg leading-snug">
+            <h3
+              title={name}
+              className="text-slate-900 group-hover:text-brand-850 transition-colors font-bold text-base sm:text-lg leading-snug line-clamp-1 truncate"
+            >
               {name}
             </h3>
             <div className="font-grotesk text-base sm:text-lg font-black text-brand-850 tracking-tight mt-0.5">
