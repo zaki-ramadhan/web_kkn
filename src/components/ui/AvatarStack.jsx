@@ -16,10 +16,14 @@ export default function AvatarStack({
             key={idx}
             src={src}
             alt="Relawan Mahasiswa"
-            className="inline-block h-7 w-7 rounded-full ring-2 ring-white object-cover"
+            width={28}
+            height={28}
+            loading="lazy"
+            decoding="async"
+            className="inline-block h-7 w-7 rounded-full ring-2 ring-white object-cover object-center shrink-0 bg-slate-100"
           />
         ))}
-        <span className="inline-flex h-7 w-7 items-center justify-center rounded-full bg-lime-400 text-brand-950 text-xs font-bold ring-2 ring-white">
+        <span className="inline-flex h-7 w-7 items-center justify-center rounded-full bg-lime-400 text-brand-950 text-xs font-bold ring-2 ring-white shrink-0">
           +
         </span>
       </div>

@@ -141,6 +141,7 @@ export const serviceFilterTabs = [
 ];
 
 // 3. Jenis Pelayanan di Puskesmas yang Tercover BPJS (Item #5)
+// Optimized WebP URLs with compressed dimensions for fast loading and responsive cover
 export const puskesmasServices = [
   {
     id: 'srv-1',
@@ -150,7 +151,7 @@ export const puskesmasServices = [
     tag: 'Pelayanan Utama',
     desc: 'Konsultasi dokter umum, penanganan penyakit menular & tidak menular, pemeriksaan tanda vital, penjahitan luka, dan terapi farmasi standar.',
     stat: '100% Tercover Tanpa Iur Biaya',
-    image: 'https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=1200&q=80',
+    image: 'https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=960&h=640&q=75&fm=webp',
   },
   {
     id: 'srv-2',
@@ -160,7 +161,7 @@ export const puskesmasServices = [
     tag: 'Prioritas Desa',
     desc: 'Pemeriksaan kehamilan rutin (ANC terpadu + USG dasar), imunisasi lengkap bayi, persalinan normal 24 jam, dan pemasangan alat KB (IUD, implan, suntik).',
     stat: 'Termasuk Skrining Stunting',
-    image: 'https://images.unsplash.com/photo-1595974482597-4b8da8879bc5?auto=format&fit=crop&w=800&q=80',
+    image: 'https://images.unsplash.com/photo-1595974482597-4b8da8879bc5?auto=format&fit=crop&w=600&h=450&q=75&fm=webp',
   },
   {
     id: 'srv-3',
@@ -170,7 +171,7 @@ export const puskesmasServices = [
     tag: 'Poli Gigi',
     desc: 'Pembersihan karang gigi (scaling 1x/tahun sesuai indikasi medis), penambalan gigi komposit, pencabutan gigi sulung/tetap, dan pengobatan infeksi pulpa.',
     stat: 'Dilayani Dokter Gigi',
-    image: 'https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?auto=format&fit=crop&w=800&q=80',
+    image: 'https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?auto=format&fit=crop&w=600&h=450&q=75&fm=webp',
   },
   {
     id: 'srv-4',
@@ -180,7 +181,7 @@ export const puskesmasServices = [
     tag: 'Tes Penunjang',
     desc: 'Pemeriksaan darah lengkap, tes urin rutin, glukosa darah puasa/sewaktu, tes kolesterol, asam urat, tes dahak TBC, dan rapid diagnostic test.',
     stat: 'Hasil Cepat Hari yang Sama',
-    image: 'https://images.unsplash.com/photo-1579154204601-01588f351e67?auto=format&fit=crop&w=800&q=80',
+    image: 'https://images.unsplash.com/photo-1579154204601-01588f351e67?auto=format&fit=crop&w=600&h=450&q=75&fm=webp',
   },
   {
     id: 'srv-5',
@@ -190,7 +191,7 @@ export const puskesmasServices = [
     tag: 'Lansia & Kronis',
     desc: 'Pemantauan khusus penderita Diabetes Melitus & Hipertensi, senam lansia berkala, edukasi gizi klinik, dan paket obat rutin bulanan.',
     stat: 'Pencegahan Komplikasi Dini',
-    image: 'https://images.unsplash.com/photo-1516549655169-df83a0774514?auto=format&fit=crop&w=800&q=80',
+    image: 'https://images.unsplash.com/photo-1516549655169-df83a0774514?auto=format&fit=crop&w=600&h=450&q=75&fm=webp',
   },
 ];
 
@@ -311,9 +312,10 @@ export const emergencyContacts = [
   },
 ];
 
+// Optimized Avatars in WebP
 export const avatarList = [
-  'https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=120&q=80',
-  'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=120&q=80',
-  'https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=120&q=80',
-  'https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=120&q=80',
+  'https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=64&h=64&q=80&fm=webp',
+  'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=64&h=64&q=80&fm=webp',
+  'https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=64&h=64&q=80&fm=webp',
+  'https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=64&h=64&q=80&fm=webp',
 ];

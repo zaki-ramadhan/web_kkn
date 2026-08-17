@@ -19,9 +19,11 @@ export default function BentoServiceCard({
       <img
         src={image}
         alt={title}
-        className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 opacity-70"
+        loading="lazy"
+        decoding="async"
+        className="absolute inset-0 w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500 opacity-70"
       />
-      <div className="absolute inset-0 bg-gradient-to-t from-black/95 via-black/50 to-transparent" />
+      <div className="absolute inset-0 bg-gradient-to-t from-black/95 via-black/50 to-transparent pointer-events-none" />
       <div className="relative z-10 p-6 sm:p-8 text-white">
         <div className="flex items-center gap-2 mb-2">
           {tag && (
