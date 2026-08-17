@@ -1,48 +1,46 @@
 import React from 'react';
-import { Home, PhoneCall, ArrowLeft } from 'lucide-react';
-import Heading from './ui/Heading';
-import PillCTAButton from './ui/PillCTAButton';
+import { ArrowLeft } from 'lucide-react';
 
 export default function NotFound() {
-  const currentPath = window.location.pathname;
-
   return (
-    <div className="min-h-screen bg-brand-950 text-white flex items-center justify-center p-4 sm:p-6 relative overflow-hidden font-sans selection:bg-lime-400 selection:text-brand-950">
-      {/* Background ambient lighting */}
-      <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[500px] h-[300px] bg-lime-400/10 rounded-full blur-[140px] pointer-events-none" />
-      <div className="absolute -bottom-20 -right-20 w-80 h-80 bg-brand-700/20 rounded-full blur-3xl pointer-events-none" />
+    <div className="min-h-screen bg-white text-slate-900 flex flex-col justify-between p-6 sm:p-12 font-sans">
+      {/* Minimal Header */}
+      <div className="max-w-3xl mx-auto w-full">
+        <a
+          href="/"
+          className="text-sm font-bold text-brand-900 hover:text-brand-700 transition-colors inline-flex items-center gap-2"
+        >
+          <span className="w-2 h-2 rounded-full bg-lime-500" />
+          <span>Panduan Layanan BPJS Kesehatan • KKN Desa Sukamakmur</span>
+        </a>
+      </div>
 
-      <div className="relative z-10 max-w-lg w-full text-center bg-white/[0.04] border border-white/10 rounded-3xl p-8 sm:p-12 backdrop-blur-md shadow-forest-card">
-        {/* Big 404 Typography */}
-        <div className="font-grotesk font-black text-7xl sm:text-8xl text-lime-400 tracking-tight mb-3 select-none">
-          404
-        </div>
+      {/* Main Content */}
+      <div className="max-w-3xl mx-auto w-full py-16 sm:py-24">
+        <span className="font-grotesk font-black text-sm text-slate-400 tracking-wider uppercase block mb-3">
+          Error 404
+        </span>
 
-        <Heading as="h1" level="2" color="light" className="mb-3">
-          Halaman Tidak Ditemukan
-        </Heading>
+        <h1 className="font-grotesk font-bold text-3xl sm:text-5xl text-slate-950 tracking-tight leading-tight mb-4">
+          Halaman tidak ditemukan.
+        </h1>
 
-        <p className="text-slate-300 text-sm sm:text-base leading-relaxed font-normal mb-8">
-          Alamat <span className="font-mono text-xs sm:text-sm text-lime-300 bg-white/10 px-2 py-0.5 rounded">{currentPath}</span> tidak tersedia atau telah dipindahkan. Silakan kembali ke beranda panduan resmi.
+        <p className="text-base sm:text-lg text-slate-600 leading-relaxed max-w-xl mb-8 font-normal">
+          Alamat halaman yang Anda tuju tidak tersedia atau tautan telah dipindahkan. Silakan kembali ke beranda untuk melihat panduan lengkap layanan faskes dan BPJS Kesehatan.
         </p>
 
-        {/* Navigation Action Buttons */}
-        <div className="flex flex-col sm:flex-row items-center justify-center gap-3.5">
-          <a
-            href="/"
-            className="w-full sm:w-auto px-6 py-3.5 rounded-full bg-lime-400 hover:bg-lime-300 text-brand-950 font-bold text-sm transition-all duration-200 shadow-subtle hover:shadow-elevation flex items-center justify-center gap-2"
-          >
-            <Home className="w-4 h-4" />
-            <span>Kembali ke Beranda</span>
-          </a>
-          <a
-            href="/#darurat"
-            className="w-full sm:w-auto px-6 py-3.5 rounded-full bg-white/10 hover:bg-white/20 border border-white/15 text-white font-bold text-sm transition-colors flex items-center justify-center gap-2"
-          >
-            <PhoneCall className="w-4 h-4 text-lime-400" />
-            <span>Kontak Posko KKN</span>
-          </a>
-        </div>
+        <a
+          href="/"
+          className="inline-flex items-center gap-2.5 px-6 py-3.5 rounded-full bg-brand-900 hover:bg-brand-950 text-white font-bold text-sm transition-colors shadow-subtle"
+        >
+          <ArrowLeft className="w-4 h-4 text-lime-400" />
+          <span>Kembali ke Halaman Utama</span>
+        </a>
+      </div>
+
+      {/* Minimal Footer */}
+      <div className="max-w-3xl mx-auto w-full pt-8 border-t border-slate-100 text-xs text-slate-400">
+        © 2026 Tim Pengabdian KKN Mahasiswa Desa Sukamakmur.
       </div>
     </div>
   );
