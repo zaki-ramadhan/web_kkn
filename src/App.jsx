@@ -128,7 +128,7 @@ export default function App() {
       <section id="jenis-bpjs" className="py-20 bg-gradient-to-b from-slate-50 via-slate-50/80 to-white border-y border-slate-200/80">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <SectionHeader
-            badge="Pilar 1 • Kepesertaan"
+            badge="Kategori Kepesertaan"
             title="Jenis-Jenis Kepesertaan BPJS Kesehatan"
             subtitle="Pahami kategori kepesertaan, besaran iuran, hak rawat inap, dan mekanisme pendaftarannya."
           />
@@ -158,7 +158,7 @@ export default function App() {
       <section id="alur-faskes" className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <SectionHeader
-            badge="Pilar 2 • Prosedur Berobat"
+            badge="Alur Pelayanan Faskes"
             title="Alur Pelayanan Pasien BPJS di FKTP / Puskesmas"
             subtitle="Ikuti 5 langkah terpadu mulai dari pengambilan antrean hingga pengambilan obat tanpa biaya tambahan."
           />
@@ -199,7 +199,7 @@ export default function App() {
           <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
             <div>
               <span className="block text-sm sm:text-base font-semibold text-brand-800 mb-2.5 tracking-normal">
-                Pilar 3 • Cakupan Manfaat
+                Cakupan Manfaat Layanan
               </span>
               <Heading as="h2" level="2" color="dark">
                 Jenis Pelayanan Puskesmas Tercover BPJS
@@ -247,7 +247,7 @@ export default function App() {
               {/* Left Column */}
               <div className="lg:col-span-5">
                 <span className="block text-sm sm:text-base font-semibold text-lime-400 mb-2.5 tracking-normal">
-                  Pilar 4 • Transformasi Digital
+                  Transformasi Layanan Digital
                 </span>
 
                 <Heading as="h2" level="1" color="light" className="mb-4 leading-tight">
@@ -301,7 +301,7 @@ export default function App() {
             {/* Left Sticky Guide */}
             <div className="lg:col-span-5 lg:sticky lg:top-28 self-start">
               <span className="block text-sm sm:text-base font-semibold text-brand-800 mb-2.5 tracking-normal">
-                Pilar 5 • Solusi Administrasi
+                Solusi Administrasi BPJS
               </span>
 
               <Heading as="h2" level="2" color="dark" className="mb-4">
@@ -354,7 +354,7 @@ export default function App() {
       <section id="darurat" className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <SectionHeader
-            badge="Pilar 6 • Pendampingan Warga"
+            badge="Pendampingan Warga Desa"
             title="Kontak & Narahubung Tim Mahasiswa KKN"
             subtitle="Hubungi tim mahasiswa KKN kami jika Anda memerlukan bantuan informasi, pendampingan alur faskes, atau konsultasi langsung di posko desa."
           />
