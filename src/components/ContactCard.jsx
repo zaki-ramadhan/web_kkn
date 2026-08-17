@@ -1,6 +1,5 @@
 import React from 'react';
 import { ArrowUpRight } from 'lucide-react';
-import Badge from './ui/Badge';
 import Heading from './ui/Heading';
 
 export default function ContactCard({
@@ -19,22 +18,38 @@ export default function ContactCard({
       <div className="absolute top-0 inset-x-0 h-[2px] bg-gradient-to-r from-transparent via-lime-400/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
 
       <div>
-        {/* Header: Avatar + Role Badge */}
-        <div className="flex items-center gap-3.5 mb-4">
+        {/* Tooltip / Speech Bubble Tag with Downward Caret */}
+        <div className="relative inline-block mb-3.5">
+          <div
+            className={`px-3 py-1 rounded-xl text-xs font-bold tracking-wide inline-flex items-center shadow-subtle ${
+              urgent
+                ? 'bg-lime-400 text-brand-950 border border-lime-500/40'
+                : 'bg-brand-50 text-brand-900 border border-brand-200/90'
+            }`}
+          >
+            {type}
+          </div>
+          {/* Downward Arrow Caret pointing to PFP */}
+          <div
+            className={`absolute left-4 -bottom-1 w-2.5 h-2.5 rotate-45 transform ${
+              urgent
+                ? 'bg-lime-400 border-r border-b border-lime-500/40'
+                : 'bg-brand-50 border-r border-b border-brand-200/90'
+            }`}
+          />
+        </div>
+
+        {/* PFP Avatar underneath */}
+        <div className="mb-3.5">
           {avatar && (
             <img
               src={avatar}
               alt={name}
               loading="lazy"
               decoding="async"
-              className="w-12 h-12 rounded-full object-cover border-2 border-brand-100/90 shadow-subtle group-hover:scale-105 group-hover:border-lime-400 transition-all duration-300 shrink-0"
+              className="w-14 h-14 rounded-2xl object-cover border-2 border-brand-100/90 shadow-subtle group-hover:scale-105 group-hover:border-lime-400 transition-all duration-300"
             />
           )}
-          <div className="flex-1 min-w-0">
-            <Badge variant={urgent ? 'lime' : 'brand'} size="xs">
-              {type}
-            </Badge>
-          </div>
         </div>
 
         <Heading as="h3" level="4" color="dark" className="mb-1 text-slate-900 group-hover:text-brand-850 transition-colors font-bold text-base sm:text-lg">
@@ -42,7 +57,7 @@ export default function ContactCard({
         </Heading>
 
         {/* Plain Bold Masked Number */}
-        <div className="font-grotesk text-2xl font-black text-slate-900 my-2 tracking-tight">
+        <div className="font-grotesk text-2xl font-black text-slate-900 my-1.5 tracking-tight">
           {number}
         </div>
 
