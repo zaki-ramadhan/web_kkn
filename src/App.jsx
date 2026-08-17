@@ -63,7 +63,7 @@ export default function App() {
       {/* ====================================================================
           HERO SECTION (High Visibility Dark Cover Photo & Text Legibility)
           ==================================================================== */}
-      <section className="relative pt-28 pb-24 sm:pt-32 md:pt-36 md:pb-28 overflow-hidden bg-brand-950 text-white">
+      <section id="hero-section" className="relative pt-28 pb-24 sm:pt-32 md:pt-36 md:pb-28 overflow-hidden bg-brand-950 text-white">
         {/* Background Image with Crisp Object-Cover and Increased Clarity */}
         <img
           src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&w=1920&h=1080&q=75&fm=webp"

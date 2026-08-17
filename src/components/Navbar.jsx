@@ -16,20 +16,31 @@ export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
 
   useEffect(() => {
-    const handleScroll = () => {
-      // Switch when scrolled past 100px down
-      if (window.scrollY > 100) {
-        setIsScrolled(true);
-      } else {
-        setIsScrolled(false);
-      }
-    };
+    const heroEl = document.getElementById('hero-section');
+    if (!heroEl) {
+      // Fallback scroll listener if element is not yet found
+      const handleScrollFallback = () => {
+        setIsScrolled(window.scrollY > 400);
+      };
+      window.addEventListener('scroll', handleScrollFallback, { passive: true });
+      return () => window.removeEventListener('scroll', handleScrollFallback);
+    }
 
-    window.addEventListener('scroll', handleScroll, { passive: true });
-    handleScroll();
+    // Observer tracks exactly when the bottom of hero-section passes the fixed 80px navbar
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        setIsScrolled(!entry.isIntersecting);
+      },
+      {
+        rootMargin: '-80px 0px 0px 0px',
+        threshold: 0,
+      }
+    );
+
+    observer.observe(heroEl);
 
     return () => {
-      window.removeEventListener('scroll', handleScroll);
+      observer.disconnect();
     };
   }, []);
 
