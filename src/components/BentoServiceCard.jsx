@@ -25,10 +25,11 @@ export default function BentoServiceCard({
         decoding="async"
         className="absolute inset-0 w-full h-full object-cover object-center group-hover:scale-108 transition-transform duration-700 ease-out opacity-75"
       />
-      {/* Multi-stop cinematic gradient scrim */}
-      <div className="absolute inset-0 bg-gradient-to-t from-black/95 via-black/55 to-black/10 pointer-events-none" />
+      {/* Multi-stop cinematic gradient scrim with smooth deepening on hover */}
+      <div className="absolute inset-0 bg-gradient-to-t from-black/95 via-black/60 to-black/10 group-hover:from-black/98 group-hover:via-black/75 group-hover:to-black/30 transition-all duration-300 pointer-events-none" />
 
-      <div className="relative z-10 p-6 sm:p-8 text-white">
+      {/* Content Container: smoothly slides up on hover */}
+      <div className="relative z-10 p-6 sm:p-8 text-white transform transition-transform duration-300 ease-out group-hover:-translate-y-1.5">
         <div className="flex items-center gap-2.5 mb-3 flex-wrap">
           {tag && (
             <Badge variant="lime" size="xs" className="shadow-subtle">
@@ -44,7 +45,8 @@ export default function BentoServiceCard({
         <Heading as="h3" level="3" color="light" className="mb-2 group-hover:text-lime-200 transition-colors">
           {title}
         </Heading>
-        <p className="text-slate-200 text-sm sm:text-base max-w-2xl leading-relaxed font-normal">
+        {/* Description: default line-clamp-2, expands to full text on hover */}
+        <p className="text-slate-200 text-sm sm:text-base max-w-2xl leading-relaxed font-normal line-clamp-2 group-hover:line-clamp-none transition-all duration-300">
           {desc}
         </p>
       </div>
