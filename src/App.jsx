@@ -1,7 +1,6 @@
 import React, { useState, useMemo } from 'react';
 import {
-  Info,
-  AlertTriangle
+  Info
 } from 'lucide-react';
 
 // Centralized Data Layer
@@ -374,29 +373,75 @@ export default function App() {
             ))}
           </div>
 
-          {/* Emergency Guidelines Callout (Clean Editorial Clinical Criteria with Hover Shimmer) */}
-          <div className="mt-12 bg-gradient-to-r from-rose-50/70 via-rose-50/40 to-white border border-rose-200/90 rounded-3xl p-6 sm:p-8 shadow-card-depth">
-            <Heading as="h4" level="4" color="dark" className="mb-2 flex items-center gap-2 text-rose-950 font-bold">
-              <AlertTriangle className="w-5 h-5 text-rose-600" /> Catatan Penting: Kondisi Gawat Darurat Medis
-            </Heading>
-            <p className="text-sm sm:text-base text-slate-800 leading-relaxed mb-5 font-normal">
-              Untuk kondisi medis darurat yang mengancam keselamatan, pasien dapat <strong>langsung mendatangi UGD Rumah Sakit terdekat tanpa perlu surat rujukan faskes tingkat pertama</strong>:
-            </p>
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-3.5 text-sm font-semibold text-slate-900">
-              <div className="group relative p-4 bg-white rounded-2xl border-l-4 border-l-rose-500 border border-slate-200/80 hover:border-slate-300 shadow-subtle hover:shadow-card-depth hover:-translate-y-1 transition-all duration-300 ease-out flex flex-col justify-center overflow-hidden">
-                <div className="absolute top-0 inset-x-0 h-[1.5px] bg-gradient-to-r from-transparent via-rose-400/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
-                <span className="text-xs font-bold text-rose-700 uppercase tracking-wider mb-1">Kriteria 1</span>
-                <span>Gangguan pernapasan akut / henti napas</span>
+          {/* ================================================================
+              EDITORIAL PUBLIC HEALTH ADVISORY: Gawat Darurat Bebas Rujukan
+              ================================================================ */}
+          <div className="mt-14 bg-brand-950 text-white rounded-3xl p-8 sm:p-10 lg:p-12 border border-brand-800 shadow-forest-card relative overflow-hidden">
+            {/* Ambient subtle glow */}
+            <div className="absolute top-0 right-0 w-80 h-80 bg-rose-500/15 rounded-full blur-3xl pointer-events-none" />
+
+            <div className="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
+              {/* Left Column: Directive & Legal Exemption */}
+              <div className="lg:col-span-6 space-y-4">
+                <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-rose-500/20 border border-rose-500/30 text-rose-300 text-sm font-semibold">
+                  <span className="w-2 h-2 rounded-full bg-rose-400" />
+                  <span>Prosedur Gawat Darurat Medis</span>
+                </div>
+
+                <h3 className="font-grotesk text-2xl sm:text-3xl font-extrabold text-white tracking-tight leading-snug">
+                  Hak Bebas Rujukan Langsung ke IGD Rumah Sakit
+                </h3>
+
+                <p className="text-slate-200 text-sm sm:text-base leading-relaxed font-normal">
+                  Dalam situasi medis darurat yang mengancam nyawa, pasien peserta BPJS berhak <strong className="text-white font-semibold">langsung ditangani di Instalasi Gawat Darurat (IGD) rumah sakit mana pun</strong> tanpa memerlukan surat rujukan dari FKTP/Puskesmas dan tanpa uang muka.
+                </p>
+
+                <div className="pt-2 text-xs sm:text-sm text-slate-400 font-medium border-t border-white/10">
+                  Landasan Regulasi: Permenkes RI No. 28 Tahun 2014 & Ketentuan BPJS Kesehatan
+                </div>
               </div>
-              <div className="group relative p-4 bg-white rounded-2xl border-l-4 border-l-rose-500 border border-slate-200/80 hover:border-slate-300 shadow-subtle hover:shadow-card-depth hover:-translate-y-1 transition-all duration-300 ease-out flex flex-col justify-center overflow-hidden">
-                <div className="absolute top-0 inset-x-0 h-[1.5px] bg-gradient-to-r from-transparent via-rose-400/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
-                <span className="text-xs font-bold text-rose-700 uppercase tracking-wider mb-1">Kriteria 2</span>
-                <span>Kehilangan kesadaran / cedera fisik berat</span>
-              </div>
-              <div className="group relative p-4 bg-white rounded-2xl border-l-4 border-l-rose-500 border border-slate-200/80 hover:border-slate-300 shadow-subtle hover:shadow-card-depth hover:-translate-y-1 transition-all duration-300 ease-out flex flex-col justify-center overflow-hidden">
-                <div className="absolute top-0 inset-x-0 h-[1.5px] bg-gradient-to-r from-transparent via-rose-400/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
-                <span className="text-xs font-bold text-rose-700 uppercase tracking-wider mb-1">Kriteria 3</span>
-                <span>Pendarahan hebat / kejang demam anak</span>
+
+              {/* Right Column: 3 Clinical Emergency Categories */}
+              <div className="lg:col-span-6 space-y-3">
+                <div className="text-xs font-bold text-slate-400 uppercase tracking-wider mb-2">
+                  Kriteria Klinis Penanganan Gawat Darurat:
+                </div>
+
+                <div className="flex items-start gap-4 p-4 rounded-2xl bg-white/[0.06] hover:bg-white/[0.09] border border-white/10 transition-colors">
+                  <span className="font-grotesk font-black text-rose-400 text-lg shrink-0 mt-0.5">01</span>
+                  <div>
+                    <div className="text-sm sm:text-base font-bold text-white leading-snug">
+                      Gangguan Pernapasan Akut & Henti Jantung
+                    </div>
+                    <div className="text-xs sm:text-sm text-slate-300 mt-1 font-normal leading-relaxed">
+                      Asma berat mendadak, sesak napas akut, henti napas, atau serangan jantung.
+                    </div>
+                  </div>
+                </div>
+
+                <div className="flex items-start gap-4 p-4 rounded-2xl bg-white/[0.06] hover:bg-white/[0.09] border border-white/10 transition-colors">
+                  <span className="font-grotesk font-black text-rose-400 text-lg shrink-0 mt-0.5">02</span>
+                  <div>
+                    <div className="text-sm sm:text-base font-bold text-white leading-snug">
+                      Penurunan Kesadaran & Cedera Fisik Berat
+                    </div>
+                    <div className="text-xs sm:text-sm text-slate-300 mt-1 font-normal leading-relaxed">
+                      Pingsan tidak sadarkan diri, kecelakaan lalu lintas, trauma kepala, patah tulang terbuka.
+                    </div>
+                  </div>
+                </div>
+
+                <div className="flex items-start gap-4 p-4 rounded-2xl bg-white/[0.06] hover:bg-white/[0.09] border border-white/10 transition-colors">
+                  <span className="font-grotesk font-black text-rose-400 text-lg shrink-0 mt-0.5">03</span>
+                  <div>
+                    <div className="text-sm sm:text-base font-bold text-white leading-snug">
+                      Pendarahan Masif & Kejang Demam Balita
+                    </div>
+                    <div className="text-xs sm:text-sm text-slate-300 mt-1 font-normal leading-relaxed">
+                      Pendarahan hebat yang tidak terkendali, luka bakar luas, keracunan akut, atau kejang demam anak.
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
