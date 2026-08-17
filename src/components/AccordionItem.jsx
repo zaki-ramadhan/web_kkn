@@ -49,8 +49,45 @@ export default function AccordionItem({
       </button>
 
       {isOpen && (
-        <div className="px-6 sm:px-7 pb-6 pt-1 text-slate-800 text-sm sm:text-base leading-relaxed border-t border-brand-100/60 font-normal">
-          <p>{answer}</p>
+        <div className="px-6 sm:px-7 pb-6 pt-2 text-slate-800 text-sm sm:text-base leading-relaxed border-t border-brand-100/60 font-normal space-y-3.5">
+          {typeof answer === 'string' ? (
+            <p>{answer}</p>
+          ) : (
+            <>
+              {answer.intro && (
+                <p className="text-slate-700 font-medium leading-relaxed">
+                  {answer.intro}
+                </p>
+              )}
+
+              {answer.list && answer.list.length > 0 && (
+                <ul className="space-y-2.5 my-2">
+                  {answer.list.map((item, idx) => (
+                    <li key={idx} className="flex items-start gap-2.5">
+                      <span className="w-5 h-5 rounded-full bg-brand-100/80 text-brand-850 font-bold text-xs flex items-center justify-center shrink-0 mt-0.5">
+                        {idx + 1}
+                      </span>
+                      <div className="text-slate-700 flex-1">
+                        {item.title && (
+                          <strong className="text-slate-900 font-semibold mr-1.5">
+                            {item.title}:
+                          </strong>
+                        )}
+                        <span>{item.text || item}</span>
+                      </div>
+                    </li>
+                  ))}
+                </ul>
+              )}
+
+              {answer.note && (
+                <div className="mt-3 p-3.5 rounded-xl bg-brand-50/70 border border-brand-200/70 text-xs sm:text-sm text-slate-700 leading-relaxed font-normal">
+                  <strong className="text-brand-950 font-bold">Catatan Penting: </strong>
+                  {answer.note}
+                </div>
+              )}
+            </>
+          )}
         </div>
       )}
     </div>

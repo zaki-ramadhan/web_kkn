@@ -223,36 +223,112 @@ export const administrativeFaqs = [
     id: 'adm-1',
     category: 'Aktivasi BPJS Mati',
     question: 'Bagaimana cara mengaktifkan kartu BPJS Mandiri yang nonaktif akibat tunggakan?',
-    answer:
-      'Untuk BPJS Mandiri: Cek total tagihan di portal layanan digital JKN. Jika tunggakan memberatkan, manfaatkan Program REHAB (Rencana Pembayaran Bertahap) untuk mencicil tagihan hingga 12 bulan. Setelah cicilan lunas atau tagihan dibayar penuh via ATM/e-wallet, status kartu otomatis aktif kembali dalam 1x24 jam.',
+    answer: {
+      intro: 'Bagi peserta BPJS Mandiri (PBPU) yang status kepesertaannya nonaktif akibat keterlambatan iuran bulanan, berikut langkah re-aktivasi yang dapat dilakukan:',
+      list: [
+        {
+          title: 'Cek Rincian Tunggakan',
+          text: 'Periksa total bulan tunggakan dan nominal iuran melalui kanal pembayaran resmi atau layanan informasi BPJS.',
+        },
+        {
+          title: 'Manfaatkan Program REHAB',
+          text: 'Jika tunggakan mencapai 4 hingga 24 bulan dan memberatkan, manfaatkan Program REHAB (Rencana Pembayaran Bertahap) untuk mencicil tagihan hingga 12 tahapan.',
+        },
+        {
+          title: 'Bayar Iuran / Cicilan Pertama',
+          text: 'Lakukan pembayaran tagihan penuh atau angsuran pertama via ATM, autodebet bank, atau minimarket.',
+        },
+      ],
+      note: 'Kartu BPJS otomatis aktif kembali maksimal 1x24 jam setelah pembayaran atau angsuran pertama diverifikasi oleh sistem perbankan.',
+    },
   },
   {
     id: 'adm-2',
     category: 'Aktivasi BPJS Mati',
     question: 'Kartu BPJS PBI (Bantuan Pemerintah) dinonaktifkan, bagaimana solusinya?',
-    answer:
-      'Peserta PBI dinonaktifkan jika data NIK tidak padan data kependudukan atau terhapus dari daftar DTKS. Langkah solusi: (1) Datang ke kantor kelurahan setempat membawa KTP dan KK untuk verifikasi data, (2) Mengajukan usulan data ulang ke balai desa, atau (3) Beralih menjadi peserta BPJS Mandiri Kelas 3 jika mampu secara mandiri.',
+    answer: {
+      intro: 'Peserta PBI yang dinonaktifkan umumnya disebabkan data NIK kependudukan belum padan di Dukcapil atau terhapus dari pemutakhiran bansos DTKS. Solusi yang dapat ditempuh warga:',
+      list: [
+        {
+          title: 'Verifikasi NIK di Balai Desa',
+          text: 'Datang ke kantor desa/kelurahan setempat membawa e-KTP dan KK asli untuk memastikan status NIK aktif dan padan secara kependudukan.',
+        },
+        {
+          title: 'Pengusulan Ulang DTKS',
+          text: 'Mintalah pendampingan petugas bansos desa untuk mengusulkan kembali data keluarga Anda ke dalam Data Terpadu Kesejahteraan Sosial (DTKS).',
+        },
+        {
+          title: 'Opsi Pindah ke Segmen Mandiri',
+          text: 'Jika membutuhkan pelayanan medis mendesak dan mampu secara ekonomi, Anda dapat beralih sementara ke BPJS Mandiri Kelas 3 (Rp 35.000/bulan).',
+        },
+      ],
+      note: 'Pengaktifan kembali PBI bansos sepenuhnya bergantung pada penetapan kuota Kemensos RI dan verifikasi Dinas Sosial setempat.',
+    },
   },
   {
     id: 'adm-3',
     category: 'Aktivasi BPJS Mati',
     question: 'Saya baru berhenti bekerja dari kantor, bagaimana cara mengaktifkan BPJS kembali?',
-    answer:
-      'Setelah dinonaktifkan oleh perusahaan lama, Anda dapat beralih ke segmen BPJS Mandiri (PBPU) tanpa masa tunggu denda. Buka menu "Perubahan Data Peserta" -> Pilih "Pindah Segmen Mandiri", tentukan kelas rawat inap yang diinginkan, lalu lakukan pembayaran iuran pertama.',
+    answer: {
+      intro: 'Setelah dinonaktifkan oleh instansi/perusahaan lama pasca-resign atau PHK, jaminan kesehatan Anda dapat dialihkan ke segmen Mandiri tanpa denda:',
+      list: [
+        {
+          title: 'Masa Perlindungan Pasca-PHK',
+          text: 'Peserta masih berhak mendapatkan manfaat perlindungan dasar hingga 6 bulan pasca-PHK tanpa iuran untuk kondisi medis tertentu.',
+        },
+        {
+          title: 'Pengalihan ke Segmen Mandiri',
+          text: 'Ubah segmen kepesertaan dari PPU (Pekerja Formal) menjadi PBPU/Mandiri dan pilih kelas rawat inap yang dikehendaki (Kelas 1, 2, atau 3).',
+        },
+        {
+          title: 'Pembayaran Iuran Pertama',
+          text: 'Lakukan pembayaran iuran pertama untuk mengaktifkan kembali kartu secara langsung tanpa masa tunggu 14 hari.',
+        },
+      ],
+      note: 'Pastikan pengalihan segmen dilakukan dalam kurun waktu 30 hari sejak tanggal nonaktif dari perusahaan untuk menghindari tunggakan kumulatif.',
+    },
   },
   {
     id: 'adm-4',
     category: 'Pindah Domisili & FKTP',
     question: 'Bagaimana cara pindah FKTP (Puskesmas/Klinik) ke domisili tempat tinggal baru?',
-    answer:
-      'Syarat utama: Telah terdaftar minimal 3 bulan di FKTP lama (kecuali jika pindah domisili KK resmi yang dibuktikan surat pindah). Cara pindah: Buka menu "Perubahan Data Peserta" -> Klik "Fasilitas Kesehatan Tingkat Pertama" -> Pilih Provinsi, Kab/Kota, dan Puskesmas tujuan -> Simpan. Perubahan berlaku per tanggal 1 bulan berikutnya.',
+    answer: {
+      intro: 'Untuk mempermudah rujukan dan memastikan pelayanan kesehatan tercover 100% di tempat tinggal saat ini, ikuti alur mutasi FKTP berikut:',
+      list: [
+        {
+          title: 'Syarat Masa Terdaftar',
+          text: 'Peserta telah terdaftar minimal 3 bulan di FKTP lama (syarat ini dikecualikan jika Anda memiliki surat keterangan pindah domisili KK resmi).',
+        },
+        {
+          title: 'Pilih Puskesmas Domisili Baru',
+          text: 'Tentukan Puskesmas Sukamakmur sebagai fasilitas kesehatan tingkat pertama yang baru untuk seluruh anggota keluarga.',
+        },
+        {
+          title: 'Masa Berlaku Aktif',
+          text: 'Perubahan faskes baru akan mulai berlaku efektif per tanggal 1 pada bulan berikutnya.',
+        },
+      ],
+      note: 'Selama masa tunggu hingga tanggal 1 bulan berikutnya, Anda tetap dapat berobat di faskes lama atau memanfaatkan kuota berobat luar faskes.',
+    },
   },
   {
     id: 'adm-5',
     category: 'Pindah Domisili & FKTP',
     question: 'Apakah bisa berobat di Puskesmas lain jika sedang di luar kota tanpa pindah FKTP?',
-    answer:
-      'Bisa! Peserta BPJS berhak mendapatkan pelayanan di luar FKTP terdaftarnya maksimal 3 kali kunjungan dalam 1 bulan pada faskes yang sama. Jika kondisi darurat (UGD), Anda bisa langsung datang ke faskes terdekat mana saja tanpa surat rujukan.',
+    answer: {
+      intro: 'Peserta BPJS tetap memiliki hak mendapatkan pelayanan kesehatan dasar meskipun sedang berada di luar wilayah faskes terdaftarnya:',
+      list: [
+        {
+          title: 'Kuota Kunjungan Luar Faskes',
+          text: 'Berhak mendapatkan pelayanan di luar FKTP terdaftar maksimal 3 kali kunjungan dalam 1 bulan pada faskes yang sama.',
+        },
+        {
+          title: 'Kondisi Gawat Darurat (UGD)',
+          text: 'Jika mengalami kondisi darurat medis yang mengancam nyawa, Anda dapat langsung mendatangi IGD rumah sakit mana saja tanpa rujukan.',
+        },
+      ],
+      note: 'Jika Anda menetap lebih dari 3 bulan di domisili baru, sangat dianjurkan untuk memindahkan FKTP secara permanen agar pelayanan lebih optimal.',
+    },
   },
 ];
 
