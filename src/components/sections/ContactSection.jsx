@@ -7,35 +7,23 @@ import ContactCard from '../ContactCard';
 import EmergencyAdvisory from '../EmergencyAdvisory';
 import TeamMarqueeSlider from '../TeamMarqueeSlider';
 import AnimatedContent from '../reactbits/AnimatedContent';
-import { useVersion } from '../../context/VersionContext';
-import { emergencyCriteria, kknTeamMembers } from '../../data/bpjsData';
+import { emergencyContacts, emergencyCriteria, kknTeamMembers } from '../../data/bpjsData';
 
 export default function ContactSection({
+  contacts = emergencyContacts,
   criteria = emergencyCriteria,
   members = kknTeamMembers,
 }) {
-  const { currentData, isNewVersion } = useVersion();
-  const contacts = currentData.emergencyContacts;
   return (
     <SectionWrapper id="darurat" bg="white">
       <SectionHeader
-        badge={isNewVersion ? 'Pusat Layanan & Narahubung' : 'Pendampingan Mahasiswa KKN'}
+        badge="Pusat Layanan & Narahubung"
         title={
-          isNewVersion ? (
-            <>
-              Pusat Informasi & <Stabilo>Kontak Darurat</Stabilo>
-            </>
-          ) : (
-            <>
-              Kontak & Narahubung <Stabilo>Tim Mahasiswa KKN</Stabilo>
-            </>
-          )
+          <>
+            Pusat Informasi & <Stabilo>Kontak Darurat</Stabilo>
+          </>
         }
-        subtitle={
-          isNewVersion
-            ? 'Hubungi narahubung resmi Kader Posyandu Sirna Asih, Puskesmas Cibeber/Cibaregbeg, Care Center BPJS 165, dan Dinas Kesehatan Cianjur.'
-            : 'Hubungi tim mahasiswa KKN kami jika Anda memerlukan bantuan informasi, pendampingan alur faskes, atau konsultasi langsung di posko desa.'
-        }
+        subtitle="Hubungi narahubung resmi Kader Posyandu Sirna Asih, Puskesmas Cibeber/Cibaregbeg, Care Center BPJS 165, dan Dinas Kesehatan Cianjur."
       />
 
       {/* 4 Primary Action Cards for Direct Citizen Inquiries with Staggered Scroll-Reveal Animations */}

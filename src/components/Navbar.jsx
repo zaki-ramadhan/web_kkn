@@ -1,6 +1,5 @@
 import React, { useState, useRef } from 'react';
 import {
-  HeartPulse,
   Menu,
   X,
   MessageSquare,
@@ -10,11 +9,9 @@ import {
 import PillCTAButton from './ui/PillCTAButton';
 import { useScrolledState } from '../hooks/useScrolledState';
 import { useClickOutside } from '../hooks/useClickOutside';
-import { useVersion } from '../context/VersionContext';
-import { navEducationalModules } from '../data/bpjsData';
+import { brandData, navEducationalModules } from '../data/bpjsData';
 
 export default function Navbar({ modules = navEducationalModules }) {
-  const { currentData, isNewVersion } = useVersion();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [dropdownOpen, setDropdownOpen] = useState(false);
   const dropdownRef = useRef(null);
@@ -51,14 +48,14 @@ export default function Navbar({ modules = navEducationalModules }) {
                   isScrolled ? 'text-slate-900' : 'text-white drop-shadow-sm'
                 }`}
               >
-                {currentData.navBrandTitle}
+                {brandData.navBrandTitle}
               </span>
               <span
                 className={`text-sm font-bold block transition-colors duration-300 ${
                   isScrolled ? 'text-brand-700' : 'text-lime-300 drop-shadow-sm'
                 }`}
               >
-                {currentData.navBrandSubtitle}
+                {brandData.navBrandSubtitle}
               </span>
             </div>
           </a>
@@ -148,21 +145,21 @@ export default function Navbar({ modules = navEducationalModules }) {
                   : 'text-lime-400 hover:text-lime-300 drop-shadow-sm'
               }`}
             >
-              {isNewVersion ? 'Kontak Darurat' : 'Kontak Posko'}
+              Kontak Darurat
             </a>
           </nav>
 
           {/* Desktop CTA Action */}
           <div className="hidden lg:flex items-center gap-3 shrink-0">
             <PillCTAButton
-              href={isNewVersion ? 'https://wa.me/628892120024?text=Halo%20Ibu%20Risma%2C%20saya%20warga%20Cibaregbeg%20ingin%20konsultasi' : '#darurat'}
-              target={isNewVersion ? '_blank' : undefined}
-              rel={isNewVersion ? 'noreferrer' : undefined}
+              href="https://wa.me/628892120024?text=Halo%20Ibu%20Risma%2C%20saya%20warga%20Cibaregbeg%20ingin%20konsultasi"
+              target="_blank"
+              rel="noreferrer"
               variant={isScrolled ? 'dark' : 'lime'}
               size="sm"
               icon={MessageSquare}
             >
-              {isNewVersion ? 'Tanya Kader' : 'Konsultasi Posko'}
+              Tanya Kader
             </PillCTAButton>
           </div>
 
@@ -218,22 +215,22 @@ export default function Navbar({ modules = navEducationalModules }) {
                 onClick={() => setMobileMenuOpen(false)}
                 className="block py-2.5 px-3 rounded-xl text-base font-bold text-brand-850 hover:bg-brand-50 hover:text-emerald-600 transition-colors"
               >
-                {isNewVersion ? 'Pusat Informasi & Kontak Darurat' : 'Kontak Posko KKN'}
+                Pusat Informasi & Kontak Darurat
               </a>
             </div>
 
             <div className="pt-3">
               <PillCTAButton
-                href={isNewVersion ? 'https://wa.me/628892120024?text=Halo%20Ibu%20Risma%2C%20saya%20warga%20Cibaregbeg%20ingin%20konsultasi' : '#darurat'}
-                target={isNewVersion ? '_blank' : undefined}
-                rel={isNewVersion ? 'noreferrer' : undefined}
+                href="https://wa.me/628892120024?text=Halo%20Ibu%20Risma%2C%20saya%20warga%20Cibaregbeg%20ingin%20konsultasi"
+                target="_blank"
+                rel="noreferrer"
                 variant="dark"
                 size="md"
                 icon={MessageSquare}
                 className="w-full justify-center"
                 onClick={() => setMobileMenuOpen(false)}
               >
-                {isNewVersion ? 'Tanya Kader Posyandu' : 'Konsultasi Posko'}
+                Tanya Kader Posyandu
               </PillCTAButton>
             </div>
           </div>

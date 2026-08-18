@@ -1,11 +1,9 @@
 import React from 'react';
 import { ArrowUpRight, CheckCircle2 } from 'lucide-react';
 import AnimatedContent from './reactbits/AnimatedContent';
-import { useVersion } from '../context/VersionContext';
+import { digitalFeatures } from '../data/bpjsData';
 
-export default function DigitalFeatureShowcase() {
-  const { currentData, isNewVersion } = useVersion();
-  const features = currentData.digitalFeatures;
+export default function DigitalFeatureShowcase({ features = digitalFeatures }) {
   return (
     <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-start">
       {/* Left Column: Authentic Real Context Photo & Village Assistance Banner */}
@@ -23,7 +21,7 @@ export default function DigitalFeatureShowcase() {
 
             <div className="absolute bottom-0 inset-x-0 p-6 sm:p-7 text-white">
               <div className="text-sm font-bold text-lime-400 uppercase tracking-wider mb-1">
-                {isNewVersion ? 'SMART DIGITAL - KKN ARS' : 'Edukasi KKN ARS Cibaregbeg'}
+                SMART DIGITAL - KKN ARS
               </div>
               <p className="text-sm sm:text-base text-slate-100 leading-snug font-medium">
                 Pendampingan warga Desa Cibaregbeg dalam memanfaatkan fitur antrean mandiri, KIS digital, dan informasi faskes.
@@ -40,18 +38,16 @@ export default function DigitalFeatureShowcase() {
                 Konsultasi Alur & Layanan Digital
               </h4>
               <p className="text-sm text-slate-700 leading-relaxed font-normal">
-                {isNewVersion
-                  ? 'Hubungi Ibu Risma (Kader Posyandu Sirna Asih) di Kp. Nyalindung & Talaga untuk panduan langsung alur berobat dan aktivasi administrasi faskes.'
-                  : 'Kunjungi Posko Mahasiswa KKN ARS di Kp. Nyalindung / Talaga, Desa Cibaregbeg untuk konsultasi langsung alur berobat Puskesmas dan panduan faskes.'}
+                Hubungi Ibu Risma (Kader Posyandu Sirna Asih) di Kp. Nyalindung & Talaga untuk panduan langsung alur berobat dan aktivasi administrasi faskes.
               </p>
             </div>
             <a
-              href={isNewVersion ? 'https://wa.me/628892120024?text=Halo%20Ibu%20Risma%2C%20saya%20warga%20Cibaregbeg%20ingin%20tanya%20layanan%20kesehatan' : '#darurat'}
-              target={isNewVersion ? '_blank' : undefined}
-              rel={isNewVersion ? 'noreferrer' : undefined}
+              href="https://wa.me/628892120024?text=Halo%20Ibu%20Risma%2C%20saya%20warga%20Cibaregbeg%20ingin%20tanya%20layanan%20kesehatan"
+              target="_blank"
+              rel="noreferrer"
               className="w-full py-3 px-5 rounded-full bg-brand-850 hover:bg-brand-950 text-lime-300 font-bold text-sm flex items-center justify-between transition-colors shadow-subtle"
             >
-              <span>{isNewVersion ? 'Tanya Kader Posyandu' : 'Hubungi Narahubung Posko'}</span>
+              <span>Tanya Kader Posyandu</span>
               <ArrowUpRight className="w-4 h-4 text-lime-400" />
             </a>
           </div>

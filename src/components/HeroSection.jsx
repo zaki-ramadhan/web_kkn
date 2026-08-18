@@ -6,12 +6,9 @@ import AvatarStack from './ui/AvatarStack';
 import StatCard from './ui/StatCard';
 import Scanner from './reactbits/Scanner';
 import AnimatedContent from './reactbits/AnimatedContent';
-import { useVersion } from '../context/VersionContext';
+import { heroData } from '../data/bpjsData';
 
-export default function HeroSection() {
-  const { currentData } = useVersion();
-  const hero = currentData.hero;
-
+export default function HeroSection({ hero = heroData }) {
   return (
     <section
       id="hero-section"

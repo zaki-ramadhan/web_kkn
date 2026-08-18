@@ -1,12 +1,9 @@
 import React from 'react';
-import { HeartPulse, MapPin, PhoneCall, Instagram, Video } from 'lucide-react';
+import { MapPin, PhoneCall, Instagram, Video } from 'lucide-react';
 import Heading from './ui/Heading';
-import { useVersion } from '../context/VersionContext';
+import { brandData, footerData } from '../data/bpjsData';
 
-export default function Footer() {
-  const { currentData } = useVersion();
-  const f = currentData.footer;
-
+export default function Footer({ f = footerData }) {
   return (
     <footer className="bg-brand-950 text-white pt-16 pb-12 border-t border-brand-800">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -21,10 +18,10 @@ export default function Footer() {
               />
               <div>
                 <span className="font-grotesk font-black text-xl tracking-tight text-white block">
-                  {currentData.navBrandTitle}
+                  {brandData.navBrandTitle}
                 </span>
                 <span className="text-sm font-bold text-lime-300 block">
-                  {currentData.navBrandSubtitle}
+                  {brandData.navBrandSubtitle}
                 </span>
               </div>
             </div>
