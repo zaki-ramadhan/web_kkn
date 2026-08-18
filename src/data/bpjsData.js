@@ -27,7 +27,7 @@ export const institutionalLogos = [
     id: 'inst-1',
     title: 'UPTD Puskesmas Cibaregbeg',
     alt: 'Logo UPTD Puskesmas Cibaregbeg',
-    src: '/images/logo/UPTD_Puskesmas.jpg',
+    src: '/images/logo/UPTD_Puskesmas.png',
   },
   {
     id: 'inst-2',
@@ -57,7 +57,7 @@ export const institutionalLogos = [
     id: 'inst-6',
     title: 'KKN S1 Administrasi Rumah Sakit',
     alt: 'Logo KKN S1 Administrasi Rumah Sakit KKN UIMA',
-    src: '/images/logo/logo_kkn_ars.webp',
+    src: '/images/logo/KKN_UIMA.png',
   },
 ];
 
