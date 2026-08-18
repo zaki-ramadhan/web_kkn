@@ -80,17 +80,17 @@ export default function ContactSection({
               {advisors.map((adv) => (
                 <div
                   key={adv.id}
-                  className="w-[195px] sm:w-[220px] shrink-0 py-2"
+                  className="w-[205px] sm:w-[230px] shrink-0 py-2"
                 >
                   <div className="relative bg-white border border-slate-200/90 rounded-2xl p-3.5 sm:p-4 shadow-card-depth flex flex-col justify-between h-full overflow-hidden">
-                    {/* Portrait Photo (Clean, no overlay badge) */}
-                    <div className="relative aspect-square w-full rounded-xl overflow-hidden mb-3 bg-slate-100 border border-slate-100">
+                    {/* Landscape Header Frame (Gray Gradient + Centered Desaturated UIMA Logo) */}
+                    <div className="relative aspect-[16/9] w-full rounded-xl overflow-hidden mb-3 bg-gradient-to-br from-slate-200 via-slate-100 to-slate-50 border border-slate-200/80 flex items-center justify-center p-3">
                       <img
-                        src={adv.avatar}
-                        alt={adv.name}
+                        src="/images/logo/UIMA.png"
+                        alt="Logo Universitas Indonesia Maju"
                         loading="lazy"
                         decoding="async"
-                        className="w-full h-full object-cover object-center"
+                        className="max-h-12 w-auto object-contain saturate-[60%] opacity-85"
                       />
                     </div>
 
