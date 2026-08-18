@@ -81,7 +81,7 @@ export const heroData = {
   ctaPrimary: { text: 'Edukasi Alur Berobat', href: '#alur-faskes' },
   ctaSecondary: {
     text: 'Tanya Kader Posyandu',
-    href: 'https://wa.me/628892120024?text=Halo%20Ibu%20Risma%20Kader%20Posyandu%2C%20saya%20warga%20Cibaregbeg%20ingin%20konsultasi%20kesehatan',
+    href: 'https://wa.me/628892120024?text=Halo%20Kader%20Posyandu%2C%20saya%20warga%20Cibaregbeg%20ingin%20konsultasi%20kesehatan',
   },
 };
 
@@ -131,7 +131,7 @@ export const bpjsCategories = [
     highlighted: true,
     theme: 'forest',
     ctaText: 'Konsultasi via WA',
-    ctaLink: 'https://wa.me/628892120024?text=Halo%20Ibu%20Risma%2C%20saya%20ingin%20tanya%20panduan%20BPJS%20Mandiri',
+    ctaLink: 'https://wa.me/628892120024?text=Halo%20Kader%20Posyandu%2C%20saya%20ingin%20tanya%20panduan%20BPJS%20Mandiri',
   },
   {
     id: 'ppu',
@@ -429,13 +429,13 @@ export const emergencyContacts = [
   },
   {
     id: 'c2',
-    name: 'Ibu Risma (Kader Posyandu)',
+    name: 'Kader Posyandu (Sirna Asih)',
     number: '+62 889-2120-024',
     type: 'Kader Posyandu Sirna Asih',
     avatar: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=160&h=160&q=80&fm=webp',
-    desc: 'Narahubung utama ibu kader posyandu Kp. Nyalindung dan Talaga untuk konsultasi dan koordinasi langsung pelayanan posyandu desa.',
+    desc: 'Narahubung resmi kader posyandu wilayah Kp. Nyalindung dan Talaga untuk konsultasi dan koordinasi langsung pelayanan posyandu desa.',
     actionText: 'WhatsApp Kader Posyandu',
-    link: 'https://wa.me/628892120024?text=Halo%20Ibu%20Risma%2C%20saya%20warga%20Cibaregbeg%20ingin%20konsultasi%20posyandu',
+    link: 'https://wa.me/628892120024?text=Halo%20Kader%20Posyandu%2C%20saya%20warga%20Cibaregbeg%20ingin%20konsultasi%20posyandu',
     urgent: true,
   },
   {
@@ -510,7 +510,7 @@ export const navEducationalModules = [
   { href: '#layanan-puskesmas', title: 'Cakupan Layanan & Poli', desc: 'Poli umum, KIA, gigi, lab & prolanis' },
   { href: '#layanan-digital', title: 'Fitur Layanan Digital JKN', desc: 'Antrean online, KIS digital, & kamar RS' },
   { href: '#solusi-adm', title: 'Panduan Administrasi (FAQ)', desc: 'Solusi kartu nonaktif & cicilan REHAB' },
-  { href: '#darurat', title: 'Pusat Informasi & Kontak', desc: 'Ibu Risma, Puskesmas, BPJS 165, & Dinkes' },
+  { href: '#darurat', title: 'Pusat Informasi & Kontak', desc: 'Kader Posyandu, Puskesmas, BPJS 165, & Dinkes' },
 ];
 
 // ==========================================
@@ -521,8 +521,8 @@ export const footerData = {
   title: 'SMART DIGITAL - KKN ARS Cibaregbeg 2026',
   desc: 'Portal informasi dan edukasi kesehatan mandiri yang dikembangkan oleh Tim Mahasiswa KKN S1 Administrasi Rumah Sakit (ARS) Universitas Indonesia Maju (UIMA) untuk mempermudah warga desa memahami alur dan hak pelayanan kesehatan.',
   address: 'RT 004 dan 007 RW 007 Kp. Nyalindung / Talaga, Desa Cibaregbeg, Kec. Cibeber, Kab. Cianjur',
-  posyanduContact: 'Ibu Risma (+62 889-2120-024)',
-  posyanduLink: 'https://wa.me/628892120024?text=Halo%20Ibu%20Risma%2C%20saya%20ingin%20konsultasi%20di%20posyandu',
+  posyanduContact: 'Kader Posyandu (+62 889-2120-024)',
+  posyanduLink: 'https://wa.me/628892120024?text=Halo%20Kader%20Posyandu%2C%20saya%20ingin%20konsultasi%20di%20posyandu',
   tiktok: '@kknars_cibaregbeg',
   tiktokUrl: 'https://www.tiktok.com/@kknars_cibaregbeg',
   instagram: '@kknars_cibaregbeg',

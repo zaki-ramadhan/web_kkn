@@ -38,11 +38,11 @@ export default function DigitalFeatureShowcase({ features = digitalFeatures }) {
                 Konsultasi Alur & Layanan Digital
               </h4>
               <p className="text-sm text-slate-700 leading-relaxed font-normal">
-                Hubungi Ibu Risma (Kader Posyandu Sirna Asih) di Kp. Nyalindung & Talaga untuk panduan langsung alur berobat dan aktivasi administrasi faskes di posyandu.
+                Hubungi Kader Posyandu (Sirna Asih) di Kp. Nyalindung & Talaga untuk panduan langsung alur berobat dan aktivasi administrasi faskes di posyandu.
               </p>
             </div>
             <a
-              href="https://wa.me/628892120024?text=Halo%20Ibu%20Risma%2C%20saya%20warga%20Cibaregbeg%20ingin%20tanya%20layanan%20kesehatan"
+              href="https://wa.me/628892120024?text=Halo%20Kader%20Posyandu%2C%20saya%20warga%20Cibaregbeg%20ingin%20tanya%20layanan%20kesehatan"
               target="_blank"
               rel="noreferrer"
               className="w-full py-3 px-5 rounded-full bg-brand-850 hover:bg-brand-950 text-lime-300 font-bold text-sm flex items-center justify-between transition-colors shadow-subtle"

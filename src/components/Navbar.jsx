@@ -152,7 +152,7 @@ export default function Navbar({ modules = navEducationalModules }) {
           {/* Desktop CTA Action */}
           <div className="hidden lg:flex items-center gap-3 shrink-0">
             <PillCTAButton
-              href="https://wa.me/628892120024?text=Halo%20Ibu%20Risma%2C%20saya%20warga%20Cibaregbeg%20ingin%20konsultasi"
+              href="https://wa.me/628892120024?text=Halo%20Kader%20Posyandu%2C%20saya%20warga%20Cibaregbeg%20ingin%20konsultasi"
               target="_blank"
               rel="noreferrer"
               variant={isScrolled ? 'dark' : 'lime'}
@@ -221,7 +221,7 @@ export default function Navbar({ modules = navEducationalModules }) {
 
             <div className="pt-3">
               <PillCTAButton
-                href="https://wa.me/628892120024?text=Halo%20Ibu%20Risma%2C%20saya%20warga%20Cibaregbeg%20ingin%20konsultasi"
+                href="https://wa.me/628892120024?text=Halo%20Kader%20Posyandu%2C%20saya%20warga%20Cibaregbeg%20ingin%20konsultasi"
                 target="_blank"
                 rel="noreferrer"
                 variant="dark"
