@@ -44,8 +44,8 @@ export default function AdministrationSection({ faqs = administrativeFaqs }) {
                 <span>Ketentuan Pindah FKTP: Terdaftar minimal 3 bulan</span>
               </div>
 
-              {/* Chat Bubble Tail */}
-              <div className="absolute -bottom-2.5 left-8 w-5 h-5 bg-white border-r border-b border-slate-200/90 rotate-45 transform" />
+              {/* Chat Bubble Tail with matching shadow & seamless border overlay */}
+              <div className="absolute -bottom-2.5 left-8 w-5 h-5 bg-white border-r border-b border-slate-200/90 rotate-45 transform shadow-[3px_3px_6px_-1px_rgba(15,23,42,0.08)] z-10" />
             </div>
           </AnimatedContent>
         </div>
