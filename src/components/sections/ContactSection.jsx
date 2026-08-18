@@ -16,15 +16,15 @@ export default function ContactSection({
 }) {
   return (
     <SectionWrapper id="darurat" bg="white" className="relative overflow-hidden">
-      {/* Full-bleed ReactBits Aurora Shader Background Blended on White */}
-      <div className="absolute inset-0 w-full h-full pointer-events-none z-0 opacity-40 mix-blend-multiply">
+      {/* Full-bleed ReactBits Aurora Shader Background Blended on White with Soft Ambient Opacity */}
+      <div className="absolute inset-0 w-full h-full pointer-events-none z-0 opacity-[0.16] mix-blend-multiply">
         <DarkVeil
           hueShift={130}
-          noiseIntensity={0.01}
+          noiseIntensity={0}
           scanlineIntensity={0}
-          speed={0.4}
+          speed={0.35}
           scanlineFrequency={0}
-          warpAmount={0.2}
+          warpAmount={0.15}
           resolutionScale={1}
         />
       </div>
