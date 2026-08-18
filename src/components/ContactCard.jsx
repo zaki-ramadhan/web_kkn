@@ -67,9 +67,9 @@ export default function ContactCard({
         </div>
 
         {/* Phone Number: Clean Text with Phone Icon (No Badge Box / No Pulse Dot) */}
-        <div className="flex items-start gap-2 text-brand-850 font-grotesk font-bold text-sm sm:text-base tracking-tight mb-3.5">
-          <Phone className="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" />
-          <span className="leading-snug">{number}</span>
+        <div className="flex items-center gap-2 text-brand-850 font-grotesk font-bold text-sm sm:text-base tracking-tight mb-3.5">
+          <Phone className="w-4 h-4 text-emerald-600 shrink-0" />
+          <span>{number}</span>
         </div>
 
         <p className="text-sm text-slate-600 leading-relaxed mb-6 font-normal flex-1">
@@ -81,10 +81,10 @@ export default function ContactCard({
         href={link}
         target="_blank"
         rel="noreferrer"
-        className="w-full py-3 px-4.5 rounded-full text-xs sm:text-sm font-semibold flex items-center justify-between transition-all duration-200 shadow-subtle hover:shadow-elevation bg-brand-850 hover:bg-brand-950 text-lime-300 active:scale-95 group/btn"
+        className="w-full py-3.5 px-5 rounded-full text-sm font-semibold flex items-center justify-between transition-all duration-200 shadow-subtle hover:shadow-elevation bg-brand-850 hover:bg-brand-950 text-lime-300 active:scale-95 group/btn"
       >
-        <span className="truncate">{actionText}</span>
-        <span className="w-7 h-7 rounded-full bg-white/10 flex items-center justify-center text-lime-400 group-hover/btn:rotate-45 transition-transform duration-200 shrink-0 ml-2">
+        <span>{actionText}</span>
+        <span className="w-7 h-7 rounded-full bg-white/10 flex items-center justify-center text-lime-400 group-hover/btn:rotate-45 transition-transform duration-200">
           <ArrowUpRight className="w-4 h-4" />
         </span>
       </a>
