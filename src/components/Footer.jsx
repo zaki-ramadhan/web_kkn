@@ -32,11 +32,8 @@ export default function Footer({ f = footerData }) {
               S1 Administrasi Rumah Sakit, Universitas Indonesia Maju (UIMA)
             </div>
 
-            {/* [OPSI 3] Atribusi Akademik di Footer */}
-            <div className="pt-3 border-t border-brand-850 text-xs text-slate-300 space-y-1">
-              <span className="text-[10px] font-bold uppercase tracking-wider text-lime-400/80 block">
-                Opsi 3: Atribusi Akademik Footer
-              </span>
+            {/* Atribusi Dosen Pembimbing & Pengampu di Footer */}
+            <div className="pt-3 border-t border-brand-850 text-xs text-slate-300">
               <p className="leading-relaxed">
                 <span className="text-white font-medium">• Dosen Pembimbing Lapangan (DPL):</span> Ibu Ns. Oci Etri Nursanty, S.Kep., M.M.R.<br />
                 <span className="text-white font-medium">• Dosen Pengampu Mata Kuliah:</span> Ibu Hanifah Solihah, S.KM.

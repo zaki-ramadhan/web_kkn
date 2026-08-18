@@ -75,61 +75,39 @@ export default function ContactSection({
             </p>
           </div>
 
-          {/* [OPSI 2] Badge Pill Ringkas */}
-          <div className="mb-6 p-4 rounded-2xl bg-slate-50 border border-dashed border-slate-300">
-            <div className="text-[11px] font-bold uppercase tracking-wider text-slate-500 mb-2.5">
-              Opsi 2: Badge Pill Ringkas
-            </div>
-            <div className="flex flex-wrap items-center gap-2.5">
-              <span className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white border border-emerald-300 text-xs sm:text-sm font-semibold text-emerald-950 shadow-2xs">
-                <GraduationCap className="w-4 h-4 text-emerald-600 shrink-0" />
-                <span><strong>DPL:</strong> {advisors[0]?.name}</span>
-              </span>
-              <span className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white border border-emerald-300 text-xs sm:text-sm font-semibold text-emerald-950 shadow-2xs">
-                <BookOpen className="w-4 h-4 text-emerald-600 shrink-0" />
-                <span><strong>Dosen Pengampu:</strong> {advisors[1]?.name}</span>
-              </span>
-            </div>
-          </div>
-
-          {/* [OPSI 1] Kartu Kehormatan Akademik (Grid 2 Kolom) */}
-          <div className="mb-8 p-4 rounded-2xl bg-slate-50 border border-dashed border-slate-300">
-            <div className="text-[11px] font-bold uppercase tracking-wider text-slate-500 mb-3">
-              Opsi 1: Kartu Kehormatan Akademik (2 Kolom)
-            </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-              <div className="flex items-center gap-3.5 p-4 sm:p-5 rounded-2xl bg-white border border-slate-200/90 shadow-card-depth hover:border-emerald-400/80 transition-all duration-300 group">
-                <div className="w-12 h-12 rounded-2xl bg-emerald-50 text-emerald-700 border border-emerald-200/80 flex items-center justify-center font-bold shrink-0 group-hover:scale-105 transition-transform">
-                  <GraduationCap className="w-6 h-6" />
-                </div>
-                <div className="min-w-0">
-                  <span className="block text-xs font-bold uppercase tracking-wider text-emerald-700 leading-tight mb-0.5">
-                    Dosen Pembimbing Lapangan (DPL)
-                  </span>
-                  <h4 className="font-grotesk font-bold text-sm sm:text-base text-slate-900 leading-snug">
-                    {advisors[0]?.name}
-                  </h4>
-                  <span className="block text-xs text-slate-500 font-normal">
-                    {advisors[0]?.institution}
-                  </span>
-                </div>
+          {/* Dosen Pembimbing Lapangan (DPL) & Dosen Pengampu Mata Kuliah Cards */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
+            <div className="flex items-center gap-3.5 p-4 sm:p-5 rounded-2xl bg-white border border-slate-200/90 shadow-card-depth hover:border-emerald-400/80 transition-all duration-300 group">
+              <div className="w-12 h-12 rounded-2xl bg-emerald-50 text-emerald-700 border border-emerald-200/80 flex items-center justify-center font-bold shrink-0 group-hover:scale-105 transition-transform">
+                <GraduationCap className="w-6 h-6" />
               </div>
+              <div className="min-w-0">
+                <span className="block text-xs font-bold uppercase tracking-wider text-emerald-700 leading-tight mb-0.5">
+                  Dosen Pembimbing Lapangan (DPL)
+                </span>
+                <h4 className="font-grotesk font-bold text-sm sm:text-base text-slate-900 leading-snug">
+                  {advisors[0]?.name}
+                </h4>
+                <span className="block text-xs text-slate-500 font-normal">
+                  {advisors[0]?.institution}
+                </span>
+              </div>
+            </div>
 
-              <div className="flex items-center gap-3.5 p-4 sm:p-5 rounded-2xl bg-white border border-slate-200/90 shadow-card-depth hover:border-emerald-400/80 transition-all duration-300 group">
-                <div className="w-12 h-12 rounded-2xl bg-emerald-50 text-emerald-700 border border-emerald-200/80 flex items-center justify-center font-bold shrink-0 group-hover:scale-105 transition-transform">
-                  <BookOpen className="w-6 h-6" />
-                </div>
-                <div className="min-w-0">
-                  <span className="block text-xs font-bold uppercase tracking-wider text-emerald-700 leading-tight mb-0.5">
-                    Dosen Pengampu Mata Kuliah
-                  </span>
-                  <h4 className="font-grotesk font-bold text-sm sm:text-base text-slate-900 leading-snug">
-                    {advisors[1]?.name}
-                  </h4>
-                  <span className="block text-xs text-slate-500 font-normal">
-                    {advisors[1]?.institution}
-                  </span>
-                </div>
+            <div className="flex items-center gap-3.5 p-4 sm:p-5 rounded-2xl bg-white border border-slate-200/90 shadow-card-depth hover:border-emerald-400/80 transition-all duration-300 group">
+              <div className="w-12 h-12 rounded-2xl bg-emerald-50 text-emerald-700 border border-emerald-200/80 flex items-center justify-center font-bold shrink-0 group-hover:scale-105 transition-transform">
+                <BookOpen className="w-6 h-6" />
+              </div>
+              <div className="min-w-0">
+                <span className="block text-xs font-bold uppercase tracking-wider text-emerald-700 leading-tight mb-0.5">
+                  Dosen Pengampu Mata Kuliah
+                </span>
+                <h4 className="font-grotesk font-bold text-sm sm:text-base text-slate-900 leading-snug">
+                  {advisors[1]?.name}
+                </h4>
+                <span className="block text-xs text-slate-500 font-normal">
+                  {advisors[1]?.institution}
+                </span>
               </div>
             </div>
           </div>
