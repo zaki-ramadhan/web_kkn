@@ -50,7 +50,16 @@ export default function FlowSection({ steps = registrationSteps }) {
           <CalloutBox
             variant="brand"
             title="PENTING - KASUS GAWAT DARURAT (UGD) BEBAS RUJUKAN"
-            description="Berdasarkan Permenkes RI No. 28/2014, dalam kondisi gawat darurat yang mengancam nyawa (seperti henti jantung, sesak napas akut berat, penurunan kesadaran/koma, cedera fisik berat akibat kecelakaan, pendarahan hebat, atau kejang demam anak), pasien BERHAK LANGSUNG ke IGD Rumah Sakit mana saja tanpa surat rujukan dari Puskesmas dan dijamin 100% oleh BPJS Kesehatan."
+            description={
+              <>
+                Berdasarkan <strong className="font-semibold text-slate-900">Permenkes RI No. 28/2014</strong>, dalam{' '}
+                <strong className="font-semibold text-slate-900">kondisi gawat darurat yang mengancam nyawa</strong> (seperti henti jantung, sesak napas akut berat, penurunan kesadaran/koma, cedera fisik berat akibat kecelakaan, pendarahan hebat, atau kejang demam anak), pasien{' '}
+                <strong className="font-bold text-brand-950 underline decoration-lime-500 decoration-2 underline-offset-2">
+                  BERHAK LANGSUNG ke IGD Rumah Sakit mana saja tanpa surat rujukan dari Puskesmas
+                </strong>{' '}
+                dan <strong className="font-semibold text-slate-900">dijamin 100% oleh BPJS Kesehatan</strong>.
+              </>
+            }
             className="mt-12"
           >
             <PillCTAButton href="#darurat" variant="dark" size="sm">
