@@ -2,7 +2,7 @@ import React from 'react';
 import { avatarList } from '../../data/bpjsData';
 
 export default function AvatarStack({
-  label = '1.450+ Warga Terbantu Edukasi Mahasiswa',
+  label = '20 Mahasiswa KKN ARS Cibaregbeg',
   avatars = avatarList,
   variant = 'light',
   className = '',
@@ -22,7 +22,7 @@ export default function AvatarStack({
           <img
             key={idx}
             src={src}
-            alt="Relawan Mahasiswa"
+            alt="Mahasiswa KKN ARS"
             width={32}
             height={32}
             loading="lazy"
@@ -30,8 +30,8 @@ export default function AvatarStack({
             className="inline-block h-8 w-8 rounded-full ring-2 ring-brand-950 object-cover object-center shrink-0 bg-slate-800"
           />
         ))}
-        <span className="inline-flex h-8 w-8 items-center justify-center rounded-full bg-lime-400 text-brand-950 text-sm font-bold ring-2 ring-brand-950 shrink-0">
-          +1k
+        <span className="inline-flex h-8 w-8 items-center justify-center rounded-full bg-lime-400 text-brand-950 text-xs font-bold ring-2 ring-brand-950 shrink-0">
+          +16
         </span>
       </div>
       <span className={`text-sm font-semibold pr-1 ${isDark ? 'text-slate-100' : 'text-slate-800'}`}>

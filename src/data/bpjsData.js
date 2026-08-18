@@ -71,7 +71,7 @@ export const heroData = {
   titleHighlight: 'Kesehatan Warga',
   titleSuffix: 'Desa Cibaregbeg',
   subtitle: 'Edukasi mandiri terkait alur rujukan faskes, re-aktivasi kepesertaan BPJS nonaktif, program cicilan REHAB, dan kemudahan antrean online Puskesmas berbasis digital.',
-  avatarText: '1.450+ Warga Terbantu Program Edukasi Mahasiswa',
+  avatarText: '20 Mahasiswa KKN ARS Cibaregbeg',
   stats: [
     { id: 'hs1', value: '100%', label: 'Tercover BPJS', detail: 'Pelayanan & obat generik di Puskesmas' },
     { id: 'hs2', value: 'Posyandu', label: 'Sirna Asih', detail: 'Konsultasi alur & panduan berkas tatap muka' },
@@ -467,16 +467,18 @@ export const academicAdvisors = [
   {
     id: 'adv-1',
     name: 'Ibu Ns. Oci Etri Nursanty, S.Kep., M.M.R.',
-    role: 'Dosen Pembimbing Lapangan (DPL)',
+    role: 'Dosen Pembimbing Lapangan',
     institution: 'Universitas Indonesia Maju (UIMA)',
-    avatar: '/images/logo/UIMA_FIKES.png',
+    badge: 'DPL KKN',
+    avatar: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=600&h=600&q=80&fm=webp',
   },
   {
     id: 'adv-2',
     name: 'Ibu Hanifah Solihah, S.KM.',
     role: 'Dosen Pengampu Mata Kuliah',
     institution: 'Universitas Indonesia Maju (UIMA)',
-    avatar: '/images/logo/UIMA.png',
+    badge: 'Dosen Pengampu',
+    avatar: 'https://images.unsplash.com/photo-1580894732488-c7e6c46a6f19?auto=format&fit=crop&w=600&h=600&q=80&fm=webp',
   },
 ];
 

@@ -4,6 +4,7 @@ import SectionWrapper from '../ui/SectionWrapper';
 import SectionHeader from '../ui/SectionHeader';
 import Eyebrow from '../ui/Eyebrow';
 import Stabilo from '../ui/Stabilo';
+import TopShimmer from '../ui/TopShimmer';
 import ContactCard from '../ContactCard';
 import EmergencyAdvisory from '../EmergencyAdvisory';
 import TeamMarqueeSlider from '../TeamMarqueeSlider';
@@ -61,50 +62,67 @@ export default function ContactSection({
       {/* Sub-section: Struktur Pembimbing & Tim Mahasiswa */}
       <AnimatedContent distance={30} duration={0.65} delay={0.15}>
         <div className="pt-12 pb-8 border-t border-slate-200/80">
-          <div className="flex flex-col lg:flex-row lg:items-end justify-between mb-8 gap-6">
+          <div className="flex flex-col md:flex-row md:items-end justify-between mb-8 gap-4">
             <div>
               <Eyebrow variant="brand">
                 Struktur Pembimbing & Tim Mahasiswa
               </Eyebrow>
-              <h3 className="font-grotesk text-2xl sm:text-3xl font-bold text-slate-950 tracking-tight mb-2">
+              <h3 className="font-grotesk text-2xl sm:text-3xl font-bold text-slate-950 tracking-tight">
                 Dosen Pembimbing & 20 Mahasiswa KKN ARS
               </h3>
-              <p className="text-sm sm:text-base text-slate-600 max-w-lg font-normal leading-relaxed">
-                Susunan 20 mahasiswa S1 Administrasi Rumah Sakit yang bertugas mendampingi warga di posyandu pelayanan dan edukasi kesehatan Desa Cibaregbeg.
-              </p>
             </div>
+            <p className="text-sm sm:text-base text-slate-600 max-w-md font-normal leading-relaxed">
+              Didampingi oleh Dosen Pembimbing Lapangan & Dosen Pengampu Universitas Indonesia Maju (UIMA) beserta 20 mahasiswa S1 Administrasi Rumah Sakit.
+            </p>
+          </div>
 
-            {/* OPSI 1: Editorial Academic Mentorship Lockup (Clean, Human & Prestigious) */}
-            <div className="bg-slate-50 border border-slate-200/90 rounded-2xl p-4 sm:px-5 sm:py-3.5 flex flex-col sm:flex-row sm:items-center gap-4 text-xs sm:text-sm shrink-0">
-              <div className="flex items-center gap-3">
-                <div className="w-8 h-8 rounded-lg bg-emerald-100/80 text-emerald-800 flex items-center justify-center shrink-0">
-                  <GraduationCap className="w-4 h-4" />
-                </div>
-                <div>
-                  <span className="text-[11px] font-bold text-emerald-800 uppercase tracking-wide block">
-                    Dosen Pembimbing Lapangan (DPL)
-                  </span>
-                  <span className="font-bold text-slate-900 block leading-tight">
-                    {advisors[0]?.name}
-                  </span>
-                </div>
-              </div>
+          {/* Dosen Pembimbing & Pengampu Cards (Exact Student Card Style) */}
+          <div className="mb-8">
+            <div className="text-xs font-bold uppercase tracking-wider text-emerald-700 mb-3.5 flex items-center gap-2">
+              <span className="w-1.5 h-1.5 rounded-full bg-emerald-600" />
+              <span>Dosen Pembimbing & Pengampu Program</span>
+            </div>
+            <div className="flex flex-wrap gap-4 sm:gap-5">
+              {advisors.map((adv) => (
+                <div
+                  key={adv.id}
+                  className="w-[195px] sm:w-[220px] shrink-0 transition-all duration-300 ease-out hover:scale-105"
+                >
+                  <div className="group relative bg-white border border-slate-200/90 hover:border-emerald-400/80 rounded-2xl p-3.5 sm:p-4 transition-all duration-300 ease-out shadow-card-depth hover:-translate-y-1.5 flex flex-col justify-between h-full overflow-hidden">
+                    <TopShimmer variant="lime" />
 
-              <div className="hidden sm:block w-px h-9 bg-slate-200" />
+                    {/* Portrait Photo */}
+                    <div className="relative aspect-square w-full rounded-xl overflow-hidden mb-3 bg-slate-100 border border-slate-100">
+                      <img
+                        src={adv.avatar}
+                        alt={adv.name}
+                        loading="lazy"
+                        decoding="async"
+                        className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-300"
+                      />
+                      <span className="absolute bottom-2 left-2 px-2.5 py-0.5 rounded-md bg-brand-950/90 backdrop-blur-xs text-sm font-bold text-lime-400 border border-lime-400/30 shadow-subtle">
+                        {adv.badge || 'Dosen'}
+                      </span>
+                    </div>
 
-              <div className="flex items-center gap-3">
-                <div className="w-8 h-8 rounded-lg bg-emerald-100/80 text-emerald-800 flex items-center justify-center shrink-0">
-                  <BookOpen className="w-4 h-4" />
+                    {/* Lecturer Details */}
+                    <div>
+                      <h4
+                        title={adv.name}
+                        className="font-grotesk font-bold text-sm sm:text-base text-slate-900 group-hover:text-emerald-700 transition-colors leading-snug"
+                      >
+                        {adv.name}
+                      </h4>
+                      <div className="text-sm font-semibold text-emerald-600 mt-1 line-clamp-1 truncate">
+                        {adv.role}
+                      </div>
+                      <div className="text-sm text-slate-500 font-normal mt-0.5 line-clamp-1 truncate">
+                        {adv.institution}
+                      </div>
+                    </div>
+                  </div>
                 </div>
-                <div>
-                  <span className="text-[11px] font-bold text-emerald-800 uppercase tracking-wide block">
-                    Dosen Pengampu Mata Kuliah
-                  </span>
-                  <span className="font-bold text-slate-900 block leading-tight">
-                    {advisors[1]?.name}
-                  </span>
-                </div>
-              </div>
+              ))}
             </div>
           </div>
 
