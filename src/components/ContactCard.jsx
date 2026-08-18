@@ -45,28 +45,31 @@ export default function ContactCard({
           />
         </div>
 
-        {/* Identity Lockup: Avatar on Left, Name & Number on Right */}
-        <div className="flex items-center gap-3.5 mb-4">
+        {/* Identity Lockup: Avatar on Left, 2-Line Clamped Name on Right */}
+        <div className="flex items-center gap-3.5 mb-3.5">
           {avatar && (
             <img
               src={avatar}
               alt={name}
               loading="lazy"
               decoding="async"
-              className="w-14 h-14 rounded-2xl object-cover border-2 border-brand-100/90 shadow-subtle group-hover:scale-105 group-hover:border-lime-400 transition-all duration-300 shrink-0"
+              className="w-13 h-13 sm:w-14 sm:h-14 rounded-2xl object-cover border-2 border-brand-100/90 shadow-subtle group-hover:scale-105 group-hover:border-lime-400 transition-all duration-300 shrink-0"
             />
           )}
           <div className="flex-1 min-w-0">
             <h3
               title={name}
-              className="text-slate-900 group-hover:text-brand-850 transition-colors font-bold text-base sm:text-lg leading-snug line-clamp-1 truncate"
+              className="text-slate-900 group-hover:text-brand-850 transition-colors font-bold text-base sm:text-lg leading-snug line-clamp-2"
             >
               {name}
             </h3>
-            <div className="font-grotesk text-base sm:text-lg font-black text-brand-850 tracking-tight mt-0.5">
-              {number}
-            </div>
           </div>
+        </div>
+
+        {/* Dedicated Phone Number Badge */}
+        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-xl bg-brand-50/80 border border-brand-200/80 text-brand-900 font-grotesk font-black text-sm sm:text-base tracking-tight mb-3.5 shadow-xs">
+          <span className="w-2 h-2 rounded-full bg-brand-600 animate-pulse shrink-0" />
+          <span className="truncate">{number}</span>
         </div>
 
         <p className="text-sm text-slate-600 leading-relaxed mb-6 font-normal">
