@@ -4,6 +4,7 @@ import Eyebrow from './ui/Eyebrow';
 import PillCTAButton from './ui/PillCTAButton';
 import AvatarStack from './ui/AvatarStack';
 import StatCard from './ui/StatCard';
+import Scanner from './reactbits/Scanner';
 import { heroStats } from '../data/bpjsData';
 
 export default function HeroSection({
@@ -19,14 +20,46 @@ export default function HeroSection({
       <img
         src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&w=1920&h=1080&q=75&fm=webp"
         alt="Layanan Kesehatan Masyarakat"
-        className="absolute inset-0 w-full h-full object-cover object-center opacity-45 pointer-events-none"
+        className="absolute inset-0 w-full h-full object-cover object-center opacity-35 pointer-events-none"
       />
 
-      {/* Multi-layer Dark Gradient Scrim for Guaranteed Text Readability */}
-      <div className="absolute inset-0 bg-gradient-to-b from-brand-950/90 via-brand-950/75 to-brand-950 pointer-events-none" />
+      {/* Multi-layer Dark Gradient Scrim */}
+      <div className="absolute inset-0 bg-gradient-to-b from-brand-950/85 via-brand-950/70 to-brand-950 pointer-events-none" />
+
+      {/* ReactBits Scanner WebGL Interactive Signal Field */}
+      <div className="absolute inset-0 w-full h-full pointer-events-none opacity-55 z-0">
+        <Scanner
+          color1="#10B981"
+          color2="#A3E635"
+          color3="#FFFFFF"
+          speed={0.4}
+          sweepSpeed={0.2}
+          sweepWidth={1.8}
+          sweepFalloff={5}
+          scale={1.4}
+          frequency={2}
+          ripple={0.22}
+          bandDensity={10}
+          lineSharpness={5.0}
+          glow={0.28}
+          scanDirection="vertical"
+          colorSpread={0.7}
+          brightness={1.0}
+          contrast={1.15}
+          softness={1.4}
+          vignette={0.45}
+          scanline={false}
+          grain={true}
+          grainIntensity={0.04}
+          opacity={0.85}
+          mouseInteraction={true}
+          mouseRadius={0.4}
+          mouseStrength={0.4}
+        />
+      </div>
 
       {/* Ambient Center Glow */}
-      <div className="absolute top-1/3 left-1/2 -translate-x-1/2 w-[600px] h-[300px] bg-lime-400/15 rounded-full blur-[120px] pointer-events-none" />
+      <div className="absolute top-1/3 left-1/2 -translate-x-1/2 w-[600px] h-[300px] bg-lime-400/10 rounded-full blur-[120px] pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
         {/* Eyebrow */}
