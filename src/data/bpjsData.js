@@ -653,6 +653,24 @@ export const navEducationalModules = [
   { href: '#darurat', title: 'Pusat Informasi & Kontak', desc: 'Kader Posyandu, Puskesmas, BPJS 165, & Dinkes' },
 ];
 
+// Dosen Pembimbing Lapangan (DPL) & Dosen Pengampu Mata Kuliah
+export const academicAdvisors = [
+  {
+    id: 'adv-1',
+    name: 'Ibu Ns. Oci Etri Nursanty, S.Kep., M.M.R.',
+    role: 'Dosen Pembimbing Lapangan (DPL)',
+    institution: 'Universitas Indonesia Maju (UIMA)',
+    tag: 'DPL KKN',
+  },
+  {
+    id: 'adv-2',
+    name: 'Ibu Hanifah Solihah, S.KM.',
+    role: 'Dosen Pengampu Mata Kuliah',
+    institution: 'Universitas Indonesia Maju (UIMA)',
+    tag: 'Dosen Pengampu',
+  },
+];
+
 // ==========================================
 // 9. FOOTER DATA
 // ==========================================

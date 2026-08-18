@@ -28,8 +28,19 @@ export default function Footer({ f = footerData }) {
             <p className="text-slate-200 text-sm sm:text-base leading-relaxed mb-4 font-normal">
               {f.desc}
             </p>
-            <div className="text-sm text-lime-400 font-semibold">
+            <div className="text-sm text-lime-400 font-semibold mb-3">
               S1 Administrasi Rumah Sakit, Universitas Indonesia Maju (UIMA)
+            </div>
+
+            {/* [OPSI 3] Atribusi Akademik di Footer */}
+            <div className="pt-3 border-t border-brand-850 text-xs text-slate-300 space-y-1">
+              <span className="text-[10px] font-bold uppercase tracking-wider text-lime-400/80 block">
+                Opsi 3: Atribusi Akademik Footer
+              </span>
+              <p className="leading-relaxed">
+                <span className="text-white font-medium">• Dosen Pembimbing Lapangan (DPL):</span> Ibu Ns. Oci Etri Nursanty, S.Kep., M.M.R.<br />
+                <span className="text-white font-medium">• Dosen Pengampu Mata Kuliah:</span> Ibu Hanifah Solihah, S.KM.
+              </p>
             </div>
           </div>
 
