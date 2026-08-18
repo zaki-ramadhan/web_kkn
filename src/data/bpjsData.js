@@ -217,7 +217,7 @@ export const puskesmasServices = [
     tag: 'Pelayanan Utama',
     desc: 'Konsultasi dokter umum, penanganan penyakit menular & tidak menular, pemeriksaan tanda vital, penjahitan luka, dan terapi farmasi standar.',
     stat: '100% Tercover Tanpa Iur Biaya',
-    image: 'https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=960&h=640&q=75&fm=webp',
+    image: '/images/services/rawat jalan.jpg',
   },
   {
     id: 'srv-2',
@@ -227,7 +227,7 @@ export const puskesmasServices = [
     tag: 'Prioritas Desa',
     desc: 'Pemeriksaan kehamilan rutin (ANC terpadu + USG dasar), imunisasi lengkap bayi, persalinan normal 24 jam PONED, dan pemasangan alat KB (IUD, implan, suntik, pil).',
     stat: 'Termasuk Program Pencegahan Stunting',
-    image: 'https://images.unsplash.com/photo-1595974482597-4b8da8879bc5?auto=format&fit=crop&w=600&h=450&q=75&fm=webp',
+    image: '/images/services/kesehatan ibu & anak.jpg',
   },
   {
     id: 'srv-3',
@@ -237,7 +237,7 @@ export const puskesmasServices = [
     tag: 'Poli Gigi',
     desc: 'Pembersihan karang gigi (scaling 1x/tahun atas indikasi medis), penambalan gigi komposit, pencabutan gigi sulung/tetap, dan pengobatan infeksi pulpa.',
     stat: 'Dilayani Dokter Gigi Terdaftar',
-    image: 'https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?auto=format&fit=crop&w=600&h=450&q=75&fm=webp',
+    image: '/images/services/pelayanan gigi & mulut lengkap.jpg',
   },
   {
     id: 'srv-4',
@@ -247,7 +247,7 @@ export const puskesmasServices = [
     tag: 'Tes Penunjang',
     desc: 'Pemeriksaan darah lengkap, tes urin rutin, glukosa darah puasa/sewaktu, tes kolesterol total, asam urat, tes dahak TBC, dan rapid diagnostic test.',
     stat: 'Hasil Cepat Hari yang Sama',
-    image: 'https://images.unsplash.com/photo-1579154204601-01588f351e67?auto=format&fit=crop&w=600&h=450&q=75&fm=webp',
+    image: '/images/services/edukasi kkn.jpg',
   },
   {
     id: 'srv-5',
@@ -257,7 +257,7 @@ export const puskesmasServices = [
     tag: 'Lansia & Kronis',
     desc: 'Pemantauan khusus penderita Diabetes Melitus & Hipertensi, senam lansia berkala, edukasi gizi klinik, dan paket obat rutin bulanan faskes.',
     stat: 'Pencegahan Dini Komplikasi Kronis',
-    image: 'https://images.unsplash.com/photo-1516549655169-df83a0774514?auto=format&fit=crop&w=600&h=450&q=75&fm=webp',
+    image: '/images/services/prolanis.jpg',
   },
 ];
 
@@ -669,24 +669,6 @@ export const navEducationalModules = [
   { href: '#layanan-digital', title: 'Fitur Layanan Digital JKN', desc: 'Antrean online, KIS digital, & kamar RS' },
   { href: '#solusi-adm', title: 'Panduan Administrasi (FAQ)', desc: 'Solusi kartu nonaktif & cicilan REHAB' },
   { href: '#darurat', title: 'Pusat Informasi & Kontak', desc: 'Kader Posyandu, Puskesmas, BPJS 165, & Dinkes' },
-];
-
-// Dosen Pembimbing Lapangan (DPL) & Dosen Pengampu Mata Kuliah
-export const academicAdvisors = [
-  {
-    id: 'adv-1',
-    name: 'Ibu Ns. Oci Etri Nursanty, S.Kep., M.M.R.',
-    role: 'Dosen Pembimbing Lapangan (DPL)',
-    institution: 'Universitas Indonesia Maju (UIMA)',
-    tag: 'DPL KKN',
-  },
-  {
-    id: 'adv-2',
-    name: 'Ibu Hanifah Solihah, S.KM.',
-    role: 'Dosen Pengampu Mata Kuliah',
-    institution: 'Universitas Indonesia Maju (UIMA)',
-    tag: 'Dosen Pengampu',
-  },
 ];
 
 // ==========================================
