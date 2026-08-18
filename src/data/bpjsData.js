@@ -323,12 +323,12 @@ export const emergencyCriteria = [
 ];
 
 export const navEducationalModules = [
-  { href: '#jenis-bpjs', title: 'Jenis Kepesertaan BPJS', desc: 'PBI, Mandiri/PBPU, & PPU' },
-  { href: '#alur-faskes', title: 'Alur Pelayanan Puskesmas', desc: '5 Langkah berobat tanpa antre' },
-  { href: '#layanan-puskesmas', title: 'Cakupan Layanan Poli', desc: 'Poli umum, KIA, gigi & lab' },
-  { href: '#layanan-digital', title: 'Fitur Mobile JKN', desc: 'Antrean online & KIS digital' },
-  { href: '#solusi-adm', title: 'Solusi BPJS Mati & Pindah FKTP', desc: 'REHAB, DTKS, & aktivasi' },
-  { href: '#darurat', title: 'Kontak & Narahubung', desc: 'Ibu Risma, Puskesmas & 20 Tim KKN' },
+  { href: '#jenis-bpjs', title: 'Jenis & Kategori Kepesertaan', desc: 'PBI JK, Mandiri/PBPU, & PPU' },
+  { href: '#alur-faskes', title: 'Alur Pendaftaran & Pelayanan', desc: '5 Langkah berobat di Puskesmas' },
+  { href: '#layanan-puskesmas', title: 'Cakupan Layanan & Poli', desc: 'Poli umum, KIA, gigi, lab & prolanis' },
+  { href: '#layanan-digital', title: 'Fitur Layanan Digital JKN', desc: 'Antrean online, KIS digital, & kamar RS' },
+  { href: '#solusi-adm', title: 'Panduan Administrasi (FAQ)', desc: 'Solusi kartu nonaktif & cicilan REHAB' },
+  { href: '#darurat', title: 'Pusat Informasi & Kontak', desc: 'Ibu Risma, Puskesmas, BPJS 165, & Dinkes' },
 ];
 
 export const avatarList = [

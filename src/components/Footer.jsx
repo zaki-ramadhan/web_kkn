@@ -44,32 +44,32 @@ export default function Footer() {
             <ul className="space-y-3 text-sm text-slate-200">
               <li>
                 <a href="#jenis-bpjs" className="hover:text-lime-400 transition-colors">
-                  1. Kategori Kepesertaan BPJS
+                  1. Jenis & Kategori Kepesertaan
                 </a>
               </li>
               <li>
                 <a href="#alur-faskes" className="hover:text-lime-400 transition-colors">
-                  2. Alur Berobat di Puskesmas
+                  2. Alur Pendaftaran & Pelayanan
                 </a>
               </li>
               <li>
                 <a href="#layanan-puskesmas" className="hover:text-lime-400 transition-colors">
-                  3. Cakupan Tindakan & Poli
+                  3. Cakupan Layanan & Poli
                 </a>
               </li>
               <li>
                 <a href="#layanan-digital" className="hover:text-lime-400 transition-colors">
-                  4. Fitur Mobile JKN
+                  4. Fitur Layanan Digital JKN
                 </a>
               </li>
               <li>
                 <a href="#solusi-adm" className="hover:text-lime-400 transition-colors">
-                  5. Solusi Aktivasi & FAQ
+                  5. Panduan Administrasi (FAQ)
                 </a>
               </li>
               <li>
                 <a href="#darurat" className="hover:text-lime-400 transition-colors">
-                  6. Kontak & Narahubung
+                  6. Pusat Informasi & Kontak
                 </a>
               </li>
             </ul>

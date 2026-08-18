@@ -113,7 +113,7 @@ export default function Navbar({ modules = navEducationalModules }) {
               )}
             </div>
 
-            {/* Direct Link 1: Alur Berobat */}
+            {/* Direct Link 1: Alur Pendaftaran & Pelayanan */}
             <a
               href="#alur-faskes"
               className={`transition-colors duration-200 py-1.5 px-3 rounded-lg ${
@@ -122,10 +122,10 @@ export default function Navbar({ modules = navEducationalModules }) {
                   : 'text-slate-100 hover:text-lime-300 drop-shadow-sm'
               }`}
             >
-              Alur Berobat Puskesmas
+              Alur Puskesmas
             </a>
 
-            {/* Direct Link 2: Narahubung Tim KKN */}
+            {/* Direct Link 2: Pusat Informasi & Kontak */}
             <a
               href="#darurat"
               className={`font-bold transition-colors duration-200 py-1.5 px-3 rounded-lg ${
@@ -134,19 +134,21 @@ export default function Navbar({ modules = navEducationalModules }) {
                   : 'text-lime-400 hover:text-lime-300 drop-shadow-sm'
               }`}
             >
-              Kontak Posko KKN
+              {isNewVersion ? 'Kontak Darurat' : 'Kontak Posko'}
             </a>
           </nav>
 
           {/* Desktop CTA Action */}
           <div className="hidden lg:flex items-center gap-3 shrink-0">
             <PillCTAButton
-              href="#darurat"
+              href={isNewVersion ? 'https://wa.me/628892120024?text=Halo%20Ibu%20Risma%2C%20saya%20warga%20Cibaregbeg%20ingin%20konsultasi' : '#darurat'}
+              target={isNewVersion ? '_blank' : undefined}
+              rel={isNewVersion ? 'noreferrer' : undefined}
               variant={isScrolled ? 'dark' : 'lime'}
               size="sm"
               icon={MessageSquare}
             >
-              Konsultasi Posko
+              {isNewVersion ? 'Tanya Kader' : 'Konsultasi Posko'}
             </PillCTAButton>
           </div>
 
@@ -189,27 +191,29 @@ export default function Navbar({ modules = navEducationalModules }) {
                 onClick={() => setMobileMenuOpen(false)}
                 className="block py-2.5 px-3 rounded-xl text-base font-semibold text-slate-800 hover:bg-slate-100 hover:text-emerald-600 transition-colors"
               >
-                Alur Berobat Puskesmas
+                Alur Pendaftaran & Pelayanan
               </a>
               <a
                 href="#darurat"
                 onClick={() => setMobileMenuOpen(false)}
                 className="block py-2.5 px-3 rounded-xl text-base font-bold text-brand-850 hover:bg-brand-50 hover:text-emerald-600 transition-colors"
               >
-                Kontak Posko KKN
+                {isNewVersion ? 'Pusat Informasi & Kontak Darurat' : 'Kontak Posko KKN'}
               </a>
             </div>
 
             <div className="pt-3">
               <PillCTAButton
-                href="#darurat"
+                href={isNewVersion ? 'https://wa.me/628892120024?text=Halo%20Ibu%20Risma%2C%20saya%20warga%20Cibaregbeg%20ingin%20konsultasi' : '#darurat'}
+                target={isNewVersion ? '_blank' : undefined}
+                rel={isNewVersion ? 'noreferrer' : undefined}
                 variant="dark"
                 size="md"
                 icon={MessageSquare}
                 className="w-full justify-center"
                 onClick={() => setMobileMenuOpen(false)}
               >
-                Konsultasi Posko
+                {isNewVersion ? 'Tanya Kader Posyandu' : 'Konsultasi Posko'}
               </PillCTAButton>
             </div>
           </div>
