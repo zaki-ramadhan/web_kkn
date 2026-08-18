@@ -462,6 +462,24 @@ export const emergencyContacts = [
   },
 ];
 
+// Dosen Pembimbing Lapangan (DPL) & Dosen Pengampu Mata Kuliah UIMA
+export const academicAdvisors = [
+  {
+    id: 'adv-1',
+    name: 'Ibu Ns. Oci Etri Nursanty, S.Kep., M.M.R.',
+    role: 'Dosen Pembimbing Lapangan (DPL)',
+    institution: 'Universitas Indonesia Maju (UIMA)',
+    avatar: '/images/logo/UIMA_FIKES.png',
+  },
+  {
+    id: 'adv-2',
+    name: 'Ibu Hanifah Solihah, S.KM.',
+    role: 'Dosen Pengampu Mata Kuliah',
+    institution: 'Universitas Indonesia Maju (UIMA)',
+    avatar: '/images/logo/UIMA.png',
+  },
+];
+
 // Roster 20 Mahasiswa KKN ARS Cibaregbeg (7 Divisi Resmi UIMA)
 export const kknTeamMembers = [
   {
