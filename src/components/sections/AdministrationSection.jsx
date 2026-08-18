@@ -32,18 +32,20 @@ export default function AdministrationSection({ faqs = administrativeFaqs }) {
               Solusi mandiri penanganan kartu nonaktif, program cicilan tunggakan REHAB, pengusulan DTKS bansos desa, hingga kepindahan FKTP domisili.
             </p>
 
-            {/* REHAB Program Highlight Box (Static Informational Card) */}
-            <div className="relative bg-white border border-slate-200/90 rounded-2xl p-6 shadow-card-depth overflow-hidden">
+            {/* REHAB Program Highlight Box (Speech Bubble Card) */}
+            <div className="relative bg-white border border-slate-200/90 rounded-2xl p-6 shadow-card-depth mb-4">
               <h4 className="font-grotesk font-bold text-base text-slate-900 mb-2">
                 Program REHAB (Cicilan Iuran)
               </h4>
               <p className="text-sm text-slate-700 leading-relaxed mb-4 font-normal">
                 Bagi peserta PBPU/Mandiri dengan tunggakan lebih dari 3 bulan s.d 24 bulan, Anda dapat mencicil tunggakan hingga 12 tahapan melalui menu REHAB di layanan digital JKN.
               </p>
-              <div className="pt-3.5 border-t border-slate-100 text-sm font-bold text-brand-900 flex items-center gap-2">
-                <span className="w-2 h-2 rounded-full bg-brand-700" />
+              <div className="pt-3.5 border-t border-slate-100 text-sm font-semibold text-brand-900">
                 <span>Ketentuan Pindah FKTP: Terdaftar minimal 3 bulan</span>
               </div>
+
+              {/* Chat Bubble Tail */}
+              <div className="absolute -bottom-2.5 left-8 w-5 h-5 bg-white border-r border-b border-slate-200/90 rotate-45 transform" />
             </div>
           </AnimatedContent>
         </div>
