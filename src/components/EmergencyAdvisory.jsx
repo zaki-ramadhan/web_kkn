@@ -1,5 +1,6 @@
 import React from 'react';
 import Eyebrow from './ui/Eyebrow';
+import LightRays from './reactbits/LightRays';
 import { emergencyCriteria } from '../data/bpjsData';
 
 export default function EmergencyAdvisory({
@@ -8,6 +9,24 @@ export default function EmergencyAdvisory({
 }) {
   return (
     <div className="mt-14 bg-brand-950 text-white rounded-3xl p-8 sm:p-10 lg:p-12 border border-brand-800 shadow-forest-card relative overflow-hidden">
+      {/* ReactBits LightRays Ambient Spotlight Effect */}
+      <div className="absolute inset-0 w-full h-full pointer-events-none z-0 opacity-55">
+        <LightRays
+          raysOrigin="top-center"
+          raysColor="#ffffff"
+          raysSpeed={0.8}
+          lightSpread={0.6}
+          rayLength={2.5}
+          followMouse={true}
+          mouseInfluence={0.15}
+          noiseAmount={0}
+          distortion={0.05}
+          pulsating={false}
+          fadeDistance={1}
+          saturation={1}
+        />
+      </div>
+
       {/* Ambient subtle glow */}
       <div className="absolute top-0 right-0 w-80 h-80 bg-rose-500/15 rounded-full blur-3xl pointer-events-none" />
 
