@@ -247,7 +247,7 @@ export const puskesmasServices = [
     tag: 'Tes Penunjang',
     desc: 'Pemeriksaan darah lengkap, tes urin rutin, glukosa darah puasa/sewaktu, tes kolesterol total, asam urat, tes dahak TBC, dan rapid diagnostic test.',
     stat: 'Hasil Cepat Hari yang Sama',
-    image: '/images/services/edukasi kkn.jpg',
+    image: 'https://images.unsplash.com/photo-1579154204601-01588f351e67?auto=format&fit=crop&w=600&h=450&q=75&fm=webp',
   },
   {
     id: 'srv-5',

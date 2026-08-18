@@ -11,8 +11,8 @@ export default function DigitalFeatureShowcase({ features = digitalFeatures }) {
         <AnimatedContent distance={30} duration={0.65} delay={0.05}>
           <div className="relative rounded-3xl overflow-hidden shadow-card-depth border border-slate-200/90 aspect-[4/3] sm:aspect-[4/3] lg:aspect-[4/5] bg-slate-100">
             <img
-              src="https://images.unsplash.com/photo-1584515979956-d9f6e5d09982?auto=format&fit=crop&w=800&h=1000&q=80&fm=webp"
-              alt="Pendampingan Layanan Digital Kesehatan"
+              src="/images/services/edukasi kkn.jpg"
+              alt="Pendampingan Layanan Digital Kesehatan Tim KKN ARS"
               loading="lazy"
               decoding="async"
               className="w-full h-full object-cover object-center"
