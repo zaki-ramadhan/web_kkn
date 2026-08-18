@@ -1,4 +1,4 @@
-import React, { createContext, useContext, useState, useMemo } from 'react';
+import React, { createContext, useContext, useState, useMemo, useEffect } from 'react';
 import { smartDigitalData, legacyData } from '../data/bpjsData';
 
 const VersionContext = createContext(null);
@@ -12,6 +12,13 @@ export function VersionProvider({ children }) {
   const currentData = useMemo(() => {
     return isNewVersion ? smartDigitalData : legacyData;
   }, [isNewVersion]);
+
+  // Dynamically update document title on version toggle
+  useEffect(() => {
+    if (typeof document !== 'undefined') {
+      document.title = currentData.brandName;
+    }
+  }, [currentData]);
 
   const toggleVersion = (target) => {
     if (target) {
