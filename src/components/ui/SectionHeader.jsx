@@ -1,6 +1,7 @@
 import React from 'react';
 import Heading from './Heading';
 import Eyebrow from './Eyebrow';
+import AnimatedContent from '../reactbits/AnimatedContent';
 
 export default function SectionHeader({
   badge,
@@ -17,7 +18,13 @@ export default function SectionHeader({
   };
 
   return (
-    <div className={`mb-16 ${alignStyles[align] || alignStyles.center} ${className}`}>
+    <AnimatedContent
+      distance={30}
+      direction="vertical"
+      duration={0.6}
+      threshold={0.1}
+      className={`mb-16 ${alignStyles[align] || alignStyles.center} ${className}`}
+    >
       {badge && (
         <Eyebrow variant={kickerColor}>
           {badge}
@@ -31,6 +38,6 @@ export default function SectionHeader({
           {subtitle}
         </p>
       )}
-    </div>
+    </AnimatedContent>
   );
 }

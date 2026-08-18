@@ -5,6 +5,7 @@ import PillCTAButton from './ui/PillCTAButton';
 import AvatarStack from './ui/AvatarStack';
 import StatCard from './ui/StatCard';
 import Scanner from './reactbits/Scanner';
+import AnimatedContent from './reactbits/AnimatedContent';
 import { heroStats } from '../data/bpjsData';
 
 export default function HeroSection({
@@ -63,46 +64,56 @@ export default function HeroSection({
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
         {/* Eyebrow */}
-        <Eyebrow variant="lime" className="mb-4 drop-shadow-sm">
-          Program Pengabdian KKN ARS Cibaregbeg 2026
-        </Eyebrow>
+        <AnimatedContent distance={20} duration={0.5} delay={0.05}>
+          <Eyebrow variant="lime" className="mb-4 drop-shadow-sm">
+            Program Pengabdian KKN ARS Cibaregbeg 2026
+          </Eyebrow>
+        </AnimatedContent>
 
         {/* Heading */}
-        <Heading
-          as="h1"
-          level="1"
-          color="light"
-          className="max-w-4xl mx-auto mb-6 text-balance text-white leading-tight drop-shadow-md"
-        >
-          Panduan Lengkap Layanan{' '}
-          <span className="text-lime-300 underline decoration-lime-400 decoration-4 underline-offset-8">
-            BPJS Kesehatan
-          </span>{' '}
-          & Puskesmas
-        </Heading>
+        <AnimatedContent distance={30} duration={0.65} delay={0.15}>
+          <Heading
+            as="h1"
+            level="1"
+            color="light"
+            className="max-w-4xl mx-auto mb-6 text-balance text-white leading-tight drop-shadow-md"
+          >
+            Panduan Lengkap Layanan{' '}
+            <span className="text-lime-300 underline decoration-lime-400 decoration-4 underline-offset-8">
+              BPJS Kesehatan
+            </span>{' '}
+            & Puskesmas
+          </Heading>
+        </AnimatedContent>
 
         {/* Subtitle */}
-        <p className="text-base sm:text-lg text-slate-100 max-w-2xl mx-auto leading-relaxed mb-8 text-balance font-normal drop-shadow-sm">
-          Media edukasi kesehatan dari mahasiswa KKN untuk warga: alur berobat mudah tanpa antre panjang,
-          cara re-aktivasi kartu nonaktif, prosedur pindah faskes domisili, dan pemanfaatan antrean online.
-        </p>
+        <AnimatedContent distance={25} duration={0.6} delay={0.25}>
+          <p className="text-base sm:text-lg text-slate-100 max-w-2xl mx-auto leading-relaxed mb-8 text-balance font-normal drop-shadow-sm">
+            Media edukasi kesehatan dari mahasiswa KKN untuk warga: alur berobat mudah tanpa antre panjang,
+            cara re-aktivasi kartu nonaktif, prosedur pindah faskes domisili, dan pemanfaatan antrean online.
+          </p>
+        </AnimatedContent>
 
         {/* Action Buttons */}
-        <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-10">
-          <PillCTAButton href="#alur-faskes" variant="lime" size="lg">
-            Pelajari Alur Pendaftaran
-          </PillCTAButton>
-          <PillCTAButton href="#darurat" variant="light" size="lg">
-            Kontak Tim Mahasiswa KKN
-          </PillCTAButton>
-        </div>
+        <AnimatedContent distance={20} duration={0.55} delay={0.35}>
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-10">
+            <PillCTAButton href="#alur-faskes" variant="lime" size="lg">
+              Pelajari Alur Pendaftaran
+            </PillCTAButton>
+            <PillCTAButton href="#darurat" variant="light" size="lg">
+              Kontak Tim Mahasiswa KKN
+            </PillCTAButton>
+          </div>
+        </AnimatedContent>
 
         {/* Avatar Stack */}
-        <div className="flex justify-center mb-14">
-          <AvatarStack variant="dark" label={avatarText} />
-        </div>
+        <AnimatedContent distance={15} duration={0.5} delay={0.4}>
+          <div className="flex justify-center mb-14">
+            <AvatarStack variant="dark" label={avatarText} />
+          </div>
+        </AnimatedContent>
 
-        {/* 4 Hero Stat Capsules (Pronounced Distorted Slider Arc Effect) */}
+        {/* 4 Hero Stat Capsules with Staggered Scroll-Reveal Animations */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-5xl mx-auto text-left items-stretch pt-3 pb-2">
           {stats.map((item, idx) => {
             const distortionClass =
@@ -115,15 +126,23 @@ export default function HeroSection({
                 : 'md:rotate-1 md:translate-x-1.5 hover:md:rotate-0 hover:md:translate-x-0 transition-all duration-300';
 
             return (
-              <div key={item.id} className={`h-full ${distortionClass}`}>
-                <StatCard
-                  variant="dark"
-                  value={item.value}
-                  label={item.label}
-                  detail={item.detail}
-                  className="h-full"
-                />
-              </div>
+              <AnimatedContent
+                key={item.id}
+                distance={35}
+                duration={0.6}
+                delay={0.45 + idx * 0.1}
+                className="h-full"
+              >
+                <div className={`h-full ${distortionClass}`}>
+                  <StatCard
+                    variant="dark"
+                    value={item.value}
+                    label={item.label}
+                    detail={item.detail}
+                    className="h-full"
+                  />
+                </div>
+              </AnimatedContent>
             );
           })}
         </div>

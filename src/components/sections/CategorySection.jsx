@@ -3,6 +3,7 @@ import SectionWrapper from '../ui/SectionWrapper';
 import SectionHeader from '../ui/SectionHeader';
 import Stabilo from '../ui/Stabilo';
 import CategoryCard from '../CategoryCard';
+import AnimatedContent from '../reactbits/AnimatedContent';
 import { bpjsCategories } from '../../data/bpjsData';
 
 export default function CategorySection({ categories = bpjsCategories }) {
@@ -28,7 +29,13 @@ export default function CategorySection({ categories = bpjsCategories }) {
               : 'lg:scale-95 lg:origin-left';
 
           return (
-            <div key={cat.id} className={`h-full ${scaleClass}`}>
+            <AnimatedContent
+              key={cat.id}
+              distance={40}
+              duration={0.65}
+              delay={idx * 0.15}
+              className={`h-full ${scaleClass}`}
+            >
               <CategoryCard
                 badge={cat.badge}
                 name={cat.name}
@@ -40,7 +47,7 @@ export default function CategorySection({ categories = bpjsCategories }) {
                 ctaLink={cat.ctaLink}
                 theme={cat.theme}
               />
-            </div>
+            </AnimatedContent>
           );
         })}
       </div>
