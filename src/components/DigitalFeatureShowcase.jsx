@@ -30,7 +30,7 @@ export default function DigitalFeatureShowcase({ features = digitalFeatures }) {
           </div>
         </AnimatedContent>
 
-        {/* Posko Assistance Box */}
+        {/* Posyandu Assistance Box */}
         <AnimatedContent distance={25} duration={0.6} delay={0.15}>
           <div className="bg-brand-50 border border-brand-200/80 rounded-2xl p-6 flex flex-col justify-between gap-4">
             <div>
@@ -38,7 +38,7 @@ export default function DigitalFeatureShowcase({ features = digitalFeatures }) {
                 Konsultasi Alur & Layanan Digital
               </h4>
               <p className="text-sm text-slate-700 leading-relaxed font-normal">
-                Hubungi Ibu Risma (Kader Posyandu Sirna Asih) di Kp. Nyalindung & Talaga untuk panduan langsung alur berobat dan aktivasi administrasi faskes.
+                Hubungi Ibu Risma (Kader Posyandu Sirna Asih) di Kp. Nyalindung & Talaga untuk panduan langsung alur berobat dan aktivasi administrasi faskes di posyandu.
               </p>
             </div>
             <a

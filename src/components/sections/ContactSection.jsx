@@ -64,7 +64,7 @@ export default function ContactSection({
               </h3>
             </div>
             <p className="text-sm sm:text-base text-slate-600 max-w-md font-normal leading-relaxed">
-              Susunan 20 mahasiswa S1 Administrasi Rumah Sakit yang bertugas mendampingi warga di posko pelayanan dan edukasi kesehatan Desa Cibaregbeg.
+              Susunan 20 mahasiswa S1 Administrasi Rumah Sakit yang bertugas mendampingi warga di posyandu pelayanan dan edukasi kesehatan Desa Cibaregbeg.
             </p>
           </div>
 

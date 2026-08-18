@@ -72,10 +72,10 @@ export default function Footer({ f = footerData }) {
             </ul>
           </div>
 
-          {/* Col 3: Posko & Kontak Resmi */}
+          {/* Col 3: Posyandu & Kontak Resmi */}
           <div className="lg:col-span-4 sm:col-span-1">
             <Heading as="h4" level="4" color="light" className="text-base font-bold mb-4">
-              Posko & Kontak Resmi
+              Posyandu & Kontak Resmi
             </Heading>
             <div className="space-y-3 text-sm text-slate-200">
               <div className="flex items-start gap-2.5">

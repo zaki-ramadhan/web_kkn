@@ -67,9 +67,9 @@ export default function ContactCard({
         </div>
 
         {/* Phone Number: Clean Text with Phone Icon (No Badge Box / No Pulse Dot) */}
-        <div className="flex items-center gap-2 text-brand-850 font-grotesk font-black text-base sm:text-lg tracking-tight mb-3.5">
-          <Phone className="w-4 h-4 text-emerald-600 shrink-0" />
-          <span className="truncate">{number}</span>
+        <div className="flex items-start gap-2 text-brand-850 font-grotesk font-bold text-sm sm:text-base tracking-tight mb-3.5">
+          <Phone className="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" />
+          <span className="leading-snug">{number}</span>
         </div>
 
         <p className="text-sm text-slate-600 leading-relaxed mb-6 font-normal flex-1">
