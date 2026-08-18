@@ -62,37 +62,31 @@ export default function ContactSection({
       {/* Sub-section: Struktur Pembimbing & Tim Mahasiswa */}
       <AnimatedContent distance={30} duration={0.65} delay={0.15}>
         <div className="pt-12 pb-8 border-t border-slate-200/80">
-          <div className="flex flex-col md:flex-row md:items-end justify-between mb-8 gap-4">
-            <div>
+          <div className="flex flex-col lg:flex-row lg:items-center justify-between mb-8 gap-6">
+            <div className="max-w-md">
               <Eyebrow variant="brand">
                 Struktur Pembimbing & Tim Mahasiswa
               </Eyebrow>
-              <h3 className="font-grotesk text-2xl sm:text-3xl font-bold text-slate-950 tracking-tight">
+              <h3 className="font-grotesk text-2xl sm:text-3xl font-bold text-slate-950 tracking-tight mb-2">
                 Dosen Pembimbing & 20 Mahasiswa KKN ARS
               </h3>
+              <p className="text-sm sm:text-base text-slate-600 font-normal leading-relaxed">
+                Didampingi oleh Dosen Pembimbing Lapangan & Dosen Pengampu Universitas Indonesia Maju (UIMA) beserta 20 mahasiswa S1 Administrasi Rumah Sakit.
+              </p>
             </div>
-            <p className="text-sm sm:text-base text-slate-600 max-w-md font-normal leading-relaxed">
-              Didampingi oleh Dosen Pembimbing Lapangan & Dosen Pengampu Universitas Indonesia Maju (UIMA) beserta 20 mahasiswa S1 Administrasi Rumah Sakit.
-            </p>
-          </div>
 
-          {/* Dosen Pembimbing & Pengampu Cards (Exact Student Card Style) */}
-          <div className="mb-8">
-            <div className="text-xs font-bold uppercase tracking-wider text-emerald-700 mb-3.5 flex items-center gap-2">
-              <span className="w-1.5 h-1.5 rounded-full bg-emerald-600" />
-              <span>Dosen Pembimbing & Pengampu Program</span>
-            </div>
-            <div className="flex flex-wrap gap-4 sm:gap-5">
+            {/* Dosen Pembimbing & Pengampu Mini Cards on the right side of header text */}
+            <div className="flex flex-wrap sm:flex-nowrap gap-3.5 sm:gap-4 shrink-0">
               {advisors.map((adv) => (
                 <div
                   key={adv.id}
-                  className="w-[195px] sm:w-[220px] shrink-0 transition-all duration-300 ease-out hover:scale-105"
+                  className="w-[175px] sm:w-[190px] shrink-0 transition-all duration-300 ease-out hover:scale-105"
                 >
-                  <div className="group relative bg-white border border-slate-200/90 hover:border-emerald-400/80 rounded-2xl p-3.5 sm:p-4 transition-all duration-300 ease-out shadow-card-depth hover:-translate-y-1.5 flex flex-col justify-between h-full overflow-hidden">
+                  <div className="group relative bg-white border border-slate-200/90 hover:border-emerald-400/80 rounded-2xl p-3 sm:p-3.5 transition-all duration-300 ease-out shadow-card-depth hover:-translate-y-1 flex flex-col justify-between h-full overflow-hidden">
                     <TopShimmer variant="lime" />
 
                     {/* Portrait Photo */}
-                    <div className="relative aspect-square w-full rounded-xl overflow-hidden mb-3 bg-slate-100 border border-slate-100">
+                    <div className="relative aspect-square w-full rounded-xl overflow-hidden mb-2.5 bg-slate-100 border border-slate-100">
                       <img
                         src={adv.avatar}
                         alt={adv.name}
@@ -100,7 +94,7 @@ export default function ContactSection({
                         decoding="async"
                         className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-300"
                       />
-                      <span className="absolute bottom-2 left-2 px-2.5 py-0.5 rounded-md bg-brand-950/90 backdrop-blur-xs text-sm font-bold text-lime-400 border border-lime-400/30 shadow-subtle">
+                      <span className="absolute bottom-1.5 left-1.5 px-2 py-0.5 rounded-md bg-brand-950/90 backdrop-blur-xs text-xs font-bold text-lime-400 border border-lime-400/30 shadow-subtle">
                         {adv.badge || 'Dosen'}
                       </span>
                     </div>
@@ -109,14 +103,14 @@ export default function ContactSection({
                     <div>
                       <h4
                         title={adv.name}
-                        className="font-grotesk font-bold text-sm sm:text-base text-slate-900 group-hover:text-emerald-700 transition-colors leading-snug"
+                        className="font-grotesk font-bold text-xs sm:text-sm text-slate-900 group-hover:text-emerald-700 transition-colors leading-snug line-clamp-2"
                       >
                         {adv.name}
                       </h4>
-                      <div className="text-sm font-semibold text-emerald-600 mt-1 line-clamp-1 truncate">
+                      <div className="text-xs font-semibold text-emerald-600 mt-1 line-clamp-1 truncate">
                         {adv.role}
                       </div>
-                      <div className="text-sm text-slate-500 font-normal mt-0.5 line-clamp-1 truncate">
+                      <div className="text-[11px] text-slate-500 font-normal mt-0.5 line-clamp-1 truncate">
                         {adv.institution}
                       </div>
                     </div>
