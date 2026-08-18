@@ -75,35 +75,30 @@ export default function ContactSection({
               </p>
             </div>
 
-            {/* Dosen Pembimbing & Pengampu Mini Cards on the right side of header text (Exact same size & format as student cards) */}
+            {/* Dosen Pembimbing & Pengampu Static Mini Cards on the right side of header text */}
             <div className="flex flex-wrap sm:flex-nowrap gap-4 shrink-0">
               {advisors.map((adv) => (
                 <div
                   key={adv.id}
-                  className="w-[195px] sm:w-[220px] shrink-0 py-2 transition-all duration-300 ease-out hover:scale-105"
+                  className="w-[195px] sm:w-[220px] shrink-0 py-2"
                 >
-                  <div className="group relative bg-white border border-slate-200/90 hover:border-emerald-400/80 rounded-2xl p-3.5 sm:p-4 transition-all duration-300 ease-out shadow-card-depth hover:-translate-y-1.5 flex flex-col justify-between h-full overflow-hidden">
-                    <TopShimmer variant="lime" />
-
-                    {/* Portrait Photo */}
+                  <div className="relative bg-white border border-slate-200/90 rounded-2xl p-3.5 sm:p-4 shadow-card-depth flex flex-col justify-between h-full overflow-hidden">
+                    {/* Portrait Photo (Clean, no overlay badge) */}
                     <div className="relative aspect-square w-full rounded-xl overflow-hidden mb-3 bg-slate-100 border border-slate-100">
                       <img
                         src={adv.avatar}
                         alt={adv.name}
                         loading="lazy"
                         decoding="async"
-                        className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-300"
+                        className="w-full h-full object-cover object-center"
                       />
-                      <span className="absolute bottom-2 left-2 px-2.5 py-0.5 rounded-md bg-brand-950/90 backdrop-blur-xs text-sm font-bold text-lime-400 border border-lime-400/30 shadow-subtle">
-                        {adv.badge || 'Dosen'}
-                      </span>
                     </div>
 
                     {/* Lecturer Details */}
                     <div>
                       <h4
                         title={adv.name}
-                        className="font-grotesk font-bold text-sm sm:text-base text-slate-900 group-hover:text-emerald-700 transition-colors leading-snug line-clamp-1 truncate"
+                        className="font-grotesk font-bold text-sm sm:text-base text-slate-900 leading-snug line-clamp-1 truncate"
                       >
                         {adv.name}
                       </h4>
