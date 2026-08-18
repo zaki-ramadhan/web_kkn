@@ -18,10 +18,10 @@ import ContactSection from './components/sections/ContactSection';
 
 export default function App() {
   // Check 404 fallback for non-root URL paths
+  const pathname = typeof window !== 'undefined' ? window.location.pathname.replace(/\/$/, '') : '';
   const isNotFound =
-    typeof window !== 'undefined' &&
-    window.location.pathname !== '/' &&
-    window.location.pathname !== '';
+    pathname !== '' &&
+    pathname !== '/index.html';
 
   if (isNotFound) {
     return <NotFound />;
