@@ -15,16 +15,16 @@ export default function ContactSection({
   members = kknTeamMembers,
 }) {
   return (
-    <SectionWrapper id="darurat" bg="dark" className="relative overflow-hidden bg-[#080d11] text-white">
-      {/* Full-bleed ReactBits DarkVeil Aurora Shader Background */}
-      <div className="absolute inset-0 w-full h-full pointer-events-none z-0">
+    <SectionWrapper id="darurat" bg="white" className="relative overflow-hidden">
+      {/* Full-bleed ReactBits Aurora Shader Background Blended on White */}
+      <div className="absolute inset-0 w-full h-full pointer-events-none z-0 opacity-40 mix-blend-multiply">
         <DarkVeil
-          hueShift={0}
-          noiseIntensity={0}
+          hueShift={130}
+          noiseIntensity={0.01}
           scanlineIntensity={0}
-          speed={0.5}
+          speed={0.4}
           scanlineFrequency={0}
-          warpAmount={0}
+          warpAmount={0.2}
           resolutionScale={1}
         />
       </div>
@@ -32,14 +32,11 @@ export default function ContactSection({
       <div className="relative z-10">
         <SectionHeader
           badge="Pendampingan Warga Desa"
-          kickerColor="lime"
-          headingColor="light"
+          kickerColor="brand"
+          headingColor="dark"
           title={
             <>
-              Kontak & Narahubung{' '}
-              <span className="text-lime-300 underline decoration-lime-400 decoration-4 underline-offset-8">
-                Tim Mahasiswa KKN
-              </span>
+              Kontak & Narahubung <Stabilo>Tim Mahasiswa KKN</Stabilo>
             </>
           }
           subtitle="Hubungi tim mahasiswa KKN kami jika Anda memerlukan bantuan informasi, pendampingan alur faskes, atau konsultasi langsung di posko desa."
@@ -64,17 +61,17 @@ export default function ContactSection({
         </div>
 
         {/* Sub-section: 20 Mahasiswa Tim KKN Continuous Nonstop Slider */}
-        <div className="pt-12 pb-8 border-t border-white/15">
+        <div className="pt-12 pb-8 border-t border-slate-200/80">
           <div className="flex flex-col md:flex-row md:items-end justify-between mb-8 gap-4">
             <div>
-              <Eyebrow variant="lime">
+              <Eyebrow variant="brand">
                 Struktur Tim Mahasiswa
               </Eyebrow>
-              <h3 className="font-grotesk text-2xl sm:text-3xl font-bold text-white tracking-tight">
+              <h3 className="font-grotesk text-2xl sm:text-3xl font-bold text-slate-950 tracking-tight">
                 20 Mahasiswa Tim KKN ARS Cibaregbeg
               </h3>
             </div>
-            <p className="text-sm sm:text-base text-slate-300 max-w-md font-normal leading-relaxed">
+            <p className="text-sm sm:text-base text-slate-600 max-w-md font-normal leading-relaxed">
               Susunan 20 mahasiswa S1 Administrasi Rumah Sakit yang bertugas mendampingi warga di posko pelayanan dan edukasi kesehatan Desa Cibaregbeg.
             </p>
           </div>

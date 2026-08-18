@@ -69,7 +69,12 @@ void main(){
     float scanline_val=sin(gl_FragCoord.y*uScanFreq)*0.5+0.5;
     col.rgb*=1.-(scanline_val*scanline_val)*uScan;
     col.rgb+=(rand(gl_FragCoord.xy+uTime)-0.5)*uNoise;
-    gl_FragColor=vec4(clamp(col.rgb,0.0,1.0),1.0);
+    
+    // Smooth luminance-based alpha for light/white background compatibility
+    float lum = max(col.r, max(col.g, col.b));
+    float alpha = smoothstep(0.03, 0.55, lum);
+    
+    gl_FragColor=vec4(clamp(col.rgb,0.0,1.0), alpha);
 }
 `;
 
