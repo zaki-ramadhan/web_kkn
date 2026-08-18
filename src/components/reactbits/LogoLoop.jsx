@@ -153,6 +153,7 @@ export const LogoLoop = memo(
     fadeOut = false,
     fadeOutColor,
     scaleOnHover = false,
+    grayscaleByDefault = false,
     renderItem,
     ariaLabel = 'Partner logos',
     className,
@@ -275,8 +276,9 @@ export const LogoLoop = memo(
             className={cx(
               'inline-flex items-center',
               'motion-reduce:transition-none',
-              scaleOnHover &&
-                'transition-transform duration-300 ease-[cubic-bezier(0.4,0,0.2,1)] group-hover/item:scale-110'
+              grayscaleByDefault && 'grayscale opacity-60 group-hover/item:grayscale-0 group-hover/item:opacity-100',
+              'transition-all duration-300 ease-[cubic-bezier(0.4,0,0.2,1)]',
+              scaleOnHover && 'group-hover/item:scale-115'
             )}
             aria-hidden={!!item.href && !item.ariaLabel}
           >
@@ -289,8 +291,9 @@ export const LogoLoop = memo(
               '[-webkit-user-drag:none] pointer-events-none',
               '[image-rendering:-webkit-optimize-contrast]',
               'motion-reduce:transition-none',
-              scaleOnHover &&
-                'transition-transform duration-300 ease-[cubic-bezier(0.4,0,0.2,1)] group-hover/item:scale-110'
+              grayscaleByDefault && 'grayscale opacity-60 group-hover/item:grayscale-0 group-hover/item:opacity-100',
+              'transition-all duration-300 ease-[cubic-bezier(0.4,0,0.2,1)]',
+              scaleOnHover && 'group-hover/item:scale-115'
             )}
             src={item.src}
             srcSet={item.srcSet}
