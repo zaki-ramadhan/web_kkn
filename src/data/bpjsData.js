@@ -131,7 +131,7 @@ export const bpjsCategories = [
     highlighted: true,
     theme: 'forest',
     ctaText: 'Konsultasi via WA',
-    ctaLink: 'https://wa.me/628892120024?text=Halo%20Kader%20Posyandu%2C%20saya%20ingin%20tanya%20panduan%20BPJS%20Mandiri',
+    ctaLink: 'https://wa.me/628118165165?text=Halo%20BPJS%20Kesehatan%2C%20saya%20warga%20Cibaregbeg%20ingin%20konsultasi%20kepesertaan%20BPJS%20Mandiri%2FPBPU',
   },
   {
     id: 'ppu',
@@ -181,31 +181,31 @@ export const registrationSteps = [
   },
   {
     step: '04',
-    icon: Pill,
-    title: 'Pengambilan Obat di Farmasi',
-    desc: 'Serahkan resep dokter ke instalasi farmasi Puskesmas. Seluruh obat formularium nasional generik diberikan tanpa iur biaya.',
-    highlight: 'Obat generik tercover 100% gratis.',
+    icon: FlaskConical,
+    title: 'Tindakan Medis / Laboratorium (Bila Diperlukan)',
+    desc: 'Pemeriksaan penunjang medis sesuai instruksi dokter (cek darah, lab sederhana, USG dasar KIA, atau tindakan gigi).',
+    highlight: 'Tindakan medis standar faskes 100% tercover tanpa biaya tambahan.',
   },
   {
     step: '05',
-    icon: FileText,
-    title: 'Penerbitan Rujukan Berjenjang',
-    desc: 'Jika membutuhkan pemeriksaan spesialis/tindakan lanjutan, dokter menerbitkan surat rujukan online (PCare) ke Rumah Sakit rekanan.',
-    highlight: 'Sistem rujukan terintegrasi otomatis ke RS.',
+    icon: Pill,
+    title: 'Pengambilan Resep Obat di Farmasi',
+    desc: 'Ambil obat sesuai resep dokter di instalasi farmasi Puskesmas. Bebas biaya untuk seluruh obat yang masuk Formularium Nasional (Fornas).',
+    highlight: 'Obat generik berkualitas lengkap dan tanpa iur biaya.',
   },
 ];
 
 // ==========================================
-// 5. SECTION 3: CAKUPAN LAYANAN & POLI DI PUSKESMAS
+// 5. SECTION 3: CAKUPAN LAYANAN & POLI PUSKESMAS TERCOVER BPJS (5 LAYANAN)
 // ==========================================
 
 export const serviceFilterTabs = [
-  { id: 'all', label: 'Semua Pelayanan (5)' },
+  { id: 'all', label: 'Semua Layanan (5)' },
   { id: 'umum', label: 'Poli Umum' },
-  { id: 'kia', label: 'KIA & Bersalin' },
+  { id: 'kia', label: 'KIA / Bersalin' },
   { id: 'gigi', label: 'Poli Gigi' },
   { id: 'lab', label: 'Laboratorium' },
-  { id: 'prolanis', label: 'Prolanis Kronis' },
+  { id: 'prolanis', label: 'Prolanis' },
 ];
 
 export const puskesmasServices = [
@@ -217,7 +217,7 @@ export const puskesmasServices = [
     tag: 'Pelayanan Utama',
     desc: 'Konsultasi dokter umum, penanganan penyakit menular & tidak menular, pemeriksaan tanda vital, penjahitan luka, dan terapi farmasi standar.',
     stat: '100% Tercover Tanpa Iur Biaya',
-    image: '/images/services/rawat jalan.jpg',
+    image: '/images/services/rawat jalan.webp',
   },
   {
     id: 'srv-2',
@@ -227,7 +227,7 @@ export const puskesmasServices = [
     tag: 'Prioritas Desa',
     desc: 'Pemeriksaan kehamilan rutin (ANC terpadu + USG dasar), imunisasi lengkap bayi, persalinan normal 24 jam PONED, dan pemasangan alat KB (IUD, implan, suntik, pil).',
     stat: 'Termasuk Program Pencegahan Stunting',
-    image: '/images/services/kesehatan ibu & anak.jpg',
+    image: '/images/services/kesehatan ibu & anak.webp',
   },
   {
     id: 'srv-3',
@@ -237,7 +237,7 @@ export const puskesmasServices = [
     tag: 'Poli Gigi',
     desc: 'Pembersihan karang gigi (scaling 1x/tahun atas indikasi medis), penambalan gigi komposit, pencabutan gigi sulung/tetap, dan pengobatan infeksi pulpa.',
     stat: 'Dilayani Dokter Gigi Terdaftar',
-    image: '/images/services/pelayanan gigi & mulut lengkap.jpg',
+    image: '/images/services/pelayanan gigi & mulut lengkap.webp',
   },
   {
     id: 'srv-4',
@@ -257,7 +257,7 @@ export const puskesmasServices = [
     tag: 'Lansia & Kronis',
     desc: 'Pemantauan khusus penderita Diabetes Melitus & Hipertensi, senam lansia berkala, edukasi gizi klinik, dan paket obat rutin bulanan faskes.',
     stat: 'Pencegahan Dini Komplikasi Kronis',
-    image: '/images/services/prolanis.jpg',
+    image: '/images/services/prolanis.webp',
   },
 ];
 

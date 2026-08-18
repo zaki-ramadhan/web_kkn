@@ -16,7 +16,7 @@ export default function PartnerLogoStrip({ logos = institutionalLogos }) {
           fadeOut={true}
           fadeOutColor="rgb(241 245 249)"
           scaleOnHover={true}
-          grayscaleByDefault={true}
+          grayscaleByDefault={false}
           ariaLabel="Institusi dan Mitra Kolaborasi Pelayanan Kesehatan"
         />
       </div>
