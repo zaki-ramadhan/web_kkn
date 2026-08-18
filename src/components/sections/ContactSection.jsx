@@ -6,6 +6,7 @@ import Stabilo from '../ui/Stabilo';
 import ContactCard from '../ContactCard';
 import EmergencyAdvisory from '../EmergencyAdvisory';
 import TeamMarqueeSlider from '../TeamMarqueeSlider';
+import DarkVeil from '../reactbits/DarkVeil';
 import { emergencyContacts, emergencyCriteria, kknTeamMembers } from '../../data/bpjsData';
 
 export default function ContactSection({
@@ -14,7 +15,30 @@ export default function ContactSection({
   members = kknTeamMembers,
 }) {
   return (
-    <SectionWrapper id="darurat" bg="white">
+    <SectionWrapper id="darurat" bg="white" className="relative overflow-hidden">
+      {/* Decorative DarkVeil Ambient Canvas Layer (React Bits) */}
+      <div className="absolute top-0 right-0 w-[550px] h-[550px] pointer-events-none opacity-25 rounded-full overflow-hidden blur-2xl z-0">
+        <DarkVeil
+          hueShift={130}
+          noiseIntensity={0.02}
+          scanlineIntensity={0.05}
+          speed={0.4}
+          scanlineFrequency={0.2}
+          warpAmount={0.25}
+        />
+      </div>
+
+      <div className="absolute bottom-12 left-0 w-[450px] h-[450px] pointer-events-none opacity-20 rounded-full overflow-hidden blur-2xl z-0">
+        <DarkVeil
+          hueShift={130}
+          noiseIntensity={0.02}
+          scanlineIntensity={0.05}
+          speed={0.35}
+          scanlineFrequency={0.2}
+          warpAmount={0.2}
+        />
+      </div>
+
       <SectionHeader
         badge="Pendampingan Warga Desa"
         title={
@@ -26,7 +50,7 @@ export default function ContactSection({
       />
 
       {/* 4 Primary Action Cards for Direct Citizen Inquiries */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16 relative z-10">
         {contacts.map((contact, idx) => (
           <ContactCard
             key={contact.id}
