@@ -10,13 +10,13 @@ export default function CategorySection({ categories = bpjsCategories }) {
   return (
     <SectionWrapper id="jenis-bpjs" bg="slate">
       <SectionHeader
-        badge="Kategori Kepesertaan"
+        badge="Section 01 • Kategori Kepesertaan"
         title={
           <>
             Jenis & Kategori Kepesertaan <Stabilo>BPJS Kesehatan</Stabilo>
           </>
         }
-        subtitle="Pahami 3 kategori kepesertaan, besaran iuran bulanan, target warga, hak rawat inap, dan mekanisme pendaftarannya."
+        subtitle="Pahami 3 kategori kepesertaan: PBI JK bantuan pemerintah, Mandiri/PBPU, dan PPU pekerja formal beserta besaran iuran dan hak rawat inapnya."
       />
 
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 items-center pt-4 pb-4">

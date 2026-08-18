@@ -87,24 +87,36 @@ export default function Navbar({ modules = navEducationalModules }) {
                 />
               </button>
 
-              {/* Dropdown Menu Flyout */}
+              {/* Dropdown Menu Flyout: 3 Columns x 2 Rows Mega Menu */}
               {dropdownOpen && (
                 <div
-                  className="absolute top-full left-0 mt-3 w-80 sm:w-88 rounded-2xl p-2.5 bg-white border border-slate-200/90 text-slate-900 shadow-2xl ring-1 ring-black/10 z-50 animate-in fade-in slide-in-from-top-2"
+                  className="absolute top-full -left-12 lg:-left-20 mt-3 w-[680px] lg:w-[760px] max-w-[95vw] rounded-3xl p-5 bg-white border border-slate-200/90 text-slate-900 shadow-2xl ring-1 ring-black/10 z-50 animate-in fade-in slide-in-from-top-2"
                 >
-                  <div className="space-y-1">
-                    {modules.map((item) => (
+                  <div className="flex items-center justify-between pb-3 mb-3 border-b border-slate-100 px-1">
+                    <div className="text-xs font-bold uppercase tracking-wider text-emerald-700 flex items-center gap-1.5">
+                      <span className="w-2 h-2 rounded-full bg-lime-500" />
+                      <span>Modul Panduan & Layanan Kesehatan</span>
+                    </div>
+                    <span className="text-xs text-slate-600 font-medium">6 Section Pilihan</span>
+                  </div>
+                  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2.5">
+                    {modules.map((item, idx) => (
                       <a
                         key={item.href}
                         href={item.href}
                         onClick={() => setDropdownOpen(false)}
-                        className="block p-3 rounded-xl hover:bg-emerald-50/50 transition-colors group"
+                        className="flex items-start gap-3 p-3.5 rounded-2xl hover:bg-emerald-50/70 border border-transparent hover:border-emerald-200/60 transition-all duration-200 group"
                       >
-                        <div className="text-sm font-bold text-slate-900 group-hover:text-emerald-600 transition-colors leading-tight">
-                          {item.title}
+                        <div className="w-8 h-8 rounded-xl bg-slate-100 group-hover:bg-emerald-600 group-hover:text-white text-slate-700 font-grotesk font-bold text-xs flex items-center justify-center shrink-0 transition-colors mt-0.5 shadow-xs">
+                          0{idx + 1}
                         </div>
-                        <div className="text-sm text-slate-600 line-clamp-1 mt-1 font-normal leading-relaxed">
-                          {item.desc}
+                        <div className="flex-1 min-w-0">
+                          <div className="text-sm font-bold text-slate-900 group-hover:text-emerald-700 transition-colors leading-snug">
+                            {item.title}
+                          </div>
+                          <div className="text-xs text-slate-600 line-clamp-1 mt-1 font-normal leading-normal">
+                            {item.desc}
+                          </div>
                         </div>
                       </a>
                     ))}

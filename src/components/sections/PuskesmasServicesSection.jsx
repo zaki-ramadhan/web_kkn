@@ -25,14 +25,14 @@ export default function PuskesmasServicesSection({
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
           <div>
             <Eyebrow variant="brand">
-              Cakupan Manfaat Faskes
+              Section 03 • Layanan & Poli
             </Eyebrow>
             <Heading as="h2" level="2" color="dark">
               Cakupan Layanan & Poli di Puskesmas <Stabilo>(Tercover BPJS)</Stabilo>
             </Heading>
           </div>
           <p className="text-slate-700 text-base max-w-md font-normal leading-relaxed">
-            Pelayanan medis dasar, tindakan preventif, imunisasi, persalinan PONED, dan obat-obatan generik 100% tanpa iur biaya bagi peserta aktif.
+            Pelayanan medis dasar Poli Umum, KIA/KB persalinan PONED 24 jam, Poli Gigi, Laboratorium diagnostik, dan Prolanis kronis 100% bebas biaya.
           </p>
         </div>
       </AnimatedContent>

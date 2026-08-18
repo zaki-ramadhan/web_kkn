@@ -19,7 +19,7 @@ export default function ContactSection({
   return (
     <SectionWrapper id="darurat" bg="white">
       <SectionHeader
-        badge={isNewVersion ? 'Pusat Layanan Warga' : 'Pendampingan Warga Desa'}
+        badge={isNewVersion ? 'Section 06 • Narahubung Resmi' : 'Section 06 • Tim Mahasiswa KKN'}
         title={
           isNewVersion ? (
             <>
