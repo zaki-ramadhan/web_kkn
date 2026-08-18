@@ -66,15 +66,25 @@ void mainImage(out vec4 fragColor,in vec2 fragCoord){
 void main(){
     vec4 col;mainImage(col,gl_FragCoord.xy);
     col.rgb=hueShiftRGB(col.rgb,uHueShift);
-    float scanline_val=sin(gl_FragCoord.y*uScanFreq)*0.5+0.5;
-    col.rgb*=1.-(scanline_val*scanline_val)*uScan;
-    col.rgb+=(rand(gl_FragCoord.xy+uTime)-0.5)*uNoise;
     
-    // Smooth luminance-based alpha for light/white background compatibility
+    if (uScan > 0.0) {
+        float scanline_val=sin(gl_FragCoord.y*uScanFreq)*0.5+0.5;
+        col.rgb*=1.-(scanline_val*scanline_val)*uScan;
+    }
+    if (uNoise > 0.0) {
+        col.rgb+=(rand(gl_FragCoord.xy+uTime)-0.5)*uNoise;
+    }
+    
+    // Clean luminance calculation
     float lum = max(col.r, max(col.g, col.b));
-    float alpha = smoothstep(0.03, 0.55, lum);
     
-    gl_FragColor=vec4(clamp(col.rgb,0.0,1.0), alpha);
+    // Strict threshold cutoff: eliminate all black/grey background fringes completely
+    float alpha = smoothstep(0.12, 0.60, lum);
+    
+    // Enhance and brighten color to pure vibrant tones (no dark murky edges)
+    vec3 vibrantCol = normalize(col.rgb + 0.12) * 1.25;
+    
+    gl_FragColor = vec4(clamp(vibrantCol, 0.0, 1.0), alpha);
 }
 `;
 
@@ -101,7 +111,8 @@ export default function DarkVeil({
       renderer = new Renderer({
         dpr: Math.min(window.devicePixelRatio || 1, 2),
         canvas,
-        alpha: true
+        alpha: true,
+        premultipliedAlpha: true
       });
     } catch (e) {
       console.warn('WebGL not supported for DarkVeil', e);

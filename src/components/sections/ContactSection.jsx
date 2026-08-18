@@ -16,8 +16,8 @@ export default function ContactSection({
 }) {
   return (
     <SectionWrapper id="darurat" bg="white" className="relative overflow-hidden">
-      {/* Full-bleed ReactBits Aurora Shader Background Blended on White with Soft Ambient Opacity */}
-      <div className="absolute inset-0 w-full h-full pointer-events-none z-0 opacity-[0.16] mix-blend-multiply">
+      {/* Full-bleed ReactBits Aurora Shader Background Blended on White (Clean Alpha, Zero Black Fringes) */}
+      <div className="absolute inset-0 w-full h-full pointer-events-none z-0 opacity-25">
         <DarkVeil
           hueShift={130}
           noiseIntensity={0}
