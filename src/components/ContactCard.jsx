@@ -16,10 +16,10 @@ export default function ContactCard({
   const isOdd = index % 2 !== 0;
 
   return (
-    <div className="group rounded-3xl p-6 sm:p-7 flex flex-col justify-between border border-slate-200/90 hover:border-brand-400/70 transition-all duration-300 ease-out shadow-card-depth hover:-translate-y-2 bg-gradient-to-b from-white via-white to-slate-50/60 relative overflow-hidden">
+    <div className="group rounded-3xl p-6 sm:p-7 flex flex-col justify-between border border-slate-200/90 hover:border-brand-400/70 transition-all duration-300 ease-out shadow-card-depth hover:-translate-y-2 bg-gradient-to-b from-white via-white to-slate-50/60 relative overflow-hidden h-full">
       <TopShimmer variant="lime" />
 
-      <div>
+      <div className="flex-1 flex flex-col">
         {/* Tooltip / Speech Bubble Tag with Alternating Nonstop Floating Animation */}
         <div
           className={`relative inline-block mb-3.5 ${
@@ -46,7 +46,7 @@ export default function ContactCard({
         </div>
 
         {/* Identity Lockup: Avatar on Left, 2-Line Clamped Name on Right */}
-        <div className="flex items-center gap-3.5 mb-3.5">
+        <div className="flex items-center gap-3.5 mb-3.5 min-h-[3.5rem]">
           {avatar && (
             <img
               src={avatar}
@@ -67,12 +67,12 @@ export default function ContactCard({
         </div>
 
         {/* Dedicated Phone Number Badge */}
-        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-xl bg-brand-50/80 border border-brand-200/80 text-brand-900 font-grotesk font-black text-sm sm:text-base tracking-tight mb-3.5 shadow-xs">
+        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-xl bg-brand-50/80 border border-brand-200/80 text-brand-900 font-grotesk font-black text-sm sm:text-base tracking-tight mb-3.5 shadow-xs self-start">
           <span className="w-2 h-2 rounded-full bg-brand-600 animate-pulse shrink-0" />
           <span className="truncate">{number}</span>
         </div>
 
-        <p className="text-sm text-slate-600 leading-relaxed mb-6 font-normal">
+        <p className="text-sm text-slate-600 leading-relaxed mb-6 font-normal flex-1">
           {desc}
         </p>
       </div>
