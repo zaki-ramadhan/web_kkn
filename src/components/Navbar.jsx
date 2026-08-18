@@ -4,7 +4,8 @@ import {
   Menu,
   X,
   MessageSquare,
-  ChevronDown
+  ChevronDown,
+  ArrowUpRight
 } from 'lucide-react';
 import PillCTAButton from './ui/PillCTAButton';
 import { useScrolledState } from '../hooks/useScrolledState';
@@ -13,7 +14,7 @@ import { useVersion } from '../context/VersionContext';
 import { navEducationalModules } from '../data/bpjsData';
 
 export default function Navbar({ modules = navEducationalModules }) {
-  const { currentData } = useVersion();
+  const { currentData, isNewVersion } = useVersion();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [dropdownOpen, setDropdownOpen] = useState(false);
   const dropdownRef = useRef(null);
@@ -90,7 +91,7 @@ export default function Navbar({ modules = navEducationalModules }) {
               {/* Dropdown Menu Flyout: 3 Columns x 2 Rows Mega Menu */}
               {dropdownOpen && (
                 <div
-                  className="absolute top-full -left-12 lg:-left-20 mt-3 w-[680px] lg:w-[760px] max-w-[95vw] rounded-3xl p-5 bg-white border border-slate-200/90 text-slate-900 shadow-2xl ring-1 ring-black/10 z-50 animate-in fade-in slide-in-from-top-2"
+                  className="absolute top-full -left-12 lg:-left-20 mt-3 w-[720px] lg:w-[820px] max-w-[95vw] rounded-3xl p-5 bg-white border border-slate-200/90 text-slate-900 shadow-2xl ring-1 ring-black/10 z-50 animate-in fade-in slide-in-from-top-2"
                 >
                   <div className="flex items-center justify-between pb-3 mb-3 border-b border-slate-100 px-1">
                     <div className="text-xs font-bold uppercase tracking-wider text-emerald-700 flex items-center gap-1.5">
@@ -99,18 +100,18 @@ export default function Navbar({ modules = navEducationalModules }) {
                     </div>
                     <span className="text-xs text-slate-600 font-medium">6 Section Pilihan</span>
                   </div>
-                  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2.5">
+                  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
                     {modules.map((item, idx) => (
                       <a
                         key={item.href}
                         href={item.href}
                         onClick={() => setDropdownOpen(false)}
-                        className="flex items-start gap-3 p-3.5 rounded-2xl hover:bg-emerald-50/70 border border-transparent hover:border-emerald-200/60 transition-all duration-200 group"
+                        className="relative flex items-start gap-3 p-3.5 rounded-2xl bg-slate-50/70 hover:bg-emerald-50 border border-slate-200/70 hover:border-emerald-300 transition-all duration-200 group shadow-2xs hover:shadow-subtle"
                       >
-                        <div className="w-8 h-8 rounded-xl bg-slate-100 group-hover:bg-emerald-600 group-hover:text-white text-slate-700 font-grotesk font-bold text-xs flex items-center justify-center shrink-0 transition-colors mt-0.5 shadow-xs">
+                        <div className="w-8 h-8 rounded-xl bg-white border border-slate-200/80 group-hover:bg-emerald-600 group-hover:border-emerald-600 group-hover:text-white text-slate-700 font-grotesk font-bold text-xs flex items-center justify-center shrink-0 transition-colors mt-0.5 shadow-xs">
                           0{idx + 1}
                         </div>
-                        <div className="flex-1 min-w-0">
+                        <div className="flex-1 min-w-0 pr-4">
                           <div className="text-sm font-bold text-slate-900 group-hover:text-emerald-700 transition-colors leading-snug">
                             {item.title}
                           </div>
@@ -118,6 +119,7 @@ export default function Navbar({ modules = navEducationalModules }) {
                             {item.desc}
                           </div>
                         </div>
+                        <ArrowUpRight className="w-4 h-4 text-slate-400 group-hover:text-emerald-600 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all duration-200 shrink-0 mt-0.5 absolute top-3.5 right-3.5" />
                       </a>
                     ))}
                   </div>
@@ -184,15 +186,21 @@ export default function Navbar({ modules = navEducationalModules }) {
           <div
             className="lg:hidden border-b border-slate-200 bg-white text-slate-900 shadow-2xl px-5 pt-4 pb-6 space-y-3"
           >
-            <div className="space-y-1">
-              {modules.map((item) => (
+            <div className="space-y-1.5">
+              {modules.map((item, idx) => (
                 <a
                   key={item.href}
                   href={item.href}
                   onClick={() => setMobileMenuOpen(false)}
-                  className="block py-2.5 px-3 rounded-xl text-base font-semibold text-slate-900 hover:bg-slate-100 hover:text-emerald-600 transition-colors"
+                  className="flex items-center justify-between py-2.5 px-3 rounded-xl text-sm font-semibold text-slate-900 hover:bg-emerald-50 hover:text-emerald-700 transition-colors group"
                 >
-                  {item.title}
+                  <div className="flex items-center gap-2.5">
+                    <span className="w-6 h-6 rounded-lg bg-slate-100 group-hover:bg-emerald-600 group-hover:text-white text-[11px] font-grotesk font-bold flex items-center justify-center text-slate-600 transition-colors">
+                      0{idx + 1}
+                    </span>
+                    <span>{item.title}</span>
+                  </div>
+                  <ArrowUpRight className="w-4 h-4 text-slate-400 group-hover:text-emerald-600 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all" />
                 </a>
               ))}
             </div>

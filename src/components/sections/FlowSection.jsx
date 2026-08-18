@@ -22,25 +22,32 @@ export default function FlowSection({ steps = registrationSteps }) {
         />
       </div>
 
-      {/* Continuous 60fps Nonstop Slider Track with Focus Spotlight on Hover */}
+      {/* Continuous 60fps Nonstop Slider Track with Focus Spotlight & Alternating Odd/Even Stagger */}
       <AnimatedContent distance={30} duration={0.65} delay={0.1}>
-        <div className="relative w-full overflow-hidden marquee-container group/track py-4 [mask-image:linear-gradient(to_right,transparent,black_6%,black_94%,transparent)]">
-          <div className="flex gap-6 animate-marquee py-3">
-            {[...steps, ...steps].map((step, idx) => (
-              <div
-                key={idx}
-                className="w-[280px] sm:w-[320px] shrink-0 py-1 transition-all duration-300 ease-out group-hover/track:opacity-45 group-hover/track:grayscale-[40%] hover:!opacity-100 hover:!grayscale-0 hover:!scale-105 relative z-0 hover:z-20"
-              >
-                <StepCard
-                  step={step.step}
-                  icon={step.icon}
-                  title={step.title}
-                  desc={step.desc}
-                  highlight={step.highlight}
-                  className="h-full"
-                />
-              </div>
-            ))}
+        <div className="relative w-full overflow-hidden marquee-container group/track py-8 sm:py-10 [mask-image:linear-gradient(to_right,transparent,black_6%,black_94%,transparent)]">
+          <div className="flex gap-6 animate-marquee py-4">
+            {[...steps, ...steps].map((step, idx) => {
+              const isOdd = idx % 2 !== 0;
+              const staggeredTranslate = isOdd
+                ? 'translate-y-3 sm:translate-y-4.5 hover:!translate-y-0'
+                : '-translate-y-3 sm:-translate-y-4.5 hover:!translate-y-0';
+
+              return (
+                <div
+                  key={idx}
+                  className={`w-[280px] sm:w-[320px] shrink-0 py-1 transition-all duration-300 ease-out group-hover/track:opacity-45 group-hover/track:grayscale-[40%] hover:!opacity-100 hover:!grayscale-0 hover:!scale-105 relative z-0 hover:z-20 ${staggeredTranslate}`}
+                >
+                  <StepCard
+                    step={step.step}
+                    icon={step.icon}
+                    title={step.title}
+                    desc={step.desc}
+                    highlight={step.highlight}
+                    className="h-full"
+                  />
+                </div>
+              );
+            })}
           </div>
         </div>
       </AnimatedContent>
