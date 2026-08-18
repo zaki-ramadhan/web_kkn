@@ -8,6 +8,7 @@ import ScrollToTop from './components/ui/ScrollToTop';
 
 // Modular Page Sections
 import HeroSection from './components/HeroSection';
+import PartnerLogoStrip from './components/PartnerLogoStrip';
 import CategorySection from './components/sections/CategorySection';
 import FlowSection from './components/sections/FlowSection';
 import PuskesmasServicesSection from './components/sections/PuskesmasServicesSection';
@@ -31,6 +32,7 @@ export default function App() {
       <Navbar />
       <main>
         <HeroSection />
+        <PartnerLogoStrip />
         <CategorySection />
         <FlowSection />
         <PuskesmasServicesSection />

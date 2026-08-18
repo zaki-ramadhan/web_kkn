@@ -21,6 +21,46 @@ export const brandData = {
   location: 'RT 004 dan 007 RW 007 Kp. Nyalindung / Talaga, Desa Cibaregbeg, Kec. Cibeber, Kab. Cianjur',
 };
 
+// 6 Institusi Mitra Sinergi Program KKN & Kesehatan Desa
+export const institutionalLogos = [
+  {
+    id: 'inst-1',
+    title: 'UPTD Puskesmas Cibaregbeg',
+    alt: 'Logo UPTD Puskesmas Cibaregbeg',
+    src: '/images/logo/image3.png',
+  },
+  {
+    id: 'inst-2',
+    title: 'BPJS Kesehatan RI',
+    alt: 'Logo BPJS Kesehatan Badan Penyelenggara Jaminan Sosial',
+    src: '/images/logo/image4.png',
+  },
+  {
+    id: 'inst-3',
+    title: 'Universitas Indonesia Maju (UIMA)',
+    alt: 'Logo Universitas Indonesia Maju UIMA',
+    src: '/images/logo/image5.png',
+  },
+  {
+    id: 'inst-4',
+    title: 'Fakultas Ilmu Kesehatan (FIKES)',
+    alt: 'Logo Fakultas Ilmu Kesehatan FIKES UIMA',
+    src: '/images/logo/image6.png',
+  },
+  {
+    id: 'inst-5',
+    title: 'Kader Posyandu Desa Cibaregbeg',
+    alt: 'Logo Kader Posyandu Desa Cibaregbeg',
+    src: '/images/logo/image7.png',
+  },
+  {
+    id: 'inst-6',
+    title: 'KKN S1 Administrasi Rumah Sakit',
+    alt: 'Logo KKN S1 Administrasi Rumah Sakit KKN UIMA',
+    src: '/images/logo/logo_kkn_ars.webp',
+  },
+];
+
 // ==========================================
 // 2. HERO BANNER & STATISTIK
 // ==========================================
