@@ -7,7 +7,8 @@ import {
   Building2,
   Calendar,
   Activity,
-  BedDouble
+  BedDouble,
+  FlaskConical,
 } from 'lucide-react';
 
 // ==========================================
