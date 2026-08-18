@@ -62,8 +62,8 @@ export default function ContactSection({
       {/* Sub-section: Struktur Pembimbing & Tim Mahasiswa */}
       <AnimatedContent distance={30} duration={0.65} delay={0.15}>
         <div className="pt-12 pb-8 border-t border-slate-200/80">
-          <div className="flex flex-col lg:flex-row lg:items-center justify-between mb-8 gap-6">
-            <div className="max-w-md">
+          <div className="flex flex-col lg:flex-row lg:items-center justify-between mb-8 gap-8">
+            <div className="flex-1 max-w-2xl lg:pr-6">
               <Eyebrow variant="brand">
                 Struktur Pembimbing & Tim Mahasiswa
               </Eyebrow>
@@ -76,11 +76,11 @@ export default function ContactSection({
             </div>
 
             {/* Dosen Pembimbing & Pengampu Mini Cards on the right side of header text */}
-            <div className="flex flex-wrap sm:flex-nowrap gap-3.5 sm:gap-4 shrink-0">
+            <div className="flex flex-wrap sm:flex-nowrap gap-4 shrink-0">
               {advisors.map((adv) => (
                 <div
                   key={adv.id}
-                  className="w-[175px] sm:w-[190px] shrink-0 transition-all duration-300 ease-out hover:scale-105"
+                  className="w-[185px] sm:w-[205px] shrink-0 transition-all duration-300 ease-out hover:scale-105"
                 >
                   <div className="group relative bg-white border border-slate-200/90 hover:border-emerald-400/80 rounded-2xl p-3 sm:p-3.5 transition-all duration-300 ease-out shadow-card-depth hover:-translate-y-1 flex flex-col justify-between h-full overflow-hidden">
                     <TopShimmer variant="lime" />
