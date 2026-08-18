@@ -1,5 +1,5 @@
 import React from 'react';
-import { Info } from 'lucide-react';
+import { AlertCircle } from 'lucide-react';
 import SectionHeader from '../ui/SectionHeader';
 import Stabilo from '../ui/Stabilo';
 import StepCard from '../StepCard';
@@ -49,14 +49,14 @@ export default function FlowSection({ steps = registrationSteps }) {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <AnimatedContent distance={25} duration={0.6} delay={0.2}>
           <CalloutBox
-            icon={Info}
-            variant="brand"
-            title="Prinsip Pelayanan Rujukan Berjenjang"
-            description="Pasien BPJS wajib berobat ke Faskes Tingkat Pertama (FKTP) tempat terdaftar terlebih dahulu. Pasien hanya dapat langsung ke UGD Rumah Sakit tanpa surat rujukan jika berada dalam kondisi gawat darurat mengancam jiwa."
+            icon={AlertCircle}
+            variant="rose"
+            title="PENTING — KASUS GAWAT DARURAT (UGD) BEBAS RUJUKAN"
+            description="Berdasarkan Permenkes RI No. 28/2014, dalam kondisi gawat darurat yang mengancam nyawa (seperti henti jantung, sesak napas akut berat, penurunan kesadaran/koma, cedera fisik berat akibat kecelakaan, pendarahan hebat, atau kejang demam anak), pasien BERHAK LANGSUNG ke IGD Rumah Sakit mana saja tanpa surat rujukan dari Puskesmas dan dijamin 100% oleh BPJS Kesehatan."
             className="mt-12"
           >
-            <PillCTAButton href="#layanan-digital" variant="dark" size="sm">
-              Cek FKTP Anda di Layanan Digital JKN
+            <PillCTAButton href="#darurat" variant="dark" size="sm">
+              Lihat Kontak & Narahubung
             </PillCTAButton>
           </CalloutBox>
         </AnimatedContent>
