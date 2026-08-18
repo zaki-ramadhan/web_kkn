@@ -81,10 +81,10 @@ export default function ContactCard({
         href={link}
         target="_blank"
         rel="noreferrer"
-        className="w-full py-3.5 px-5 rounded-full text-sm font-bold flex items-center justify-between transition-all duration-200 shadow-subtle hover:shadow-elevation bg-brand-850 hover:bg-brand-950 text-lime-300 active:scale-95 group/btn"
+        className="w-full py-3 px-4.5 rounded-full text-xs sm:text-sm font-semibold flex items-center justify-between transition-all duration-200 shadow-subtle hover:shadow-elevation bg-brand-850 hover:bg-brand-950 text-lime-300 active:scale-95 group/btn"
       >
-        <span>{actionText}</span>
-        <span className="w-7 h-7 rounded-full bg-white/10 flex items-center justify-center text-lime-400 group-hover/btn:rotate-45 transition-transform duration-200">
+        <span className="truncate">{actionText}</span>
+        <span className="w-7 h-7 rounded-full bg-white/10 flex items-center justify-center text-lime-400 group-hover/btn:rotate-45 transition-transform duration-200 shrink-0 ml-2">
           <ArrowUpRight className="w-4 h-4" />
         </span>
       </a>
