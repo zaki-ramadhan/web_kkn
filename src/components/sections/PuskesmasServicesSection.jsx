@@ -25,7 +25,7 @@ export default function PuskesmasServicesSection({
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
           <div>
             <Eyebrow variant="brand">
-              Section 03 • Layanan & Poli
+              Cakupan Manfaat Faskes
             </Eyebrow>
             <Heading as="h2" level="2" color="dark">
               Cakupan Layanan & Poli di Puskesmas <Stabilo>(Tercover BPJS)</Stabilo>

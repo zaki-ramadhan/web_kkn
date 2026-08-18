@@ -98,7 +98,7 @@ export default function Navbar({ modules = navEducationalModules }) {
                       <span className="w-2 h-2 rounded-full bg-lime-500" />
                       <span>Modul Panduan & Layanan Kesehatan</span>
                     </div>
-                    <span className="text-xs text-slate-600 font-medium">6 Section Pilihan</span>
+                    <span className="text-xs text-slate-600 font-medium">6 Panduan Utama</span>
                   </div>
                   <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
                     {modules.map((item, idx) => (

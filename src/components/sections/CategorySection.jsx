@@ -10,7 +10,7 @@ export default function CategorySection({ categories = bpjsCategories }) {
   return (
     <SectionWrapper id="jenis-bpjs" bg="slate">
       <SectionHeader
-        badge="Section 01 • Kategori Kepesertaan"
+        badge="Kategori Kepesertaan"
         title={
           <>
             Jenis & Kategori Kepesertaan <Stabilo>BPJS Kesehatan</Stabilo>

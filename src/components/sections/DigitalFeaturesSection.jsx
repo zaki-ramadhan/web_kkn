@@ -8,7 +8,7 @@ export default function DigitalFeaturesSection() {
   return (
     <SectionWrapper id="layanan-digital" bg="white" className="border-t border-slate-200/80">
       <SectionHeader
-        badge="Section 04 • Layanan Digital"
+        badge="Transformasi Digital Kesehatan"
         title={
           <>
             Fitur & Pemanfaatan <Stabilo>Layanan Digital JKN</Stabilo>

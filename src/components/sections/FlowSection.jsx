@@ -12,7 +12,7 @@ export default function FlowSection({ steps = registrationSteps }) {
     <section id="alur-faskes" className="py-20 bg-white overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <SectionHeader
-          badge="Section 02 • Alur Faskes"
+          badge="Alur Pelayanan Faskes"
           title={
             <>
               Alur Pendaftaran & Pelayanan <Stabilo>Puskesmas</Stabilo>

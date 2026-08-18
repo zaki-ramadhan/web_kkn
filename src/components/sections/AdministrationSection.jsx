@@ -21,7 +21,7 @@ export default function AdministrationSection({ faqs = administrativeFaqs }) {
         <div className="lg:col-span-5 lg:sticky lg:top-28 self-start">
           <AnimatedContent distance={30} duration={0.65} delay={0.05}>
             <Eyebrow variant="brand">
-              Section 05 • Pusat Solusi Administrasi
+              Pusat Solusi Administrasi
             </Eyebrow>
 
             <Heading as="h2" level="2" color="dark" className="mb-4">
