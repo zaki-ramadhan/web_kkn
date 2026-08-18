@@ -1,9 +1,11 @@
 import React from 'react';
 import { ArrowUpRight, CheckCircle2 } from 'lucide-react';
 import AnimatedContent from './reactbits/AnimatedContent';
-import { digitalFeatures as defaultFeatures } from '../data/bpjsData';
+import { useVersion } from '../context/VersionContext';
 
-export default function DigitalFeatureShowcase({ features = defaultFeatures }) {
+export default function DigitalFeatureShowcase() {
+  const { currentData } = useVersion();
+  const features = currentData.digitalFeatures;
   return (
     <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-start">
       {/* Left Column: Authentic Real Context Photo & Village Assistance Banner */}

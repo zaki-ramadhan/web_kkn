@@ -6,12 +6,12 @@ import AvatarStack from './ui/AvatarStack';
 import StatCard from './ui/StatCard';
 import Scanner from './reactbits/Scanner';
 import AnimatedContent from './reactbits/AnimatedContent';
-import { heroStats } from '../data/bpjsData';
+import { useVersion } from '../context/VersionContext';
 
-export default function HeroSection({
-  stats = heroStats,
-  avatarText = '1.450+ Warga Terbantu Program Edukasi Mahasiswa',
-}) {
+export default function HeroSection() {
+  const { currentData } = useVersion();
+  const hero = currentData.hero;
+
   return (
     <section
       id="hero-section"
@@ -66,7 +66,7 @@ export default function HeroSection({
         {/* Eyebrow */}
         <AnimatedContent distance={20} duration={0.5} delay={0.05}>
           <Eyebrow variant="lime" className="mb-4 drop-shadow-sm">
-            Program Pengabdian KKN ARS Cibaregbeg 2026
+            {hero.eyebrow}
           </Eyebrow>
         </AnimatedContent>
 
@@ -78,30 +78,34 @@ export default function HeroSection({
             color="light"
             className="max-w-4xl mx-auto mb-6 text-balance text-white leading-tight drop-shadow-md"
           >
-            Panduan Lengkap Layanan{' '}
+            {hero.titlePrefix}{' '}
             <span className="text-lime-300 underline decoration-lime-400 decoration-4 underline-offset-8">
-              BPJS Kesehatan
+              {hero.titleHighlight}
             </span>{' '}
-            & Puskesmas
+            {hero.titleSuffix}
           </Heading>
         </AnimatedContent>
 
         {/* Subtitle */}
         <AnimatedContent distance={25} duration={0.6} delay={0.25}>
           <p className="text-base sm:text-lg text-slate-100 max-w-2xl mx-auto leading-relaxed mb-8 text-balance font-normal drop-shadow-sm">
-            Media edukasi kesehatan dari mahasiswa KKN untuk warga: alur berobat mudah tanpa antre panjang,
-            cara re-aktivasi kartu nonaktif, prosedur pindah faskes domisili, dan pemanfaatan antrean online.
+            {hero.subtitle}
           </p>
         </AnimatedContent>
 
         {/* Action Buttons */}
         <AnimatedContent distance={20} duration={0.55} delay={0.35}>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-10">
-            <PillCTAButton href="#alur-faskes" variant="lime" size="lg">
-              Pelajari Alur Pendaftaran
+            <PillCTAButton href={hero.ctaPrimary.href} variant="lime" size="lg">
+              {hero.ctaPrimary.text}
             </PillCTAButton>
-            <PillCTAButton href="#darurat" variant="light" size="lg">
-              Kontak Tim Mahasiswa KKN
+            <PillCTAButton
+              href={hero.ctaSecondary.href}
+              variant="light"
+              size="lg"
+              isExternal={hero.ctaSecondary.href.startsWith('http')}
+            >
+              {hero.ctaSecondary.text}
             </PillCTAButton>
           </div>
         </AnimatedContent>
@@ -109,13 +113,13 @@ export default function HeroSection({
         {/* Avatar Stack */}
         <AnimatedContent distance={15} duration={0.5} delay={0.4}>
           <div className="flex justify-center mb-14">
-            <AvatarStack variant="dark" label={avatarText} />
+            <AvatarStack variant="dark" label={hero.avatarText} />
           </div>
         </AnimatedContent>
 
         {/* 4 Hero Stat Capsules with Staggered Scroll-Reveal Animations */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-5xl mx-auto text-left items-stretch pt-3 pb-2">
-          {stats.map((item, idx) => {
+          {hero.stats.map((item, idx) => {
             const distortionClass =
               idx === 0
                 ? 'md:-rotate-6 md:-translate-x-5 md:scale-95 md:origin-right hover:md:rotate-0 hover:md:translate-x-0 hover:md:scale-100 hover:md:opacity-100 transition-all duration-300'

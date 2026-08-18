@@ -5,6 +5,8 @@ import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import NotFound from './components/NotFound';
 import ScrollToTop from './components/ui/ScrollToTop';
+import VersionSwitcher from './components/ui/VersionSwitcher';
+import { VersionProvider } from './context/VersionContext';
 
 // Modular Page Sections
 import HeroSection from './components/HeroSection';
@@ -27,19 +29,22 @@ export default function App() {
   }
 
   return (
-    <div className="min-h-screen bg-white text-slate-800 font-sans selection:bg-lime-400 selection:text-brand-950 relative">
-      <Navbar />
-      <main>
-        <HeroSection />
-        <CategorySection />
-        <FlowSection />
-        <PuskesmasServicesSection />
-        <DigitalFeaturesSection />
-        <AdministrationSection />
-        <ContactSection />
-      </main>
-      <Footer />
-      <ScrollToTop />
-    </div>
+    <VersionProvider>
+      <div className="min-h-screen bg-white text-slate-800 font-sans selection:bg-lime-400 selection:text-brand-950 relative">
+        <Navbar />
+        <main>
+          <HeroSection />
+          <CategorySection />
+          <FlowSection />
+          <PuskesmasServicesSection />
+          <DigitalFeaturesSection />
+          <AdministrationSection />
+          <ContactSection />
+        </main>
+        <Footer />
+        <ScrollToTop />
+        <VersionSwitcher />
+      </div>
+    </VersionProvider>
   );
 }

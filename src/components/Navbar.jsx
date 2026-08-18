@@ -9,9 +9,11 @@ import {
 import PillCTAButton from './ui/PillCTAButton';
 import { useScrolledState } from '../hooks/useScrolledState';
 import { useClickOutside } from '../hooks/useClickOutside';
+import { useVersion } from '../context/VersionContext';
 import { navEducationalModules } from '../data/bpjsData';
 
 export default function Navbar({ modules = navEducationalModules }) {
+  const { currentData } = useVersion();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [dropdownOpen, setDropdownOpen] = useState(false);
   const dropdownRef = useRef(null);
@@ -48,14 +50,14 @@ export default function Navbar({ modules = navEducationalModules }) {
                   isScrolled ? 'text-slate-900' : 'text-white drop-shadow-sm'
                 }`}
               >
-                POSKO SEHAT BPJS
+                {currentData.navBrandTitle}
               </span>
               <span
                 className={`text-sm font-bold block transition-colors duration-300 ${
                   isScrolled ? 'text-brand-700' : 'text-lime-300 drop-shadow-sm'
                 }`}
               >
-                KKN ARS Cibaregbeg
+                {currentData.navBrandSubtitle}
               </span>
             </div>
           </a>

@@ -7,13 +7,15 @@ import ContactCard from '../ContactCard';
 import EmergencyAdvisory from '../EmergencyAdvisory';
 import TeamMarqueeSlider from '../TeamMarqueeSlider';
 import AnimatedContent from '../reactbits/AnimatedContent';
-import { emergencyContacts, emergencyCriteria, kknTeamMembers } from '../../data/bpjsData';
+import { useVersion } from '../../context/VersionContext';
+import { emergencyCriteria, kknTeamMembers } from '../../data/bpjsData';
 
 export default function ContactSection({
-  contacts = emergencyContacts,
   criteria = emergencyCriteria,
   members = kknTeamMembers,
 }) {
+  const { currentData } = useVersion();
+  const contacts = currentData.emergencyContacts;
   return (
     <SectionWrapper id="darurat" bg="white">
       <SectionHeader
