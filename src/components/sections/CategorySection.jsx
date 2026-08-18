@@ -13,10 +13,10 @@ export default function CategorySection({ categories = bpjsCategories }) {
         badge="Kategori Kepesertaan"
         title={
           <>
-            Jenis-Jenis Kepesertaan <Stabilo>BPJS Kesehatan</Stabilo>
+            Jenis & Kategori Kepesertaan <Stabilo>BPJS Kesehatan</Stabilo>
           </>
         }
-        subtitle="Pahami kategori kepesertaan, besaran iuran, hak rawat inap, dan mekanisme pendaftarannya."
+        subtitle="Pahami 3 kategori kepesertaan, besaran iuran bulanan, target warga, hak rawat inap, dan mekanisme pendaftarannya."
       />
 
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 items-center pt-4 pb-4">

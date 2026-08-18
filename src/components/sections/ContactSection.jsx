@@ -14,18 +14,28 @@ export default function ContactSection({
   criteria = emergencyCriteria,
   members = kknTeamMembers,
 }) {
-  const { currentData } = useVersion();
+  const { currentData, isNewVersion } = useVersion();
   const contacts = currentData.emergencyContacts;
   return (
     <SectionWrapper id="darurat" bg="white">
       <SectionHeader
-        badge="Pendampingan Warga Desa"
+        badge={isNewVersion ? 'Pusat Layanan Warga' : 'Pendampingan Warga Desa'}
         title={
-          <>
-            Kontak & Narahubung <Stabilo>Tim Mahasiswa KKN</Stabilo>
-          </>
+          isNewVersion ? (
+            <>
+              Pusat Informasi & <Stabilo>Kontak Darurat</Stabilo>
+            </>
+          ) : (
+            <>
+              Kontak & Narahubung <Stabilo>Tim Mahasiswa KKN</Stabilo>
+            </>
+          )
         }
-        subtitle="Hubungi tim mahasiswa KKN kami jika Anda memerlukan bantuan informasi, pendampingan alur faskes, atau konsultasi langsung di posko desa."
+        subtitle={
+          isNewVersion
+            ? 'Hubungi narahubung resmi Kader Posyandu Sirna Asih, Puskesmas Cibeber/Cibaregbeg, Care Center BPJS 165, dan Dinas Kesehatan Cianjur.'
+            : 'Hubungi tim mahasiswa KKN kami jika Anda memerlukan bantuan informasi, pendampingan alur faskes, atau konsultasi langsung di posko desa.'
+        }
       />
 
       {/* 4 Primary Action Cards for Direct Citizen Inquiries with Staggered Scroll-Reveal Animations */}

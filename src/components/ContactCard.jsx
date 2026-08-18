@@ -1,5 +1,5 @@
 import React from 'react';
-import { ArrowUpRight } from 'lucide-react';
+import { ArrowUpRight, Phone } from 'lucide-react';
 import TopShimmer from './ui/TopShimmer';
 
 export default function ContactCard({
@@ -66,9 +66,9 @@ export default function ContactCard({
           </div>
         </div>
 
-        {/* Dedicated Phone Number Badge */}
-        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-xl bg-brand-50/80 border border-brand-200/80 text-brand-900 font-grotesk font-black text-sm sm:text-base tracking-tight mb-3.5 shadow-xs self-start">
-          <span className="w-2 h-2 rounded-full bg-brand-600 animate-pulse shrink-0" />
+        {/* Phone Number: Clean Text with Phone Icon (No Badge Box / No Pulse Dot) */}
+        <div className="flex items-center gap-2 text-brand-850 font-grotesk font-black text-base sm:text-lg tracking-tight mb-3.5">
+          <Phone className="w-4 h-4 text-emerald-600 shrink-0" />
           <span className="truncate">{number}</span>
         </div>
 

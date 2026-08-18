@@ -21,15 +21,15 @@ export default function AdministrationSection({ faqs = administrativeFaqs }) {
         <div className="lg:col-span-5 lg:sticky lg:top-28 self-start">
           <AnimatedContent distance={30} duration={0.65} delay={0.05}>
             <Eyebrow variant="brand">
-              Solusi Administrasi BPJS
+              Pusat Solusi Warga
             </Eyebrow>
 
             <Heading as="h2" level="2" color="dark" className="mb-4">
-              Aktivasi <Stabilo>BPJS Mati</Stabilo> & Balik Domisili FKTP
+              Panduan Administrasi & <Stabilo>Permasalahan BPJS (FAQ)</Stabilo>
             </Heading>
 
             <p className="text-slate-700 text-base leading-relaxed mb-6 font-normal">
-              Jangan panik jika status kartu Anda nonaktif atau faskes terdaftar masih di kampung halaman lama. Simak solusi mandiri dan ketentuan terbarunya di sini.
+              Solusi mandiri penanganan kartu nonaktif, program cicilan tunggakan REHAB, pengusulan DTKS bansos desa, hingga kepindahan FKTP domisili.
             </p>
 
             {/* REHAB Program Highlight Box (Static Informational Card) */}

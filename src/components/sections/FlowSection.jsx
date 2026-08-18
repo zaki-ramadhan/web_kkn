@@ -15,10 +15,10 @@ export default function FlowSection({ steps = registrationSteps }) {
           badge="Alur Pelayanan Faskes"
           title={
             <>
-              Alur Pelayanan Pasien BPJS di <Stabilo>FKTP & Puskesmas</Stabilo>
+              Alur Pendaftaran & Pelayanan <Stabilo>Puskesmas</Stabilo>
             </>
           }
-          subtitle="Ikuti 5 langkah terpadu mulai dari pengambilan antrean hingga pengambilan obat tanpa biaya tambahan."
+          subtitle="Ikuti 5 tahapan prosedur mulai dari antrean online, verifikasi berkas, pemeriksaan dokter, hingga farmasi obat generik gratis."
         />
       </div>
 

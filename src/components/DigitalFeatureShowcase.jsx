@@ -4,7 +4,7 @@ import AnimatedContent from './reactbits/AnimatedContent';
 import { useVersion } from '../context/VersionContext';
 
 export default function DigitalFeatureShowcase() {
-  const { currentData } = useVersion();
+  const { currentData, isNewVersion } = useVersion();
   const features = currentData.digitalFeatures;
   return (
     <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-start">
@@ -23,10 +23,10 @@ export default function DigitalFeatureShowcase() {
 
             <div className="absolute bottom-0 inset-x-0 p-6 sm:p-7 text-white">
               <div className="text-sm font-bold text-lime-400 uppercase tracking-wider mb-1">
-                Edukasi KKN ARS Cibaregbeg
+                {isNewVersion ? 'SMART DIGITAL - KKN ARS' : 'Edukasi KKN ARS Cibaregbeg'}
               </div>
               <p className="text-sm sm:text-base text-slate-100 leading-snug font-medium">
-                Pendampingan warga Desa Cibaregbeg dalam memanfaatkan fitur antrean mandiri dan KIS digital dari ponsel.
+                Pendampingan warga Desa Cibaregbeg dalam memanfaatkan fitur antrean mandiri, KIS digital, dan informasi faskes.
               </p>
             </div>
           </div>
@@ -37,17 +37,21 @@ export default function DigitalFeatureShowcase() {
           <div className="bg-brand-50 border border-brand-200/80 rounded-2xl p-6 flex flex-col justify-between gap-4">
             <div>
               <h4 className="font-grotesk font-bold text-base sm:text-lg text-brand-950 mb-1">
-                Butuh Konsultasi Alur Layanan BPJS?
+                Konsultasi Alur & Layanan Digital
               </h4>
               <p className="text-sm text-slate-700 leading-relaxed font-normal">
-                Kunjungi Posko Mahasiswa KKN ARS di Kp. Nyalindung / Talaga, Desa Cibaregbeg untuk konsultasi langsung alur berobat Puskesmas dan panduan administrasi faskes.
+                {isNewVersion
+                  ? 'Hubungi Ibu Risma (Kader Posyandu Sirna Asih) di Kp. Nyalindung & Talaga untuk panduan langsung alur berobat dan aktivasi administrasi faskes.'
+                  : 'Kunjungi Posko Mahasiswa KKN ARS di Kp. Nyalindung / Talaga, Desa Cibaregbeg untuk konsultasi langsung alur berobat Puskesmas dan panduan faskes.'}
               </p>
             </div>
             <a
-              href="#darurat"
+              href={isNewVersion ? 'https://wa.me/628892120024?text=Halo%20Ibu%20Risma%2C%20saya%20warga%20Cibaregbeg%20ingin%20tanya%20layanan%20kesehatan' : '#darurat'}
+              target={isNewVersion ? '_blank' : undefined}
+              rel={isNewVersion ? 'noreferrer' : undefined}
               className="w-full py-3 px-5 rounded-full bg-brand-850 hover:bg-brand-950 text-lime-300 font-bold text-sm flex items-center justify-between transition-colors shadow-subtle"
             >
-              <span>Hubungi Narahubung Posko</span>
+              <span>{isNewVersion ? 'Tanya Kader Posyandu' : 'Hubungi Narahubung Posko'}</span>
               <ArrowUpRight className="w-4 h-4 text-lime-400" />
             </a>
           </div>
