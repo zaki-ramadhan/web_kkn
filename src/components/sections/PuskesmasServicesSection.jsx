@@ -48,7 +48,7 @@ export default function PuskesmasServicesSection({
       </AnimatedContent>
 
       {/* Bento Showcase Grid with Staggered Scroll-Reveal Animations */}
-      <div className="grid grid-cols-12 gap-6">
+      <div className="grid grid-cols-12 gap-3.5 sm:gap-4 lg:gap-4.5">
         {filteredServices.map((srv, idx) => (
           <AnimatedContent
             key={srv.id}
