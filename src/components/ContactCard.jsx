@@ -53,7 +53,7 @@ export default function ContactCard({
               alt={name}
               loading="lazy"
               decoding="async"
-              className="w-13 h-13 sm:w-14 sm:h-14 rounded-2xl object-cover border-2 border-brand-100/90 shadow-subtle group-hover:scale-105 group-hover:border-lime-400 transition-all duration-300 shrink-0"
+              className="w-13 h-13 sm:w-14 sm:h-14 rounded-2xl object-cover border-2 border-brand-100/90 shadow-subtle group-hover:scale-105 group-hover:border-lime-400 transition-all duration-300 shrink-0 bg-white"
             />
           )}
           <div className="flex-1 min-w-0">
