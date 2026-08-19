@@ -2,7 +2,7 @@ import React from 'react';
 import Eyebrow from '../ui/Eyebrow';
 import Stabilo from '../ui/Stabilo';
 import AdminFlowTimeline from '../AdminFlowTimeline';
-import { ShieldAlert, ArrowRight } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
 import { adminFlowSteps } from '../../data/bpjsData';
 
 export default function AdminFlowSection({ steps = adminFlowSteps }) {
@@ -29,14 +29,9 @@ export default function AdminFlowSection({ steps = adminFlowSteps }) {
                 {/* Inner Card Container */}
                 <div className="bg-white rounded-2xl p-5 sm:p-5.5 text-slate-900 shadow-2xs">
                   {/* Header inside Card */}
-                  <div className="flex items-center gap-2.5 mb-3.5">
-                    <div className="w-8 h-8 rounded-xl bg-rose-50 border border-rose-200/80 flex items-center justify-center text-rose-600 shrink-0">
-                      <ShieldAlert className="w-4 h-4" />
-                    </div>
-                    <h4 className="font-grotesk font-bold text-base text-slate-950">
-                      Kasus Gawat Darurat (UGD)
-                    </h4>
-                  </div>
+                  <h4 className="font-grotesk font-bold text-base sm:text-lg text-slate-950 tracking-tight leading-snug mb-2.5">
+                    Kasus Gawat Darurat (UGD)
+                  </h4>
 
                   {/* Narrative */}
                   <p className="text-xs sm:text-sm text-slate-600 leading-relaxed font-normal mb-3.5">
