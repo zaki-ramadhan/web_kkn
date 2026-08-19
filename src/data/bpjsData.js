@@ -9,6 +9,12 @@ import {
   Activity,
   BedDouble,
   FlaskConical,
+  ShieldCheck,
+  ClipboardCheck,
+  Clock,
+  HeartPulse,
+  GitFork,
+  CheckCircle2,
 } from 'lucide-react';
 
 // ==========================================
@@ -32,33 +38,33 @@ export const institutionalLogos = [
   },
   {
     id: 'inst-2',
-    title: 'BPJS Kesehatan RI',
-    alt: 'Logo BPJS Kesehatan Badan Penyelenggara Jaminan Sosial',
-    src: '/images/logo/BPJS.png',
-  },
-  {
-    id: 'inst-3',
     title: 'Universitas Indonesia Maju (UIMA)',
     alt: 'Logo Universitas Indonesia Maju UIMA',
     src: '/images/logo/UIMA.png',
   },
   {
+    id: 'inst-3',
+    title: 'BPJS Kesehatan',
+    alt: 'Logo BPJS Kesehatan',
+    src: '/images/logo/BPJS.png',
+  },
+  {
     id: 'inst-4',
-    title: 'Fakultas Ilmu Kesehatan (FIKES)',
-    alt: 'Logo Fakultas Ilmu Kesehatan FIKES UIMA',
-    src: '/images/logo/UIMA_FIKES.png',
+    title: 'Posyandu Sirna Asih RW 007',
+    alt: 'Logo Posyandu Indonesia',
+    src: '/images/logo/Posyandu.png',
   },
   {
     id: 'inst-5',
-    title: 'Kader Posyandu Desa Cibaregbeg',
-    alt: 'Logo Kader Posyandu Desa Cibaregbeg',
-    src: '/images/logo/KADER_POSYANDU.png',
+    title: 'Dinas Kesehatan Kabupaten Cianjur',
+    alt: 'Logo Dinas Kesehatan Kabupaten Cianjur',
+    src: '/images/logo/Dinkes.png',
   },
   {
     id: 'inst-6',
-    title: 'KKN S1 Administrasi Rumah Sakit',
-    alt: 'Logo KKN S1 Administrasi Rumah Sakit KKN UIMA',
-    src: '/images/logo/KKN_UIMA.png',
+    title: 'Pemerintah Desa Cibaregbeg',
+    alt: 'Logo Pemerintah Desa Cibaregbeg',
+    src: '/images/logo/Desa_Cibaregbeg.png',
   },
 ];
 
@@ -132,7 +138,7 @@ export const bpjsCategories = [
     highlighted: true,
     theme: 'forest',
     ctaText: 'Konsultasi via WA',
-    ctaLink: 'https://wa.me/628118165165?text=Halo%20BPJS%20Kesehatan%2C%20saya%20warga%20Cibaregbeg%20ingin%20konsultasi%20kepesertaan%20BPJS%20Mandiri%2FPBPU',
+    ctaLink: 'https://wa.me/628139931952?text=Halo%20BPJS%20Kesehatan%2C%20saya%20warga%20Cibaregbeg%20ingin%20konsultasi%20kepesertaan%20BPJS%20Mandiri%2FPBPU',
   },
   {
     id: 'ppu',
@@ -155,7 +161,69 @@ export const bpjsCategories = [
 ];
 
 // ==========================================
-// 4. SECTION 2: ALUR PENDAFTARAN & PELAYANAN PUSKESMAS
+// 4. ALUR & TAHAPAN ADMINISTRASI PELAYANAN KESEHATAN (7 TAHAPAN RESMI)
+// ==========================================
+
+export const adminFlowSteps = [
+  {
+    step: '01',
+    icon: ShieldCheck,
+    title: 'Pastikan Kepesertaan BPJS Aktif',
+    desc: 'Sebelum mendapatkan pelayanan kesehatan, pastikan kepesertaan BPJS dalam kondisi aktif.',
+    why: 'Untuk memastikan peserta dapat menggunakan layanan kesehatan sesuai dengan ketentuan yang berlaku.',
+    requirements: [
+      'Kartu BPJS / KIS atau identitas peserta',
+      'KTP atau identitas lainnya',
+      'Pastikan data kepesertaan sesuai',
+    ],
+  },
+  {
+    step: '02',
+    icon: Building2,
+    title: 'Datang ke Fasilitas Kesehatan Tingkat Pertama (FKTP)',
+    desc: 'Saat mengalami keluhan kesehatan, peserta dapat datang ke fasilitas kesehatan tempat peserta terdaftar, seperti puskesmas, klinik, atau dokter yang bekerja sama dengan BPJS.',
+    why: 'FKTP menjadi tempat pertama peserta mendapatkan pelayanan kesehatan. Di sini tenaga kesehatan akan melakukan pemeriksaan dan menentukan pelayanan yang sesuai dengan kondisi pasien.',
+  },
+  {
+    step: '03',
+    icon: ClipboardCheck,
+    title: 'Melakukan Pendaftaran dan Administrasi',
+    desc: 'Setelah datang ke fasilitas kesehatan, peserta melakukan pendaftaran kepada petugas dengan menunjukkan identitas atau kartu kepesertaan yang diperlukan.',
+    why: 'Administrasi berfungsi untuk memastikan identitas dan data peserta tercatat dengan benar, sehingga pelayanan dapat diberikan sesuai dengan ketentuan dan kebutuhan pasien.',
+    quickFlow: ['Datang', 'Daftar', 'Tunjukkan Identitas', 'Data Diperiksa', 'Menunggu Pelayanan'],
+  },
+  {
+    step: '04',
+    icon: Clock,
+    title: 'Menunggu dan Mendapatkan Pemeriksaan',
+    desc: 'Setelah proses pendaftaran selesai, peserta menunggu sesuai antrean dan kemudian mendapatkan pemeriksaan dari tenaga kesehatan.',
+    why: 'Pemeriksaan dilakukan untuk mengetahui kondisi kesehatan pasien dan menentukan tindakan atau pelayanan yang dibutuhkan.',
+  },
+  {
+    step: '05',
+    icon: HeartPulse,
+    title: 'Mendapatkan Pelayanan Kesehatan',
+    desc: 'Berdasarkan hasil pemeriksaan, pasien akan mendapatkan pelayanan sesuai dengan kondisi dan kebutuhan kesehatannya.',
+    details: 'Pelayanan dapat berupa konsultasi dokter, pemeriksaan fisik, pemberian obat, atau tindakan medis sesuai indikasi medis pasien.',
+  },
+  {
+    step: '06',
+    icon: GitFork,
+    title: 'Jika Membutuhkan Pelayanan Lebih Lanjut (Rujukan)',
+    desc: 'Apabila kondisi pasien membutuhkan pelayanan yang tidak dapat diberikan di FKTP, tenaga kesehatan dapat memberikan rujukan sesuai dengan ketentuan yang berlaku.',
+    why: 'Rujukan membantu pasien mendapatkan pelayanan di fasilitas kesehatan yang memiliki kemampuan dan fasilitas yang sesuai dengan kebutuhan medis pasien.',
+  },
+  {
+    step: '07',
+    icon: CheckCircle2,
+    title: 'Mengikuti Arahan Setelah Mendapatkan Pelayanan',
+    desc: 'Setelah mendapatkan pelayanan, pasien perlu mengikuti arahan tenaga kesehatan, seperti minum obat sesuai petunjuk, melakukan kontrol kembali, atau mengikuti rujukan apabila diperlukan.',
+    why: 'Agar proses pelayanan kesehatan dapat berjalan dengan baik dan kondisi kesehatan dapat terus dipantau.',
+  },
+];
+
+// ==========================================
+// 5. SECTION 2: ALUR PENDAFTARAN TEKNIS PUSKESMAS
 // ==========================================
 
 export const registrationSteps = [

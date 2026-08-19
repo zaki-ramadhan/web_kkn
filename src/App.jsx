@@ -10,6 +10,7 @@ import ScrollToTop from './components/ui/ScrollToTop';
 import HeroSection from './components/HeroSection';
 import PartnerLogoStrip from './components/PartnerLogoStrip';
 import CategorySection from './components/sections/CategorySection';
+import AdminFlowSection from './components/sections/AdminFlowSection';
 import FlowSection from './components/sections/FlowSection';
 import PuskesmasServicesSection from './components/sections/PuskesmasServicesSection';
 import DigitalFeaturesSection from './components/sections/DigitalFeaturesSection';
@@ -34,6 +35,7 @@ export default function App() {
         <HeroSection />
         <PartnerLogoStrip />
         <CategorySection />
+        <AdminFlowSection />
         <FlowSection />
         <PuskesmasServicesSection />
         <DigitalFeaturesSection />
