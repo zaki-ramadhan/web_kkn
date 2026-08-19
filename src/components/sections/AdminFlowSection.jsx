@@ -2,9 +2,7 @@ import React from 'react';
 import Eyebrow from '../ui/Eyebrow';
 import Stabilo from '../ui/Stabilo';
 import AdminFlowTimeline from '../AdminFlowTimeline';
-import CalloutBox from '../ui/CalloutBox';
-import PillCTAButton from '../ui/PillCTAButton';
-import AnimatedContent from '../reactbits/AnimatedContent';
+import { ShieldAlert, ArrowRight } from 'lucide-react';
 import { adminFlowSteps } from '../../data/bpjsData';
 
 export default function AdminFlowSection({ steps = adminFlowSteps }) {
@@ -26,27 +24,73 @@ export default function AdminFlowSection({ steps = adminFlowSteps }) {
                 Mendapatkan pelayanan kesehatan tidak hanya tentang mengetahui manfaat BPJS, tetapi juga memahami bagaimana tahapan administrasi pelayanan kesehatan dilakukan dari persiapan berkas hingga pasca-pelayanan.
               </p>
 
-              {/* Quick Public Health Protocol Callout in Left Column */}
-              <CalloutBox
-                variant="brand"
-                title="KASUS GAWAT DARURAT (UGD)"
-                description={
-                  <span>
-                    Untuk kondisi gawat darurat medis yang mengancam nyawa, warga dapat <strong>langsung menuju UGD RS terdekat 24 Jam bebas rujukan</strong>.
-                  </span>
-                }
-                action={
-                  <PillCTAButton
-                    href="https://wa.me/628139931952?text=Halo%20BPJS%2C%20saya%20warga%20Cibaregbeg%20ingin%20tanya%20prosedur%20administrasi%20kesehatan"
-                    target="_blank"
-                    rel="noreferrer"
-                    variant="brand"
-                    size="sm"
-                  >
-                    Konsultasi Alur via WA
-                  </PillCTAButton>
-                }
-              />
+              {/* Widget Card Kasus Gawat Darurat (Double-Layered Accent Frame Matching Reference) */}
+              <div className="relative rounded-3xl bg-emerald-800 p-1.5 shadow-card-depth border border-emerald-700/80 overflow-hidden group transition-all duration-300 hover:shadow-2xl">
+                {/* Inner Card Container */}
+                <div className="bg-white rounded-2xl p-5 sm:p-5.5 text-slate-900 shadow-2xs">
+                  {/* Header inside Card */}
+                  <div className="flex items-center justify-between gap-3 mb-3.5">
+                    <div className="flex items-center gap-2.5">
+                      <div className="w-8 h-8 rounded-xl bg-rose-50 border border-rose-200/80 flex items-center justify-center text-rose-600 shrink-0">
+                        <ShieldAlert className="w-4 h-4" />
+                      </div>
+                      <h4 className="font-grotesk font-bold text-base text-slate-950">
+                        Kasus Gawat Darurat (UGD)
+                      </h4>
+                    </div>
+
+                    <span className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-rose-50 border border-rose-200 text-rose-700 text-xs font-bold shrink-0">
+                      <span className="relative flex h-2 w-2">
+                        <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-rose-400 opacity-75" />
+                        <span className="relative inline-flex rounded-full h-2 w-2 bg-rose-600" />
+                      </span>
+                      24 Jam
+                    </span>
+                  </div>
+
+                  {/* Narrative */}
+                  <p className="text-xs sm:text-sm text-slate-600 leading-relaxed font-normal mb-3.5">
+                    Untuk kondisi medis kritis yang mengancam nyawa (sesak berat, trauma, penurunan kesadaran):
+                  </p>
+
+                  {/* Structured Criteria Checklist */}
+                  <div className="space-y-2 pt-3 border-t border-slate-100 text-xs sm:text-sm text-slate-800 font-medium">
+                    <div className="flex items-center gap-2.5">
+                      <span className="w-5 h-5 rounded-lg bg-emerald-50 text-emerald-700 border border-emerald-200/80 flex items-center justify-center text-xs font-bold shrink-0">
+                        ✓
+                      </span>
+                      <span>Langsung menuju UGD RS terdekat</span>
+                    </div>
+                    <div className="flex items-center gap-2.5">
+                      <span className="w-5 h-5 rounded-lg bg-emerald-50 text-emerald-700 border border-emerald-200/80 flex items-center justify-center text-xs font-bold shrink-0">
+                        ✓
+                      </span>
+                      <span>100% Bebas surat rujukan FKTP Puskesmas</span>
+                    </div>
+                    <div className="flex items-center gap-2.5">
+                      <span className="w-5 h-5 rounded-lg bg-emerald-50 text-emerald-700 border border-emerald-200/80 flex items-center justify-center text-xs font-bold shrink-0">
+                        ✓
+                      </span>
+                      <span>Cukup bawa e-KTP / Kartu KIS Digital</span>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Bottom Accent Action Bar (Matching Reference Image) */}
+                <a
+                  href="https://wa.me/628139931952?text=Halo%20BPJS%2C%20saya%20warga%20Cibaregbeg%20ingin%20tanya%20prosedur%20administrasi%20kesehatan"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="px-4 py-2.5 flex items-center justify-between text-white hover:text-lime-300 transition-colors duration-200 text-xs sm:text-sm font-bold group/btn"
+                >
+                  <span>Konsultasi Alur via WhatsApp</span>
+                  <div className="flex items-center gap-1">
+                    <span className="w-6 h-6 rounded-full bg-white/20 group-hover/btn:bg-lime-400 group-hover/btn:text-brand-950 flex items-center justify-center transition-all duration-200">
+                      <ArrowRight className="w-3.5 h-3.5" />
+                    </span>
+                  </div>
+                </a>
+              </div>
             </div>
           </div>
 
