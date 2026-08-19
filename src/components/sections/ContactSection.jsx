@@ -71,7 +71,7 @@ export default function ContactSection({
                 Dosen Pembimbing & <Stabilo>20 Mahasiswa KKN ARS</Stabilo>
               </h3>
               <p className="text-sm sm:text-base text-slate-600 font-normal leading-relaxed">
-                Didampingi oleh Dosen Pembimbing Lapangan & Dosen Pengampu Universitas Indonesia Maju (UIMA) beserta 20 mahasiswa S1 Administrasi Rumah Sakit.
+                Program KKN mahasiswa didampingi oleh dosen pembimbing lapangan mata kuliah KKN program studi S1 Administrasi Rumah Sakit UIMA.
               </p>
             </div>
 
