@@ -9,13 +9,13 @@ import { adminFlowSteps } from '../../data/bpjsData';
 
 export default function AdminFlowSection({ steps = adminFlowSteps }) {
   return (
-    <section id="alur-administrasi" className="py-20 bg-slate-50/70 border-b border-slate-200/80 relative overflow-visible">
+    <section id="alur-administrasi" className="py-20 bg-slate-50/70 border-b border-slate-200/80">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-start">
           
-          {/* Kolom Kiri: Sticky Guide (Menempel persis seperti section FAQ) */}
+          {/* Kolom Kiri: True Sticky Guide */}
           <div className="lg:col-span-5 lg:sticky lg:top-28 self-start space-y-6">
-            <AnimatedContent distance={30} duration={0.65} delay={0.05}>
+            <div>
               <Eyebrow variant="brand">
                 Tahapan Administrasi Resmi
               </Eyebrow>
@@ -47,14 +47,12 @@ export default function AdminFlowSection({ steps = adminFlowSteps }) {
                   </PillCTAButton>
                 }
               />
-            </AnimatedContent>
+            </div>
           </div>
 
           {/* Kolom Kanan: Vertical Interactive Scroll Progress Timeline */}
           <div className="lg:col-span-7">
-            <AnimatedContent distance={30} duration={0.65} delay={0.1}>
-              <AdminFlowTimeline steps={steps} />
-            </AnimatedContent>
+            <AdminFlowTimeline steps={steps} />
           </div>
 
         </div>
