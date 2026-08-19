@@ -13,8 +13,8 @@ export default function AdminFlowTimeline({ steps }) {
       const rect = containerRef.current.getBoundingClientRect();
       const windowHeight = window.innerHeight;
 
-      // Start calculating when container enters viewport (e.g. top at middle of screen)
-      const startOffset = windowHeight * 0.65;
+      // Start calculating when container enters viewport
+      const startOffset = windowHeight * 0.6;
       const totalHeight = rect.height;
       const currentScroll = startOffset - rect.top;
 
@@ -26,7 +26,7 @@ export default function AdminFlowTimeline({ steps }) {
       const stepFraction = 100 / steps.length;
       const currentIdx = Math.min(
         steps.length - 1,
-        Math.max(0, Math.floor((progress + stepFraction * 0.3) / stepFraction))
+        Math.max(0, Math.floor((progress + stepFraction * 0.35) / stepFraction))
       );
       setActiveStepIndex(currentIdx);
     };
@@ -38,18 +38,18 @@ export default function AdminFlowTimeline({ steps }) {
   }, [steps.length]);
 
   return (
-    <div ref={containerRef} className="relative max-w-4xl mx-auto py-8">
-      {/* Background Static Line */}
-      <div className="absolute top-8 bottom-8 left-6 sm:left-8 w-1 bg-slate-200 rounded-full" />
+    <div ref={containerRef} className="relative py-2 sm:py-4">
+      {/* Background Static Track Line */}
+      <div className="absolute top-6 bottom-6 left-5 sm:left-6 w-0.5 sm:w-1 bg-slate-200 rounded-full" />
 
       {/* Dynamic Animated Scroll Progress Line */}
       <div
         style={{ height: `${scrollProgress}%` }}
-        className="absolute top-8 left-6 sm:left-8 w-1 bg-gradient-to-b from-emerald-500 via-emerald-600 to-lime-400 rounded-full transition-all duration-150 ease-out shadow-[0_0_12px_rgba(16,185,129,0.5)]"
+        className="absolute top-6 left-5 sm:left-6 w-0.5 sm:w-1 bg-gradient-to-b from-emerald-500 via-emerald-600 to-lime-400 rounded-full transition-all duration-150 ease-out shadow-[0_0_10px_rgba(16,185,129,0.45)]"
       />
 
       {/* Timeline Steps Stack */}
-      <div className="space-y-12 sm:space-y-16 relative">
+      <div className="space-y-6 sm:space-y-8 relative">
         {steps.map((step, idx) => {
           const isPassed = scrollProgress > ((idx + 0.85) / steps.length) * 100;
           const isActive = idx === activeStepIndex;
@@ -58,23 +58,23 @@ export default function AdminFlowTimeline({ steps }) {
           return (
             <div
               key={step.step}
-              className="relative flex items-start gap-5 sm:gap-8 group"
+              className="relative flex items-start gap-4 sm:gap-6 group"
             >
               {/* Step Circle Indicator Node */}
-              <div className="relative z-10 shrink-0">
+              <div className="relative z-10 shrink-0 mt-1">
                 <div
-                  className={`w-12 h-12 sm:w-16 sm:h-16 rounded-full flex items-center justify-center font-grotesk font-black text-sm sm:text-base transition-all duration-300 shadow-card-depth ${
+                  className={`w-10 h-10 sm:w-12 sm:h-12 rounded-full flex items-center justify-center font-grotesk font-bold text-xs sm:text-sm transition-all duration-300 shadow-card-depth ${
                     isPassed
-                      ? 'bg-emerald-600 text-white border-2 border-emerald-600 ring-4 ring-emerald-100'
+                      ? 'bg-emerald-600 text-white border-2 border-emerald-600 ring-2 ring-emerald-100'
                       : isActive
-                      ? 'bg-emerald-700 text-white border-2 border-lime-400 ring-4 ring-emerald-200/70 scale-105 shadow-lg'
+                      ? 'bg-emerald-700 text-white border-2 border-lime-400 ring-4 ring-emerald-200/60 scale-105 shadow-md'
                       : 'bg-white text-slate-500 border-2 border-slate-300 group-hover:border-emerald-400 group-hover:text-emerald-700'
                   }`}
                 >
                   {isPassed ? (
-                    <Check className="w-5 h-5 sm:w-6 sm:h-6 text-white stroke-[2.5]" />
+                    <Check className="w-4 h-4 sm:w-5 sm:h-5 text-white stroke-[2.5]" />
                   ) : Icon ? (
-                    <Icon className="w-5 h-5 sm:w-6 sm:h-6" />
+                    <Icon className="w-4 h-4 sm:w-5 sm:h-5" />
                   ) : (
                     <span>{step.step}</span>
                   )}
@@ -83,20 +83,20 @@ export default function AdminFlowTimeline({ steps }) {
 
               {/* Main Content Card with Active Highlighting */}
               <div
-                className={`flex-1 rounded-3xl p-6 sm:p-8 transition-all duration-300 relative overflow-hidden ${
+                className={`flex-1 rounded-2xl sm:rounded-3xl p-5 sm:p-6 transition-all duration-300 relative overflow-hidden ${
                   isActive
-                    ? 'bg-white border-2 border-emerald-500/80 shadow-2xl ring-4 ring-emerald-500/10 -translate-y-1'
+                    ? 'bg-white border-2 border-emerald-500/80 shadow-card-depth ring-4 ring-emerald-500/10 -translate-y-0.5'
                     : isPassed
-                    ? 'bg-white border border-slate-200/90 shadow-card-depth hover:border-emerald-300'
-                    : 'bg-white/80 border border-slate-200/80 shadow-subtle hover:border-slate-300'
+                    ? 'bg-white border border-slate-200/90 shadow-subtle hover:border-emerald-300'
+                    : 'bg-white/90 border border-slate-200/80 shadow-2xs hover:border-slate-300'
                 }`}
               >
                 <TopShimmer variant={isActive ? 'lime' : 'slate'} />
 
                 {/* Step Eyebrow & Number */}
-                <div className="flex items-center justify-between gap-4 mb-3">
+                <div className="flex items-center justify-between gap-3 mb-2.5">
                   <span
-                    className={`inline-flex items-center px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider font-grotesk ${
+                    className={`inline-flex items-center px-2.5 py-0.5 rounded-md text-xs font-bold uppercase tracking-wider font-grotesk ${
                       isActive
                         ? 'bg-emerald-50 text-emerald-800 border border-emerald-200'
                         : isPassed
@@ -104,17 +104,17 @@ export default function AdminFlowTimeline({ steps }) {
                         : 'bg-slate-50 text-slate-500'
                     }`}
                   >
-                    Langkah {step.step} dari 0{steps.length}
+                    Tahap {step.step}
                   </span>
 
-                  <span className="font-grotesk font-black text-2xl sm:text-3xl text-slate-200 select-none">
-                    {step.step}
+                  <span className="font-grotesk font-bold text-lg sm:text-xl text-slate-300 select-none">
+                    {step.step} / 0{steps.length}
                   </span>
                 </div>
 
                 {/* Step Title */}
                 <h3
-                  className={`font-grotesk font-bold text-lg sm:text-2xl tracking-tight leading-snug mb-3 transition-colors ${
+                  className={`font-grotesk font-bold text-base sm:text-lg tracking-tight leading-snug mb-2 transition-colors ${
                     isActive
                       ? 'text-emerald-950'
                       : 'text-slate-900 group-hover:text-emerald-700'
@@ -124,17 +124,17 @@ export default function AdminFlowTimeline({ steps }) {
                 </h3>
 
                 {/* Step Main Narrative */}
-                <p className="text-sm sm:text-base text-slate-600 leading-relaxed font-normal mb-5">
+                <p className="text-sm text-slate-600 leading-relaxed font-normal mb-3.5">
                   {step.desc}
                 </p>
 
                 {/* Sub-blocks: Why, Requirements, Quick Flow */}
-                <div className="space-y-3.5 pt-4 border-t border-slate-100">
+                <div className="space-y-2.5 pt-3 border-t border-slate-100">
                   {/* Why Box */}
                   {step.why && (
-                    <div className="bg-slate-50/90 border border-slate-200/80 rounded-2xl p-4">
-                      <div className="text-xs sm:text-sm font-bold text-slate-900 mb-1.5 flex items-center gap-2">
-                        <span className="w-2 h-2 rounded-full bg-emerald-600 shrink-0" />
+                    <div className="bg-slate-50 border border-slate-200/70 rounded-xl p-3 sm:p-3.5">
+                      <div className="text-xs font-bold text-slate-900 mb-1 flex items-center gap-1.5">
+                        <span className="w-1.5 h-1.5 rounded-full bg-emerald-600 shrink-0" />
                         <span>Mengapa perlu dilakukan?</span>
                       </div>
                       <p className="text-xs sm:text-sm text-slate-600 font-normal leading-relaxed">
@@ -145,14 +145,14 @@ export default function AdminFlowTimeline({ steps }) {
 
                   {/* Requirements List (Step 01) */}
                   {step.requirements && step.requirements.length > 0 && (
-                    <div className="bg-emerald-50/70 border border-emerald-200/80 rounded-2xl p-4">
-                      <div className="text-xs sm:text-sm font-bold text-emerald-950 mb-2.5">
+                    <div className="bg-emerald-50/60 border border-emerald-200/70 rounded-xl p-3 sm:p-3.5">
+                      <div className="text-xs font-bold text-emerald-950 mb-1.5">
                         Yang perlu disiapkan:
                       </div>
-                      <ul className="space-y-2 text-xs sm:text-sm text-slate-700 font-normal">
+                      <ul className="space-y-1.5 text-xs sm:text-sm text-slate-700 font-normal">
                         {step.requirements.map((req, i) => (
-                          <li key={i} className="flex items-start gap-2.5">
-                            <span className="w-5 h-5 rounded-full bg-emerald-600 text-white flex items-center justify-center text-[10px] shrink-0 mt-0.5 font-bold">
+                          <li key={i} className="flex items-start gap-2">
+                            <span className="w-4 h-4 rounded-full bg-emerald-600 text-white flex items-center justify-center text-[10px] shrink-0 mt-0.5 font-bold">
                               ✓
                             </span>
                             <span className="font-medium text-slate-800">{req}</span>
@@ -164,18 +164,18 @@ export default function AdminFlowTimeline({ steps }) {
 
                   {/* Quick Horizontal Flow (Step 03) */}
                   {step.quickFlow && step.quickFlow.length > 0 && (
-                    <div className="bg-slate-50 border border-slate-200/80 rounded-2xl p-4">
-                      <div className="text-xs sm:text-sm font-bold text-slate-900 mb-3">
+                    <div className="bg-slate-50 border border-slate-200/80 rounded-xl p-3 sm:p-3.5">
+                      <div className="text-xs font-bold text-slate-900 mb-2">
                         Sederhananya:
                       </div>
-                      <div className="flex flex-wrap items-center gap-2">
+                      <div className="flex flex-wrap items-center gap-1.5">
                         {step.quickFlow.map((node, i) => (
                           <React.Fragment key={i}>
-                            <span className="px-3 py-1.5 rounded-xl bg-white border border-slate-200 text-slate-800 text-xs sm:text-sm font-semibold shadow-2xs">
+                            <span className="px-2 py-0.5 rounded-lg bg-white border border-slate-200 text-slate-800 text-xs font-semibold shadow-2xs">
                               {node}
                             </span>
                             {i < step.quickFlow.length - 1 && (
-                              <ArrowRight className="w-4 h-4 text-emerald-600 shrink-0" />
+                              <ArrowRight className="w-3 h-3 text-emerald-600 shrink-0" />
                             )}
                           </React.Fragment>
                         ))}
@@ -185,9 +185,9 @@ export default function AdminFlowTimeline({ steps }) {
 
                   {/* Details (Step 05) */}
                   {step.details && (
-                    <div className="bg-slate-50/90 border border-slate-200/80 rounded-2xl p-4">
-                      <div className="text-xs sm:text-sm font-bold text-slate-900 mb-1 flex items-center gap-2">
-                        <span className="w-2 h-2 rounded-full bg-emerald-600 shrink-0" />
+                    <div className="bg-slate-50 border border-slate-200/70 rounded-xl p-3 sm:p-3.5">
+                      <div className="text-xs font-bold text-slate-900 mb-1 flex items-center gap-1.5">
+                        <span className="w-1.5 h-1.5 rounded-full bg-emerald-600 shrink-0" />
                         <span>Bentuk Pelayanan:</span>
                       </div>
                       <p className="text-xs sm:text-sm text-slate-600 font-normal leading-relaxed">
