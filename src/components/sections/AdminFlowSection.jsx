@@ -1,15 +1,16 @@
 import React, { useState } from 'react';
 import SectionHeader from '../ui/SectionHeader';
 import Stabilo from '../ui/Stabilo';
+import AdminFlowTimeline from '../AdminFlowTimeline';
 import AdminFlowCard from '../AdminFlowCard';
 import CalloutBox from '../ui/CalloutBox';
 import PillCTAButton from '../ui/PillCTAButton';
 import AnimatedContent from '../reactbits/AnimatedContent';
-import { LayoutGrid, MoveRight } from 'lucide-react';
+import { GitCommitVertical, LayoutGrid, MoveRight } from 'lucide-react';
 import { adminFlowSteps } from '../../data/bpjsData';
 
 export default function AdminFlowSection({ steps = adminFlowSteps }) {
-  const [viewMode, setViewMode] = useState('grid'); // 'grid' | 'slider'
+  const [viewMode, setViewMode] = useState('timeline'); // 'timeline' | 'grid' | 'slider'
 
   return (
     <section id="alur-administrasi" className="py-20 bg-slate-50/70 border-b border-slate-200/80 overflow-hidden">
@@ -25,34 +26,52 @@ export default function AdminFlowSection({ steps = adminFlowSteps }) {
         />
 
         {/* View Mode Toggle Controls (Pilihan Seleksi Desain untuk User/Klien) */}
-        <div className="flex justify-center mb-10">
-          <div className="inline-flex p-1 rounded-2xl bg-white border border-slate-200 shadow-subtle gap-1">
+        <div className="flex justify-center mb-12">
+          <div className="inline-flex flex-wrap justify-center p-1 rounded-2xl bg-white border border-slate-200 shadow-subtle gap-1">
+            <button
+              onClick={() => setViewMode('timeline')}
+              className={`inline-flex items-center gap-2 px-4 py-2 rounded-xl text-xs sm:text-sm font-bold transition-all duration-200 cursor-pointer ${
+                viewMode === 'timeline'
+                  ? 'bg-emerald-600 text-white shadow-xs'
+                  : 'text-slate-600 hover:text-slate-900 hover:bg-slate-50'
+              }`}
+            >
+              <GitCommitVertical className="w-4 h-4" />
+              <span>Timeline Interaktif (Scroll Progress)</span>
+            </button>
             <button
               onClick={() => setViewMode('grid')}
-              className={`inline-flex items-center gap-2 px-4 py-2 rounded-xl text-xs sm:text-sm font-bold transition-all duration-200 ${
+              className={`inline-flex items-center gap-2 px-4 py-2 rounded-xl text-xs sm:text-sm font-bold transition-all duration-200 cursor-pointer ${
                 viewMode === 'grid'
                   ? 'bg-emerald-600 text-white shadow-xs'
                   : 'text-slate-600 hover:text-slate-900 hover:bg-slate-50'
               }`}
             >
               <LayoutGrid className="w-4 h-4" />
-              <span>Tampilan Grid (7 Langkah)</span>
+              <span>Grid Bento</span>
             </button>
             <button
               onClick={() => setViewMode('slider')}
-              className={`inline-flex items-center gap-2 px-4 py-2 rounded-xl text-xs sm:text-sm font-bold transition-all duration-200 ${
+              className={`inline-flex items-center gap-2 px-4 py-2 rounded-xl text-xs sm:text-sm font-bold transition-all duration-200 cursor-pointer ${
                 viewMode === 'slider'
                   ? 'bg-emerald-600 text-white shadow-xs'
                   : 'text-slate-600 hover:text-slate-900 hover:bg-slate-50'
               }`}
             >
               <MoveRight className="w-4 h-4" />
-              <span>Tampilan Alur Slider</span>
+              <span>Alur Slider</span>
             </button>
           </div>
         </div>
 
-        {/* View Mode 1: Modern Responsive Structured Grid (Recommended for high readability) */}
+        {/* View Mode 1: Interactive Scroll Progress Timeline (Exact Pinterest Reference!) */}
+        {viewMode === 'timeline' && (
+          <AnimatedContent distance={30} duration={0.65} delay={0.1}>
+            <AdminFlowTimeline steps={steps} />
+          </AnimatedContent>
+        )}
+
+        {/* View Mode 2: Modern Responsive Structured Grid */}
         {viewMode === 'grid' && (
           <AnimatedContent distance={30} duration={0.65} delay={0.1}>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-7 mb-12">
@@ -79,7 +98,7 @@ export default function AdminFlowSection({ steps = adminFlowSteps }) {
         )}
       </div>
 
-      {/* View Mode 2: 60fps Continuous Marquee Slider with Hover Spotlight */}
+      {/* View Mode 3: 60fps Continuous Marquee Slider */}
       {viewMode === 'slider' && (
         <AnimatedContent distance={30} duration={0.65} delay={0.1}>
           <div className="relative w-full overflow-hidden marquee-container group/track py-6 sm:py-8 [mask-image:linear-gradient(to_right,transparent,black_6%,black_94%,transparent)] mb-12">
@@ -108,7 +127,7 @@ export default function AdminFlowSection({ steps = adminFlowSteps }) {
       )}
 
       {/* Editorial Public Health Emergency Protocol Callout */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-6">
         <AnimatedContent distance={25} duration={0.6} delay={0.2}>
           <CalloutBox
             variant="brand"
