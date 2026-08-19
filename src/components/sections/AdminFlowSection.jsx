@@ -9,28 +9,24 @@ import { adminFlowSteps } from '../../data/bpjsData';
 
 export default function AdminFlowSection({ steps = adminFlowSteps }) {
   return (
-    <section id="alur-administrasi" className="py-20 bg-slate-50/70 border-b border-slate-200/80 overflow-hidden">
+    <section id="alur-administrasi" className="py-20 bg-slate-50/70 border-b border-slate-200/80 relative overflow-visible">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-start">
           
-          {/* Kolom Kiri: Sticky Header & Callout (Desktop) / Header Atas (Mobile) */}
-          <div className="lg:col-span-5 lg:sticky lg:top-28 space-y-6">
-            <AnimatedContent distance={25} duration={0.6} delay={0.05}>
-              <div>
-                <Eyebrow variant="brand">
-                  Tahapan Administrasi Resmi
-                </Eyebrow>
-                <h2 className="font-grotesk text-3xl sm:text-4xl lg:text-[40px] font-bold text-slate-950 tracking-tight leading-[1.15] mb-4">
-                  Pahami Alur Administrasi <Stabilo>Pelayanan Kesehatan</Stabilo>
-                </h2>
-                <p className="text-sm sm:text-base text-slate-600 font-normal leading-relaxed">
-                  Mendapatkan pelayanan kesehatan tidak hanya tentang mengetahui manfaat BPJS, tetapi juga memahami bagaimana tahapan administrasi pelayanan kesehatan dilakukan dari persiapan berkas hingga pasca-pelayanan.
-                </p>
-              </div>
-            </AnimatedContent>
+          {/* Kolom Kiri: Sticky Guide (Menempel persis seperti section FAQ) */}
+          <div className="lg:col-span-5 lg:sticky lg:top-28 self-start space-y-6">
+            <AnimatedContent distance={30} duration={0.65} delay={0.05}>
+              <Eyebrow variant="brand">
+                Tahapan Administrasi Resmi
+              </Eyebrow>
+              <h2 className="font-grotesk text-3xl sm:text-4xl lg:text-[40px] font-bold text-slate-950 tracking-tight leading-[1.15] mb-4">
+                Pahami Alur Administrasi <Stabilo>Pelayanan Kesehatan</Stabilo>
+              </h2>
+              <p className="text-sm sm:text-base text-slate-600 font-normal leading-relaxed mb-6">
+                Mendapatkan pelayanan kesehatan tidak hanya tentang mengetahui manfaat BPJS, tetapi juga memahami bagaimana tahapan administrasi pelayanan kesehatan dilakukan dari persiapan berkas hingga pasca-pelayanan.
+              </p>
 
-            {/* Quick Public Health Protocol Callout in Left Column */}
-            <AnimatedContent distance={25} duration={0.6} delay={0.15}>
+              {/* Quick Public Health Protocol Callout in Left Column */}
               <CalloutBox
                 variant="brand"
                 title="KASUS GAWAT DARURAT (UGD)"
