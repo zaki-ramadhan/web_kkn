@@ -98,15 +98,15 @@ export default function ContactSection({
                     <div>
                       <h4
                         title={adv.name}
-                        className="font-grotesk font-bold text-sm sm:text-base text-slate-900 leading-snug line-clamp-1 truncate"
+                        className="font-grotesk font-bold text-sm sm:text-base text-slate-900 leading-snug mb-1.5"
                       >
                         {adv.name}
                       </h4>
-                      <div className="text-sm font-semibold text-emerald-600 mt-1 line-clamp-1 truncate">
+                      <div
+                        title={adv.role}
+                        className="text-xs sm:text-sm font-semibold text-emerald-700 leading-snug line-clamp-3"
+                      >
                         {adv.role}
-                      </div>
-                      <div className="text-sm text-slate-500 font-normal mt-0.5 line-clamp-1 truncate">
-                        {adv.institution}
                       </div>
                     </div>
                   </div>

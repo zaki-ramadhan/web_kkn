@@ -463,12 +463,12 @@ export const emergencyContacts = [
   },
 ];
 
-// Dosen Pembimbing Lapangan (DPL) & Dosen Pengampu Mata Kuliah UIMA
+// Dosen Pembimbing Lapangan (DPL) & Asisten DPL Mata Kuliah KKN UIMA
 export const academicAdvisors = [
   {
     id: 'adv-1',
     name: 'Ibu Ns. Oci Etri Nursanty, S.Kep., M.M.R.',
-    role: 'Dosen Pembimbing Lapangan',
+    role: 'Dosen Pembimbing Lapangan Mata Kuliah KKN Prodi S1 ARS UIMA',
     institution: 'Universitas Indonesia Maju (UIMA)',
     badge: 'DPL KKN',
     avatar: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=600&h=600&q=80&fm=webp',
@@ -476,9 +476,9 @@ export const academicAdvisors = [
   {
     id: 'adv-2',
     name: 'Ibu Hanifah Solihah, S.KM.',
-    role: 'Dosen Pengampu Mata Kuliah',
+    role: 'Asisten Dosen Pembimbing Lapangan Mata Kuliah KKN Prodi S1 ARS UIMA',
     institution: 'Universitas Indonesia Maju (UIMA)',
-    badge: 'Dosen Pengampu',
+    badge: 'Asisten DPL',
     avatar: 'https://images.unsplash.com/photo-1580894732488-c7e6c46a6f19?auto=format&fit=crop&w=600&h=600&q=80&fm=webp',
   },
 ];
