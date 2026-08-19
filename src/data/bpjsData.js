@@ -38,33 +38,33 @@ export const institutionalLogos = [
   },
   {
     id: 'inst-2',
+    title: 'BPJS Kesehatan RI',
+    alt: 'Logo BPJS Kesehatan Badan Penyelenggara Jaminan Sosial',
+    src: '/images/logo/BPJS.png',
+  },
+  {
+    id: 'inst-3',
     title: 'Universitas Indonesia Maju (UIMA)',
     alt: 'Logo Universitas Indonesia Maju UIMA',
     src: '/images/logo/UIMA.png',
   },
   {
-    id: 'inst-3',
-    title: 'BPJS Kesehatan',
-    alt: 'Logo BPJS Kesehatan',
-    src: '/images/logo/BPJS.png',
-  },
-  {
     id: 'inst-4',
-    title: 'Posyandu Sirna Asih RW 007',
-    alt: 'Logo Posyandu Indonesia',
-    src: '/images/logo/Posyandu.png',
+    title: 'Fakultas Ilmu Kesehatan (FIKES)',
+    alt: 'Logo Fakultas Ilmu Kesehatan FIKES UIMA',
+    src: '/images/logo/UIMA_FIKES.png',
   },
   {
     id: 'inst-5',
-    title: 'Dinas Kesehatan Kabupaten Cianjur',
-    alt: 'Logo Dinas Kesehatan Kabupaten Cianjur',
-    src: '/images/logo/Dinkes.png',
+    title: 'Kader Posyandu Desa Cibaregbeg',
+    alt: 'Logo Kader Posyandu Desa Cibaregbeg',
+    src: '/images/logo/KADER_POSYANDU.png',
   },
   {
     id: 'inst-6',
-    title: 'Pemerintah Desa Cibaregbeg',
-    alt: 'Logo Pemerintah Desa Cibaregbeg',
-    src: '/images/logo/Desa_Cibaregbeg.png',
+    title: 'KKN S1 Administrasi Rumah Sakit',
+    alt: 'Logo KKN S1 Administrasi Rumah Sakit KKN UIMA',
+    src: '/images/logo/KKN_UIMA.png',
   },
 ];
 
