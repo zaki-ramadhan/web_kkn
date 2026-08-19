@@ -129,15 +129,14 @@ export default function AdminFlowTimeline({ steps }) {
                 </p>
 
                 {/* Sub-blocks: Why, Requirements, Quick Flow */}
-                <div className="space-y-2.5 pt-3 border-t border-slate-100">
+                <div className="space-y-3 pt-3.5 border-t border-slate-100">
                   {/* Why Box */}
                   {step.why && (
-                    <div className="bg-slate-50 border border-slate-200/70 rounded-xl p-3 sm:p-3.5">
-                      <div className="text-xs font-bold text-slate-900 mb-1 flex items-center gap-1.5">
-                        <span className="w-1.5 h-1.5 rounded-full bg-emerald-600 shrink-0" />
-                        <span>Mengapa perlu dilakukan?</span>
+                    <div className="bg-slate-50 border border-slate-200/70 rounded-xl p-3.5 sm:p-4">
+                      <div className="text-sm sm:text-base font-bold text-slate-900 mb-1.5">
+                        Mengapa perlu dilakukan?
                       </div>
-                      <p className="text-xs sm:text-sm text-slate-600 font-normal leading-relaxed">
+                      <p className="text-sm text-slate-600 font-normal leading-relaxed">
                         {step.why}
                       </p>
                     </div>
@@ -145,17 +144,17 @@ export default function AdminFlowTimeline({ steps }) {
 
                   {/* Requirements List (Step 01) */}
                   {step.requirements && step.requirements.length > 0 && (
-                    <div className="bg-emerald-50/60 border border-emerald-200/70 rounded-xl p-3 sm:p-3.5">
-                      <div className="text-xs font-bold text-emerald-950 mb-1.5">
+                    <div className="bg-emerald-50/60 border border-emerald-200/70 rounded-xl p-3.5 sm:p-4">
+                      <div className="text-sm sm:text-base font-bold text-emerald-950 mb-2">
                         Yang perlu disiapkan:
                       </div>
-                      <ul className="space-y-1.5 text-xs sm:text-sm text-slate-700 font-normal">
+                      <ul className="space-y-2 text-sm text-slate-800 font-medium">
                         {step.requirements.map((req, i) => (
-                          <li key={i} className="flex items-start gap-2">
+                          <li key={i} className="flex items-start gap-2.5">
                             <span className="w-4 h-4 rounded-full bg-emerald-600 text-white flex items-center justify-center text-[10px] shrink-0 mt-0.5 font-bold">
                               ✓
                             </span>
-                            <span className="font-medium text-slate-800">{req}</span>
+                            <span>{req}</span>
                           </li>
                         ))}
                       </ul>
@@ -164,18 +163,18 @@ export default function AdminFlowTimeline({ steps }) {
 
                   {/* Quick Horizontal Flow (Step 03) */}
                   {step.quickFlow && step.quickFlow.length > 0 && (
-                    <div className="bg-slate-50 border border-slate-200/80 rounded-xl p-3 sm:p-3.5">
-                      <div className="text-xs font-bold text-slate-900 mb-2">
+                    <div className="bg-slate-50 border border-slate-200/80 rounded-xl p-3.5 sm:p-4">
+                      <div className="text-sm sm:text-base font-bold text-slate-900 mb-2.5">
                         Sederhananya:
                       </div>
-                      <div className="flex flex-wrap items-center gap-1.5">
+                      <div className="flex flex-wrap items-center gap-1.5 sm:gap-2">
                         {step.quickFlow.map((node, i) => (
                           <React.Fragment key={i}>
-                            <span className="px-2 py-0.5 rounded-lg bg-white border border-slate-200 text-slate-800 text-xs font-semibold shadow-2xs">
+                            <span className="px-2.5 py-1 rounded-lg bg-white border border-slate-200 text-slate-800 text-xs sm:text-sm font-semibold shadow-2xs">
                               {node}
                             </span>
                             {i < step.quickFlow.length - 1 && (
-                              <ArrowRight className="w-3 h-3 text-emerald-600 shrink-0" />
+                              <ArrowRight className="w-3.5 h-3.5 text-emerald-600 shrink-0" />
                             )}
                           </React.Fragment>
                         ))}
@@ -185,12 +184,11 @@ export default function AdminFlowTimeline({ steps }) {
 
                   {/* Details (Step 05) */}
                   {step.details && (
-                    <div className="bg-slate-50 border border-slate-200/70 rounded-xl p-3 sm:p-3.5">
-                      <div className="text-xs font-bold text-slate-900 mb-1 flex items-center gap-1.5">
-                        <span className="w-1.5 h-1.5 rounded-full bg-emerald-600 shrink-0" />
-                        <span>Bentuk Pelayanan:</span>
+                    <div className="bg-slate-50 border border-slate-200/70 rounded-xl p-3.5 sm:p-4">
+                      <div className="text-sm sm:text-base font-bold text-slate-900 mb-1.5">
+                        Bentuk Pelayanan:
                       </div>
-                      <p className="text-xs sm:text-sm text-slate-600 font-normal leading-relaxed">
+                      <p className="text-sm text-slate-600 font-normal leading-relaxed">
                         {step.details}
                       </p>
                     </div>

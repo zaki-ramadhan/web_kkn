@@ -50,11 +50,10 @@ export default function AdminFlowCard({
         {/* Why / Mengapa Perlu Box */}
         {why && (
           <div className="bg-slate-50/90 border border-slate-200/70 rounded-2xl p-3.5 sm:p-4">
-            <div className="text-xs sm:text-sm font-bold text-slate-900 mb-1 flex items-center gap-1.5">
-              <span className="w-1.5 h-1.5 rounded-full bg-emerald-600 shrink-0" />
-              <span>Mengapa perlu dilakukan?</span>
+            <div className="text-sm sm:text-base font-bold text-slate-900 mb-1.5">
+              Mengapa perlu dilakukan?
             </div>
-            <p className="text-xs sm:text-sm text-slate-600 font-normal leading-relaxed">
+            <p className="text-sm text-slate-600 font-normal leading-relaxed">
               {why}
             </p>
           </div>
@@ -63,10 +62,10 @@ export default function AdminFlowCard({
         {/* Requirements / Yang Perlu Disiapkan (Step 01) */}
         {requirements && requirements.length > 0 && (
           <div className="bg-emerald-50/60 border border-emerald-200/60 rounded-2xl p-3.5 sm:p-4">
-            <div className="text-xs sm:text-sm font-bold text-emerald-900 mb-2 flex items-center gap-1.5">
-              <span>Yang perlu disiapkan:</span>
+            <div className="text-sm sm:text-base font-bold text-emerald-950 mb-2">
+              Yang perlu disiapkan:
             </div>
-            <ul className="space-y-1.5 text-xs sm:text-sm text-slate-700 font-normal">
+            <ul className="space-y-1.5 text-sm text-slate-700 font-normal">
               {requirements.map((req, i) => (
                 <li key={i} className="flex items-start gap-2">
                   <Check className="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" />
@@ -80,7 +79,7 @@ export default function AdminFlowCard({
         {/* Quick Horizontal Flow (Step 03) */}
         {quickFlow && quickFlow.length > 0 && (
           <div className="bg-slate-50 border border-slate-200/80 rounded-2xl p-3.5 sm:p-4">
-            <div className="text-xs sm:text-sm font-bold text-slate-900 mb-2.5">
+            <div className="text-sm sm:text-base font-bold text-slate-900 mb-2.5">
               Sederhananya:
             </div>
             <div className="flex flex-wrap items-center gap-1.5 sm:gap-2">
@@ -101,11 +100,10 @@ export default function AdminFlowCard({
         {/* Service Details (Step 05) */}
         {details && (
           <div className="bg-slate-50/90 border border-slate-200/70 rounded-2xl p-3.5 sm:p-4">
-            <div className="text-xs sm:text-sm font-bold text-slate-900 mb-1 flex items-center gap-1.5">
-              <span className="w-1.5 h-1.5 rounded-full bg-emerald-600 shrink-0" />
-              <span>Bentuk Pelayanan:</span>
+            <div className="text-sm sm:text-base font-bold text-slate-900 mb-1.5">
+              Bentuk Pelayanan:
             </div>
-            <p className="text-xs sm:text-sm text-slate-600 font-normal leading-relaxed">
+            <p className="text-sm text-slate-600 font-normal leading-relaxed">
               {details}
             </p>
           </div>
