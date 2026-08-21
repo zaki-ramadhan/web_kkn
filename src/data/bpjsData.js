@@ -75,7 +75,7 @@ export const institutionalLogos = [
 // ==========================================
 
 export const heroData = {
-  eyebrow: 'ASLI SEHAT CIBAREGBEG • Aksi Sadar Layanan Kesehatan & Informasi Sehat',
+  eyebrow: 'ASLI SEHAT CIBAREGBEG — Aksi Sadar Layanan Kesehatan & Informasi Sehat',
   titlePrefix: 'Solusi Bebas Kendala Pelayanan',
   titleHighlight: 'Kesehatan Warga',
   titleSuffix: 'Desa Cibaregbeg',

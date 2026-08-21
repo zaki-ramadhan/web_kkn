@@ -43,8 +43,7 @@ export default function StepCard({
 
       {/* Bottom: Clean Editorial Note (No Chip / Badge AI Slop) */}
       {highlight && (
-        <div className="pt-3.5 border-t border-slate-100 text-sm font-semibold text-slate-700 group-hover:text-slate-950 transition-colors flex items-center gap-2">
-          <span className="w-1.5 h-1.5 rounded-full bg-emerald-600 shrink-0" />
+        <div className="pt-3.5 border-t border-slate-100 text-sm font-semibold text-slate-700 group-hover:text-slate-950 transition-colors">
           <span>{highlight}</span>
         </div>
       )}
