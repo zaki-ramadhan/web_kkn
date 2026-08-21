@@ -51,6 +51,8 @@ export default function ContactCard({
             <img
               src={avatar}
               alt={name}
+              width="56"
+              height="56"
               loading="lazy"
               decoding="async"
               className="w-13 h-13 sm:w-14 sm:h-14 rounded-2xl object-cover border-2 border-brand-100/90 shadow-subtle group-hover:scale-105 group-hover:border-lime-400 transition-all duration-300 shrink-0 bg-white"

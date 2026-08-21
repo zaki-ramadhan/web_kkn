@@ -13,6 +13,8 @@ export default function DigitalFeatureShowcase({ features = digitalFeatures }) {
             <img
               src="/images/services/edukasi kkn.webp"
               alt="Pendampingan Layanan Digital Kesehatan Tim KKN ARS"
+              width="600"
+              height="450"
               loading="lazy"
               decoding="async"
               className="w-full h-full object-cover object-center"

@@ -21,6 +21,8 @@ export default function BentoServiceCard({
       <img
         src={image}
         alt={title}
+        width="600"
+        height="450"
         loading="lazy"
         decoding="async"
         className="absolute inset-0 w-full h-full object-cover object-center group-hover:scale-108 transition-transform duration-700 ease-out opacity-75"

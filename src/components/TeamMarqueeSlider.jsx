@@ -13,6 +13,8 @@ function MemberMiniCard({ member }) {
           <img
             src={member.avatar}
             alt={member.name}
+            width="200"
+            height="200"
             loading="lazy"
             decoding="async"
             className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-300"

@@ -88,6 +88,8 @@ export default function ContactSection({
                       <img
                         src="/images/logo/UIMA.webp"
                         alt="Logo Universitas Indonesia Maju"
+                        width="160"
+                        height="48"
                         loading="lazy"
                         decoding="async"
                         className="max-h-12 w-auto object-contain saturate-[60%] opacity-85"

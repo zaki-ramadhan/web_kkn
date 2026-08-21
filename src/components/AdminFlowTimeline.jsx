@@ -8,27 +8,36 @@ export default function AdminFlowTimeline({ steps }) {
   const [activeStepIndex, setActiveStepIndex] = useState(0);
 
   useEffect(() => {
+    let ticking = false;
+
     const handleScroll = () => {
-      if (!containerRef.current) return;
-      const rect = containerRef.current.getBoundingClientRect();
-      const windowHeight = window.innerHeight;
+      if (!ticking) {
+        window.requestAnimationFrame(() => {
+          if (containerRef.current) {
+            const rect = containerRef.current.getBoundingClientRect();
+            const windowHeight = window.innerHeight;
 
-      // Start calculating when container enters viewport
-      const startOffset = windowHeight * 0.6;
-      const totalHeight = rect.height;
-      const currentScroll = startOffset - rect.top;
+            // Start calculating when container enters viewport
+            const startOffset = windowHeight * 0.6;
+            const totalHeight = rect.height;
+            const currentScroll = startOffset - rect.top;
 
-      let progress = (currentScroll / totalHeight) * 100;
-      progress = Math.max(0, Math.min(100, progress));
-      setScrollProgress(progress);
+            let progress = (currentScroll / totalHeight) * 100;
+            progress = Math.max(0, Math.min(100, progress));
+            setScrollProgress(progress);
 
-      // Determine active step index based on progress
-      const stepFraction = 100 / steps.length;
-      const currentIdx = Math.min(
-        steps.length - 1,
-        Math.max(0, Math.floor((progress + stepFraction * 0.35) / stepFraction))
-      );
-      setActiveStepIndex(currentIdx);
+            // Determine active step index based on progress
+            const stepFraction = 100 / steps.length;
+            const currentIdx = Math.min(
+              steps.length - 1,
+              Math.max(0, Math.floor((progress + stepFraction * 0.35) / stepFraction))
+            );
+            setActiveStepIndex(currentIdx);
+          }
+          ticking = false;
+        });
+        ticking = true;
+      }
     };
 
     window.addEventListener('scroll', handleScroll, { passive: true });
