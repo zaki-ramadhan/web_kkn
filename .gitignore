@@ -14,6 +14,21 @@ out/
 !README.md
 !readme.md
 
+# Office & Document Files
+*.docx
+*.doc
+*.xlsx
+*.xls
+*.xlsm
+*.pptx
+*.ppt
+*.pdf
+*.odt
+*.ods
+*.odp
+*.rtf
+~$*
+
 # Executables, Binaries & Scripts
 *.exe
 *.dll
