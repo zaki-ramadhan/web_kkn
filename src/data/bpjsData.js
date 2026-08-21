@@ -36,37 +36,37 @@ export const institutionalLogos = [
     id: 'inst-1',
     title: 'UPTD Puskesmas Cibaregbeg',
     alt: 'Logo UPTD Puskesmas Cibaregbeg',
-    src: '/images/logo/UPTD_Puskesmas.png',
+    src: '/images/logo/UPTD_Puskesmas.webp',
   },
   {
     id: 'inst-2',
     title: 'BPJS Kesehatan RI',
     alt: 'Logo BPJS Kesehatan Badan Penyelenggara Jaminan Sosial',
-    src: '/images/logo/BPJS.png',
+    src: '/images/logo/BPJS.webp',
   },
   {
     id: 'inst-3',
     title: 'Universitas Indonesia Maju (UIMA)',
     alt: 'Logo Universitas Indonesia Maju UIMA',
-    src: '/images/logo/UIMA.png',
+    src: '/images/logo/UIMA.webp',
   },
   {
     id: 'inst-4',
     title: 'Fakultas Ilmu Kesehatan (FIKES)',
     alt: 'Logo Fakultas Ilmu Kesehatan FIKES UIMA',
-    src: '/images/logo/UIMA_FIKES.png',
+    src: '/images/logo/UIMA_FIKES.webp',
   },
   {
     id: 'inst-5',
     title: 'Kader Posyandu Desa Cibaregbeg',
     alt: 'Logo Kader Posyandu Desa Cibaregbeg',
-    src: '/images/logo/KADER_POSYANDU.png',
+    src: '/images/logo/KADER_POSYANDU.webp',
   },
   {
     id: 'inst-6',
     title: 'KKN S1 Administrasi Rumah Sakit',
     alt: 'Logo KKN S1 Administrasi Rumah Sakit KKN UIMA',
-    src: '/images/logo/KKN_UIMA.png',
+    src: '/images/logo/KKN_UIMA.webp',
   },
 ];
 
@@ -318,7 +318,7 @@ export const puskesmasServices = [
     tag: 'Tes Penunjang',
     desc: 'Pemeriksaan darah lengkap, tes urin rutin, glukosa darah puasa/sewaktu, tes kolesterol total, asam urat, tes dahak TBC, dan rapid diagnostic test.',
     stat: 'Hasil Cepat Hari yang Sama',
-    image: 'https://images.unsplash.com/photo-1579154204601-01588f351e67?auto=format&fit=crop&w=600&h=450&q=75&fm=webp',
+    image: '/images/services/laboratorium diagnostik.webp',
   },
   {
     id: 'srv-5',
@@ -492,7 +492,7 @@ export const emergencyContacts = [
     name: 'BPJS Kesehatan',
     number: '+62 813-9931-952',
     type: 'Layanan BPJS Kesehatan',
-    avatar: '/images/logo/BPJS.png',
+    avatar: '/images/logo/BPJS.webp',
     desc: 'Layanan konsultasi resmi kepesertaan, informasi iuran, serta pengurusan administrasi BPJS Kesehatan bagi warga.',
     actionText: 'Hubungi BPJS',
     link: 'https://wa.me/628139931952?text=Halo%20BPJS%20Kesehatan%2C%20saya%20warga%20Cibaregbeg%20ingin%20konsultasi%20kepesertaan',
@@ -541,7 +541,7 @@ export const academicAdvisors = [
     role: 'Dosen Pembimbing Lapangan Mata Kuliah KKN Prodi S1 ARS UIMA',
     institution: 'Universitas Indonesia Maju (UIMA)',
     badge: 'DPL KKN',
-    avatar: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=600&h=600&q=80&fm=webp',
+    avatar: '/images/logo/UIMA.webp',
   },
   {
     id: 'adv-2',
@@ -549,7 +549,7 @@ export const academicAdvisors = [
     role: 'Asisten Dosen Pembimbing Lapangan Mata Kuliah KKN Prodi S1 ARS UIMA',
     institution: 'Universitas Indonesia Maju (UIMA)',
     badge: 'Asisten DPL',
-    avatar: 'https://images.unsplash.com/photo-1580894732488-c7e6c46a6f19?auto=format&fit=crop&w=600&h=600&q=80&fm=webp',
+    avatar: '/images/logo/UIMA.webp',
   },
 ];
 

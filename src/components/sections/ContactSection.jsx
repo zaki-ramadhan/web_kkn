@@ -86,7 +86,7 @@ export default function ContactSection({
                     {/* Landscape Header Frame (Gray Gradient + Centered Desaturated UIMA Logo) */}
                     <div className="relative aspect-[16/9] w-full rounded-xl overflow-hidden mb-3 bg-gradient-to-br from-slate-200 via-slate-100 to-slate-50 border border-slate-200/80 flex items-center justify-center p-3">
                       <img
-                        src="/images/logo/UIMA.png"
+                        src="/images/logo/UIMA.webp"
                         alt="Logo Universitas Indonesia Maju"
                         loading="lazy"
                         decoding="async"

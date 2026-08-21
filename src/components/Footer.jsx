@@ -25,8 +25,12 @@ export default function Footer({ f = footerData }) {
           <div className="lg:col-span-5 sm:col-span-2">
             <div className="flex items-center gap-3 mb-4">
               <img
-                src="/images/logo/KKN_UIMA.png"
-                alt="Logo KKN ARS Cibaregbeg"
+                src="/images/logo/KKN_UIMA.webp"
+                alt="Logo ASLI SEHAT CIBAREGBEG"
+                width="40"
+                height="40"
+                loading="lazy"
+                decoding="async"
                 className="w-9 h-9 sm:w-10 sm:h-10 rounded-full object-cover shadow-sm ring-1 ring-white/20 shrink-0 bg-white"
               />
               <div>

@@ -14,10 +14,12 @@ export default function HeroSection({ hero = heroData }) {
       id="hero-section"
       className="relative pt-28 pb-24 sm:pt-32 md:pt-36 md:pb-32 overflow-hidden bg-brand-950 text-white"
     >
-      {/* Background Image with Crisp Object-Cover and Increased Clarity */}
+      {/* Background Image with Crisp Object-Cover and High Priority LCP */}
       <img
-        src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&w=1920&h=1080&q=75&fm=webp"
+        src="/images/hero-bg.webp"
         alt="Layanan Kesehatan Masyarakat"
+        fetchPriority="high"
+        decoding="async"
         className="absolute inset-0 w-full h-full object-cover object-center opacity-35 pointer-events-none"
       />
 

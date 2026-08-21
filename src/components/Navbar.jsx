@@ -38,8 +38,10 @@ export default function Navbar({ modules = navEducationalModules }) {
           {/* Logo */}
           <a href="#" className="flex items-center gap-2.5 sm:gap-3 group shrink-0">
             <img
-              src="/images/logo/KKN_UIMA.png"
-              alt="Logo KKN ARS Cibaregbeg"
+              src="/images/logo/KKN_UIMA.webp"
+              alt="Logo ASLI SEHAT CIBAREGBEG"
+              width="36"
+              height="36"
               className="w-8 h-8 sm:w-9 sm:h-9 rounded-full object-cover shadow-sm ring-1 ring-white/20 group-hover:scale-105 transition-transform duration-200 shrink-0 bg-white"
             />
             <div>
