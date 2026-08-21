@@ -3,7 +3,9 @@
 > **Aksi Sadar Layanan Kesehatan & Informasi Sehat**  
 > *“Masyarakat Sadar, Administrasi Lancar, Jaminan Terakses.”*
 
-![Preview ASLI SEHAT CIBAREGBEG](./public/images/preview.webp)
+[![Preview ASLI SEHAT CIBAREGBEG](./public/images/preview.webp)](https://aslisehat-cibaregbeg.vercel.app/)
+
+🌐 **Live Website:** [aslisehat-cibaregbeg.vercel.app](https://aslisehat-cibaregbeg.vercel.app/)
 
 Portal edukasi mandiri mengenai alur pelayanan BPJS Kesehatan dan Puskesmas untuk warga Desa Cibaregbeg, Kec. Cibeber, Kab. Cianjur. 
 
