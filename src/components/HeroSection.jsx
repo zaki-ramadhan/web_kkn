@@ -139,29 +139,30 @@ export default function HeroSection({ hero = heroData }) {
           {hero.stats.map((item, idx) => {
             const distortionClass =
               idx === 0
-                ? 'rounded-tl-3xl rounded-br-2xl'
+                ? 'md:-rotate-6 md:-translate-x-5 md:scale-95 md:origin-right hover:md:rotate-0 hover:md:translate-x-0 hover:md:scale-100 hover:md:opacity-100 transition-all duration-300'
+                : idx === 3
+                ? 'md:rotate-6 md:translate-x-5 md:scale-95 md:origin-left hover:md:rotate-0 hover:md:translate-x-0 hover:md:scale-100 hover:md:opacity-100 transition-all duration-300'
                 : idx === 1
-                ? 'rounded-tr-3xl rounded-bl-2xl'
-                : idx === 2
-                ? 'rounded-bl-3xl rounded-tr-2xl'
-                : 'rounded-br-3xl rounded-tl-2xl';
+                ? 'md:-rotate-1 md:-translate-x-1.5 hover:md:rotate-0 hover:md:translate-x-0 transition-all duration-300'
+                : 'md:rotate-1 md:translate-x-1.5 hover:md:rotate-0 hover:md:translate-x-0 transition-all duration-300';
 
             return (
               <AnimatedContent
                 key={item.id}
-                distance={25}
-                duration={0.5}
-                delay={0.45 + idx * 0.08}
+                distance={35}
+                duration={0.6}
+                delay={0.45 + idx * 0.1}
                 className="h-full"
               >
-                <StatCard
-                  value={item.value}
-                  label={item.label}
-                  detail={item.detail}
-                  distortionClass={distortionClass}
-                  variant="forest"
-                  className="h-full"
-                />
+                <div className={`h-full ${distortionClass}`}>
+                  <StatCard
+                    variant="dark"
+                    value={item.value}
+                    label={item.label}
+                    detail={item.detail}
+                    className="h-full"
+                  />
+                </div>
               </AnimatedContent>
             );
           })}
