@@ -18,13 +18,15 @@ import {
 } from 'lucide-react';
 
 // ==========================================
-// 1. BRAND & IDENTITY (SMART DIGITAL)
+// 1. BRAND & IDENTITY (ASLI SEHAT CIBAREGBEG)
 // ==========================================
 
 export const brandData = {
-  brandName: 'SMART DIGITAL - KKN ARS Cibaregbeg 2026',
-  navBrandTitle: 'SMART DIGITAL',
-  navBrandSubtitle: 'KKN ARS Cibaregbeg',
+  brandName: 'ASLI SEHAT CIBAREGBEG',
+  brandFullName: 'Aksi Sadar Layanan Kesehatan & Informasi Sehat',
+  tagline: 'Masyarakat Sadar, Administrasi Lancar, Jaminan Terakses.',
+  navBrandTitle: 'ASLI SEHAT',
+  navBrandSubtitle: 'Cibaregbeg',
   location: 'RT 004 dan 007 RW 007 Kp. Nyalindung / Talaga, Desa Cibaregbeg, Kec. Cibeber, Kab. Cianjur',
 };
 
@@ -73,11 +75,11 @@ export const institutionalLogos = [
 // ==========================================
 
 export const heroData = {
-  eyebrow: 'Program Pengabdian KKN ARS Cibaregbeg 2026, Universitas Indonesia Maju (UIMA)',
+  eyebrow: 'ASLI SEHAT CIBAREGBEG • Aksi Sadar Layanan Kesehatan & Informasi Sehat',
   titlePrefix: 'Solusi Bebas Kendala Pelayanan',
   titleHighlight: 'Kesehatan Warga',
   titleSuffix: 'Desa Cibaregbeg',
-  subtitle: 'Edukasi mandiri terkait alur rujukan faskes, re-aktivasi kepesertaan BPJS nonaktif, program cicilan REHAB, dan kemudahan antrean online Puskesmas berbasis digital.',
+  subtitle: '“Masyarakat Sadar, Administrasi Lancar, Jaminan Terakses.” Edukasi mandiri terkait alur rujukan faskes, re-aktivasi kepesertaan BPJS nonaktif, program cicilan REHAB, dan kemudahan antrean online Puskesmas berbasis digital.',
   avatarText: '20 Mahasiswa KKN ARS Cibaregbeg',
   stats: [
     { id: 'hs1', value: '100%', label: 'Tercover BPJS', detail: 'Pelayanan & obat generik di Puskesmas' },
@@ -747,8 +749,10 @@ export const navEducationalModules = [
 // ==========================================
 
 export const footerData = {
-  title: 'SMART DIGITAL - KKN ARS Cibaregbeg 2026',
-  desc: 'Portal informasi dan edukasi kesehatan mandiri yang dikembangkan oleh Tim Mahasiswa KKN S1 Administrasi Rumah Sakit (ARS) Universitas Indonesia Maju (UIMA) untuk mempermudah warga desa memahami alur dan hak pelayanan kesehatan.',
+  title: 'ASLI SEHAT CIBAREGBEG',
+  subtitle: 'Aksi Sadar Layanan Kesehatan & Informasi Sehat',
+  tagline: '“Masyarakat Sadar, Administrasi Lancar, Jaminan Terakses.”',
+  desc: 'Portal informasi dan edukasi kesehatan mandiri yang dikembangkan oleh Tim Mahasiswa KKN S1 Administrasi Rumah Sakit (ARS) UIMA untuk mewujudkan masyarakat sadar layanan kesehatan, administrasi tertib, dan jaminan kesehatan yang mudah diakses.',
   address: 'RT 004 dan 007 RW 007 Kp. Nyalindung / Talaga, Desa Cibaregbeg, Kec. Cibeber, Kab. Cianjur',
   posyanduContact: 'Kader Posyandu (+62 889-2120-024)',
   posyanduLink: 'https://wa.me/628892120024?text=Halo%20Kader%20Posyandu%2C%20saya%20ingin%20konsultasi%20di%20posyandu',
@@ -756,7 +760,7 @@ export const footerData = {
   tiktokUrl: 'https://www.tiktok.com/@kknars_cibaregbeg',
   instagram: '@kknars_cibaregbeg',
   instagramUrl: 'https://www.instagram.com/kknars_cibaregbeg/',
-  copyright: '© 2026 KKN ARS Cibaregbeg. Program Pengabdian Masyarakat S1 Administrasi Rumah Sakit, Universitas Indonesia Maju (UIMA). Hak cipta dilindungi.',
+  copyright: '© 2026 ASLI SEHAT CIBAREGBEG. Program Pengabdian Masyarakat S1 Administrasi Rumah Sakit, Universitas Indonesia Maju (UIMA). Hak cipta dilindungi.',
 };
 
 // Aliases for compatibility

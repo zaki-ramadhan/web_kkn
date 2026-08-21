@@ -31,17 +31,20 @@ export default function Footer({ f = footerData }) {
               />
               <div>
                 <span className="font-grotesk font-black text-xl tracking-tight text-white block">
-                  {brandData.navBrandTitle}
+                  {brandData.brandName}
                 </span>
-                <span className="text-sm font-bold text-lime-300 block">
-                  {brandData.navBrandSubtitle}
+                <span className="text-xs sm:text-sm font-bold text-lime-300 block">
+                  {brandData.brandFullName}
                 </span>
               </div>
             </div>
-            <p className="text-slate-200 text-sm sm:text-base leading-relaxed mb-4 font-normal">
+            <p className="text-slate-200 text-sm sm:text-base leading-relaxed mb-3 font-normal">
               {f.desc}
             </p>
-            <div className="text-sm text-lime-400 font-semibold">
+            <div className="text-sm font-semibold text-lime-300 italic mb-4">
+              {brandData.tagline}
+            </div>
+            <div className="text-sm text-slate-300 font-medium">
               S1 Administrasi Rumah Sakit, Universitas Indonesia Maju (UIMA)
             </div>
           </div>
