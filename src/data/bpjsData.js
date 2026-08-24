@@ -30,8 +30,16 @@ export const brandData = {
   location: 'RT 004 dan 007 RW 007 Kp. Nyalindung / Talaga, Desa Cibaregbeg, Kec. Cibeber, Kab. Cianjur',
 };
 
-// 6 Institusi Mitra Sinergi Program KKN & Kesehatan Desa
+// 7 Institusi Mitra Sinergi Program KKN & Kesehatan Desa
 export const institutionalLogos = [
+  {
+    id: 'inst-dinkes',
+    title: 'Dinas Kesehatan Kabupaten Cianjur',
+    alt: 'Logo Dinas Kesehatan Kabupaten Cianjur Dinkes Cianjur',
+    src: '/images/logo/Dinkes_Cianjur.webp',
+    width: 160,
+    height: 72,
+  },
   {
     id: 'inst-1',
     title: 'UPTD Puskesmas Cibaregbeg',
@@ -534,14 +542,14 @@ export const emergencyContacts = [
   },
   {
     id: 'c4',
-    name: 'Dinas Kesehatan Kab. Cianjur',
-    number: '(0263) 268894',
-    type: 'Dinas Kesehatan Cianjur',
-    avatar: '/images/dinas kesehatan.webp',
-    desc: 'Narahubung panggilan telepon kantor resmi untuk layanan dan fasilitas kesehatan daerah Kabupaten Cianjur.',
-    actionText: 'Hubungi Dinkes',
-    link: 'tel:0263268894',
-    urgent: false,
+    name: 'Layanan PSC 119 Dinkes Cianjur',
+    number: '119 / (0263) 268894',
+    type: 'Ambulans & Gawat Darurat 24 Jam',
+    avatar: '/images/logo/Dinkes_Cianjur.webp',
+    desc: 'Layanan panggilan darurat medis 24 jam & evakuasi ambulans cepat tanggap Dinkes Kab. Cianjur untuk kondisi kritis di wilayah Cibaregbeg.',
+    actionText: 'Panggil PSC 119',
+    link: 'tel:119',
+    urgent: true,
   },
 ];
 
